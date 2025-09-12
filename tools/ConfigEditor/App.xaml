@@ -3,14 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <!-- Palette -->
-        <SolidColorBrush x:Key="PrimaryBrush" Color="#2563EB"/>
-        <SolidColorBrush x:Key="AccentBrush" Color="#10B981"/>
-        <SolidColorBrush x:Key="WindowBackgroundBrush" Color="#F7F9FC"/>
-        <SolidColorBrush x:Key="SurfaceBrush" Color="#FFFFFFFF"/>
-        <SolidColorBrush x:Key="SurfaceBorderBrush" Color="#E5E7EB"/>
-        <SolidColorBrush x:Key="TextBrush" Color="#111827"/>
-        <SolidColorBrush x:Key="SubtleTextBrush" Color="#6B7280"/>
+        <!-- Dark Palette -->
+        <SolidColorBrush x:Key="PrimaryBrush" Color="#60A5FA"/>
+        <SolidColorBrush x:Key="AccentBrush" Color="#34D399"/>
+        <SolidColorBrush x:Key="WindowBackgroundBrush" Color="#0B1220"/>
+        <SolidColorBrush x:Key="SurfaceBrush" Color="#111827"/>
+        <SolidColorBrush x:Key="SurfaceBorderBrush" Color="#1F2937"/>
+        <SolidColorBrush x:Key="TextBrush" Color="#E5E7EB"/>
+        <SolidColorBrush x:Key="SubtleTextBrush" Color="#9CA3AF"/>
 
         <!-- Typography defaults -->
         <Style TargetType="Window">
@@ -26,32 +26,43 @@
         <Style TargetType="TextBox">
             <Setter Property="Padding" Value="6"/>
             <Setter Property="MinHeight" Value="28"/>
+            <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+            <Setter Property="Background" Value="#0B1220"/>
+            <Setter Property="BorderBrush" Value="{StaticResource SurfaceBorderBrush}"/>
         </Style>
         <Style TargetType="CheckBox">
             <Setter Property="Margin" Value="0,2,0,2"/>
+            <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
         </Style>
         <Style TargetType="Button">
             <Setter Property="Padding" Value="8,6"/>
             <Setter Property="MinHeight" Value="28"/>
+            <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+            <Setter Property="Background" Value="{StaticResource SurfaceBorderBrush}"/>
+            <Setter Property="BorderBrush" Value="#374151"/>
         </Style>
 
         <!-- DataGrid defaults -->
         <Style TargetType="DataGrid">
             <Setter Property="AlternationCount" Value="2"/>
-            <Setter Property="AlternatingRowBackground" Value="#F3F4F6"/>
-            <Setter Property="RowBackground" Value="#FFFFFFFF"/>
+            <Setter Property="AlternatingRowBackground" Value="#0F172A"/>
+            <Setter Property="RowBackground" Value="#0B1220"/>
             <Setter Property="GridLinesVisibility" Value="None"/>
             <Setter Property="HeadersVisibility" Value="All"/>
             <Setter Property="EnableRowVirtualization" Value="True"/>
             <Setter Property="RowHeaderWidth" Value="0"/>
             <Setter Property="SnapsToDevicePixels" Value="True"/>
+            <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource SurfaceBorderBrush}"/>
+            <Setter Property="Background" Value="{StaticResource SurfaceBrush}"/>
         </Style>
         <Style TargetType="DataGridColumnHeader">
             <Setter Property="FontWeight" Value="SemiBold"/>
-            <Setter Property="Background" Value="#FAFAFA"/>
-            <Setter Property="BorderBrush" Value="#E5E7EB"/>
+            <Setter Property="Background" Value="#0F172A"/>
+            <Setter Property="BorderBrush" Value="{StaticResource SurfaceBorderBrush}"/>
             <Setter Property="BorderThickness" Value="0,0,0,1"/>
             <Setter Property="Padding" Value="6,4"/>
+            <Setter Property="Foreground" Value="{StaticResource SubtleTextBrush}"/>
         </Style>
     </Application.Resources>
 </Application>

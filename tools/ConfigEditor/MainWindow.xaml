@@ -85,7 +85,7 @@
                         <Button Content="Duplicate" Click="DuplicateRule_Click" />
                         <Button Content="Delete" Click="DeleteRule_Click" />
                         <Separator />
-                        <Button Background="{StaticResource AccentBrush}" Foreground="White" Content="Edit Steps..." Click="EditSteps_Click" />
+                        <Button Background="{StaticResource AccentBrush}" Foreground="#0B1220" Content="Edit Steps..." Click="EditSteps_Click" />
                     </ToolBar>
                     <DataGrid x:Name="RulesGrid" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="False" Margin="8" SelectionMode="Extended" RowEditEnding="RulesGrid_RowEditEnding" CellEditEnding="RulesGrid_CellEditEnding" CurrentCellChanged="RulesGrid_CurrentCellChanged">
                         <DataGrid.Columns>
