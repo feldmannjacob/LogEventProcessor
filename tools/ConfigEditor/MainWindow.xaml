@@ -22,10 +22,11 @@
             </MenuItem>
         </Menu>
 
+        <Border Margin="12" Padding="12" Background="{StaticResource SurfaceBrush}" BorderBrush="{StaticResource SurfaceBorderBrush}" BorderThickness="1" CornerRadius="6">
         <TabControl>
             <TabItem Header="General">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
-                    <Grid Margin="16">
+                    <Grid Margin="4">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="200" />
                             <ColumnDefinition Width="*" />
@@ -41,10 +42,10 @@
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" Grid.Column="0" Margin="0,6,12,6" Text="Log file path" />
+                        <TextBlock Grid.Row="0" Grid.Column="0" Margin="0,10,12,6" Text="Log file path" />
                         <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
                             <TextBox x:Name="LogFilePathText" Width="500" Margin="0,0,8,0" TextChanged="General_TextChanged"/>
-                            <Button Content="Browse..." Click="BrowseLogFile_Click" />
+                            <Button Content="Browse..." Click="BrowseLogFile_Click"/>
                         </StackPanel>
 
                         <TextBlock Grid.Row="1" Grid.Column="0" Margin="0,6,12,6" Text="Output directory" />
@@ -84,7 +85,7 @@
                         <Button Content="Duplicate" Click="DuplicateRule_Click" />
                         <Button Content="Delete" Click="DeleteRule_Click" />
                         <Separator />
-                        <Button Content="Edit Steps..." Click="EditSteps_Click" />
+                        <Button Background="{StaticResource AccentBrush}" Foreground="White" Content="Edit Steps..." Click="EditSteps_Click" />
                     </ToolBar>
                     <DataGrid x:Name="RulesGrid" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="False" Margin="8" SelectionMode="Extended" RowEditEnding="RulesGrid_RowEditEnding" CellEditEnding="RulesGrid_CellEditEnding" CurrentCellChanged="RulesGrid_CurrentCellChanged">
                         <DataGrid.Columns>
@@ -132,6 +133,7 @@
                 </DockPanel>
             </TabItem>
         </TabControl>
+        </Border>
     </DockPanel>
 </Window>
 
