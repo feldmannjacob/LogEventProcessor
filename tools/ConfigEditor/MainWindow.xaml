@@ -119,6 +119,20 @@
                                     <Binding Path="CooldownMs" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay" />
                                 </DataGridTextColumn.Binding>
                             </DataGridTextColumn>
+                            <DataGridTemplateColumn Header="Steps" Width="70">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Border x:Name="Badge" Background="{StaticResource AccentBrush}" CornerRadius="10" Padding="6,2" HorizontalAlignment="Center" ToolTip="Multi-step sequence">
+                                            <TextBlock Text="{Binding Actions.Count, TargetNullValue=0}" Foreground="#0B1220" FontWeight="SemiBold"/>
+                                        </Border>
+                                        <DataTemplate.Triggers>
+                                            <DataTrigger Binding="{Binding Actions.Count, TargetNullValue=0}" Value="0">
+                                                <Setter TargetName="Badge" Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
+                                        </DataTemplate.Triggers>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
                         </DataGrid.Columns>
                     </DataGrid>
                 </DockPanel>
