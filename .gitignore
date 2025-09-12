@@ -1,0 +1,42 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.vcxproj.user
+*.VC.db
+*.opendb
+
+# Build output
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+[Rr]eleases/
+[xX]64/
+[xX]86/
+*.iobj
+*.ipdb
+*.idb
+*.pdb
+*.ilk
+*.obj
+*.tlog/
+*.cache
+
+# Executables and packages
+*.exe
+*.dll
+*.lib
+*.exp
+*.apk
+*.msi
+
+# Logs and temp
+*.log
+[Tt]est[Rr]esult*/
+*.tmp
+~$*
+
+# Other
+*.DS_Store
+Thumbs.db

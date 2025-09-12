@@ -1,0 +1,26 @@
+
+log_file_path: "test.log"
+output_directory: "./output"
+polling_interval_ms: 1000
+
+regex_rules:
+  - name: "hello_world_response"
+    pattern: ".*hello world.*"
+    action_type: "command"
+    action_value: "/g Goodbye"
+    modifiers: 0
+    enabled: true
+  
+  - name: "error_detection"
+    pattern: ".*\\[ERROR\\].*"
+    action_type: "keystroke"
+    action_value: "f1"
+    modifiers: 0
+    enabled: true
+  
+  - name: "user_login"
+    pattern: ".*User login: ([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}).*"
+    action_type: "text"
+    action_value: "Welcome!"
+    modifiers: 0
+    enabled: true
