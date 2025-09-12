@@ -61,39 +61,55 @@ bool ActionManager::processEvent(const LogEventPtr& event) {
             continue;
         }
         
-        if (std::regex_search(event->data, matches, std::regex(rule->pattern))) {
+        if (std::regex_search(event->data, matches, std::regex(rule->pattern, std::regex_constants::ECMAScript | std::regex_constants::optimize | std::regex_constants::icase))) {
             // Check if we have an action mapping for this rule
-            std::lock_guard<std::mutex> lock(_mutex);
-            auto it = _actionMappings.find(rule->name);
-            if (it != _actionMappings.end()) {
-                // Prepare sequence with placeholder substitution
-                std::vector<ActionMapping> seq;
-                seq.reserve(it->second.size());
-                // Determine extracted text: first capture group if present, otherwise full match
-                std::string extractedText;
-                if (matches.size() > 1) {
-                    extractedText = matches[1].str();
-                } else if (matches.size() > 0) {
-                    extractedText = matches[0].str();
-                }
-                for (const auto& step : it->second) {
-                    if (!step.enabled) continue;
-                    ActionMapping s = step;
-                    if (!extractedText.empty() && s.actionValue.find('#') != std::string::npos) {
-                        std::string result;
-                        result.reserve(s.actionValue.size() + extractedText.size());
-                        for (char c : s.actionValue) {
-                            if (c == '#') { result += extractedText; } else { result.push_back(c); }
+            std::vector<ActionMapping> seq;
+            {
+                std::lock_guard<std::mutex> lock(_mutex);
+                auto it = _actionMappings.find(rule->name);
+                if (it != _actionMappings.end()) {
+                    seq.reserve(it->second.size());
+                    // Determine extracted text: first capture group if present, otherwise full match
+                    std::string extractedText;
+                    if (matches.size() > 1) {
+                        extractedText = matches[1].str();
+                    } else if (matches.size() > 0) {
+                        extractedText = matches[0].str();
+                    }
+                    for (const auto& step : it->second) {
+                        if (!step.enabled) continue;
+                        ActionMapping s = step;
+                        if (!extractedText.empty() && s.actionValue.find('#') != std::string::npos) {
+                            std::string result;
+                            result.reserve(s.actionValue.size() + extractedText.size());
+                            for (char c : s.actionValue) {
+                                if (c == '#') { result += extractedText; } else { result.push_back(c); }
+                            }
+                            s.actionValue = result;
                         }
-                        s.actionValue = result;
+                        seq.push_back(std::move(s));
                     }
-                    seq.push_back(std::move(s));
                 }
-                if (!seq.empty()) {
-                    std::cout << "[ACTION] Rule '" << rule->name << "' matched, executing " << seq.size() << " step(s)" << std::endl;
-                    if (executeActions(seq)) {
-                        anyMatch = true;
+            }
+            if (!seq.empty()) {
+                // Cooldown enforcement per rule
+                int cooldown = rule->cooldownMs;
+                if (cooldown > 0) {
+                    auto now = std::chrono::steady_clock::now();
+                    std::lock_guard<std::mutex> cdlock(_cooldownMutex);
+                    auto itLast = _lastRuleFireTime.find(rule->name);
+                    if (itLast != _lastRuleFireTime.end()) {
+                        auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now - itLast->second).count();
+                        if (elapsed < cooldown) {
+                            // Skip due to cooldown
+                            continue;
+                        }
                     }
+                    _lastRuleFireTime[rule->name] = now;
+                }
+                std::cout << "[ACTION] Rule '" << rule->name << "' matched, executing " << seq.size() << " step(s)" << std::endl;
+                if (executeActions(seq)) {
+                    anyMatch = true;
                 }
             }
         }
@@ -110,31 +126,38 @@ bool ActionManager::getActionsForEvent(const LogEventPtr& event, std::vector<Act
     for (size_t i = 0; i < _regexMatcher->getRuleCount(); ++i) {
         const RegexRule* rule = _regexMatcher->getRule(i);
         if (!rule || !rule->enabled) continue;
-        if (std::regex_search(event->data, matches, std::regex(rule->pattern))) {
-            // Guard mappings access
-            std::lock_guard<std::mutex> lock(_mutex);
-            auto it = _actionMappings.find(rule->name);
-            if (it != _actionMappings.end()) {
-                std::string extractedText;
-                if (matches.size() > 1) {
-                    extractedText = matches[1].str();
-                } else if (matches.size() > 0) {
-                    extractedText = matches[0].str();
-                }
-                for (const auto& step : it->second) {
-                    if (!step.enabled) continue;
-                    ActionMapping s = step;
-                    if (!extractedText.empty() && s.actionValue.find('#') != std::string::npos) {
-                        std::string result;
-                        result.reserve(s.actionValue.size() + extractedText.size());
-                        for (char c : s.actionValue) {
-                            if (c == '#') { result += extractedText; } else { result.push_back(c); }
-                        }
-                        s.actionValue = result;
+        if (std::regex_search(event->data, matches, std::regex(rule->pattern, std::regex_constants::ECMAScript | std::regex_constants::optimize | std::regex_constants::icase))) {
+            // Build sequence under mapping lock
+            std::vector<ActionMapping> seq;
+            {
+                std::lock_guard<std::mutex> lock(_mutex);
+                auto it = _actionMappings.find(rule->name);
+                if (it != _actionMappings.end()) {
+                    std::string extractedText;
+                    if (matches.size() > 1) {
+                        extractedText = matches[1].str();
+                    } else if (matches.size() > 0) {
+                        extractedText = matches[0].str();
                     }
-                    outActions.push_back(std::move(s));
-                    any = true;
+                    for (const auto& step : it->second) {
+                        if (!step.enabled) continue;
+                        ActionMapping s = step;
+                        if (!extractedText.empty() && s.actionValue.find('#') != std::string::npos) {
+                            std::string result;
+                            result.reserve(s.actionValue.size() + extractedText.size());
+                            for (char c : s.actionValue) {
+                                if (c == '#') { result += extractedText; } else { result.push_back(c); }
+                            }
+                            s.actionValue = result;
+                        }
+                        seq.push_back(std::move(s));
+                    }
                 }
+            }
+            if (!seq.empty()) {
+                // No cooldown mutation in const method; return actions and let dispatcher enforce order
+                for (auto &s : seq) { outActions.push_back(std::move(s)); }
+                any = true;
             }
         }
     }
@@ -143,6 +166,23 @@ bool ActionManager::getActionsForEvent(const LogEventPtr& event, std::vector<Act
 
 bool ActionManager::executeActions(const std::vector<ActionMapping>& actions) {
     bool allOk = true;
+    // Enforce per-rule cooldown before executing
+    if (!actions.empty() && _regexMatcher) {
+        const std::string& ruleName = actions.front().ruleName;
+        const RegexRule* rule = _regexMatcher->getRuleByName(ruleName);
+        if (rule && rule->cooldownMs > 0) {
+            auto now = std::chrono::steady_clock::now();
+            std::lock_guard<std::mutex> cdlock(_cooldownMutex);
+            auto itLast = _lastRuleFireTime.find(ruleName);
+            if (itLast != _lastRuleFireTime.end()) {
+                auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now - itLast->second).count();
+                if (elapsed < rule->cooldownMs) {
+                    return true; // treat as success but skip execution
+                }
+            }
+            _lastRuleFireTime[ruleName] = now;
+        }
+    }
     for (const auto& m : actions) {
         if (executeAction(m)) {
             _executedActionCount.fetch_add(1);

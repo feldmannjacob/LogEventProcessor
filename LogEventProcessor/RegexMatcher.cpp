@@ -19,7 +19,13 @@ void RegexMatcher::addRule(const RegexRule& rule) {
 
 void RegexMatcher::addRule(const std::string& name, const std::string& pattern, 
                           const std::string& description, bool enabled) {
-    _rules.emplace_back(name, pattern, description, enabled);
+    _rules.emplace_back(name, pattern, description, enabled, 0);
+    compilePatterns();
+}
+
+void RegexMatcher::addRule(const std::string& name, const std::string& pattern,
+                          const std::string& description, bool enabled, int cooldownMs) {
+    _rules.emplace_back(name, pattern, description, enabled, cooldownMs);
     compilePatterns();
 }
 
@@ -83,6 +89,13 @@ const RegexRule* RegexMatcher::getRule(size_t index) const {
     return nullptr;
 }
 
+const RegexRule* RegexMatcher::getRuleByName(const std::string& name) const {
+    for (const auto& r : _rules) {
+        if (r.name == name) return &r;
+    }
+    return nullptr;
+}
+
 void RegexMatcher::clearRules() {
     _rules.clear();
     _compiledPatterns.clear();
@@ -93,7 +106,7 @@ void RegexMatcher::compilePatterns() {
     
     for (const auto& rule : _rules) {
         try {
-            _compiledPatterns.emplace_back(rule.pattern, std::regex_constants::ECMAScript);
+            _compiledPatterns.emplace_back(rule.pattern, std::regex_constants::ECMAScript | std::regex_constants::optimize | std::regex_constants::icase);
         } catch (const std::regex_error& e) {
             std::cerr << "Error compiling regex pattern '" << rule.pattern 
                      << "' for rule '" << rule.name << "': " << e.what() << std::endl;

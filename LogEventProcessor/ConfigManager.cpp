@@ -113,6 +113,7 @@ bool ConfigManager::loadRegexRulesAndActions(RegexMatcher& matcher, ActionManage
     bool inActionsList = false;
     std::vector<ActionMapping> currentSteps;
     ActionMapping currentStep;
+    int currentCooldownMs = 0;
     
     // Helper: convert template with '#' into regex by only replacing '#' with a capture of non-space
     auto templateToRegex = [](const std::string& templ) -> std::string {
@@ -131,6 +132,14 @@ bool ConfigManager::loadRegexRulesAndActions(RegexMatcher& matcher, ActionManage
         }
         return out;
     };
+    auto collapseDoubleBackslashes = [](std::string s) {
+        // Convert "\\\\" -> "\\" repeatedly to normalize overly escaped patterns from config samples
+        for (size_t pos = 0; (pos = s.find("\\\\", pos)) != std::string::npos; ) {
+            s.replace(pos, 2, "\\");
+            pos += 1;
+        }
+        return s;
+    };
 
     while (std::getline(stream, line)) {
         // Trim whitespace
@@ -148,7 +157,7 @@ bool ConfigManager::loadRegexRulesAndActions(RegexMatcher& matcher, ActionManage
         
         // Do not prematurely break; continue scanning until EOF
         
-        if (inRegexRules && line.find("- name:") != std::string::npos) {
+        if (inRegexRules && line.rfind("- name:", 0) == 0) {
             // Save previous rule if exists
             if (!currentRule.empty() && !currentPattern.empty()) {
                 // Flush any pending step in actions list
@@ -157,7 +166,7 @@ bool ConfigManager::loadRegexRulesAndActions(RegexMatcher& matcher, ActionManage
                         currentSteps.push_back(currentStep);
                     }
                 }
-                matcher.addRule(currentRule, currentPattern, "", currentEnabled);
+                matcher.addRule(currentRule, currentPattern, "", currentEnabled, currentCooldownMs);
                 if (inActionsList && !currentSteps.empty()) {
                     // Ensure ruleName is set on each step
                     for (auto& s : currentSteps) { s.ruleName = currentRule; }
@@ -168,25 +177,48 @@ bool ConfigManager::loadRegexRulesAndActions(RegexMatcher& matcher, ActionManage
             }
             
             // Start new rule
-            size_t start = line.find('"') + 1;
-            size_t end = line.find('"', start);
-            currentRule = line.substr(start, end - start);
+            // Extract value after ':' and strip optional quotes
+            size_t colon = line.find(':');
+            std::string raw = colon != std::string::npos ? line.substr(colon + 1) : std::string();
+            // trim
+            raw.erase(0, raw.find_first_not_of(" \t"));
+            raw.erase(raw.find_last_not_of(" \t") + 1);
+            if (!raw.empty() && (raw.front()=='"' || raw.front()=='\'')) {
+                char q = raw.front();
+                if (raw.size() >= 2 && raw.back()==q) raw = raw.substr(1, raw.size()-2);
+            }
+            currentRule = raw;
             currentPattern = "";
             currentActionType = "keystroke";
             currentActionValue = "";
             currentModifiers = 0;
             currentEnabled = true;
+            currentCooldownMs = 0;
             inActionsList = false;
             currentSteps.clear();
             currentStep = ActionMapping();
         }
-        else if (inRegexRules && line.find("pattern:") != std::string::npos) {
-            size_t start = line.find('"') + 1;
-            size_t end = line.find('"', start);
-            if (start > 0 && end != std::string::npos) {
-                std::string rawPattern = line.substr(start, end - start);
-                currentPattern = templateToRegex(rawPattern);
+        else if (inRegexRules && line.rfind("pattern:", 0) == 0) {
+            size_t colon = line.find(':');
+            std::string raw = colon != std::string::npos ? line.substr(colon + 1) : std::string();
+            raw.erase(0, raw.find_first_not_of(" \t"));
+            raw.erase(raw.find_last_not_of(" \t") + 1);
+            if (!raw.empty() && (raw.front()=='"' || raw.front()=='\'')) {
+                char q = raw.front();
+                if (raw.size() >= 2 && raw.back()==q) raw = raw.substr(1, raw.size()-2);
             }
+            if (!raw.empty()) {
+                raw = collapseDoubleBackslashes(raw);
+                currentPattern = templateToRegex(raw);
+            }
+        }
+        else if (inRegexRules && line.rfind("cooldown_ms:", 0) == 0) {
+            size_t colon = line.find(':');
+            std::string v = colon != std::string::npos ? line.substr(colon + 1) : std::string();
+            v.erase(0, v.find_first_not_of(" \t"));
+            v.erase(v.find_last_not_of(" \t") + 1);
+            try { currentCooldownMs = std::stoi(v); } catch (...) { currentCooldownMs = 0; }
+            if (currentCooldownMs < 0) currentCooldownMs = 0;
         }
         else if (inRegexRules && line == "actions:") {
             inActionsList = true;
@@ -201,20 +233,22 @@ bool ConfigManager::loadRegexRulesAndActions(RegexMatcher& matcher, ActionManage
             currentStep = ActionMapping();
             currentStep.ruleName = currentRule;
             // Parse inline key on same line if present (e.g., - type: "command")
-            if (line.find("type:") != std::string::npos) {
-                size_t start = line.find('"') + 1;
-                size_t end = line.find('"', start);
-                if (start > 0 && end != std::string::npos) {
-                    currentStep.actionType = line.substr(start, end - start);
+            auto extractStr = [](const std::string& l, const char* key) -> std::string {
+                size_t pos = l.find(key);
+                if (pos == std::string::npos) return std::string();
+                pos = l.find(':', pos);
+                if (pos == std::string::npos) return std::string();
+                std::string v = l.substr(pos + 1);
+                v.erase(0, v.find_first_not_of(" \t"));
+                v.erase(v.find_last_not_of(" \t") + 1);
+                if (!v.empty() && (v.front()=='"' || v.front()=='\'')) {
+                    char q = v.front();
+                    if (v.size() >= 2 && v.back()==q) v = v.substr(1, v.size()-2);
                 }
-            }
-            if (line.find("value:") != std::string::npos) {
-                size_t start = line.find('"') + 1;
-                size_t end = line.find('"', start);
-                if (start > 0 && end != std::string::npos) {
-                    currentStep.actionValue = line.substr(start, end - start);
-                }
-            }
+                return v;
+            };
+            std::string t = extractStr(line, "type"); if (!t.empty()) currentStep.actionType = t;
+            std::string val = extractStr(line, "value"); if (!val.empty()) currentStep.actionValue = val;
             if (line.find("modifiers:") != std::string::npos) {
                 size_t pos = line.find("modifiers:"); pos += 10;
                 while (pos < line.length() && (line[pos] == ' ' || line[pos] == '\t')) pos++;
@@ -236,18 +270,18 @@ bool ConfigManager::loadRegexRulesAndActions(RegexMatcher& matcher, ActionManage
         }
         else if (inRegexRules && inActionsList) {
             // Continuation lines for current step
-            if (line.find("type:") != std::string::npos) {
-                size_t start = line.find('"') + 1;
-                size_t end = line.find('"', start);
-                if (start > 0 && end != std::string::npos) {
-                    currentStep.actionType = line.substr(start, end - start);
-                }
-            } else if (line.find("value:") != std::string::npos) {
-                size_t start = line.find('"') + 1;
-                size_t end = line.find('"', start);
-                if (start > 0 && end != std::string::npos) {
-                    currentStep.actionValue = line.substr(start, end - start);
-                }
+            if (line.rfind("type:", 0) == 0) {
+                size_t colon = line.find(':');
+                std::string v = line.substr(colon + 1);
+                v.erase(0, v.find_first_not_of(" \t")); v.erase(v.find_last_not_of(" \t") + 1);
+                if (!v.empty() && (v.front()=='"' || v.front()=='\'')) { char q=v.front(); if (v.back()==q) v=v.substr(1, v.size()-2);} 
+                currentStep.actionType = v;
+            } else if (line.rfind("value:", 0) == 0) {
+                size_t colon = line.find(':');
+                std::string v = line.substr(colon + 1);
+                v.erase(0, v.find_first_not_of(" \t")); v.erase(v.find_last_not_of(" \t") + 1);
+                if (!v.empty() && (v.front()=='"' || v.front()=='\'')) { char q=v.front(); if (v.back()==q) v=v.substr(1, v.size()-2);} 
+                currentStep.actionValue = v;
             } else if (line.find("modifiers:") != std::string::npos) {
                 size_t pos = line.find("modifiers:"); pos += 10;
                 while (pos < line.length() && (line[pos] == ' ' || line[pos] == '\t')) pos++;
@@ -263,21 +297,21 @@ bool ConfigManager::loadRegexRulesAndActions(RegexMatcher& matcher, ActionManage
                 currentStep.enabled = (v == "true");
             }
         }
-        else if (inRegexRules && line.find("action_type:") != std::string::npos) {
-            size_t start = line.find('"') + 1;
-            size_t end = line.find('"', start);
-            if (start > 0 && end != std::string::npos) {
-                currentActionType = line.substr(start, end - start);
-            }
+        else if (inRegexRules && line.rfind("action_type:", 0) == 0) {
+            size_t colon = line.find(':');
+            std::string v = line.substr(colon + 1);
+            v.erase(0, v.find_first_not_of(" \t")); v.erase(v.find_last_not_of(" \t") + 1);
+            if (!v.empty() && (v.front()=='"' || v.front()=='\'')) { char q=v.front(); if (v.back()==q) v=v.substr(1, v.size()-2);} 
+            currentActionType = v;
         }
-        else if (inRegexRules && line.find("action_value:") != std::string::npos) {
-            size_t start = line.find('"') + 1;
-            size_t end = line.find('"', start);
-            if (start > 0 && end != std::string::npos) {
-                currentActionValue = line.substr(start, end - start);
-            }
+        else if (inRegexRules && line.rfind("action_value:", 0) == 0) {
+            size_t colon = line.find(':');
+            std::string v = line.substr(colon + 1);
+            v.erase(0, v.find_first_not_of(" \t")); v.erase(v.find_last_not_of(" \t") + 1);
+            if (!v.empty() && (v.front()=='"' || v.front()=='\'')) { char q=v.front(); if (v.back()==q) v=v.substr(1, v.size()-2);} 
+            currentActionValue = v;
         }
-        else if (inRegexRules && line.find("modifiers:") != std::string::npos) {
+        else if (inRegexRules && line.rfind("modifiers:", 0) == 0) {
             size_t start = line.find("modifiers:") + 10;
             while (start < line.length() && (line[start] == ' ' || line[start] == '\t')) start++;
             try {
@@ -286,10 +320,13 @@ bool ConfigManager::loadRegexRulesAndActions(RegexMatcher& matcher, ActionManage
                 currentModifiers = 0;
             }
         }
-        else if (inRegexRules && line.find("enabled:") != std::string::npos) {
+        else if (inRegexRules && line.rfind("enabled:", 0) == 0) {
             size_t start = line.find("enabled:") + 8;
             while (start < line.length() && (line[start] == ' ' || line[start] == '\t')) start++;
-            currentEnabled = (line.substr(start) == "true");
+            std::string v = line.substr(start);
+            // normalize
+            std::transform(v.begin(), v.end(), v.begin(), ::tolower);
+            currentEnabled = (v == "true" || v == "1" || v == "yes");
         }
     }
     
@@ -300,7 +337,7 @@ bool ConfigManager::loadRegexRulesAndActions(RegexMatcher& matcher, ActionManage
                 currentSteps.push_back(currentStep);
             }
         }
-        matcher.addRule(currentRule, currentPattern, "", currentEnabled);
+        matcher.addRule(currentRule, currentPattern, "", currentEnabled, currentCooldownMs);
         if (inActionsList && !currentSteps.empty()) {
             for (auto& s : currentSteps) { s.ruleName = currentRule; }
             actionManager.addActionSequence(currentRule, currentSteps);

@@ -16,10 +16,11 @@ struct RegexRule {
     std::string pattern;
     std::string description;
     bool enabled;
+    int cooldownMs; // Minimum milliseconds between matches for this rule
     
     RegexRule(const std::string& ruleName, const std::string& regexPattern, 
-              const std::string& ruleDescription = "", bool isEnabled = true)
-        : name(ruleName), pattern(regexPattern), description(ruleDescription), enabled(isEnabled) {}
+              const std::string& ruleDescription = "", bool isEnabled = true, int cooldown = 0)
+        : name(ruleName), pattern(regexPattern), description(ruleDescription), enabled(isEnabled), cooldownMs(cooldown) {}
 };
 
 /**
@@ -48,6 +49,10 @@ public:
      */
     void addRule(const std::string& name, const std::string& pattern, 
                 const std::string& description = "", bool enabled = true);
+
+    // Overload with cooldown
+    void addRule(const std::string& name, const std::string& pattern,
+                const std::string& description, bool enabled, int cooldownMs);
     
     /**
      * @brief Remove a rule by name
@@ -89,6 +94,7 @@ public:
      * @return Pointer to rule or nullptr if index is invalid
      */
     const RegexRule* getRule(size_t index) const;
+    const RegexRule* getRuleByName(const std::string& name) const;
     
     /**
      * @brief Clear all rules

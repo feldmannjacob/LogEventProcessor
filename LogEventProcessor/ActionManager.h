@@ -5,6 +5,8 @@
 #include <memory>
 #include <mutex>
 #include <vector>
+#include <unordered_map>
+#include <chrono>
 #include "ActionSender.h"
 #include "RegexMatcher.h"
 #include "LogEvent.h"
@@ -142,6 +144,9 @@ private:
     std::atomic<size_t> _executedActionCount;
     std::atomic<size_t> _failedActionCount;
     mutable std::mutex _mutex;
+    // Cooldown tracking per rule
+    std::unordered_map<std::string, std::chrono::steady_clock::time_point> _lastRuleFireTime;
+    mutable std::mutex _cooldownMutex;
     
     /**
      * @brief Execute an action based on the mapping
