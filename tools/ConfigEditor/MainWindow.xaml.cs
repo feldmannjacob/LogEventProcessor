@@ -410,18 +410,77 @@ namespace ConfigEditor
             dlg.Owner = this;
             if (dlg.ShowDialog() == true)
             {
-                foreach (var rule in dlg.SelectedRules)
+                // For each selected preset, open the Rule Editor prefilled with action fields
+                foreach (var preset in dlg.SelectedRules)
                 {
-                    // ensure unique name
-                    var baseName = rule.Name;
-                    var name = baseName;
-                    int i = 1;
-                    var names = Current.RegexRules.Select(x => x.Name).ToHashSet(StringComparer.OrdinalIgnoreCase);
-                    while (names.Contains(name)) { i++; name = baseName + "_" + i; }
-                    var toAdd = rule.Clone();
-                    toAdd.Name = name;
-                    Current.RegexRules.Add(toAdd);
-                    Rules.Add(toAdd);
+                    var prefilled = new RegexRule
+                    {
+                        // Leave Name/Pattern empty so user provides them
+                        Name = string.Empty,
+                        Pattern = string.Empty,
+                        Enabled = true,
+                        CooldownMs = 0,
+                        Modifiers = 0
+                    };
+
+                    // Prefer top-level ActionType/Value; fallback to first step if present
+                    if (!string.IsNullOrWhiteSpace(preset.ActionType))
+                    {
+                        prefilled.ActionType = preset.ActionType;
+                        prefilled.ActionValue = preset.ActionValue;
+                    }
+                    else if (preset.Actions != null && preset.Actions.Count > 0)
+                    {
+                        var first = preset.Actions[0];
+                        prefilled.ActionType = first.Type;
+                        prefilled.ActionValue = first.Value;
+                    }
+
+                    var editor = new Views.RuleEditorWindow(prefilled) { Owner = this };
+                    if (editor.ShowDialog() == true)
+                    {
+                        // Ensure unique and non-empty name
+                        var baseName = string.IsNullOrWhiteSpace(prefilled.Name) ? "new_rule" : prefilled.Name;
+                        var finalName = baseName;
+                        int i = 1;
+                        var existingNames = Current.RegexRules.Select(x => x.Name).ToHashSet(StringComparer.OrdinalIgnoreCase);
+                        while (existingNames.Contains(finalName)) { i++; finalName = baseName + "_" + i; }
+                        prefilled.Name = finalName;
+
+                        Current.RegexRules.Add(prefilled);
+                        Rules.Add(prefilled);
+                        AutoSave();
+                    }
+                }
+
+                // Also allow direct EQ command selection to prefill action type/value
+                foreach (var cmd in dlg.SelectedCommands)
+                {
+                    var prefilled = new RegexRule
+                    {
+                        Name = string.Empty,
+                        Pattern = string.Empty,
+                        Enabled = true,
+                        CooldownMs = 0,
+                        Modifiers = 0,
+                        ActionType = "command",
+                        ActionValue = cmd
+                    };
+
+                    var editor = new Views.RuleEditorWindow(prefilled) { Owner = this };
+                    if (editor.ShowDialog() == true)
+                    {
+                        var baseName = string.IsNullOrWhiteSpace(prefilled.Name) ? "new_rule" : prefilled.Name;
+                        var finalName = baseName;
+                        int i = 1;
+                        var existingNames = Current.RegexRules.Select(x => x.Name).ToHashSet(StringComparer.OrdinalIgnoreCase);
+                        while (existingNames.Contains(finalName)) { i++; finalName = baseName + "_" + i; }
+                        prefilled.Name = finalName;
+
+                        Current.RegexRules.Add(prefilled);
+                        Rules.Add(prefilled);
+                        AutoSave();
+                    }
                 }
             }
         }

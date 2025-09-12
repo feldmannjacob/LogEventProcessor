@@ -166,6 +166,8 @@ bool ConfigManager::loadRegexRulesAndActions(RegexMatcher& matcher, ActionManage
                         currentSteps.push_back(currentStep);
                     }
                 }
+                std::cout << "[PARSE] Adding rule name='" << currentRule << "' pattern='" << currentPattern << "'"
+                          << (inActionsList ? " with steps" : " with single action") << std::endl;
                 matcher.addRule(currentRule, currentPattern, "", currentEnabled, currentCooldownMs);
                 if (inActionsList && !currentSteps.empty()) {
                     // Ensure ruleName is set on each step
@@ -174,6 +176,8 @@ bool ConfigManager::loadRegexRulesAndActions(RegexMatcher& matcher, ActionManage
                 } else {
                     actionManager.addActionMapping(currentRule, currentActionType, currentActionValue, currentModifiers, currentEnabled);
                 }
+            } else if (!currentRule.empty()) {
+                std::cout << "[PARSE] Skipping rule name='" << currentRule << "' due to empty pattern" << std::endl;
             }
             
             // Start new rule
@@ -337,6 +341,8 @@ bool ConfigManager::loadRegexRulesAndActions(RegexMatcher& matcher, ActionManage
                 currentSteps.push_back(currentStep);
             }
         }
+        std::cout << "[PARSE] Adding rule name='" << currentRule << "' pattern='" << currentPattern << "'"
+                  << (inActionsList ? " with steps" : " with single action") << std::endl;
         matcher.addRule(currentRule, currentPattern, "", currentEnabled, currentCooldownMs);
         if (inActionsList && !currentSteps.empty()) {
             for (auto& s : currentSteps) { s.ruleName = currentRule; }
@@ -344,6 +350,8 @@ bool ConfigManager::loadRegexRulesAndActions(RegexMatcher& matcher, ActionManage
         } else {
             actionManager.addActionMapping(currentRule, currentActionType, currentActionValue, currentModifiers, currentEnabled);
         }
+    } else if (!currentRule.empty()) {
+        std::cout << "[PARSE] Skipping rule name='" << currentRule << "' due to empty pattern" << std::endl;
     }
     
     std::cout << "Loaded " << matcher.getRuleCount() << " regex rules with actions." << std::endl;

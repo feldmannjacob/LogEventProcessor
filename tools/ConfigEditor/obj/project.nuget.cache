@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "EUQJ5LzcOMo=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Jake\\source\\repos\\EQLogAutomator\\tools\\ConfigEditor\\ConfigEditor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jake\\.nuget\\packages\\yamldotnet\\15.1.2\\yamldotnet.15.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

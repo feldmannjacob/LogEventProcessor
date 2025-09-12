@@ -1,0 +1,33 @@
+<Window x:Class="ConfigEditor.Presets.ChoosePresetWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Insert Presets" Height="520" Width="780">
+    <DockPanel>
+        <Grid DockPanel.Dock="Top" Margin="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="SearchText" Margin="0,0,8,0"/>
+            <Button Grid.Column="1" Content="Filter" Click="Filter_Click"/>
+        </Grid>
+        <Grid Margin="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <GroupBox Header="EQ Commands">
+                <ListBox x:Name="CommandsList" SelectionMode="Extended" />
+            </GroupBox>
+            <GroupBox Grid.Column="1" Header="Preset Rules" Margin="8,0,0,0">
+                <ListBox x:Name="PresetsList" SelectionMode="Extended" DisplayMemberPath="Name"/>
+            </GroupBox>
+        </Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="8">
+            <Button Content="Insert Selected" Margin="0,0,8,0" Click="Insert_Click"/>
+            <Button Content="Cancel" Click="Cancel_Click"/>
+        </StackPanel>
+    </DockPanel>
+</Window>
+
+

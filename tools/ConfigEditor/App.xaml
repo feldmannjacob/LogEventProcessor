@@ -18,6 +18,14 @@
         <SolidColorBrush x:Key="TabHeaderHoverBg" Color="#0F172A"/>
         <SolidColorBrush x:Key="TabHeaderBorder" Color="#1F2937"/>
 
+        <!-- Ensure system menu popups and highlights use dark theme colors -->
+        <SolidColorBrush x:Key="{x:Static SystemColors.MenuBrushKey}" Color="#0B1220"/>
+        <SolidColorBrush x:Key="{x:Static SystemColors.MenuBarBrushKey}" Color="#111827"/>
+        <SolidColorBrush x:Key="{x:Static SystemColors.MenuTextBrushKey}" Color="#E5E7EB"/>
+        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="#0C1624"/>
+        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="#E5E7EB"/>
+        <SolidColorBrush x:Key="{x:Static SystemColors.ControlTextBrushKey}" Color="#E5E7EB"/>
+
         <!-- Typography defaults -->
         <Style TargetType="Window">
             <Setter Property="FontFamily" Value="Segoe UI"/>
@@ -135,11 +143,31 @@
         <Style TargetType="MenuItem">
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+            <Setter Property="Padding" Value="10,6"/>
             <Style.Triggers>
                 <Trigger Property="IsHighlighted" Value="True">
                     <Setter Property="Background" Value="#0C1624"/>
                 </Trigger>
+                <Trigger Property="IsSubmenuOpen" Value="True">
+                    <Setter Property="Background" Value="#0C1624"/>
+                </Trigger>
             </Style.Triggers>
+        </Style>
+        <Style TargetType="ContextMenu">
+            <Setter Property="Background" Value="{StaticResource SurfaceBrush}"/>
+            <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource SurfaceBorderBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+        <Style TargetType="Separator">
+            <Setter Property="Margin" Value="2,4"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Separator">
+                        <Border Height="1" Background="{StaticResource SurfaceBorderBrush}"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
         <Style TargetType="ToolBar">
             <Setter Property="Background" Value="{StaticResource SurfaceBrush}"/>

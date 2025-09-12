@@ -307,10 +307,9 @@ bool ActionSender::sendChord(const std::vector<int>& keys, int modifiers, bool p
 }
 
 bool ActionSender::sendCommand(const std::string& command) {
-    // Send the command as text (EQ commands start with /)
-    std::string fullCommand = "/" + command;
-    std::cout << "[SEND] Command '/" << command << "' pid=" << _processId << std::endl;
-    bool textOk = sendText(fullCommand);
+    // Send the command as-is; UI composes with leading '/' already
+    std::cout << "[SEND] Command '" << command << "' pid=" << _processId << std::endl;
+    bool textOk = sendText(command);
     // Always press Enter after sending a command
     bool enterOk = sendKeystroke(VK_RETURN, 0);
     return textOk && enterOk;
