@@ -66,3 +66,10 @@ regex_rules:
     action_value: "f3"
     modifiers: 0
     enabled: true
+
+  - name: "attack_minions"
+    pattern: ".*Attack my minions.*"
+    action_type: "keystroke"
+    action_value: "Ctrl + 1"
+    modifiers: 0
+    enabled: true
