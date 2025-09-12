@@ -16,8 +16,7 @@ namespace ConfigEditor.Presets
         public ObservableCollection<RegexRule> SelectedRules { get; } = new ObservableCollection<RegexRule>();
         public ObservableCollection<string> SelectedCommands { get; } = new ObservableCollection<string>();
         public ObservableCollection<Spell> SelectedSpells { get; } = new ObservableCollection<Spell>();
-        private IReadOnlyList<Spell> _cleric = Array.Empty<Spell>();
-        private IReadOnlyList<Spell> _shaman = Array.Empty<Spell>();
+        private readonly Dictionary<string, IReadOnlyList<Spell>> _spellClasses = new Dictionary<string, IReadOnlyList<Spell>>();
 
         public ChoosePresetWindow(string[] commands, IEnumerable<RegexRule> presetRules)
         {
@@ -26,8 +25,17 @@ namespace ConfigEditor.Presets
             _allPresets = presetRules.ToList();
             CommandsList.ItemsSource = _allCommands.OrderBy(x => x).ToList();
             PresetsList.ItemsSource = _allPresets;
-            _cleric = _spells.GetClericSpells();
-            _shaman = _spells.GetShamanSpells();
+            
+            // Load all spell classes
+            _spellClasses["Cleric"] = _spells.GetClericSpells();
+            _spellClasses["Shaman"] = _spells.GetShamanSpells();
+            _spellClasses["Druid"] = _spells.GetDruidSpells();
+            _spellClasses["Enchanter"] = _spells.GetEnchanterSpells();
+            _spellClasses["Magician"] = _spells.GetMagicianSpells();
+            _spellClasses["Necromancer"] = _spells.GetNecromancerSpells();
+            _spellClasses["Ranger"] = _spells.GetRangerSpells();
+            _spellClasses["Wizard"] = _spells.GetWizardSpells();
+            
             if (SpellClassFilter != null) SpellClassFilter.SelectedIndex = 0;
             if (MinLevelFilter != null) MinLevelFilter.Text = "1";
             if (MaxLevelFilter != null) MaxLevelFilter.Text = "70";
@@ -87,9 +95,16 @@ namespace ConfigEditor.Presets
             var minLevel = min > 0 ? (int?)min : null;
             var maxLevel = max > 0 ? (int?)max : null;
             var cls = (SpellClassFilter?.SelectedItem as System.Windows.Controls.ComboBoxItem)?.Content?.ToString() ?? "Cleric";
-            var baseList = cls.Equals("Shaman", StringComparison.OrdinalIgnoreCase) ? _shaman : _cleric;
-            var filtered = _spells.FilterByLevel(baseList, minLevel, maxLevel);
-            SpellsList.ItemsSource = filtered;
+            
+            if (_spellClasses.TryGetValue(cls, out var baseList))
+            {
+                var filtered = _spells.FilterByLevel(baseList, minLevel, maxLevel);
+                SpellsList.ItemsSource = filtered;
+            }
+            else
+            {
+                SpellsList.ItemsSource = Array.Empty<Spell>();
+            }
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)

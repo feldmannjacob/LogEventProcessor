@@ -1,0 +1,1812 @@
+[
+  {
+    "id": 372,
+    "name": "Blast of Cold",
+    "level": 1
+  },
+  {
+    "id": 54,
+    "name": "Frost Bolt",
+    "level": 1
+  },
+  {
+    "id": 288,
+    "name": "Minor Shielding",
+    "level": 1
+  },
+  {
+    "id": 374,
+    "name": "Numbing Cold",
+    "level": 1
+  },
+  {
+    "id": 373,
+    "name": "Sphere of Light",
+    "level": 1
+  },
+  {
+    "id": 205,
+    "name": "True North",
+    "level": 1
+  },
+  {
+    "id": 51,
+    "name": "Glimpse",
+    "level": 2
+  },
+  {
+    "id": 378,
+    "name": "O'Keil's Radiation",
+    "level": 2
+  },
+  {
+    "id": 375,
+    "name": "Fade",
+    "level": 3
+  },
+  {
+    "id": 230,
+    "name": "Root",
+    "level": 3
+  },
+  {
+    "id": 36,
+    "name": "Gate",
+    "level": 4
+  },
+  {
+    "id": 80,
+    "name": "See Invisible",
+    "level": 4
+  },
+  {
+    "id": 376,
+    "name": "Shock of Fire",
+    "level": 4
+  },
+  {
+    "id": 379,
+    "name": "Fingers of Fire",
+    "level": 5
+  },
+  {
+    "id": 477,
+    "name": "Fire Bolt",
+    "level": 5
+  },
+  {
+    "id": 377,
+    "name": "Icestrike",
+    "level": 6
+  },
+  {
+    "id": 246,
+    "name": "Lesser Shielding",
+    "level": 6
+  },
+  {
+    "id": 232,
+    "name": "Sense Summoned",
+    "level": 7
+  },
+  {
+    "id": 354,
+    "name": "Shadow Step",
+    "level": 7
+  },
+  {
+    "id": 380,
+    "name": "Column of Frost",
+    "level": 8
+  },
+  {
+    "id": 323,
+    "name": "Eye of Zomm",
+    "level": 8
+  },
+  {
+    "id": 656,
+    "name": "Shock of Ice",
+    "level": 8
+  },
+  {
+    "id": 234,
+    "name": "Halo of Light",
+    "level": 9
+  },
+  {
+    "id": 381,
+    "name": "Resistant Skin",
+    "level": 9
+  },
+  {
+    "id": 2551,
+    "name": "O'Keil's Embers",
+    "level": 10
+  },
+  {
+    "id": 383,
+    "name": "Shock of Lightning",
+    "level": 10
+  },
+  {
+    "id": 48,
+    "name": "Cancel Magic",
+    "level": 11
+  },
+  {
+    "id": 529,
+    "name": "Gaze",
+    "level": 11
+  },
+  {
+    "id": 35,
+    "name": "Bind Affinity",
+    "level": 12
+  },
+  {
+    "id": 85,
+    "name": "Firestorm",
+    "level": 12
+  },
+  {
+    "id": 382,
+    "name": "Frost Spiral of Al'Kabor",
+    "level": 12
+  },
+  {
+    "id": 236,
+    "name": "Shieldskin",
+    "level": 13
+  },
+  {
+    "id": 4252,
+    "name": "Xalirilan's Lesser Appraisal",
+    "level": 13
+  },
+  {
+    "id": 305,
+    "name": "Identify",
+    "level": 14
+  },
+  {
+    "id": 385,
+    "name": "Project Lightning",
+    "level": 14
+  },
+  {
+    "id": 4264,
+    "name": "Xalirilan's Lesser Discombobulation",
+    "level": 14
+  },
+  {
+    "id": 4276,
+    "name": "Xalirilan's Lesser Extrication",
+    "level": 14
+  },
+  {
+    "id": 657,
+    "name": "Flame Shock",
+    "level": 15
+  },
+  {
+    "id": 386,
+    "name": "Pillar of Fire",
+    "level": 15
+  },
+  {
+    "id": 309,
+    "name": "Shielding",
+    "level": 15
+  },
+  {
+    "id": 500,
+    "name": "Bind Sight",
+    "level": 16
+  },
+  {
+    "id": 7676,
+    "name": "Focus Crude Spellcaster's Empowering Essence",
+    "level": 16
+  },
+  {
+    "id": 7674,
+    "name": "Focus Primitive Spellcaster's Empowering Essence",
+    "level": 16
+  },
+  {
+    "id": 7675,
+    "name": "Focus Rudimentary Spellcaster's Empowering Essence",
+    "level": 16
+  },
+  {
+    "id": 679,
+    "name": "Heat Sight",
+    "level": 16
+  },
+  {
+    "id": 42,
+    "name": "Invisibility",
+    "level": 16
+  },
+  {
+    "id": 38,
+    "name": "Lightning Bolt",
+    "level": 16
+  },
+  {
+    "id": 22,
+    "name": "Force Snap",
+    "level": 17
+  },
+  {
+    "id": 131,
+    "name": "Instill",
+    "level": 17
+  },
+  {
+    "id": 2945,
+    "name": "Nexus Gate",
+    "level": 17
+  },
+  {
+    "id": 458,
+    "name": "Fire Spiral of Al'Kabor",
+    "level": 18
+  },
+  {
+    "id": 2552,
+    "name": "Garrison's Mighty Mana Shock",
+    "level": 18
+  },
+  {
+    "id": 2184,
+    "name": "Lesser Evacuate",
+    "level": 18
+  },
+  {
+    "id": 542,
+    "name": "North Gate",
+    "level": 18
+  },
+  {
+    "id": 578,
+    "name": "Sight",
+    "level": 19
+  },
+  {
+    "id": 503,
+    "name": "Tishan's Clash",
+    "level": 19
+  },
+  {
+    "id": 541,
+    "name": "Tox Gate",
+    "level": 19
+  },
+  {
+    "id": 10882,
+    "name": "Blightfire Moors Gate",
+    "level": 20
+  },
+  {
+    "id": 10881,
+    "name": "Blightfire Moors Portal",
+    "level": 20
+  },
+  {
+    "id": 108,
+    "name": "Elemental Shield",
+    "level": 20
+  },
+  {
+    "id": 543,
+    "name": "Fay Gate",
+    "level": 20
+  },
+  {
+    "id": 7677,
+    "name": "Focus Makeshift Spellcaster's Empowering Essence",
+    "level": 20
+  },
+  {
+    "id": 7689,
+    "name": "Focus Mass Crude Spellcaster's Empowering Essence",
+    "level": 20
+  },
+  {
+    "id": 7687,
+    "name": "Focus Mass Primitive Spellcaster's Empowering Essence",
+    "level": 20
+  },
+  {
+    "id": 7688,
+    "name": "Focus Mass Rudimentary Spellcaster's Empowering Essence",
+    "level": 20
+  },
+  {
+    "id": 2418,
+    "name": "Grimling Gate",
+    "level": 20
+  },
+  {
+    "id": 27749,
+    "name": "Primary Anchor Gate",
+    "level": 20
+  },
+  {
+    "id": 27753,
+    "name": "Secondary Anchor Gate",
+    "level": 20
+  },
+  {
+    "id": 10880,
+    "name": "Translocate Blightfire Moors",
+    "level": 20
+  },
+  {
+    "id": 544,
+    "name": "Common Gate",
+    "level": 21
+  },
+  {
+    "id": 387,
+    "name": "Leatherskin",
+    "level": 21
+  },
+  {
+    "id": 3795,
+    "name": "Stonebrunt Gate",
+    "level": 21
+  },
+  {
+    "id": 261,
+    "name": "Levitate",
+    "level": 22
+  },
+  {
+    "id": 545,
+    "name": "Nek Gate",
+    "level": 22
+  },
+  {
+    "id": 547,
+    "name": "Ro Gate",
+    "level": 22
+  },
+  {
+    "id": 2423,
+    "name": "Twilight Gate",
+    "level": 22
+  },
+  {
+    "id": 546,
+    "name": "Cazic Gate",
+    "level": 23
+  },
+  {
+    "id": 467,
+    "name": "Lightning Storm",
+    "level": 23
+  },
+  {
+    "id": 65,
+    "name": "Major Shielding",
+    "level": 23
+  },
+  {
+    "id": 548,
+    "name": "West Gate",
+    "level": 23
+  },
+  {
+    "id": 4253,
+    "name": "Xalirilan's Appraisal",
+    "level": 23
+  },
+  {
+    "id": 461,
+    "name": "Cast Force",
+    "level": 24
+  },
+  {
+    "id": 462,
+    "name": "Column of Lightning",
+    "level": 24
+  },
+  {
+    "id": 1325,
+    "name": "Combine Gate",
+    "level": 24
+  },
+  {
+    "id": 7690,
+    "name": "Focus Mass Makeshift Spellcaster's Empowering Essence",
+    "level": 24
+  },
+  {
+    "id": 464,
+    "name": "Frost Shock",
+    "level": 24
+  },
+  {
+    "id": 4265,
+    "name": "Xalirilan's Discombobulation",
+    "level": 24
+  },
+  {
+    "id": 4277,
+    "name": "Xalirilan's Extrication",
+    "level": 24
+  },
+  {
+    "id": 2553,
+    "name": "Minor Familiar",
+    "level": 25
+  },
+  {
+    "id": 562,
+    "name": "North Portal",
+    "level": 25
+  },
+  {
+    "id": 3581,
+    "name": "O'Keil's Levity",
+    "level": 25
+  },
+  {
+    "id": 528,
+    "name": "Yonder",
+    "level": 25
+  },
+  {
+    "id": 468,
+    "name": "Energy Storm",
+    "level": 26
+  },
+  {
+    "id": 602,
+    "name": "Evacuate North",
+    "level": 26
+  },
+  {
+    "id": 1899,
+    "name": "Imbue Fire Opal",
+    "level": 26
+  },
+  {
+    "id": 465,
+    "name": "Inferno Shock",
+    "level": 26
+  },
+  {
+    "id": 636,
+    "name": "Bonds of Force",
+    "level": 27
+  },
+  {
+    "id": 563,
+    "name": "Fay Portal",
+    "level": 27
+  },
+  {
+    "id": 3183,
+    "name": "Knowledge Gate",
+    "level": 27
+  },
+  {
+    "id": 3793,
+    "name": "Stonebrunt Portal",
+    "level": 27
+  },
+  {
+    "id": 3999,
+    "name": "Mass Imbue Fire Opal",
+    "level": 28
+  },
+  {
+    "id": 459,
+    "name": "Shock Spiral of Al'Kabor",
+    "level": 28
+  },
+  {
+    "id": 470,
+    "name": "Thunder Strike",
+    "level": 28
+  },
+  {
+    "id": 561,
+    "name": "Tox Portal",
+    "level": 28
+  },
+  {
+    "id": 2428,
+    "name": "Dawnshroud Gate",
+    "level": 29
+  },
+  {
+    "id": 2420,
+    "name": "Grimling Portal",
+    "level": 29
+  },
+  {
+    "id": 579,
+    "name": "Magnify",
+    "level": 29
+  },
+  {
+    "id": 2944,
+    "name": "Nexus Portal",
+    "level": 29
+  },
+  {
+    "id": 7678,
+    "name": "Focus Elementary Spellcaster's Empowering Essence",
+    "level": 30
+  },
+  {
+    "id": 393,
+    "name": "Steelskin",
+    "level": 30
+  },
+  {
+    "id": 471,
+    "name": "Thunderclap",
+    "level": 30
+  },
+  {
+    "id": 463,
+    "name": "Circle of Force",
+    "level": 31
+  },
+  {
+    "id": 1419,
+    "name": "O'Keil's Flickering Flame",
+    "level": 31
+  },
+  {
+    "id": 603,
+    "name": "Evacuate Fay",
+    "level": 32
+  },
+  {
+    "id": 1744,
+    "name": "Harvest",
+    "level": 32
+  },
+  {
+    "id": 1417,
+    "name": "Iceclad Gate",
+    "level": 32
+  },
+  {
+    "id": 469,
+    "name": "Lava Storm",
+    "level": 32
+  },
+  {
+    "id": 564,
+    "name": "Nek Portal",
+    "level": 32
+  },
+  {
+    "id": 565,
+    "name": "Cazic Portal",
+    "level": 33
+  },
+  {
+    "id": 66,
+    "name": "Greater Shielding",
+    "level": 33
+  },
+  {
+    "id": 1418,
+    "name": "Iceclad Portal",
+    "level": 33
+  },
+  {
+    "id": 2425,
+    "name": "Twilight Portal",
+    "level": 33
+  },
+  {
+    "id": 4254,
+    "name": "Xalirilan's Greater Appraisal",
+    "level": 33
+  },
+  {
+    "id": 1516,
+    "name": "Combine Portal",
+    "level": 34
+  },
+  {
+    "id": 7691,
+    "name": "Focus Mass Elementary Spellcaster's Empowering Essence",
+    "level": 34
+  },
+  {
+    "id": 2026,
+    "name": "Great Divide Gate",
+    "level": 34
+  },
+  {
+    "id": 658,
+    "name": "Ice Shock",
+    "level": 34
+  },
+  {
+    "id": 49,
+    "name": "Nullify Magic",
+    "level": 34
+  },
+  {
+    "id": 4266,
+    "name": "Xalirilan's Greater Discombobulation",
+    "level": 34
+  },
+  {
+    "id": 4278,
+    "name": "Xalirilan's Greater Extrication",
+    "level": 34
+  },
+  {
+    "id": 566,
+    "name": "Common Portal",
+    "level": 35
+  },
+  {
+    "id": 2554,
+    "name": "Elnerick's Entombment of Ice",
+    "level": 35
+  },
+  {
+    "id": 460,
+    "name": "Force Spiral of Al'Kabor",
+    "level": 35
+  },
+  {
+    "id": 27751,
+    "name": "Primary Anchor Portal",
+    "level": 35
+  },
+  {
+    "id": 27755,
+    "name": "Secondary Anchor Portal",
+    "level": 35
+  },
+  {
+    "id": 1338,
+    "name": "Translocate North",
+    "level": 35
+  },
+  {
+    "id": 3833,
+    "name": "Translocate Stonebrunt",
+    "level": 35
+  },
+  {
+    "id": 1423,
+    "name": "Great Divide Portal",
+    "level": 36
+  },
+  {
+    "id": 567,
+    "name": "Ro Portal",
+    "level": 36
+  },
+  {
+    "id": 1738,
+    "name": "Tishan's Relocation",
+    "level": 36
+  },
+  {
+    "id": 1336,
+    "name": "Translocate Fay",
+    "level": 36
+  },
+  {
+    "id": 2943,
+    "name": "Translocate Nexus",
+    "level": 36
+  },
+  {
+    "id": 752,
+    "name": "Concussion",
+    "level": 37
+  },
+  {
+    "id": 466,
+    "name": "Lightning Shock",
+    "level": 37
+  },
+  {
+    "id": 1739,
+    "name": "Markar's Relocation",
+    "level": 37
+  },
+  {
+    "id": 1337,
+    "name": "Translocate Tox",
+    "level": 37
+  },
+  {
+    "id": 568,
+    "name": "West Portal",
+    "level": 37
+  },
+  {
+    "id": 539,
+    "name": "Chill Sight",
+    "level": 38
+  },
+  {
+    "id": 604,
+    "name": "Evacuate Ro",
+    "level": 38
+  },
+  {
+    "id": 3180,
+    "name": "Knowledge Portal",
+    "level": 38
+  },
+  {
+    "id": 84,
+    "name": "Shifting Sight",
+    "level": 38
+  },
+  {
+    "id": 1339,
+    "name": "Translocate Combine",
+    "level": 38
+  },
+  {
+    "id": 2027,
+    "name": "Wakening Lands Gate",
+    "level": 38
+  },
+  {
+    "id": 2028,
+    "name": "Cobalt Scar Gate",
+    "level": 39
+  },
+  {
+    "id": 2430,
+    "name": "Dawnshroud Portal",
+    "level": 39
+  },
+  {
+    "id": 132,
+    "name": "Immobilize",
+    "level": 39
+  },
+  {
+    "id": 1420,
+    "name": "Invisibility to Undead",
+    "level": 39
+  },
+  {
+    "id": 2421,
+    "name": "Translocate Grimling",
+    "level": 39
+  },
+  {
+    "id": 394,
+    "name": "Diamondskin",
+    "level": 40
+  },
+  {
+    "id": 7679,
+    "name": "Focus Modest Spellcaster's Empowering Essence",
+    "level": 40
+  },
+  {
+    "id": 27757,
+    "name": "Primary Anchor Push",
+    "level": 40
+  },
+  {
+    "id": 27758,
+    "name": "Secondary Anchor Push",
+    "level": 40
+  },
+  {
+    "id": 1372,
+    "name": "Translocate Common",
+    "level": 40
+  },
+  {
+    "id": 27750,
+    "name": "Translocate Primary Anchor",
+    "level": 40
+  },
+  {
+    "id": 27754,
+    "name": "Translocate Secondary Anchor",
+    "level": 40
+  },
+  {
+    "id": 3811,
+    "name": "Vision Shift",
+    "level": 40
+  },
+  {
+    "id": 23,
+    "name": "Force Strike",
+    "level": 41
+  },
+  {
+    "id": 660,
+    "name": "Frost Storm",
+    "level": 41
+  },
+  {
+    "id": 1371,
+    "name": "Translocate Nek",
+    "level": 41
+  },
+  {
+    "id": 2426,
+    "name": "Translocate Twilight",
+    "level": 41
+  },
+  {
+    "id": 109,
+    "name": "Elemental Armor",
+    "level": 42
+  },
+  {
+    "id": 605,
+    "name": "Evacuate Nek",
+    "level": 42
+  },
+  {
+    "id": 53123,
+    "name": "Greater Mass Imbue Fire Opal",
+    "level": 42
+  },
+  {
+    "id": 1374,
+    "name": "Translocate West",
+    "level": 42
+  },
+  {
+    "id": 1399,
+    "name": "Wakening Lands Portal",
+    "level": 42
+  },
+  {
+    "id": 1425,
+    "name": "Cobalt Scar Portal",
+    "level": 43
+  },
+  {
+    "id": 659,
+    "name": "Conflagration",
+    "level": 43
+  },
+  {
+    "id": 73,
+    "name": "Gravity Flux",
+    "level": 43
+  },
+  {
+    "id": 1373,
+    "name": "Translocate Ro",
+    "level": 43
+  },
+  {
+    "id": 67,
+    "name": "Arch Shielding",
+    "level": 44
+  },
+  {
+    "id": 4099,
+    "name": "Bounce",
+    "level": 44
+  },
+  {
+    "id": 1421,
+    "name": "Enticement of Flame",
+    "level": 44
+  },
+  {
+    "id": 7692,
+    "name": "Focus Mass Modest Spellcaster's Empowering Essence",
+    "level": 44
+  },
+  {
+    "id": 1375,
+    "name": "Translocate Cazic",
+    "level": 44
+  },
+  {
+    "id": 2555,
+    "name": "Lesser Familiar",
+    "level": 45
+  },
+  {
+    "id": 733,
+    "name": "Supernova",
+    "level": 45
+  },
+  {
+    "id": 2022,
+    "name": "Translocate Iceclad",
+    "level": 45
+  },
+  {
+    "id": 3181,
+    "name": "Translocate Knowledge",
+    "level": 45
+  },
+  {
+    "id": 666,
+    "name": "Alter Plane Hate",
+    "level": 46
+  },
+  {
+    "id": 674,
+    "name": "Alter Plane Sky",
+    "level": 46
+  },
+  {
+    "id": 2023,
+    "name": "Translocate Great Divide",
+    "level": 46
+  },
+  {
+    "id": 606,
+    "name": "Evacuate West",
+    "level": 47
+  },
+  {
+    "id": 612,
+    "name": "Markar's Clash",
+    "level": 47
+  },
+  {
+    "id": 755,
+    "name": "Rend",
+    "level": 47
+  },
+  {
+    "id": 2024,
+    "name": "Translocate Wakening Lands",
+    "level": 47
+  },
+  {
+    "id": 133,
+    "name": "Paralyzing Earth",
+    "level": 48
+  },
+  {
+    "id": 2025,
+    "name": "Translocate Cobalt Scar",
+    "level": 48
+  },
+  {
+    "id": 731,
+    "name": "Wrath of Al'Kabor",
+    "level": 48
+  },
+  {
+    "id": 732,
+    "name": "Ice Comet",
+    "level": 49
+  },
+  {
+    "id": 2431,
+    "name": "Translocate Dawnshroud",
+    "level": 49
+  },
+  {
+    "id": 4067,
+    "name": "Ward of Calrena",
+    "level": 49
+  },
+  {
+    "id": 7680,
+    "name": "Focus Simple Spellcaster's Empowering Essence",
+    "level": 50
+  },
+  {
+    "id": 2894,
+    "name": "Levitation",
+    "level": 50
+  },
+  {
+    "id": 1422,
+    "name": "Translocate",
+    "level": 50
+  },
+  {
+    "id": 8968,
+    "name": "Arcstone Gate",
+    "level": 51
+  },
+  {
+    "id": 8966,
+    "name": "Arcstone Portal",
+    "level": 51
+  },
+  {
+    "id": 1631,
+    "name": "Atol's Spectral Shackles",
+    "level": 51
+  },
+  {
+    "id": 1637,
+    "name": "Draught of Fire",
+    "level": 51
+  },
+  {
+    "id": 1646,
+    "name": "Pillar of Frost",
+    "level": 51
+  },
+  {
+    "id": 1634,
+    "name": "Tishan's Discord",
+    "level": 51
+  },
+  {
+    "id": 53150,
+    "name": "Tranquility Gate",
+    "level": 51
+  },
+  {
+    "id": 8238,
+    "name": "Undershore Gate",
+    "level": 51
+  },
+  {
+    "id": 8236,
+    "name": "Undershore Portal",
+    "level": 51
+  },
+  {
+    "id": 1627,
+    "name": "Abscond",
+    "level": 52
+  },
+  {
+    "id": 5734,
+    "name": "Barindu Gate",
+    "level": 52
+  },
+  {
+    "id": 3706,
+    "name": "Frozen Harpoon",
+    "level": 52
+  },
+  {
+    "id": 1642,
+    "name": "Lure of Frost",
+    "level": 52
+  },
+  {
+    "id": 1609,
+    "name": "Manaskin",
+    "level": 52
+  },
+  {
+    "id": 4963,
+    "name": "Natimbi Gate",
+    "level": 52
+  },
+  {
+    "id": 1649,
+    "name": "Tears of Druzzil",
+    "level": 52
+  },
+  {
+    "id": 1334,
+    "name": "Translocate Group",
+    "level": 52
+  },
+  {
+    "id": 1526,
+    "name": "Annul Magic",
+    "level": 53
+  },
+  {
+    "id": 6181,
+    "name": "Bloodfields Gate",
+    "level": 53
+  },
+  {
+    "id": 1650,
+    "name": "Inferno of Al'Kabor",
+    "level": 53
+  },
+  {
+    "id": 1653,
+    "name": "Jyll's Static Pulse",
+    "level": 53
+  },
+  {
+    "id": 3582,
+    "name": "Elemental Cloak",
+    "level": 54
+  },
+  {
+    "id": 2557,
+    "name": "Familiar",
+    "level": 54
+  },
+  {
+    "id": 7693,
+    "name": "Focus Mass Simple Spellcaster's Empowering Essence",
+    "level": 54
+  },
+  {
+    "id": 4070,
+    "name": "Magi Ward",
+    "level": 54
+  },
+  {
+    "id": 4965,
+    "name": "Natimbi Portal",
+    "level": 54
+  },
+  {
+    "id": 1645,
+    "name": "Pillar of Lightning",
+    "level": 54
+  },
+  {
+    "id": 1610,
+    "name": "Shield of the Magi",
+    "level": 54
+  },
+  {
+    "id": 1656,
+    "name": "Thunderbolt",
+    "level": 54
+  },
+  {
+    "id": 53151,
+    "name": "Tranquility Portal",
+    "level": 54
+  },
+  {
+    "id": 1639,
+    "name": "Voltaic Draught",
+    "level": 54
+  },
+  {
+    "id": 5732,
+    "name": "Barindu Portal",
+    "level": 55
+  },
+  {
+    "id": 6183,
+    "name": "Bloodfields Portal",
+    "level": 55
+  },
+  {
+    "id": 1643,
+    "name": "Draught of Jiva",
+    "level": 55
+  },
+  {
+    "id": 8932,
+    "name": "Fire Mark",
+    "level": 55
+  },
+  {
+    "id": 7681,
+    "name": "Focus Spellcaster's Empowering Essence",
+    "level": 55
+  },
+  {
+    "id": 1406,
+    "name": "Improved Invisibility",
+    "level": 55
+  },
+  {
+    "id": 1638,
+    "name": "Lure of Flame",
+    "level": 55
+  },
+  {
+    "id": 1632,
+    "name": "Plainsight",
+    "level": 55
+  },
+  {
+    "id": 1648,
+    "name": "Tears of Solusek",
+    "level": 55
+  },
+  {
+    "id": 8969,
+    "name": "Translocate Arcstone",
+    "level": 55
+  },
+  {
+    "id": 8239,
+    "name": "Translocate Undershore",
+    "level": 55
+  },
+  {
+    "id": 2558,
+    "name": "Decession",
+    "level": 56
+  },
+  {
+    "id": 1654,
+    "name": "Jyll's Zephyr of Ice",
+    "level": 56
+  },
+  {
+    "id": 1635,
+    "name": "Markar's Discord",
+    "level": 56
+  },
+  {
+    "id": 1651,
+    "name": "Retribution of Al'Kabor",
+    "level": 56
+  },
+  {
+    "id": 1641,
+    "name": "Draught of Ice",
+    "level": 57
+  },
+  {
+    "id": 1628,
+    "name": "Evacuate",
+    "level": 57
+  },
+  {
+    "id": 1720,
+    "name": "Eye of Tallon",
+    "level": 57
+  },
+  {
+    "id": 4068,
+    "name": "Guard of Calrena",
+    "level": 57
+  },
+  {
+    "id": 1644,
+    "name": "Pillar of Flame",
+    "level": 57
+  },
+  {
+    "id": 4964,
+    "name": "Translocate Natimbi",
+    "level": 57
+  },
+  {
+    "id": 53152,
+    "name": "Translocate Tranquility",
+    "level": 57
+  },
+  {
+    "id": 1633,
+    "name": "Fetter",
+    "level": 58
+  },
+  {
+    "id": 1640,
+    "name": "Lure of Lightning",
+    "level": 58
+  },
+  {
+    "id": 1728,
+    "name": "Manasink",
+    "level": 58
+  },
+  {
+    "id": 4100,
+    "name": "Reflect",
+    "level": 58
+  },
+  {
+    "id": 2559,
+    "name": "Spellshield",
+    "level": 58
+  },
+  {
+    "id": 1647,
+    "name": "Tears of Prexus",
+    "level": 58
+  },
+  {
+    "id": 6182,
+    "name": "Translocate Bloodfields",
+    "level": 58
+  },
+  {
+    "id": 1722,
+    "name": "Flaming Sword of Xuzl",
+    "level": 59
+  },
+  {
+    "id": 7694,
+    "name": "Focus Mass Spellcaster's Empowering Essence",
+    "level": 59
+  },
+  {
+    "id": 1636,
+    "name": "Invert Gravity",
+    "level": 59
+  },
+  {
+    "id": 1655,
+    "name": "Jyll's Wave of Heat",
+    "level": 59
+  },
+  {
+    "id": 1652,
+    "name": "Vengeance of Al'Kabor",
+    "level": 59
+  },
+  {
+    "id": 2116,
+    "name": "Ancient Destruction of Ice",
+    "level": 60
+  },
+  {
+    "id": 2117,
+    "name": "Ancient Greater Concussion",
+    "level": 60
+  },
+  {
+    "id": 1724,
+    "name": "Disintegrate",
+    "level": 60
+  },
+  {
+    "id": 2883,
+    "name": "Elnerick's Electrical Rending",
+    "level": 60
+  },
+  {
+    "id": 7682,
+    "name": "Focus Refined Spellcaster's Empowering Essence",
+    "level": 60
+  },
+  {
+    "id": 2884,
+    "name": "Garrison's Superior Sundering",
+    "level": 60
+  },
+  {
+    "id": 2560,
+    "name": "Greater Familiar",
+    "level": 60
+  },
+  {
+    "id": 1311,
+    "name": "Hsagra's Wrath",
+    "level": 60
+  },
+  {
+    "id": 1426,
+    "name": "Ice Spear of Solist",
+    "level": 60
+  },
+  {
+    "id": 1769,
+    "name": "Lure of Ice",
+    "level": 60
+  },
+  {
+    "id": 1310,
+    "name": "Porlos' Fury",
+    "level": 60
+  },
+  {
+    "id": 10879,
+    "name": "Sunderock Springs Gate",
+    "level": 60
+  },
+  {
+    "id": 10878,
+    "name": "Sunderock Springs Portal",
+    "level": 60
+  },
+  {
+    "id": 1658,
+    "name": "Sunstrike",
+    "level": 60
+  },
+  {
+    "id": 33099,
+    "name": "Teleport Guild Hall Anchor",
+    "level": 60
+  },
+  {
+    "id": 27752,
+    "name": "Teleport Primary Anchor",
+    "level": 60
+  },
+  {
+    "id": 27756,
+    "name": "Teleport Secondary Anchor",
+    "level": 60
+  },
+  {
+    "id": 5735,
+    "name": "Translocate Barindu",
+    "level": 60
+  },
+  {
+    "id": 10877,
+    "name": "Translocate Sunderock Springs",
+    "level": 60
+  },
+  {
+    "id": 1657,
+    "name": "Winds of Gelid",
+    "level": 60
+  },
+  {
+    "id": 6737,
+    "name": "Claw of Frost",
+    "level": 61
+  },
+  {
+    "id": 3194,
+    "name": "Greater Fetter",
+    "level": 61
+  },
+  {
+    "id": 3328,
+    "name": "Lure of Thunder",
+    "level": 61
+  },
+  {
+    "id": 3326,
+    "name": "Resistant Armor",
+    "level": 61
+  },
+  {
+    "id": 3300,
+    "name": "Shield of the Arcane",
+    "level": 61
+  },
+  {
+    "id": 3327,
+    "name": "Tears of Ro",
+    "level": 61
+  },
+  {
+    "id": 3330,
+    "name": "Draught of Ro",
+    "level": 62
+  },
+  {
+    "id": 3329,
+    "name": "Elemental Barrier",
+    "level": 62
+  },
+  {
+    "id": 3331,
+    "name": "Lure of Ro",
+    "level": 62
+  },
+  {
+    "id": 6176,
+    "name": "Slaughter Gate",
+    "level": 62
+  },
+  {
+    "id": 3243,
+    "name": "Teleport",
+    "level": 62
+  },
+  {
+    "id": 3335,
+    "name": "Agnarr's Thunder",
+    "level": 63
+  },
+  {
+    "id": 3976,
+    "name": "Draught of Lightning",
+    "level": 63
+  },
+  {
+    "id": 3334,
+    "name": "Draught of Thunder",
+    "level": 63
+  },
+  {
+    "id": 3301,
+    "name": "Force Shield",
+    "level": 63
+  },
+  {
+    "id": 3337,
+    "name": "Iceflame of E'ci",
+    "level": 63
+  },
+  {
+    "id": 4071,
+    "name": "Mana Ward",
+    "level": 63
+  },
+  {
+    "id": 3336,
+    "name": "Draught of E'ci",
+    "level": 64
+  },
+  {
+    "id": 7695,
+    "name": "Focus Mass Refined Spellcaster's Empowering Essence",
+    "level": 64
+  },
+  {
+    "id": 4066,
+    "name": "Ice Meteor",
+    "level": 64
+  },
+  {
+    "id": 11985,
+    "name": "Katta Castrum Gate",
+    "level": 64
+  },
+  {
+    "id": 4069,
+    "name": "Protection of Calrena",
+    "level": 64
+  },
+  {
+    "id": 3302,
+    "name": "Shield of Maelin",
+    "level": 64
+  },
+  {
+    "id": 6178,
+    "name": "Slaughter Portal",
+    "level": 64
+  },
+  {
+    "id": 3189,
+    "name": "Tears of Arlyxir",
+    "level": 64
+  },
+  {
+    "id": 3333,
+    "name": "Telekin",
+    "level": 64
+  },
+  {
+    "id": 4981,
+    "name": "Ancient Strike of Chaos",
+    "level": 65
+  },
+  {
+    "id": 4905,
+    "name": "Black Ice",
+    "level": 65
+  },
+  {
+    "id": 7683,
+    "name": "Focus Intricate Spellcaster's Empowering Essence",
+    "level": 65
+  },
+  {
+    "id": 3244,
+    "name": "Greater Decession",
+    "level": 65
+  },
+  {
+    "id": 3191,
+    "name": "Shock of Magic",
+    "level": 65
+  },
+  {
+    "id": 3339,
+    "name": "Strike of Solusek",
+    "level": 65
+  },
+  {
+    "id": 3332,
+    "name": "Tears of Marr",
+    "level": 65
+  },
+  {
+    "id": 4907,
+    "name": "Telaka",
+    "level": 65
+  },
+  {
+    "id": 4906,
+    "name": "White Fire",
+    "level": 65
+  },
+  {
+    "id": 5443,
+    "name": "Ether Shield",
+    "level": 66
+  },
+  {
+    "id": 5442,
+    "name": "Icebane",
+    "level": 66
+  },
+  {
+    "id": 5446,
+    "name": "Spark of Fire",
+    "level": 66
+  },
+  {
+    "id": 5444,
+    "name": "Tears of the Sun",
+    "level": 66
+  },
+  {
+    "id": 5455,
+    "name": "Circle of Fire",
+    "level": 67
+  },
+  {
+    "id": 5445,
+    "name": "Lightningbane",
+    "level": 67
+  },
+  {
+    "id": 6120,
+    "name": "Phase Walk",
+    "level": 67
+  },
+  {
+    "id": 6177,
+    "name": "Translocate Slaughter",
+    "level": 67
+  },
+  {
+    "id": 8041,
+    "name": "Clinging Frost",
+    "level": 68
+  },
+  {
+    "id": 5448,
+    "name": "Ether Skin",
+    "level": 68
+  },
+  {
+    "id": 5447,
+    "name": "Firebane",
+    "level": 68
+  },
+  {
+    "id": 5452,
+    "name": "Spark of Lightning",
+    "level": 68
+  },
+  {
+    "id": 5449,
+    "name": "Spark of Thunder",
+    "level": 68
+  },
+  {
+    "id": 5450,
+    "name": "Thundaka",
+    "level": 68
+  },
+  {
+    "id": 6669,
+    "name": "Claw of Vox",
+    "level": 69
+  },
+  {
+    "id": 5453,
+    "name": "Ether Ward",
+    "level": 69
+  },
+  {
+    "id": 7696,
+    "name": "Focus Mass Intricate Spellcaster's Empowering Essence",
+    "level": 69
+  },
+  {
+    "id": 5458,
+    "name": "Gelidin Comet",
+    "level": 69
+  },
+  {
+    "id": 11984,
+    "name": "Katta Castrum Portal",
+    "level": 69
+  },
+  {
+    "id": 8044,
+    "name": "Mana Weave",
+    "level": 69
+  },
+  {
+    "id": 5454,
+    "name": "Meteor Storm",
+    "level": 69
+  },
+  {
+    "id": 5460,
+    "name": "Solist's Frozen Sword",
+    "level": 69
+  },
+  {
+    "id": 5457,
+    "name": "Spark of Ice",
+    "level": 69
+  },
+  {
+    "id": 5463,
+    "name": "Ancient Core Fire",
+    "level": 70
+  },
+  {
+    "id": 6146,
+    "name": "Ancient Spear of Gelaqua",
+    "level": 70
+  },
+  {
+    "id": 5459,
+    "name": "Bulwark of Calrena",
+    "level": 70
+  },
+  {
+    "id": 8512,
+    "name": "Chaos Flame",
+    "level": 70
+  },
+  {
+    "id": 5451,
+    "name": "Circle of Thunder",
+    "level": 70
+  },
+  {
+    "id": 5462,
+    "name": "Corona Flare",
+    "level": 70
+  },
+  {
+    "id": 8043,
+    "name": "Ether Flame",
+    "level": 70
+  },
+  {
+    "id": 8513,
+    "name": "Fire Rune",
+    "level": 70
+  },
+  {
+    "id": 7684,
+    "name": "Focus Elaborate Spellcaster's Empowering Essence",
+    "level": 70
+  },
+  {
+    "id": 5461,
+    "name": "Gelid Rains",
+    "level": 70
+  },
+  {
+    "id": 8511,
+    "name": "Ice Block",
+    "level": 70
+  },
+  {
+    "id": 10876,
+    "name": "Icefall Glacier Gate",
+    "level": 70
+  },
+  {
+    "id": 10875,
+    "name": "Icefall Glacier Portal",
+    "level": 70
+  },
+  {
+    "id": 5456,
+    "name": "Telekara",
+    "level": 70
+  },
+  {
+    "id": 10874,
+    "name": "Translocate Icefall Glacier",
+    "level": 70
+  }
+]

@@ -93,11 +93,21 @@ namespace ConfigEditor.Views
             int.TryParse(MaxLevelText?.Text ?? "70", out var maxL);
             var minLevel = minL > 0 ? (int?)minL : null;
             var maxLevel = maxL > 0 ? (int?)maxL : null;
-            var list = classChoice.Equals("Shaman", System.StringComparison.OrdinalIgnoreCase)
-                ? _spells.FilterByLevel(_spells.GetShamanSpells(), minLevel, maxLevel)
-                : _spells.FilterByLevel(_spells.GetClericSpells(), minLevel, maxLevel);
+            
+            // Get spells based on selected class
+            var list = classChoice.ToLowerInvariant() switch
+            {
+                "shaman" => _spells.FilterByLevel(_spells.GetShamanSpells(), minLevel, maxLevel),
+                "druid" => _spells.FilterByLevel(_spells.GetDruidSpells(), minLevel, maxLevel),
+                "enchanter" => _spells.FilterByLevel(_spells.GetEnchanterSpells(), minLevel, maxLevel),
+                "magician" => _spells.FilterByLevel(_spells.GetMagicianSpells(), minLevel, maxLevel),
+                "necromancer" => _spells.FilterByLevel(_spells.GetNecromancerSpells(), minLevel, maxLevel),
+                "ranger" => _spells.FilterByLevel(_spells.GetRangerSpells(), minLevel, maxLevel),
+                "wizard" => _spells.FilterByLevel(_spells.GetWizardSpells(), minLevel, maxLevel),
+                _ => _spells.FilterByLevel(_spells.GetClericSpells(), minLevel, maxLevel) // Default to Cleric
+            };
+            
             SpellNameCombo.ItemsSource = list;
-            // Don't set DisplayMemberPath here as it's already set in XAML
             
             // If we have a pending spell selection, select it now
             if (!string.IsNullOrEmpty(_pendingSpellSelection))

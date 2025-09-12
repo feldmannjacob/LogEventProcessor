@@ -1,0 +1,1947 @@
+[
+  {
+    "id": 53225,
+    "name": "Illusion Akheva",
+    "level": 1
+  },
+  {
+    "id": 40770,
+    "name": "Illusion Ancient Sarnak Warrior",
+    "level": 1
+  },
+  {
+    "id": 47284,
+    "name": "Illusion Ancient Yeti",
+    "level": 1
+  },
+  {
+    "id": 37504,
+    "name": "Illusion Aqua Goblin",
+    "level": 1
+  },
+  {
+    "id": 27719,
+    "name": "Illusion Arcane Scrykin",
+    "level": 1
+  },
+  {
+    "id": 47285,
+    "name": "Illusion Armored Kunark Goblin",
+    "level": 1
+  },
+  {
+    "id": 37793,
+    "name": "Illusion Armored Shiliskin",
+    "level": 1
+  },
+  {
+    "id": 27722,
+    "name": "Illusion Aviak Rook",
+    "level": 1
+  },
+  {
+    "id": 27717,
+    "name": "Illusion Banshee",
+    "level": 1
+  },
+  {
+    "id": 27735,
+    "name": "Illusion Banshee",
+    "level": 1
+  },
+  {
+    "id": 27732,
+    "name": "Illusion Barraki",
+    "level": 1
+  },
+  {
+    "id": 27712,
+    "name": "Illusion Bixie Drone",
+    "level": 1
+  },
+  {
+    "id": 582,
+    "name": "Illusion Human",
+    "level": 2
+  },
+  {
+    "id": 681,
+    "name": "Juli's Animation",
+    "level": 2
+  },
+  {
+    "id": 292,
+    "name": "Mesmerize",
+    "level": 2
+  },
+  {
+    "id": 676,
+    "name": "Tashina",
+    "level": 2
+  },
+  {
+    "id": 290,
+    "name": "Color Flux",
+    "level": 3
+  },
+  {
+    "id": 229,
+    "name": "Fear",
+    "level": 3
+  },
+  {
+    "id": 293,
+    "name": "Haze",
+    "level": 3
+  },
+  {
+    "id": 583,
+    "name": "Illusion Half-Elf",
+    "level": 3
+  },
+  {
+    "id": 291,
+    "name": "Enfeeblement",
+    "level": 4
+  },
+  {
+    "id": 36,
+    "name": "Gate",
+    "level": 4
+  },
+  {
+    "id": 42,
+    "name": "Invisibility",
+    "level": 4
+  },
+  {
+    "id": 294,
+    "name": "Suffocating Sphere",
+    "level": 4
+  },
+  {
+    "id": 297,
+    "name": "Eye of Confusion",
+    "level": 5
+  },
+  {
+    "id": 588,
+    "name": "Illusion Wood Elf",
+    "level": 5
+  },
+  {
+    "id": 299,
+    "name": "Sentinel",
+    "level": 5
+  },
+  {
+    "id": 246,
+    "name": "Lesser Shielding",
+    "level": 6
+  },
+  {
+    "id": 230,
+    "name": "Root",
+    "level": 6
+  },
+  {
+    "id": 80,
+    "name": "See Invisible",
+    "level": 6
+  },
+  {
+    "id": 501,
+    "name": "Soothe",
+    "level": 6
+  },
+  {
+    "id": 48,
+    "name": "Cancel Magic",
+    "level": 7
+  },
+  {
+    "id": 296,
+    "name": "Chaotic Feedback",
+    "level": 7
+  },
+  {
+    "id": 667,
+    "name": "Enchant Silver",
+    "level": 7
+  },
+  {
+    "id": 3991,
+    "name": "Mass Enchant Silver",
+    "level": 7
+  },
+  {
+    "id": 295,
+    "name": "Mircyl's Animation",
+    "level": 7
+  },
+  {
+    "id": 298,
+    "name": "Alliance",
+    "level": 8
+  },
+  {
+    "id": 500,
+    "name": "Bind Sight",
+    "level": 8
+  },
+  {
+    "id": 1359,
+    "name": "Enchant Clay",
+    "level": 8
+  },
+  {
+    "id": 595,
+    "name": "Illusion Gnome",
+    "level": 8
+  },
+  {
+    "id": 3986,
+    "name": "Mass Enchant Clay",
+    "level": 8
+  },
+  {
+    "id": 645,
+    "name": "Ebbing Strength",
+    "level": 9
+  },
+  {
+    "id": 682,
+    "name": "Kilan's Animation",
+    "level": 9
+  },
+  {
+    "id": 302,
+    "name": "Languid Pace",
+    "level": 9
+  },
+  {
+    "id": 303,
+    "name": "Whirl Till You Hurl",
+    "level": 9
+  },
+  {
+    "id": 12337,
+    "name": "Illusion Burning Nekhon",
+    "level": 10
+  },
+  {
+    "id": 590,
+    "name": "Illusion Dark Elf",
+    "level": 10
+  },
+  {
+    "id": 12402,
+    "name": "Illusion Kedge",
+    "level": 10
+  },
+  {
+    "id": 12335,
+    "name": "Illusion Simple Gnoll",
+    "level": 10
+  },
+  {
+    "id": 12401,
+    "name": "Illusion Steam Suit",
+    "level": 10
+  },
+  {
+    "id": 301,
+    "name": "Memory Blur",
+    "level": 10
+  },
+  {
+    "id": 650,
+    "name": "Mist",
+    "level": 10
+  },
+  {
+    "id": 276,
+    "name": "Serpent Sight",
+    "level": 10
+  },
+  {
+    "id": 300,
+    "name": "Charm",
+    "level": 11
+  },
+  {
+    "id": 521,
+    "name": "Choke",
+    "level": 11
+  },
+  {
+    "id": 7988,
+    "name": "Greater Mass Enchant Silver",
+    "level": 11
+  },
+  {
+    "id": 589,
+    "name": "Illusion High Elf",
+    "level": 11
+  },
+  {
+    "id": 2561,
+    "name": "Intellectual Advancement",
+    "level": 11
+  },
+  {
+    "id": 4010,
+    "name": "Mass Thicken Mana",
+    "level": 11
+  },
+  {
+    "id": 390,
+    "name": "Thicken Mana",
+    "level": 11
+  },
+  {
+    "id": 35,
+    "name": "Bind Affinity",
+    "level": 12
+  },
+  {
+    "id": 86,
+    "name": "Enduring Breath",
+    "level": 12
+  },
+  {
+    "id": 53115,
+    "name": "Greater Mass Enchant Clay",
+    "level": 12
+  },
+  {
+    "id": 587,
+    "name": "Illusion Erudite",
+    "level": 12
+  },
+  {
+    "id": 594,
+    "name": "Illusion Halfling",
+    "level": 12
+  },
+  {
+    "id": 187,
+    "name": "Enthrall",
+    "level": 13
+  },
+  {
+    "id": 591,
+    "name": "Illusion Dwarf",
+    "level": 13
+  },
+  {
+    "id": 481,
+    "name": "Rune I",
+    "level": 13
+  },
+  {
+    "id": 4255,
+    "name": "Wuggan's Lesser Appraisal",
+    "level": 13
+  },
+  {
+    "id": 697,
+    "name": "Breeze",
+    "level": 14
+  },
+  {
+    "id": 668,
+    "name": "Enchant Electrum",
+    "level": 14
+  },
+  {
+    "id": 235,
+    "name": "Invisibility Versus Undead",
+    "level": 14
+  },
+  {
+    "id": 3987,
+    "name": "Mass Enchant Electrum",
+    "level": 14
+  },
+  {
+    "id": 683,
+    "name": "Shalee's Animation",
+    "level": 14
+  },
+  {
+    "id": 4267,
+    "name": "Wuggan's Lesser Discombobulation",
+    "level": 14
+  },
+  {
+    "id": 4279,
+    "name": "Wuggan's Lesser Extrication",
+    "level": 14
+  },
+  {
+    "id": 305,
+    "name": "Identify",
+    "level": 15
+  },
+  {
+    "id": 586,
+    "name": "Illusion Barbarian",
+    "level": 15
+  },
+  {
+    "id": 601,
+    "name": "Illusion Tree",
+    "level": 15
+  },
+  {
+    "id": 261,
+    "name": "Levitate",
+    "level": 15
+  },
+  {
+    "id": 39,
+    "name": "Quickness",
+    "level": 15
+  },
+  {
+    "id": 304,
+    "name": "Chase the Moon",
+    "level": 16
+  },
+  {
+    "id": 281,
+    "name": "Disempower",
+    "level": 16
+  },
+  {
+    "id": 7676,
+    "name": "Focus Crude Spellcaster's Empowering Essence",
+    "level": 16
+  },
+  {
+    "id": 7677,
+    "name": "Focus Makeshift Spellcaster's Empowering Essence",
+    "level": 16
+  },
+  {
+    "id": 7674,
+    "name": "Focus Primitive Spellcaster's Empowering Essence",
+    "level": 16
+  },
+  {
+    "id": 7675,
+    "name": "Focus Rudimentary Spellcaster's Empowering Essence",
+    "level": 16
+  },
+  {
+    "id": 307,
+    "name": "Mesmerization",
+    "level": 16
+  },
+  {
+    "id": 306,
+    "name": "Sanity Warp",
+    "level": 16
+  },
+  {
+    "id": 309,
+    "name": "Shielding",
+    "level": 16
+  },
+  {
+    "id": 651,
+    "name": "Cloud",
+    "level": 17
+  },
+  {
+    "id": 228,
+    "name": "Endure Magic",
+    "level": 17
+  },
+  {
+    "id": 53134,
+    "name": "Greater Mass Thicken Mana",
+    "level": 17
+  },
+  {
+    "id": 593,
+    "name": "Illusion Ogre",
+    "level": 17
+  },
+  {
+    "id": 2562,
+    "name": "Intellectual Superiority",
+    "level": 17
+  },
+  {
+    "id": 684,
+    "name": "Sisna's Animation",
+    "level": 17
+  },
+  {
+    "id": 47,
+    "name": "Calm",
+    "level": 18
+  },
+  {
+    "id": 592,
+    "name": "Illusion Troll",
+    "level": 18
+  },
+  {
+    "id": 489,
+    "name": "Sympathetic Aura",
+    "level": 18
+  },
+  {
+    "id": 677,
+    "name": "Tashani",
+    "level": 18
+  },
+  {
+    "id": 21,
+    "name": "Berserker Strength",
+    "level": 19
+  },
+  {
+    "id": 439,
+    "name": "Crystallize Mana",
+    "level": 19
+  },
+  {
+    "id": 179,
+    "name": "Feckless Might",
+    "level": 19
+  },
+  {
+    "id": 7985,
+    "name": "Greater Mass Enchant Electrum",
+    "level": 19
+  },
+  {
+    "id": 3583,
+    "name": "Tiny Companion",
+    "level": 19
+  },
+  {
+    "id": 173,
+    "name": "Benevolence",
+    "level": 20
+  },
+  {
+    "id": 177,
+    "name": "Color Shift",
+    "level": 20
+  },
+  {
+    "id": 7689,
+    "name": "Focus Mass Crude Spellcaster's Empowering Essence",
+    "level": 20
+  },
+  {
+    "id": 7690,
+    "name": "Focus Mass Makeshift Spellcaster's Empowering Essence",
+    "level": 20
+  },
+  {
+    "id": 7687,
+    "name": "Focus Mass Primitive Spellcaster's Empowering Essence",
+    "level": 20
+  },
+  {
+    "id": 7688,
+    "name": "Focus Mass Rudimentary Spellcaster's Empowering Essence",
+    "level": 20
+  },
+  {
+    "id": 243,
+    "name": "Illusion Iksar",
+    "level": 20
+  },
+  {
+    "id": 3982,
+    "name": "Mass Crystallize Mana",
+    "level": 20
+  },
+  {
+    "id": 84,
+    "name": "Shifting Sight",
+    "level": 20
+  },
+  {
+    "id": 170,
+    "name": "Alacrity",
+    "level": 21
+  },
+  {
+    "id": 350,
+    "name": "Chaos Flux",
+    "level": 21
+  },
+  {
+    "id": 584,
+    "name": "Illusion Earth Elemental",
+    "level": 21
+  },
+  {
+    "id": 482,
+    "name": "Rune II",
+    "level": 22
+  },
+  {
+    "id": 685,
+    "name": "Sagar's Animation",
+    "level": 22
+  },
+  {
+    "id": 24,
+    "name": "Strip Enchantment",
+    "level": 22
+  },
+  {
+    "id": 182,
+    "name": "Beguile",
+    "level": 23
+  },
+  {
+    "id": 65,
+    "name": "Major Shielding",
+    "level": 23
+  },
+  {
+    "id": 185,
+    "name": "Tepid Deeds",
+    "level": 23
+  },
+  {
+    "id": 4256,
+    "name": "Wuggan's Appraisal",
+    "level": 23
+  },
+  {
+    "id": 669,
+    "name": "Enchant Gold",
+    "level": 24
+  },
+  {
+    "id": 581,
+    "name": "Illusion Skeleton",
+    "level": 24
+  },
+  {
+    "id": 3988,
+    "name": "Mass Enchant Gold",
+    "level": 24
+  },
+  {
+    "id": 4268,
+    "name": "Wuggan's Discombobulation",
+    "level": 24
+  },
+  {
+    "id": 4280,
+    "name": "Wuggan's Extrication",
+    "level": 24
+  },
+  {
+    "id": 191,
+    "name": "Feedback",
+    "level": 25
+  },
+  {
+    "id": 7678,
+    "name": "Focus Elementary Spellcaster's Empowering Essence",
+    "level": 25
+  },
+  {
+    "id": 131,
+    "name": "Instill",
+    "level": 25
+  },
+  {
+    "id": 162,
+    "name": "Listless Power",
+    "level": 25
+  },
+  {
+    "id": 174,
+    "name": "Clarity",
+    "level": 26
+  },
+  {
+    "id": 408,
+    "name": "Curse of the Simple Mind",
+    "level": 26
+  },
+  {
+    "id": 2563,
+    "name": "Haunting Visage",
+    "level": 26
+  },
+  {
+    "id": 450,
+    "name": "Suffocate",
+    "level": 26
+  },
+  {
+    "id": 540,
+    "name": "Clarify Mana",
+    "level": 27
+  },
+  {
+    "id": 652,
+    "name": "Obscure",
+    "level": 27
+  },
+  {
+    "id": 46,
+    "name": "Ultravision",
+    "level": 27
+  },
+  {
+    "id": 10,
+    "name": "Augmentation",
+    "level": 28
+  },
+  {
+    "id": 619,
+    "name": "Dyn's Dizzying Draught",
+    "level": 28
+  },
+  {
+    "id": 7986,
+    "name": "Greater Mass Enchant Gold",
+    "level": 28
+  },
+  {
+    "id": 599,
+    "name": "Illusion Water Elemental",
+    "level": 28
+  },
+  {
+    "id": 49,
+    "name": "Nullify Magic",
+    "level": 28
+  },
+  {
+    "id": 7691,
+    "name": "Focus Mass Elementary Spellcaster's Empowering Essence",
+    "level": 29
+  },
+  {
+    "id": 597,
+    "name": "Illusion Air Elemental",
+    "level": 29
+  },
+  {
+    "id": 3981,
+    "name": "Mass Clarify Mana",
+    "level": 29
+  },
+  {
+    "id": 686,
+    "name": "Uleen's Animation",
+    "level": 29
+  },
+  {
+    "id": 4073,
+    "name": "Ward of Alendar",
+    "level": 29
+  },
+  {
+    "id": 188,
+    "name": "Entrance",
+    "level": 30
+  },
+  {
+    "id": 3585,
+    "name": "Entrancing Lights",
+    "level": 30
+  },
+  {
+    "id": 53111,
+    "name": "Greater Mass Crystallize Mana",
+    "level": 30
+  },
+  {
+    "id": 10605,
+    "name": "Illusion Drakkin of Draton'ra",
+    "level": 30
+  },
+  {
+    "id": 10606,
+    "name": "Illusion Drakkin of Osh'vir",
+    "level": 30
+  },
+  {
+    "id": 10607,
+    "name": "Illusion Drakkin of Venesh",
+    "level": 30
+  },
+  {
+    "id": 74,
+    "name": "Mana Sieve",
+    "level": 30
+  },
+  {
+    "id": 687,
+    "name": "Boltran's Animation",
+    "level": 31
+  },
+  {
+    "id": 66,
+    "name": "Greater Shielding",
+    "level": 31
+  },
+  {
+    "id": 646,
+    "name": "Radiant Visage",
+    "level": 31
+  },
+  {
+    "id": 71,
+    "name": "Anarchy",
+    "level": 32
+  },
+  {
+    "id": 407,
+    "name": "Cast Sight",
+    "level": 32
+  },
+  {
+    "id": 670,
+    "name": "Enchant Platinum",
+    "level": 32
+  },
+  {
+    "id": 3990,
+    "name": "Mass Enchant Platinum",
+    "level": 32
+  },
+  {
+    "id": 598,
+    "name": "Illusion Fire Elemental",
+    "level": 33
+  },
+  {
+    "id": 483,
+    "name": "Rune III",
+    "level": 33
+  },
+  {
+    "id": 4257,
+    "name": "Wuggan's Greater Appraisal",
+    "level": 33
+  },
+  {
+    "id": 1408,
+    "name": "Gift of Magic",
+    "level": 34
+  },
+  {
+    "id": 180,
+    "name": "Insipid Weakness",
+    "level": 34
+  },
+  {
+    "id": 4269,
+    "name": "Wuggan's Greater Discombobulation",
+    "level": 34
+  },
+  {
+    "id": 4281,
+    "name": "Wuggan's Greater Extrication",
+    "level": 34
+  },
+  {
+    "id": 7679,
+    "name": "Focus Modest Spellcaster's Empowering Essence",
+    "level": 35
+  },
+  {
+    "id": 175,
+    "name": "Insight",
+    "level": 35
+  },
+  {
+    "id": 127,
+    "name": "Invoke Fear",
+    "level": 35
+  },
+  {
+    "id": 45,
+    "name": "Pacify",
+    "level": 35
+  },
+  {
+    "id": 2564,
+    "name": "Calming Visage",
+    "level": 36
+  },
+  {
+    "id": 73,
+    "name": "Gravity Flux",
+    "level": 36
+  },
+  {
+    "id": 192,
+    "name": "Mind Wipe",
+    "level": 36
+  },
+  {
+    "id": 688,
+    "name": "Aanya's Animation",
+    "level": 37
+  },
+  {
+    "id": 183,
+    "name": "Cajoling Whispers",
+    "level": 37
+  },
+  {
+    "id": 596,
+    "name": "Illusion Dry Bone",
+    "level": 37
+  },
+  {
+    "id": 64,
+    "name": "Resist Magic",
+    "level": 37
+  },
+  {
+    "id": 653,
+    "name": "Shade",
+    "level": 37
+  },
+  {
+    "id": 695,
+    "name": "Distill Mana",
+    "level": 38
+  },
+  {
+    "id": 7987,
+    "name": "Greater Mass Enchant Platinum",
+    "level": 38
+  },
+  {
+    "id": 600,
+    "name": "Illusion Spirit Wolf",
+    "level": 38
+  },
+  {
+    "id": 648,
+    "name": "Rampage",
+    "level": 38
+  },
+  {
+    "id": 1407,
+    "name": "Wandering Mind",
+    "level": 38
+  },
+  {
+    "id": 171,
+    "name": "Celerity",
+    "level": 39
+  },
+  {
+    "id": 7692,
+    "name": "Focus Mass Modest Spellcaster's Empowering Essence",
+    "level": 39
+  },
+  {
+    "id": 132,
+    "name": "Immobilize",
+    "level": 39
+  },
+  {
+    "id": 3983,
+    "name": "Mass Distill Mana",
+    "level": 39
+  },
+  {
+    "id": 67,
+    "name": "Arch Shielding",
+    "level": 40
+  },
+  {
+    "id": 1474,
+    "name": "Boon of the Garou",
+    "level": 40
+  },
+  {
+    "id": 163,
+    "name": "Incapacitate",
+    "level": 40
+  },
+  {
+    "id": 484,
+    "name": "Rune IV",
+    "level": 40
+  },
+  {
+    "id": 33,
+    "name": "Brilliance",
+    "level": 41
+  },
+  {
+    "id": 186,
+    "name": "Shiftless Deeds",
+    "level": 41
+  },
+  {
+    "id": 678,
+    "name": "Tashania",
+    "level": 41
+  },
+  {
+    "id": 689,
+    "name": "Yegoreff's Animation",
+    "level": 41
+  },
+  {
+    "id": 1694,
+    "name": "Boon of the Clear Mind",
+    "level": 42
+  },
+  {
+    "id": 585,
+    "name": "Illusion Werewolf",
+    "level": 42
+  },
+  {
+    "id": 25,
+    "name": "Pillage Enchantment",
+    "level": 42
+  },
+  {
+    "id": 181,
+    "name": "Weakness",
+    "level": 42
+  },
+  {
+    "id": 4099,
+    "name": "Bounce",
+    "level": 43
+  },
+  {
+    "id": 178,
+    "name": "Color Skew",
+    "level": 43
+  },
+  {
+    "id": 673,
+    "name": "Discordant Mind",
+    "level": 43
+  },
+  {
+    "id": 1797,
+    "name": "Enchant Velium",
+    "level": 43
+  },
+  {
+    "id": 1285,
+    "name": "Summon Companion",
+    "level": 43
+  },
+  {
+    "id": 53110,
+    "name": "Greater Mass Clarify Mana",
+    "level": 44
+  },
+  {
+    "id": 7989,
+    "name": "Greater Mass Enchant Velium",
+    "level": 44
+  },
+  {
+    "id": 4074,
+    "name": "Guard of Alendar",
+    "level": 44
+  },
+  {
+    "id": 3586,
+    "name": "Illusion Scaled Wolf",
+    "level": 44
+  },
+  {
+    "id": 3696,
+    "name": "Leviathan Eyes",
+    "level": 44
+  },
+  {
+    "id": 3993,
+    "name": "Mass Enchant Velium",
+    "level": 44
+  },
+  {
+    "id": 7680,
+    "name": "Focus Simple Spellcaster's Empowering Essence",
+    "level": 45
+  },
+  {
+    "id": 2565,
+    "name": "Illusion Imp",
+    "level": 45
+  },
+  {
+    "id": 133,
+    "name": "Paralyzing Earth",
+    "level": 45
+  },
+  {
+    "id": 696,
+    "name": "Purify Mana",
+    "level": 45
+  },
+  {
+    "id": 194,
+    "name": "Reoccurring Amnesia",
+    "level": 45
+  },
+  {
+    "id": 647,
+    "name": "Adorning Grace",
+    "level": 46
+  },
+  {
+    "id": 184,
+    "name": "Allure",
+    "level": 46
+  },
+  {
+    "id": 193,
+    "name": "Blanket of Forgetfulness",
+    "level": 46
+  },
+  {
+    "id": 1892,
+    "name": "Enchant Steel",
+    "level": 46
+  },
+  {
+    "id": 176,
+    "name": "Berserker Spirit",
+    "level": 47
+  },
+  {
+    "id": 190,
+    "name": "Dazzle",
+    "level": 47
+  },
+  {
+    "id": 195,
+    "name": "Gasping Embrace",
+    "level": 47
+  },
+  {
+    "id": 4009,
+    "name": "Mass Purify Mana",
+    "level": 47
+  },
+  {
+    "id": 172,
+    "name": "Swift Like the Wind",
+    "level": 47
+  },
+  {
+    "id": 1890,
+    "name": "Enchant Adamantite",
+    "level": 48
+  },
+  {
+    "id": 1889,
+    "name": "Enchant Mithril",
+    "level": 48
+  },
+  {
+    "id": 72,
+    "name": "Group Resist Magic",
+    "level": 48
+  },
+  {
+    "id": 690,
+    "name": "Kintaz's Animation",
+    "level": 48
+  },
+  {
+    "id": 654,
+    "name": "Shadow",
+    "level": 48
+  },
+  {
+    "id": 1893,
+    "name": "Enchant Brellium",
+    "level": 49
+  },
+  {
+    "id": 7693,
+    "name": "Focus Mass Simple Spellcaster's Empowering Essence",
+    "level": 49
+  },
+  {
+    "id": 3984,
+    "name": "Mass Enchant Adamantite",
+    "level": 49
+  },
+  {
+    "id": 3985,
+    "name": "Mass Enchant Brellium",
+    "level": 49
+  },
+  {
+    "id": 3989,
+    "name": "Mass Enchant Mithril",
+    "level": 49
+  },
+  {
+    "id": 3992,
+    "name": "Mass Enchant Steel",
+    "level": 49
+  },
+  {
+    "id": 1687,
+    "name": "Collaboration",
+    "level": 50
+  },
+  {
+    "id": 7681,
+    "name": "Focus Spellcaster's Empowering Essence",
+    "level": 50
+  },
+  {
+    "id": 1406,
+    "name": "Improved Invisibility",
+    "level": 50
+  },
+  {
+    "id": 1686,
+    "name": "Theft of Thought",
+    "level": 50
+  },
+  {
+    "id": 2881,
+    "name": "Everlasting Breath",
+    "level": 51
+  },
+  {
+    "id": 2894,
+    "name": "Levitation",
+    "level": 51
+  },
+  {
+    "id": 1541,
+    "name": "Wake of Tranquility",
+    "level": 51
+  },
+  {
+    "id": 1693,
+    "name": "Clarity II",
+    "level": 52
+  },
+  {
+    "id": 1696,
+    "name": "Color Slant",
+    "level": 52
+  },
+  {
+    "id": 1690,
+    "name": "Fascination",
+    "level": 52
+  },
+  {
+    "id": 4017,
+    "name": "Illusion Guktan",
+    "level": 52
+  },
+  {
+    "id": 4077,
+    "name": "Ordinance",
+    "level": 52
+  },
+  {
+    "id": 1689,
+    "name": "Rune V",
+    "level": 52
+  },
+  {
+    "id": 3697,
+    "name": "Scryer's Trespass",
+    "level": 52
+  },
+  {
+    "id": 2566,
+    "name": "Trickster's Augmentation",
+    "level": 52
+  },
+  {
+    "id": 1708,
+    "name": "Aanya's Quickening",
+    "level": 53
+  },
+  {
+    "id": 1705,
+    "name": "Boltran's Agacerie",
+    "level": 53
+  },
+  {
+    "id": 1592,
+    "name": "Cripple",
+    "level": 53
+  },
+  {
+    "id": 1697,
+    "name": "Recant Magic",
+    "level": 53
+  },
+  {
+    "id": 2567,
+    "name": "Beguiling Visage",
+    "level": 54
+  },
+  {
+    "id": 1698,
+    "name": "Dementia",
+    "level": 54
+  },
+  {
+    "id": 7694,
+    "name": "Focus Mass Spellcaster's Empowering Essence",
+    "level": 54
+  },
+  {
+    "id": 1691,
+    "name": "Glamour of Kintaz",
+    "level": 54
+  },
+  {
+    "id": 8036,
+    "name": "Illusion Orc",
+    "level": 54
+  },
+  {
+    "id": 2826,
+    "name": "Illusion Vah Shir",
+    "level": 54
+  },
+  {
+    "id": 1610,
+    "name": "Shield of the Magi",
+    "level": 54
+  },
+  {
+    "id": 8931,
+    "name": "Beguiler's Aura",
+    "level": 55
+  },
+  {
+    "id": 7682,
+    "name": "Focus Refined Spellcaster's Empowering Essence",
+    "level": 55
+  },
+  {
+    "id": 1409,
+    "name": "Gift of Insight",
+    "level": 55
+  },
+  {
+    "id": 4418,
+    "name": "Illusion Frost Bone",
+    "level": 55
+  },
+  {
+    "id": 1715,
+    "name": "Largarn's Lamentation",
+    "level": 55
+  },
+  {
+    "id": 1714,
+    "name": "Memory Flux",
+    "level": 55
+  },
+  {
+    "id": 4075,
+    "name": "Protection of Alendar",
+    "level": 55
+  },
+  {
+    "id": 1699,
+    "name": "Wind of Tashani",
+    "level": 55
+  },
+  {
+    "id": 1723,
+    "name": "Zumaik's Animation",
+    "level": 55
+  },
+  {
+    "id": 1729,
+    "name": "Augment",
+    "level": 56
+  },
+  {
+    "id": 1695,
+    "name": "Gift of Pure Thought",
+    "level": 56
+  },
+  {
+    "id": 2568,
+    "name": "Horrifying Visage",
+    "level": 56
+  },
+  {
+    "id": 3591,
+    "name": "Imbue Disease",
+    "level": 56
+  },
+  {
+    "id": 3595,
+    "name": "Imbue Justice",
+    "level": 56
+  },
+  {
+    "id": 1701,
+    "name": "Overwhelming Splendor",
+    "level": 56
+  },
+  {
+    "id": 1700,
+    "name": "Torment of Argli",
+    "level": 56
+  },
+  {
+    "id": 1527,
+    "name": "Trepidation",
+    "level": 56
+  },
+  {
+    "id": 1688,
+    "name": "Enlightenment",
+    "level": 57
+  },
+  {
+    "id": 1712,
+    "name": "Forlorn Deeds",
+    "level": 57
+  },
+  {
+    "id": 3352,
+    "name": "Imbue Earth",
+    "level": 57
+  },
+  {
+    "id": 3344,
+    "name": "Imbue Nightmare",
+    "level": 57
+  },
+  {
+    "id": 3346,
+    "name": "Imbue Storm",
+    "level": 57
+  },
+  {
+    "id": 3594,
+    "name": "Imbue Torment",
+    "level": 57
+  },
+  {
+    "id": 6983,
+    "name": "Phobia",
+    "level": 57
+  },
+  {
+    "id": 1702,
+    "name": "Tashanian",
+    "level": 57
+  },
+  {
+    "id": 1711,
+    "name": "Umbra",
+    "level": 57
+  },
+  {
+    "id": 1713,
+    "name": "Bedlam",
+    "level": 58
+  },
+  {
+    "id": 2016,
+    "name": "Dementing Visions",
+    "level": 58
+  },
+  {
+    "id": 1633,
+    "name": "Fetter",
+    "level": 58
+  },
+  {
+    "id": 2569,
+    "name": "Glamorous Visage",
+    "level": 58
+  },
+  {
+    "id": 3592,
+    "name": "Imbue Valor",
+    "level": 58
+  },
+  {
+    "id": 3593,
+    "name": "Imbue War",
+    "level": 58
+  },
+  {
+    "id": 4100,
+    "name": "Reflect",
+    "level": 58
+  },
+  {
+    "id": 1709,
+    "name": "Wondrous Rapidity",
+    "level": 58
+  },
+  {
+    "id": 1703,
+    "name": "Asphyxiate",
+    "level": 59
+  },
+  {
+    "id": 7695,
+    "name": "Focus Mass Refined Spellcaster's Empowering Essence",
+    "level": 59
+  },
+  {
+    "id": 53112,
+    "name": "Greater Mass Distill Mana",
+    "level": 59
+  },
+  {
+    "id": 3353,
+    "name": "Imbue Air",
+    "level": 59
+  },
+  {
+    "id": 1692,
+    "name": "Rapture",
+    "level": 59
+  },
+  {
+    "id": 2121,
+    "name": "Ancient Chaotic Visions",
+    "level": 60
+  },
+  {
+    "id": 2120,
+    "name": "Ancient Eternal Rapture",
+    "level": 60
+  },
+  {
+    "id": 1707,
+    "name": "Dictate",
+    "level": 60
+  },
+  {
+    "id": 7683,
+    "name": "Focus Intricate Spellcaster's Empowering Essence",
+    "level": 60
+  },
+  {
+    "id": 1410,
+    "name": "Gift of Brilliance",
+    "level": 60
+  },
+  {
+    "id": 3356,
+    "name": "Imbue Fire",
+    "level": 60
+  },
+  {
+    "id": 3357,
+    "name": "Imbue Water",
+    "level": 60
+  },
+  {
+    "id": 2570,
+    "name": "Koadic's Endless Intellect",
+    "level": 60
+  },
+  {
+    "id": 2895,
+    "name": "Speed of the Brood",
+    "level": 60
+  },
+  {
+    "id": 1710,
+    "name": "Visions of Grandeur",
+    "level": 60
+  },
+  {
+    "id": 1704,
+    "name": "Wind of Tashanian",
+    "level": 60
+  },
+  {
+    "id": 3341,
+    "name": "Apathy",
+    "level": 61
+  },
+  {
+    "id": 3199,
+    "name": "Arcane Rune",
+    "level": 61
+  },
+  {
+    "id": 3229,
+    "name": "Boggle",
+    "level": 61
+  },
+  {
+    "id": 3194,
+    "name": "Greater Fetter",
+    "level": 61
+  },
+  {
+    "id": 3342,
+    "name": "Howl of Tashan",
+    "level": 61
+  },
+  {
+    "id": 6739,
+    "name": "Rune of the Scale",
+    "level": 61
+  },
+  {
+    "id": 3343,
+    "name": "Rune of Zebuxoruk",
+    "level": 61
+  },
+  {
+    "id": 3300,
+    "name": "Shield of the Arcane",
+    "level": 61
+  },
+  {
+    "id": 3034,
+    "name": "Aeldorb's Animation",
+    "level": 62
+  },
+  {
+    "id": 3347,
+    "name": "Beckon",
+    "level": 62
+  },
+  {
+    "id": 3242,
+    "name": "Guard of Druzzil",
+    "level": 62
+  },
+  {
+    "id": 6984,
+    "name": "Jitterskin",
+    "level": 62
+  },
+  {
+    "id": 3197,
+    "name": "Pacification",
+    "level": 62
+  },
+  {
+    "id": 3240,
+    "name": "Speed of Vallon",
+    "level": 62
+  },
+  {
+    "id": 3345,
+    "name": "Strangle",
+    "level": 62
+  },
+  {
+    "id": 3359,
+    "name": "Word of Morell",
+    "level": 62
+  },
+  {
+    "id": 4076,
+    "name": "Bulwark of Alendar",
+    "level": 63
+  },
+  {
+    "id": 4408,
+    "name": "Color Cloud",
+    "level": 63
+  },
+  {
+    "id": 3241,
+    "name": "Night's Dark Terror",
+    "level": 63
+  },
+  {
+    "id": 3354,
+    "name": "Sleep",
+    "level": 63
+  },
+  {
+    "id": 3348,
+    "name": "Torment of Scio",
+    "level": 63
+  },
+  {
+    "id": 3350,
+    "name": "Tranquility",
+    "level": 63
+  },
+  {
+    "id": 3351,
+    "name": "Uproar",
+    "level": 63
+  },
+  {
+    "id": 3358,
+    "name": "Bliss",
+    "level": 64
+  },
+  {
+    "id": 3355,
+    "name": "Command of Druzzil",
+    "level": 64
+  },
+  {
+    "id": 7696,
+    "name": "Focus Mass Intricate Spellcaster's Empowering Essence",
+    "level": 64
+  },
+  {
+    "id": 3349,
+    "name": "Insanity",
+    "level": 64
+  },
+  {
+    "id": 3302,
+    "name": "Shield of Maelin",
+    "level": 64
+  },
+  {
+    "id": 4975,
+    "name": "Ancient Chaos Madness",
+    "level": 65
+  },
+  {
+    "id": 4878,
+    "name": "Bliss of the Nihil",
+    "level": 65
+  },
+  {
+    "id": 4877,
+    "name": "Dreary Deeds",
+    "level": 65
+  },
+  {
+    "id": 7684,
+    "name": "Focus Elaborate Spellcaster's Empowering Essence",
+    "level": 65
+  },
+  {
+    "id": 3063,
+    "name": "Illusion Froglok",
+    "level": 65
+  },
+  {
+    "id": 27733,
+    "name": "Illusion Kunark Goblin",
+    "level": 65
+  },
+  {
+    "id": 4879,
+    "name": "Madness of Ikkibi",
+    "level": 65
+  },
+  {
+    "id": 3178,
+    "name": "Vallon's Quickening",
+    "level": 65
+  },
+  {
+    "id": 3360,
+    "name": "Voice of Quellious",
+    "level": 65
+  },
+  {
+    "id": 5500,
+    "name": "Ethereal Rune",
+    "level": 66
+  },
+  {
+    "id": 5502,
+    "name": "Mystic Shield",
+    "level": 66
+  },
+  {
+    "id": 5505,
+    "name": "Salik's Animation",
+    "level": 66
+  },
+  {
+    "id": 6122,
+    "name": "Suppression Field",
+    "level": 66
+  },
+  {
+    "id": 5499,
+    "name": "Synapsis Spasm",
+    "level": 66
+  },
+  {
+    "id": 6985,
+    "name": "Anxiety Attack",
+    "level": 67
+  },
+  {
+    "id": 5503,
+    "name": "Felicity",
+    "level": 67
+  },
+  {
+    "id": 5506,
+    "name": "Placate",
+    "level": 67
+  },
+  {
+    "id": 5504,
+    "name": "Rune of Salik",
+    "level": 67
+  },
+  {
+    "id": 5507,
+    "name": "Speed of Salik",
+    "level": 67
+  },
+  {
+    "id": 7003,
+    "name": "Circle of Dreams",
+    "level": 68
+  },
+  {
+    "id": 5513,
+    "name": "Clairvoyance",
+    "level": 68
+  },
+  {
+    "id": 5510,
+    "name": "Compel",
+    "level": 68
+  },
+  {
+    "id": 8035,
+    "name": "Echoing Madness",
+    "level": 68
+  },
+  {
+    "id": 5518,
+    "name": "Psychosis",
+    "level": 68
+  },
+  {
+    "id": 5515,
+    "name": "Wall of Alendar",
+    "level": 68
+  },
+  {
+    "id": 5509,
+    "name": "Arcane Noose",
+    "level": 69
+  },
+  {
+    "id": 5516,
+    "name": "Color Snap",
+    "level": 69
+  },
+  {
+    "id": 8034,
+    "name": "Colored Chaos",
+    "level": 69
+  },
+  {
+    "id": 6826,
+    "name": "Desolate Deeds",
+    "level": 69
+  },
+  {
+    "id": 5520,
+    "name": "Euphoria",
+    "level": 69
+  },
+  {
+    "id": 7697,
+    "name": "Focus Mass Elaborate Spellcaster's Empowering Essence",
+    "level": 69
+  },
+  {
+    "id": 5514,
+    "name": "Mayhem",
+    "level": 69
+  },
+  {
+    "id": 6671,
+    "name": "Rune of Rikkukin",
+    "level": 69
+  },
+  {
+    "id": 5511,
+    "name": "Wake of Felicity",
+    "level": 69
+  },
+  {
+    "id": 5523,
+    "name": "Ancient Neurosis",
+    "level": 70
+  },
+  {
+    "id": 6144,
+    "name": "Ancient Voice of Muram",
+    "level": 70
+  },
+  {
+    "id": 5517,
+    "name": "Circle of Alendar",
+    "level": 70
+  },
+  {
+    "id": 7685,
+    "name": "Focus Ornate Spellcaster's Empowering Essence",
+    "level": 70
+  },
+  {
+    "id": 5521,
+    "name": "Hastening of Salik",
+    "level": 70
+  },
+  {
+    "id": 8509,
+    "name": "Illusionist's Aura",
+    "level": 70
+  },
+  {
+    "id": 8032,
+    "name": "Mana Flare",
+    "level": 70
+  },
+  {
+    "id": 8508,
+    "name": "Mind Shatter",
+    "level": 70
+  },
+  {
+    "id": 5519,
+    "name": "True Name",
+    "level": 70
+  },
+  {
+    "id": 5522,
+    "name": "Voice of Clairvoyance",
+    "level": 70
+  },
+  {
+    "id": 8506,
+    "name": "Ward of Bedazzlement",
+    "level": 70
+  }
+]

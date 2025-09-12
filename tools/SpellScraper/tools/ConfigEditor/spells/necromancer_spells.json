@@ -1,0 +1,1542 @@
+[
+  {
+    "id": 338,
+    "name": "Cavorting Bones",
+    "level": 1
+  },
+  {
+    "id": 339,
+    "name": "Coldlight",
+    "level": 1
+  },
+  {
+    "id": 340,
+    "name": "Disease Cloud",
+    "level": 1
+  },
+  {
+    "id": 235,
+    "name": "Invisibility Versus Undead",
+    "level": 1
+  },
+  {
+    "id": 341,
+    "name": "Lifetap",
+    "level": 1
+  },
+  {
+    "id": 342,
+    "name": "Locate Corpse",
+    "level": 1
+  },
+  {
+    "id": 288,
+    "name": "Minor Shielding",
+    "level": 1
+  },
+  {
+    "id": 331,
+    "name": "Reclaim Energy",
+    "level": 1
+  },
+  {
+    "id": 221,
+    "name": "Sense the Dead",
+    "level": 1
+  },
+  {
+    "id": 343,
+    "name": "Siphon Strength",
+    "level": 1
+  },
+  {
+    "id": 229,
+    "name": "Fear",
+    "level": 2
+  },
+  {
+    "id": 347,
+    "name": "Numb the Dead",
+    "level": 2
+  },
+  {
+    "id": 205,
+    "name": "True North",
+    "level": 2
+  },
+  {
+    "id": 225,
+    "name": "Endure Cold",
+    "level": 3
+  },
+  {
+    "id": 346,
+    "name": "Grim Aura",
+    "level": 3
+  },
+  {
+    "id": 502,
+    "name": "Lifespike",
+    "level": 3
+  },
+  {
+    "id": 344,
+    "name": "Clinging Darkness",
+    "level": 4
+  },
+  {
+    "id": 36,
+    "name": "Gate",
+    "level": 4
+  },
+  {
+    "id": 491,
+    "name": "Leering Corpse",
+    "level": 4
+  },
+  {
+    "id": 348,
+    "name": "Poison Bolt",
+    "level": 4
+  },
+  {
+    "id": 352,
+    "name": "Deadeye",
+    "level": 5
+  },
+  {
+    "id": 354,
+    "name": "Shadow Step",
+    "level": 5
+  },
+  {
+    "id": 357,
+    "name": "Dark Empathy",
+    "level": 6
+  },
+  {
+    "id": 641,
+    "name": "Dark Pact",
+    "level": 6
+  },
+  {
+    "id": 218,
+    "name": "Ward Undead",
+    "level": 6
+  },
+  {
+    "id": 522,
+    "name": "Gather Shadows",
+    "level": 7
+  },
+  {
+    "id": 353,
+    "name": "Mend Bones",
+    "level": 7
+  },
+  {
+    "id": 359,
+    "name": "Vampiric Embrace",
+    "level": 7
+  },
+  {
+    "id": 351,
+    "name": "Bone Walk",
+    "level": 8
+  },
+  {
+    "id": 358,
+    "name": "Impart Strength",
+    "level": 8
+  },
+  {
+    "id": 246,
+    "name": "Lesser Shielding",
+    "level": 8
+  },
+  {
+    "id": 1509,
+    "name": "Leech",
+    "level": 9
+  },
+  {
+    "id": 361,
+    "name": "Sight Graft",
+    "level": 9
+  },
+  {
+    "id": 363,
+    "name": "Wave of Enfeeblement",
+    "level": 9
+  },
+  {
+    "id": 360,
+    "name": "Heat Blood",
+    "level": 10
+  },
+  {
+    "id": 1511,
+    "name": "Scent of Dusk",
+    "level": 10
+  },
+  {
+    "id": 209,
+    "name": "Spook the Dead",
+    "level": 10
+  },
+  {
+    "id": 226,
+    "name": "Endure Disease",
+    "level": 11
+  },
+  {
+    "id": 355,
+    "name": "Engulfing Darkness",
+    "level": 11
+  },
+  {
+    "id": 2541,
+    "name": "Focus Death",
+    "level": 11
+  },
+  {
+    "id": 35,
+    "name": "Bind Affinity",
+    "level": 12
+  },
+  {
+    "id": 362,
+    "name": "Convoke Shadow",
+    "level": 12
+  },
+  {
+    "id": 2213,
+    "name": "Lesser Summon Corpse",
+    "level": 12
+  },
+  {
+    "id": 445,
+    "name": "Lifedraw",
+    "level": 12
+  },
+  {
+    "id": 213,
+    "name": "Cure Disease",
+    "level": 13
+  },
+  {
+    "id": 367,
+    "name": "Heart Flutter",
+    "level": 13
+  },
+  {
+    "id": 4273,
+    "name": "Reebo's Lesser Exorcism",
+    "level": 13
+  },
+  {
+    "id": 4255,
+    "name": "Wuggan's Lesser Appraisal",
+    "level": 13
+  },
+  {
+    "id": 4261,
+    "name": "Reebo's Lesser Augury",
+    "level": 14
+  },
+  {
+    "id": 4285,
+    "name": "Reebo's Lesser Cleansing",
+    "level": 14
+  },
+  {
+    "id": 236,
+    "name": "Shieldskin",
+    "level": 14
+  },
+  {
+    "id": 4267,
+    "name": "Wuggan's Lesser Discombobulation",
+    "level": 14
+  },
+  {
+    "id": 4279,
+    "name": "Wuggan's Lesser Extrication",
+    "level": 14
+  },
+  {
+    "id": 364,
+    "name": "Banshee Aura",
+    "level": 15
+  },
+  {
+    "id": 48,
+    "name": "Cancel Magic",
+    "level": 15
+  },
+  {
+    "id": 365,
+    "name": "Infectious Cloud",
+    "level": 15
+  },
+  {
+    "id": 371,
+    "name": "Voice Graft",
+    "level": 15
+  },
+  {
+    "id": 366,
+    "name": "Feign Death",
+    "level": 16
+  },
+  {
+    "id": 7676,
+    "name": "Focus Crude Spellcaster's Empowering Essence",
+    "level": 16
+  },
+  {
+    "id": 7674,
+    "name": "Focus Primitive Spellcaster's Empowering Essence",
+    "level": 16
+  },
+  {
+    "id": 7675,
+    "name": "Focus Rudimentary Spellcaster's Empowering Essence",
+    "level": 16
+  },
+  {
+    "id": 9987,
+    "name": "Form of Chilled Bone",
+    "level": 16
+  },
+  {
+    "id": 369,
+    "name": "Hungry Earth",
+    "level": 16
+  },
+  {
+    "id": 492,
+    "name": "Restless Bones",
+    "level": 16
+  },
+  {
+    "id": 309,
+    "name": "Shielding",
+    "level": 16
+  },
+  {
+    "id": 368,
+    "name": "Spirit Armor",
+    "level": 16
+  },
+  {
+    "id": 305,
+    "name": "Identify",
+    "level": 17
+  },
+  {
+    "id": 2542,
+    "name": "Shackle of Bone",
+    "level": 17
+  },
+  {
+    "id": 1510,
+    "name": "Shadow Compact",
+    "level": 17
+  },
+  {
+    "id": 642,
+    "name": "Allure of Death",
+    "level": 18
+  },
+  {
+    "id": 196,
+    "name": "Dominate Undead",
+    "level": 18
+  },
+  {
+    "id": 698,
+    "name": "Track Corpse",
+    "level": 18
+  },
+  {
+    "id": 233,
+    "name": "Expulse Undead",
+    "level": 19
+  },
+  {
+    "id": 370,
+    "name": "Shadow Vortex",
+    "level": 19
+  },
+  {
+    "id": 3583,
+    "name": "Tiny Companion",
+    "level": 19
+  },
+  {
+    "id": 440,
+    "name": "Animate Dead",
+    "level": 20
+  },
+  {
+    "id": 7677,
+    "name": "Focus Makeshift Spellcaster's Empowering Essence",
+    "level": 20
+  },
+  {
+    "id": 7689,
+    "name": "Focus Mass Crude Spellcaster's Empowering Essence",
+    "level": 20
+  },
+  {
+    "id": 7687,
+    "name": "Focus Mass Primitive Spellcaster's Empowering Essence",
+    "level": 20
+  },
+  {
+    "id": 7688,
+    "name": "Focus Mass Rudimentary Spellcaster's Empowering Essence",
+    "level": 20
+  },
+  {
+    "id": 199,
+    "name": "Harmshield",
+    "level": 20
+  },
+  {
+    "id": 446,
+    "name": "Siphon Life",
+    "level": 20
+  },
+  {
+    "id": 413,
+    "name": "Word of Shadow",
+    "level": 20
+  },
+  {
+    "id": 478,
+    "name": "Breath of the Dead",
+    "level": 21
+  },
+  {
+    "id": 1514,
+    "name": "Rapacious Subvention",
+    "level": 21
+  },
+  {
+    "id": 1512,
+    "name": "Scent of Shadow",
+    "level": 21
+  },
+  {
+    "id": 204,
+    "name": "Shock of Poison",
+    "level": 21
+  },
+  {
+    "id": 387,
+    "name": "Leatherskin",
+    "level": 22
+  },
+  {
+    "id": 549,
+    "name": "Screaming Terror",
+    "level": 22
+  },
+  {
+    "id": 90,
+    "name": "Shadow Sight",
+    "level": 22
+  },
+  {
+    "id": 449,
+    "name": "Intensify Death",
+    "level": 23
+  },
+  {
+    "id": 4274,
+    "name": "Reebo's Exorcism",
+    "level": 23
+  },
+  {
+    "id": 448,
+    "name": "Rest the Dead",
+    "level": 23
+  },
+  {
+    "id": 4256,
+    "name": "Wuggan's Appraisal",
+    "level": 23
+  },
+  {
+    "id": 7690,
+    "name": "Focus Mass Makeshift Spellcaster's Empowering Essence",
+    "level": 24
+  },
+  {
+    "id": 493,
+    "name": "Haunting Corpse",
+    "level": 24
+  },
+  {
+    "id": 65,
+    "name": "Major Shielding",
+    "level": 24
+  },
+  {
+    "id": 4262,
+    "name": "Reebo's Augury",
+    "level": 24
+  },
+  {
+    "id": 4286,
+    "name": "Reebo's Cleansing",
+    "level": 24
+  },
+  {
+    "id": 61,
+    "name": "Resist Cold",
+    "level": 24
+  },
+  {
+    "id": 4268,
+    "name": "Wuggan's Discombobulation",
+    "level": 24
+  },
+  {
+    "id": 4280,
+    "name": "Wuggan's Extrication",
+    "level": 24
+  },
+  {
+    "id": 59,
+    "name": "Panic the Dead",
+    "level": 25
+  },
+  {
+    "id": 444,
+    "name": "Renew Bones",
+    "level": 26
+  },
+  {
+    "id": 524,
+    "name": "Spirit Tap",
+    "level": 26
+  },
+  {
+    "id": 452,
+    "name": "Dooming Darkness",
+    "level": 27
+  },
+  {
+    "id": 2543,
+    "name": "Eternities Torment",
+    "level": 27
+  },
+  {
+    "id": 414,
+    "name": "Word of Spirit",
+    "level": 27
+  },
+  {
+    "id": 451,
+    "name": "Boil Blood",
+    "level": 28
+  },
+  {
+    "id": 117,
+    "name": "Dismiss Undead",
+    "level": 28
+  },
+  {
+    "id": 441,
+    "name": "Summon Dead",
+    "level": 29
+  },
+  {
+    "id": 454,
+    "name": "Vampiric Curse",
+    "level": 29
+  },
+  {
+    "id": 7678,
+    "name": "Focus Elementary Spellcaster's Empowering Essence",
+    "level": 30
+  },
+  {
+    "id": 127,
+    "name": "Invoke Fear",
+    "level": 30
+  },
+  {
+    "id": 197,
+    "name": "Beguile Undead",
+    "level": 31
+  },
+  {
+    "id": 643,
+    "name": "Call of Bones",
+    "level": 31
+  },
+  {
+    "id": 63,
+    "name": "Resist Disease",
+    "level": 31
+  },
+  {
+    "id": 393,
+    "name": "Steelskin",
+    "level": 32
+  },
+  {
+    "id": 455,
+    "name": "Surge of Enfeeblement",
+    "level": 32
+  },
+  {
+    "id": 1415,
+    "name": "Torbas' Acid Blast",
+    "level": 32
+  },
+  {
+    "id": 66,
+    "name": "Greater Shielding",
+    "level": 33
+  },
+  {
+    "id": 494,
+    "name": "Invoke Shadow",
+    "level": 33
+  },
+  {
+    "id": 4275,
+    "name": "Reebo's Greater Exorcism",
+    "level": 33
+  },
+  {
+    "id": 4257,
+    "name": "Wuggan's Greater Appraisal",
+    "level": 33
+  },
+  {
+    "id": 7691,
+    "name": "Focus Mass Elementary Spellcaster's Empowering Essence",
+    "level": 34
+  },
+  {
+    "id": 4263,
+    "name": "Reebo's Greater Augury",
+    "level": 34
+  },
+  {
+    "id": 4287,
+    "name": "Reebo's Greater Cleansing",
+    "level": 34
+  },
+  {
+    "id": 230,
+    "name": "Root",
+    "level": 34
+  },
+  {
+    "id": 435,
+    "name": "Venom of the Snake",
+    "level": 34
+  },
+  {
+    "id": 4269,
+    "name": "Wuggan's Greater Discombobulation",
+    "level": 34
+  },
+  {
+    "id": 4281,
+    "name": "Wuggan's Greater Extrication",
+    "level": 34
+  },
+  {
+    "id": 661,
+    "name": "Augment Death",
+    "level": 35
+  },
+  {
+    "id": 31,
+    "name": "Scourge",
+    "level": 35
+  },
+  {
+    "id": 3,
+    "name": "Summon Corpse",
+    "level": 35
+  },
+  {
+    "id": 1412,
+    "name": "Chilling Embrace",
+    "level": 36
+  },
+  {
+    "id": 96,
+    "name": "Counteract Disease",
+    "level": 36
+  },
+  {
+    "id": 415,
+    "name": "Word of Souls",
+    "level": 36
+  },
+  {
+    "id": 49,
+    "name": "Nullify Magic",
+    "level": 37
+  },
+  {
+    "id": 1513,
+    "name": "Scent of Darkness",
+    "level": 37
+  },
+  {
+    "id": 662,
+    "name": "Expel Undead",
+    "level": 38
+  },
+  {
+    "id": 2544,
+    "name": "Shackle of Spirit",
+    "level": 38
+  },
+  {
+    "id": 4096,
+    "name": "Dark Soul",
+    "level": 39
+  },
+  {
+    "id": 525,
+    "name": "Drain Spirit",
+    "level": 39
+  },
+  {
+    "id": 442,
+    "name": "Malignant Dead",
+    "level": 39
+  },
+  {
+    "id": 1508,
+    "name": "Asystole",
+    "level": 40
+  },
+  {
+    "id": 7679,
+    "name": "Focus Modest Spellcaster's Empowering Essence",
+    "level": 40
+  },
+  {
+    "id": 1285,
+    "name": "Summon Companion",
+    "level": 40
+  },
+  {
+    "id": 67,
+    "name": "Arch Shielding",
+    "level": 41
+  },
+  {
+    "id": 457,
+    "name": "Dead Man Floating",
+    "level": 41
+  },
+  {
+    "id": 559,
+    "name": "Ignite Bones",
+    "level": 42
+  },
+  {
+    "id": 2014,
+    "name": "Incinerate Bones",
+    "level": 42
+  },
+  {
+    "id": 1413,
+    "name": "Corporeal Empathy",
+    "level": 43
+  },
+  {
+    "id": 1515,
+    "name": "Covetous Subversion",
+    "level": 43
+  },
+  {
+    "id": 394,
+    "name": "Diamondskin",
+    "level": 43
+  },
+  {
+    "id": 4099,
+    "name": "Bounce",
+    "level": 44
+  },
+  {
+    "id": 495,
+    "name": "Cackling Bones",
+    "level": 44
+  },
+  {
+    "id": 7692,
+    "name": "Focus Mass Modest Spellcaster's Empowering Essence",
+    "level": 44
+  },
+  {
+    "id": 9988,
+    "name": "Form of Bleached Bone",
+    "level": 44
+  },
+  {
+    "id": 694,
+    "name": "Pact of Shadow",
+    "level": 44
+  },
+  {
+    "id": 3702,
+    "name": "Auspice",
+    "level": 45
+  },
+  {
+    "id": 1391,
+    "name": "Dead Men Floating",
+    "level": 45
+  },
+  {
+    "id": 118,
+    "name": "Banish Undead",
+    "level": 46
+  },
+  {
+    "id": 2545,
+    "name": "Insidious Retrogression",
+    "level": 46
+  },
+  {
+    "id": 133,
+    "name": "Paralyzing Earth",
+    "level": 46
+  },
+  {
+    "id": 198,
+    "name": "Cajole Undead",
+    "level": 47
+  },
+  {
+    "id": 453,
+    "name": "Cascading Darkness",
+    "level": 47
+  },
+  {
+    "id": 6,
+    "name": "Ignite Blood",
+    "level": 47
+  },
+  {
+    "id": 447,
+    "name": "Drain Soul",
+    "level": 48
+  },
+  {
+    "id": 443,
+    "name": "Invoke Death",
+    "level": 48
+  },
+  {
+    "id": 644,
+    "name": "Lich",
+    "level": 48
+  },
+  {
+    "id": 456,
+    "name": "Bond of Death",
+    "level": 49
+  },
+  {
+    "id": 3571,
+    "name": "Torbas' Poison Blast",
+    "level": 49
+  },
+  {
+    "id": 4079,
+    "name": "Ward of Calliav",
+    "level": 49
+  },
+  {
+    "id": 436,
+    "name": "Envenomed Bolt",
+    "level": 50
+  },
+  {
+    "id": 7680,
+    "name": "Focus Simple Spellcaster's Empowering Essence",
+    "level": 50
+  },
+  {
+    "id": 1411,
+    "name": "Improved Invisibility to Undead",
+    "level": 50
+  },
+  {
+    "id": 1532,
+    "name": "Dread of Night",
+    "level": 51
+  },
+  {
+    "id": 1768,
+    "name": "Sacrifice",
+    "level": 51
+  },
+  {
+    "id": 1620,
+    "name": "Splurt",
+    "level": 51
+  },
+  {
+    "id": 3685,
+    "name": "Comatose",
+    "level": 52
+  },
+  {
+    "id": 1630,
+    "name": "Defoliation",
+    "level": 52
+  },
+  {
+    "id": 2546,
+    "name": "Degeneration",
+    "level": 52
+  },
+  {
+    "id": 1609,
+    "name": "Manaskin",
+    "level": 52
+  },
+  {
+    "id": 32,
+    "name": "Plague",
+    "level": 52
+  },
+  {
+    "id": 1716,
+    "name": "Scent of Terris",
+    "level": 52
+  },
+  {
+    "id": 1526,
+    "name": "Annul Magic",
+    "level": 53
+  },
+  {
+    "id": 1733,
+    "name": "Convergence",
+    "level": 53
+  },
+  {
+    "id": 131,
+    "name": "Instill",
+    "level": 53
+  },
+  {
+    "id": 1621,
+    "name": "Minion of Shadows",
+    "level": 53
+  },
+  {
+    "id": 1613,
+    "name": "Deflux",
+    "level": 54
+  },
+  {
+    "id": 7693,
+    "name": "Focus Mass Simple Spellcaster's Empowering Essence",
+    "level": 54
+  },
+  {
+    "id": 4097,
+    "name": "Imprecation",
+    "level": 54
+  },
+  {
+    "id": 1717,
+    "name": "Shadowbond",
+    "level": 54
+  },
+  {
+    "id": 1610,
+    "name": "Shield of the Magi",
+    "level": 54
+  },
+  {
+    "id": 2547,
+    "name": "Succussion of Shadows",
+    "level": 54
+  },
+  {
+    "id": 1624,
+    "name": "Thrall of Bones",
+    "level": 54
+  },
+  {
+    "id": 3572,
+    "name": "Torbas' Venom Blast",
+    "level": 54
+  },
+  {
+    "id": 1414,
+    "name": "Augmentation of Death",
+    "level": 55
+  },
+  {
+    "id": 1614,
+    "name": "Chill Bones",
+    "level": 55
+  },
+  {
+    "id": 2015,
+    "name": "Conglaciation of Bone",
+    "level": 55
+  },
+  {
+    "id": 8934,
+    "name": "Dark Rune",
+    "level": 55
+  },
+  {
+    "id": 7681,
+    "name": "Focus Spellcaster's Empowering Essence",
+    "level": 55
+  },
+  {
+    "id": 1734,
+    "name": "Infusion",
+    "level": 55
+  },
+  {
+    "id": 1626,
+    "name": "Levant",
+    "level": 55
+  },
+  {
+    "id": 1625,
+    "name": "Skin of the Shadow",
+    "level": 55
+  },
+  {
+    "id": 1615,
+    "name": "Cessation of Cor",
+    "level": 56
+  },
+  {
+    "id": 2548,
+    "name": "Crippling Claudication",
+    "level": 56
+  },
+  {
+    "id": 1611,
+    "name": "Demi Lich",
+    "level": 56
+  },
+  {
+    "id": 6992,
+    "name": "Eidolon Voice",
+    "level": 56
+  },
+  {
+    "id": 9989,
+    "name": "Form of Mottled Bone",
+    "level": 56
+  },
+  {
+    "id": 1718,
+    "name": "Sedulous Subversion",
+    "level": 56
+  },
+  {
+    "id": 1622,
+    "name": "Servant of Bones",
+    "level": 56
+  },
+  {
+    "id": 1527,
+    "name": "Trepidation",
+    "level": 56
+  },
+  {
+    "id": 1773,
+    "name": "Conjure Corpse",
+    "level": 57
+  },
+  {
+    "id": 1528,
+    "name": "Exile Undead",
+    "level": 57
+  },
+  {
+    "id": 3344,
+    "name": "Imbue Nightmare",
+    "level": 57
+  },
+  {
+    "id": 6980,
+    "name": "Unholy Voice",
+    "level": 57
+  },
+  {
+    "id": 1616,
+    "name": "Vexing Mordinia",
+    "level": 57
+  },
+  {
+    "id": 4080,
+    "name": "Guard of Calliav",
+    "level": 58
+  },
+  {
+    "id": 3591,
+    "name": "Imbue Disease",
+    "level": 58
+  },
+  {
+    "id": 3594,
+    "name": "Imbue Torment",
+    "level": 58
+  },
+  {
+    "id": 132,
+    "name": "Immobilize",
+    "level": 58
+  },
+  {
+    "id": 2549,
+    "name": "Mind Wrack",
+    "level": 58
+  },
+  {
+    "id": 1617,
+    "name": "Pyrocruor",
+    "level": 58
+  },
+  {
+    "id": 1612,
+    "name": "Quivering Veil of Xarn",
+    "level": 58
+  },
+  {
+    "id": 4100,
+    "name": "Reflect",
+    "level": 58
+  },
+  {
+    "id": 1619,
+    "name": "Devouring Darkness",
+    "level": 59
+  },
+  {
+    "id": 1623,
+    "name": "Emissary of Thule",
+    "level": 59
+  },
+  {
+    "id": 7694,
+    "name": "Focus Mass Spellcaster's Empowering Essence",
+    "level": 59
+  },
+  {
+    "id": 1618,
+    "name": "Touch of Night",
+    "level": 59
+  },
+  {
+    "id": 2115,
+    "name": "Ancient Lifebane",
+    "level": 60
+  },
+  {
+    "id": 2114,
+    "name": "Ancient Master of Death",
+    "level": 60
+  },
+  {
+    "id": 1416,
+    "name": "Arch Lich",
+    "level": 60
+  },
+  {
+    "id": 1530,
+    "name": "Banishment of Shadows",
+    "level": 60
+  },
+  {
+    "id": 1460,
+    "name": "Death Peace",
+    "level": 60
+  },
+  {
+    "id": 1629,
+    "name": "Enslave Death",
+    "level": 60
+  },
+  {
+    "id": 7682,
+    "name": "Focus Refined Spellcaster's Empowering Essence",
+    "level": 60
+  },
+  {
+    "id": 2885,
+    "name": "Funeral Pyre of Kelador",
+    "level": 60
+  },
+  {
+    "id": 1393,
+    "name": "Gangrenous Touch of Zum'uul",
+    "level": 60
+  },
+  {
+    "id": 1735,
+    "name": "Trucidation",
+    "level": 60
+  },
+  {
+    "id": 2550,
+    "name": "Zevfeer's Theft of Vitae",
+    "level": 60
+  },
+  {
+    "id": 3315,
+    "name": "Dark Plague",
+    "level": 61
+  },
+  {
+    "id": 6993,
+    "name": "Eidolon Bellow",
+    "level": 61
+  },
+  {
+    "id": 3304,
+    "name": "Legacy of Zek",
+    "level": 61
+  },
+  {
+    "id": 3035,
+    "name": "Neurotoxin",
+    "level": 61
+  },
+  {
+    "id": 3300,
+    "name": "Shield of the Arcane",
+    "level": 61
+  },
+  {
+    "id": 6736,
+    "name": "Soul Orb",
+    "level": 61
+  },
+  {
+    "id": 3032,
+    "name": "Touch of Mujaki",
+    "level": 61
+  },
+  {
+    "id": 3196,
+    "name": "Petrifying Earth",
+    "level": 62
+  },
+  {
+    "id": 3305,
+    "name": "Rune of Death",
+    "level": 62
+  },
+  {
+    "id": 3306,
+    "name": "Saryrn's Kiss",
+    "level": 62
+  },
+  {
+    "id": 6981,
+    "name": "Unholy Bellow",
+    "level": 62
+  },
+  {
+    "id": 3308,
+    "name": "Death's Silence",
+    "level": 63
+  },
+  {
+    "id": 3309,
+    "name": "Embracing Darkness",
+    "level": 63
+  },
+  {
+    "id": 3301,
+    "name": "Force Shield",
+    "level": 63
+  },
+  {
+    "id": 3195,
+    "name": "Greater Immobilize",
+    "level": 63
+  },
+  {
+    "id": 4098,
+    "name": "Horror",
+    "level": 63
+  },
+  {
+    "id": 3310,
+    "name": "Saryrn's Companion",
+    "level": 63
+  },
+  {
+    "id": 7695,
+    "name": "Focus Mass Refined Spellcaster's Empowering Essence",
+    "level": 64
+  },
+  {
+    "id": 4081,
+    "name": "Protection of Calliav",
+    "level": 64
+  },
+  {
+    "id": 3311,
+    "name": "Seduction of Saryrn",
+    "level": 64
+  },
+  {
+    "id": 3302,
+    "name": "Shield of Maelin",
+    "level": 64
+  },
+  {
+    "id": 3312,
+    "name": "Touch of Death",
+    "level": 64
+  },
+  {
+    "id": 4978,
+    "name": "Ancient Seduction of Chaos",
+    "level": 65
+  },
+  {
+    "id": 3303,
+    "name": "Blood of Thule",
+    "level": 65
+  },
+  {
+    "id": 3314,
+    "name": "Child of Bertoxxulous",
+    "level": 65
+  },
+  {
+    "id": 3468,
+    "name": "Destroy Undead",
+    "level": 65
+  },
+  {
+    "id": 7683,
+    "name": "Focus Intricate Spellcaster's Empowering Essence",
+    "level": 65
+  },
+  {
+    "id": 4890,
+    "name": "Night Fire",
+    "level": 65
+  },
+  {
+    "id": 4889,
+    "name": "Night Stalker",
+    "level": 65
+  },
+  {
+    "id": 4891,
+    "name": "Night's Beckon",
+    "level": 65
+  },
+  {
+    "id": 3316,
+    "name": "Word of Terris",
+    "level": 65
+  },
+  {
+    "id": 5420,
+    "name": "Acikin",
+    "level": 66
+  },
+  {
+    "id": 5423,
+    "name": "Chaos Plague",
+    "level": 66
+  },
+  {
+    "id": 6994,
+    "name": "Eidolon Howl",
+    "level": 66
+  },
+  {
+    "id": 21399,
+    "name": "Eradicate Disease",
+    "level": 66
+  },
+  {
+    "id": 5421,
+    "name": "Shadow Guard",
+    "level": 66
+  },
+  {
+    "id": 5432,
+    "name": "Dark Nightmare",
+    "level": 67
+  },
+  {
+    "id": 5425,
+    "name": "Glyph of Darkness",
+    "level": 67
+  },
+  {
+    "id": 5424,
+    "name": "Grip of Mori",
+    "level": 67
+  },
+  {
+    "id": 5431,
+    "name": "Lost Soul",
+    "level": 67
+  },
+  {
+    "id": 5419,
+    "name": "Soulspike",
+    "level": 67
+  },
+  {
+    "id": 6982,
+    "name": "Unholy Howl",
+    "level": 67
+  },
+  {
+    "id": 7995,
+    "name": "Call for Blood",
+    "level": 68
+  },
+  {
+    "id": 5430,
+    "name": "Desecrating Darkness",
+    "level": 68
+  },
+  {
+    "id": 5426,
+    "name": "Fang of Death",
+    "level": 68
+  },
+  {
+    "id": 5427,
+    "name": "Scent of Midnight",
+    "level": 68
+  },
+  {
+    "id": 6124,
+    "name": "Shadow of Death",
+    "level": 68
+  },
+  {
+    "id": 5436,
+    "name": "Bulwark of Calliav",
+    "level": 69
+  },
+  {
+    "id": 7999,
+    "name": "Corath Venom",
+    "level": 69
+  },
+  {
+    "id": 5429,
+    "name": "Dark Hold",
+    "level": 69
+  },
+  {
+    "id": 5435,
+    "name": "Dark Salve",
+    "level": 69
+  },
+  {
+    "id": 5428,
+    "name": "Dull Pain",
+    "level": 69
+  },
+  {
+    "id": 7696,
+    "name": "Focus Mass Intricate Spellcaster's Empowering Essence",
+    "level": 69
+  },
+  {
+    "id": 5437,
+    "name": "Pyre of Mori",
+    "level": 69
+  },
+  {
+    "id": 6668,
+    "name": "Shadow Orb",
+    "level": 69
+  },
+  {
+    "id": 5441,
+    "name": "Ancient Curse of Mori",
+    "level": 70
+  },
+  {
+    "id": 6143,
+    "name": "Ancient Touch of Orshilak",
+    "level": 70
+  },
+  {
+    "id": 5433,
+    "name": "Chaos Venom",
+    "level": 70
+  },
+  {
+    "id": 5438,
+    "name": "Dark Assassin",
+    "level": 70
+  },
+  {
+    "id": 5434,
+    "name": "Dark Possession",
+    "level": 70
+  },
+  {
+    "id": 8523,
+    "name": "Death Rune",
+    "level": 70
+  },
+  {
+    "id": 5440,
+    "name": "Desolate Undead",
+    "level": 70
+  },
+  {
+    "id": 7994,
+    "name": "Dread Pyre",
+    "level": 70
+  },
+  {
+    "id": 7684,
+    "name": "Focus Elaborate Spellcaster's Empowering Essence",
+    "level": 70
+  },
+  {
+    "id": 8520,
+    "name": "Grave Pact",
+    "level": 70
+  },
+  {
+    "id": 8522,
+    "name": "Mind Flay",
+    "level": 70
+  },
+  {
+    "id": 5439,
+    "name": "Word of Chaos",
+    "level": 70
+  }
+]

@@ -1,0 +1,1707 @@
+[
+  {
+    "id": 93,
+    "name": "Burst of Flame",
+    "level": 1
+  },
+  {
+    "id": 313,
+    "name": "Fire Flux",
+    "level": 1
+  },
+  {
+    "id": 310,
+    "name": "Flare",
+    "level": 1
+  },
+  {
+    "id": 288,
+    "name": "Minor Shielding",
+    "level": 1
+  },
+  {
+    "id": 331,
+    "name": "Reclaim Energy",
+    "level": 1
+  },
+  {
+    "id": 311,
+    "name": "Summon Dagger",
+    "level": 1
+  },
+  {
+    "id": 211,
+    "name": "Summon Drink",
+    "level": 1
+  },
+  {
+    "id": 50,
+    "name": "Summon Food",
+    "level": 1
+  },
+  {
+    "id": 205,
+    "name": "True North",
+    "level": 1
+  },
+  {
+    "id": 315,
+    "name": "Elementalkin Water",
+    "level": 2
+  },
+  {
+    "id": 318,
+    "name": "Summon Bandages",
+    "level": 2
+  },
+  {
+    "id": 2230,
+    "name": "Summon Brass Choker",
+    "level": 2
+  },
+  {
+    "id": 316,
+    "name": "Elementalkin Fire",
+    "level": 3
+  },
+  {
+    "id": 232,
+    "name": "Sense Summoned",
+    "level": 3
+  },
+  {
+    "id": 321,
+    "name": "Summon Wisp",
+    "level": 3
+  },
+  {
+    "id": 94,
+    "name": "Burn",
+    "level": 4
+  },
+  {
+    "id": 317,
+    "name": "Elementalkin Air",
+    "level": 4
+  },
+  {
+    "id": 36,
+    "name": "Gate",
+    "level": 4
+  },
+  {
+    "id": 58,
+    "name": "Elementalkin Earth",
+    "level": 5
+  },
+  {
+    "id": 322,
+    "name": "Flame Bolt",
+    "level": 5
+  },
+  {
+    "id": 246,
+    "name": "Lesser Shielding",
+    "level": 5
+  },
+  {
+    "id": 325,
+    "name": "Dimensional Pocket",
+    "level": 6
+  },
+  {
+    "id": 398,
+    "name": "Elementaling Water",
+    "level": 6
+  },
+  {
+    "id": 323,
+    "name": "Eye of Zomm",
+    "level": 6
+  },
+  {
+    "id": 399,
+    "name": "Elementaling Fire",
+    "level": 7
+  },
+  {
+    "id": 1504,
+    "name": "Renew Elements",
+    "level": 7
+  },
+  {
+    "id": 332,
+    "name": "Shield of Fire",
+    "level": 7
+  },
+  {
+    "id": 324,
+    "name": "Shock of Blades",
+    "level": 7
+  },
+  {
+    "id": 400,
+    "name": "Elementaling Air",
+    "level": 8
+  },
+  {
+    "id": 42,
+    "name": "Invisibility",
+    "level": 8
+  },
+  {
+    "id": 613,
+    "name": "Staff of Tracing",
+    "level": 8
+  },
+  {
+    "id": 2233,
+    "name": "Summon Linen Mantle",
+    "level": 8
+  },
+  {
+    "id": 397,
+    "name": "Elementaling Earth",
+    "level": 9
+  },
+  {
+    "id": 319,
+    "name": "Summon Fang",
+    "level": 9
+  },
+  {
+    "id": 248,
+    "name": "Ward Summoned",
+    "level": 9
+  },
+  {
+    "id": 48,
+    "name": "Cancel Magic",
+    "level": 10
+  },
+  {
+    "id": 402,
+    "name": "Elemental Water",
+    "level": 10
+  },
+  {
+    "id": 330,
+    "name": "Rain of Blades",
+    "level": 10
+  },
+  {
+    "id": 2242,
+    "name": "Summon Tarnished Bauble",
+    "level": 10
+  },
+  {
+    "id": 327,
+    "name": "Burnout",
+    "level": 11
+  },
+  {
+    "id": 403,
+    "name": "Elemental Fire",
+    "level": 11
+  },
+  {
+    "id": 2531,
+    "name": "Summon Elemental Defender",
+    "level": 11
+  },
+  {
+    "id": 35,
+    "name": "Bind Affinity",
+    "level": 12
+  },
+  {
+    "id": 328,
+    "name": "Column of Fire",
+    "level": 12
+  },
+  {
+    "id": 404,
+    "name": "Elemental Air",
+    "level": 12
+  },
+  {
+    "id": 401,
+    "name": "Elemental Earth",
+    "level": 13
+  },
+  {
+    "id": 305,
+    "name": "Identify",
+    "level": 13
+  },
+  {
+    "id": 333,
+    "name": "Phantom Leather",
+    "level": 13
+  },
+  {
+    "id": 4255,
+    "name": "Wuggan's Lesser Appraisal",
+    "level": 13
+  },
+  {
+    "id": 336,
+    "name": "Minor Summoning Water",
+    "level": 14
+  },
+  {
+    "id": 614,
+    "name": "Staff of Warding",
+    "level": 14
+  },
+  {
+    "id": 4267,
+    "name": "Wuggan's Lesser Discombobulation",
+    "level": 14
+  },
+  {
+    "id": 4279,
+    "name": "Wuggan's Lesser Extrication",
+    "level": 14
+  },
+  {
+    "id": 395,
+    "name": "Minor Summoning Fire",
+    "level": 15
+  },
+  {
+    "id": 334,
+    "name": "Shock of Flame",
+    "level": 15
+  },
+  {
+    "id": 320,
+    "name": "Summon Heatstone",
+    "level": 15
+  },
+  {
+    "id": 100,
+    "name": "Summon Throwing Dagger",
+    "level": 15
+  },
+  {
+    "id": 7676,
+    "name": "Focus Crude Spellcaster's Empowering Essence",
+    "level": 16
+  },
+  {
+    "id": 7674,
+    "name": "Focus Primitive Spellcaster's Empowering Essence",
+    "level": 16
+  },
+  {
+    "id": 7675,
+    "name": "Focus Rudimentary Spellcaster's Empowering Essence",
+    "level": 16
+  },
+  {
+    "id": 396,
+    "name": "Minor Summoning Air",
+    "level": 16
+  },
+  {
+    "id": 80,
+    "name": "See Invisible",
+    "level": 16
+  },
+  {
+    "id": 309,
+    "name": "Shielding",
+    "level": 16
+  },
+  {
+    "id": 2239,
+    "name": "Summon Tiny Ring",
+    "level": 16
+  },
+  {
+    "id": 335,
+    "name": "Minor Summoning Earth",
+    "level": 17
+  },
+  {
+    "id": 83,
+    "name": "Rain of Fire",
+    "level": 17
+  },
+  {
+    "id": 2532,
+    "name": "Summon Phantom Leather",
+    "level": 17
+  },
+  {
+    "id": 4,
+    "name": "Summon Waterstone",
+    "level": 17
+  },
+  {
+    "id": 68,
+    "name": "Bolt of Flame",
+    "level": 18
+  },
+  {
+    "id": 663,
+    "name": "Expulse Summoned",
+    "level": 18
+  },
+  {
+    "id": 497,
+    "name": "Lesser Summoning Water",
+    "level": 18
+  },
+  {
+    "id": 1505,
+    "name": "Renew Summoning",
+    "level": 18
+  },
+  {
+    "id": 108,
+    "name": "Elemental Shield",
+    "level": 19
+  },
+  {
+    "id": 498,
+    "name": "Lesser Summoning Fire",
+    "level": 19
+  },
+  {
+    "id": 411,
+    "name": "Shield of Flame",
+    "level": 19
+  },
+  {
+    "id": 3583,
+    "name": "Tiny Companion",
+    "level": 19
+  },
+  {
+    "id": 7677,
+    "name": "Focus Makeshift Spellcaster's Empowering Essence",
+    "level": 20
+  },
+  {
+    "id": 7689,
+    "name": "Focus Mass Crude Spellcaster's Empowering Essence",
+    "level": 20
+  },
+  {
+    "id": 7687,
+    "name": "Focus Mass Primitive Spellcaster's Empowering Essence",
+    "level": 20
+  },
+  {
+    "id": 7688,
+    "name": "Focus Mass Rudimentary Spellcaster's Empowering Essence",
+    "level": 20
+  },
+  {
+    "id": 499,
+    "name": "Lesser Summoning Air",
+    "level": 20
+  },
+  {
+    "id": 102,
+    "name": "Spear of Warding",
+    "level": 20
+  },
+  {
+    "id": 101,
+    "name": "Summon Arrows",
+    "level": 20
+  },
+  {
+    "id": 2236,
+    "name": "Summon Jade Bracelet",
+    "level": 20
+  },
+  {
+    "id": 4027,
+    "name": "Summon Wooden Bracelet",
+    "level": 20
+  },
+  {
+    "id": 55,
+    "name": "Cornucopia",
+    "level": 21
+  },
+  {
+    "id": 496,
+    "name": "Lesser Summoning Earth",
+    "level": 21
+  },
+  {
+    "id": 2231,
+    "name": "Summon Silver Choker",
+    "level": 21
+  },
+  {
+    "id": 56,
+    "name": "Everfount",
+    "level": 22
+  },
+  {
+    "id": 189,
+    "name": "Flame Flux",
+    "level": 22
+  },
+  {
+    "id": 110,
+    "name": "Malaise",
+    "level": 22
+  },
+  {
+    "id": 570,
+    "name": "Summoning Water",
+    "level": 22
+  },
+  {
+    "id": 113,
+    "name": "Shock of Spikes",
+    "level": 23
+  },
+  {
+    "id": 571,
+    "name": "Summoning Fire",
+    "level": 23
+  },
+  {
+    "id": 4256,
+    "name": "Wuggan's Appraisal",
+    "level": 23
+  },
+  {
+    "id": 7690,
+    "name": "Focus Mass Makeshift Spellcaster's Empowering Essence",
+    "level": 24
+  },
+  {
+    "id": 65,
+    "name": "Major Shielding",
+    "level": 24
+  },
+  {
+    "id": 615,
+    "name": "Staff of Runes",
+    "level": 24
+  },
+  {
+    "id": 572,
+    "name": "Summoning Air",
+    "level": 24
+  },
+  {
+    "id": 4268,
+    "name": "Wuggan's Discombobulation",
+    "level": 24
+  },
+  {
+    "id": 4280,
+    "name": "Wuggan's Extrication",
+    "level": 24
+  },
+  {
+    "id": 115,
+    "name": "Dismiss Summoned",
+    "level": 25
+  },
+  {
+    "id": 81,
+    "name": "Phantom Chain",
+    "level": 25
+  },
+  {
+    "id": 2533,
+    "name": "Summon Phantom Chain",
+    "level": 25
+  },
+  {
+    "id": 569,
+    "name": "Summoning Earth",
+    "level": 25
+  },
+  {
+    "id": 574,
+    "name": "Greater Summoning Water",
+    "level": 26
+  },
+  {
+    "id": 409,
+    "name": "Rain of Spikes",
+    "level": 26
+  },
+  {
+    "id": 617,
+    "name": "Sword of Runes",
+    "level": 26
+  },
+  {
+    "id": 1286,
+    "name": "Expedience",
+    "level": 27
+  },
+  {
+    "id": 575,
+    "name": "Greater Summoning Fire",
+    "level": 27
+  },
+  {
+    "id": 2234,
+    "name": "Summon Leather Mantle",
+    "level": 27
+  },
+  {
+    "id": 664,
+    "name": "Expel Summoned",
+    "level": 28
+  },
+  {
+    "id": 576,
+    "name": "Greater Summoning Air",
+    "level": 28
+  },
+  {
+    "id": 479,
+    "name": "Inferno Shield",
+    "level": 28
+  },
+  {
+    "id": 106,
+    "name": "Burnout II",
+    "level": 29
+  },
+  {
+    "id": 573,
+    "name": "Greater Summoning Earth",
+    "level": 29
+  },
+  {
+    "id": 103,
+    "name": "Summon Coldstone",
+    "level": 29
+  },
+  {
+    "id": 618,
+    "name": "Dimensional Hole",
+    "level": 30
+  },
+  {
+    "id": 7678,
+    "name": "Focus Elementary Spellcaster's Empowering Essence",
+    "level": 30
+  },
+  {
+    "id": 1400,
+    "name": "Monster Summoning I",
+    "level": 30
+  },
+  {
+    "id": 2243,
+    "name": "Summon Shiny Bauble",
+    "level": 30
+  },
+  {
+    "id": 120,
+    "name": "Blaze",
+    "level": 31
+  },
+  {
+    "id": 621,
+    "name": "Minor Conjuration Water",
+    "level": 31
+  },
+  {
+    "id": 1401,
+    "name": "Summon Shard of the Core",
+    "level": 31
+  },
+  {
+    "id": 66,
+    "name": "Greater Shielding",
+    "level": 32
+  },
+  {
+    "id": 622,
+    "name": "Minor Conjuration Fire",
+    "level": 32
+  },
+  {
+    "id": 49,
+    "name": "Nullify Magic",
+    "level": 32
+  },
+  {
+    "id": 69,
+    "name": "Cinder Bolt",
+    "level": 33
+  },
+  {
+    "id": 623,
+    "name": "Minor Conjuration Air",
+    "level": 33
+  },
+  {
+    "id": 616,
+    "name": "Staff of Symbols",
+    "level": 33
+  },
+  {
+    "id": 4257,
+    "name": "Wuggan's Greater Appraisal",
+    "level": 33
+  },
+  {
+    "id": 7691,
+    "name": "Focus Mass Elementary Spellcaster's Empowering Essence",
+    "level": 34
+  },
+  {
+    "id": 620,
+    "name": "Minor Conjuration Earth",
+    "level": 34
+  },
+  {
+    "id": 3584,
+    "name": "Refresh Summoning",
+    "level": 34
+  },
+  {
+    "id": 4269,
+    "name": "Wuggan's Greater Discombobulation",
+    "level": 34
+  },
+  {
+    "id": 4281,
+    "name": "Wuggan's Greater Extrication",
+    "level": 34
+  },
+  {
+    "id": 104,
+    "name": "Dagger of Symbols",
+    "level": 35
+  },
+  {
+    "id": 121,
+    "name": "Rain of Lava",
+    "level": 35
+  },
+  {
+    "id": 625,
+    "name": "Lesser Conjuration Water",
+    "level": 36
+  },
+  {
+    "id": 1285,
+    "name": "Summon Companion",
+    "level": 36
+  },
+  {
+    "id": 626,
+    "name": "Lesser Conjuration Fire",
+    "level": 37
+  },
+  {
+    "id": 105,
+    "name": "Summon Ring of Flight",
+    "level": 37
+  },
+  {
+    "id": 2240,
+    "name": "Summon Twisted Ring",
+    "level": 37
+  },
+  {
+    "id": 680,
+    "name": "Barrier of Combustion",
+    "level": 38
+  },
+  {
+    "id": 627,
+    "name": "Lesser Conjuration Air",
+    "level": 38
+  },
+  {
+    "id": 2534,
+    "name": "Summon Phantom Plate",
+    "level": 38
+  },
+  {
+    "id": 122,
+    "name": "Flame Arc",
+    "level": 39
+  },
+  {
+    "id": 624,
+    "name": "Lesser Conjuration Earth",
+    "level": 39
+  },
+  {
+    "id": 7679,
+    "name": "Focus Modest Spellcaster's Empowering Essence",
+    "level": 40
+  },
+  {
+    "id": 629,
+    "name": "Conjuration Water",
+    "level": 41
+  },
+  {
+    "id": 109,
+    "name": "Elemental Armor",
+    "level": 41
+  },
+  {
+    "id": 82,
+    "name": "Phantom Plate",
+    "level": 41
+  },
+  {
+    "id": 114,
+    "name": "Shock of Swords",
+    "level": 41
+  },
+  {
+    "id": 4099,
+    "name": "Bounce",
+    "level": 42
+  },
+  {
+    "id": 630,
+    "name": "Conjuration Fire",
+    "level": 42
+  },
+  {
+    "id": 2237,
+    "name": "Summon Opal Bracelet",
+    "level": 42
+  },
+  {
+    "id": 4082,
+    "name": "Summon Orb of Exploration",
+    "level": 42
+  },
+  {
+    "id": 67,
+    "name": "Arch Shielding",
+    "level": 43
+  },
+  {
+    "id": 631,
+    "name": "Conjuration Air",
+    "level": 43
+  },
+  {
+    "id": 1403,
+    "name": "Elemental Maelstrom",
+    "level": 43
+  },
+  {
+    "id": 628,
+    "name": "Conjuration Earth",
+    "level": 44
+  },
+  {
+    "id": 7692,
+    "name": "Focus Mass Modest Spellcaster's Empowering Essence",
+    "level": 44
+  },
+  {
+    "id": 111,
+    "name": "Malaisement",
+    "level": 44
+  },
+  {
+    "id": 1503,
+    "name": "Modulating Rod",
+    "level": 44
+  },
+  {
+    "id": 3699,
+    "name": "Primal Remedy",
+    "level": 44
+  },
+  {
+    "id": 4028,
+    "name": "Summon Stone Bracelet",
+    "level": 44
+  },
+  {
+    "id": 412,
+    "name": "Shield of Lava",
+    "level": 45
+  },
+  {
+    "id": 1944,
+    "name": "Summon Orb",
+    "level": 45
+  },
+  {
+    "id": 632,
+    "name": "Greater Conjuration Earth",
+    "level": 46
+  },
+  {
+    "id": 4079,
+    "name": "Ward of Calliav",
+    "level": 46
+  },
+  {
+    "id": 107,
+    "name": "Burnout III",
+    "level": 47
+  },
+  {
+    "id": 634,
+    "name": "Greater Conjuration Fire",
+    "level": 47
+  },
+  {
+    "id": 70,
+    "name": "Lava Bolt",
+    "level": 47
+  },
+  {
+    "id": 116,
+    "name": "Banish Summoned",
+    "level": 48
+  },
+  {
+    "id": 635,
+    "name": "Greater Conjuration Air",
+    "level": 48
+  },
+  {
+    "id": 2535,
+    "name": "Summon Elemental Blanket",
+    "level": 48
+  },
+  {
+    "id": 633,
+    "name": "Greater Conjuration Water",
+    "level": 49
+  },
+  {
+    "id": 410,
+    "name": "Rain of Swords",
+    "level": 49
+  },
+  {
+    "id": 7680,
+    "name": "Focus Simple Spellcaster's Empowering Essence",
+    "level": 50
+  },
+  {
+    "id": 1402,
+    "name": "Monster Summoning II",
+    "level": 50
+  },
+  {
+    "id": 2232,
+    "name": "Summon Golden Choker",
+    "level": 50
+  },
+  {
+    "id": 1680,
+    "name": "Gift of Xev",
+    "level": 51
+  },
+  {
+    "id": 112,
+    "name": "Malosi",
+    "level": 51
+  },
+  {
+    "id": 1659,
+    "name": "Scintillation",
+    "level": 51
+  },
+  {
+    "id": 2235,
+    "name": "Summon Silken Mantle",
+    "level": 51
+  },
+  {
+    "id": 1671,
+    "name": "Vocarate Earth",
+    "level": 51
+  },
+  {
+    "id": 1681,
+    "name": "Bristlebane's Bundle",
+    "level": 52
+  },
+  {
+    "id": 1660,
+    "name": "Char",
+    "level": 52
+  },
+  {
+    "id": 3700,
+    "name": "Elemental Empathy",
+    "level": 52
+  },
+  {
+    "id": 1666,
+    "name": "Phantom Armor",
+    "level": 52
+  },
+  {
+    "id": 2244,
+    "name": "Summon Brilliant Bauble",
+    "level": 52
+  },
+  {
+    "id": 2536,
+    "name": "Transon's Elemental Infusion",
+    "level": 52
+  },
+  {
+    "id": 1673,
+    "name": "Vocarate Fire",
+    "level": 52
+  },
+  {
+    "id": 1526,
+    "name": "Annul Magic",
+    "level": 53
+  },
+  {
+    "id": 1668,
+    "name": "Boon of Immolation",
+    "level": 53
+  },
+  {
+    "id": 1682,
+    "name": "Quiver of Marr",
+    "level": 53
+  },
+  {
+    "id": 2241,
+    "name": "Summon Studded Ring",
+    "level": 53
+  },
+  {
+    "id": 1674,
+    "name": "Vocarate Air",
+    "level": 53
+  },
+  {
+    "id": 1683,
+    "name": "Bandolier of Luclin",
+    "level": 54
+  },
+  {
+    "id": 3582,
+    "name": "Elemental Cloak",
+    "level": 54
+  },
+  {
+    "id": 5133,
+    "name": "Elemental Draw",
+    "level": 54
+  },
+  {
+    "id": 7693,
+    "name": "Focus Mass Simple Spellcaster's Empowering Essence",
+    "level": 54
+  },
+  {
+    "id": 4011,
+    "name": "Kindle",
+    "level": 54
+  },
+  {
+    "id": 2879,
+    "name": "Phantasmal Armor",
+    "level": 54
+  },
+  {
+    "id": 1661,
+    "name": "Scars of Sigil",
+    "level": 54
+  },
+  {
+    "id": 1610,
+    "name": "Shield of the Magi",
+    "level": 54
+  },
+  {
+    "id": 4029,
+    "name": "Summon Iron Bracelet",
+    "level": 54
+  },
+  {
+    "id": 2238,
+    "name": "Summon Ruby Bracelet",
+    "level": 54
+  },
+  {
+    "id": 2537,
+    "name": "Veil of Elements",
+    "level": 54
+  },
+  {
+    "id": 1672,
+    "name": "Vocarate Water",
+    "level": 54
+  },
+  {
+    "id": 1472,
+    "name": "Burnout IV",
+    "level": 55
+  },
+  {
+    "id": 1771,
+    "name": "Call of the Hero",
+    "level": 55
+  },
+  {
+    "id": 8933,
+    "name": "Earthen Strength",
+    "level": 55
+  },
+  {
+    "id": 7681,
+    "name": "Focus Spellcaster's Empowering Essence",
+    "level": 55
+  },
+  {
+    "id": 1684,
+    "name": "Pouch of Quellious",
+    "level": 55
+  },
+  {
+    "id": 1770,
+    "name": "Rage of Zomm",
+    "level": 55
+  },
+  {
+    "id": 1662,
+    "name": "Sirocco",
+    "level": 55
+  },
+  {
+    "id": 1405,
+    "name": "Wrath of the Elements",
+    "level": 55
+  },
+  {
+    "id": 1667,
+    "name": "Cadeau of Flame",
+    "level": 56
+  },
+  {
+    "id": 1679,
+    "name": "Dyzil's Deafening Decoy",
+    "level": 56
+  },
+  {
+    "id": 1529,
+    "name": "Exile Summoned",
+    "level": 56
+  },
+  {
+    "id": 2538,
+    "name": "Mass Mystical Transvergence",
+    "level": 56
+  },
+  {
+    "id": 1685,
+    "name": "Muzzle of Mardu",
+    "level": 56
+  },
+  {
+    "id": 3188,
+    "name": "Rod of Mystical Transvergence",
+    "level": 56
+  },
+  {
+    "id": 1720,
+    "name": "Eye of Tallon",
+    "level": 57
+  },
+  {
+    "id": 1675,
+    "name": "Greater Vocaration Earth",
+    "level": 57
+  },
+  {
+    "id": 3352,
+    "name": "Imbue Earth",
+    "level": 57
+  },
+  {
+    "id": 1663,
+    "name": "Shock of Steel",
+    "level": 57
+  },
+  {
+    "id": 1677,
+    "name": "Greater Vocaration Fire",
+    "level": 58
+  },
+  {
+    "id": 4080,
+    "name": "Guard of Calliav",
+    "level": 58
+  },
+  {
+    "id": 1577,
+    "name": "Malosini",
+    "level": 58
+  },
+  {
+    "id": 4100,
+    "name": "Reflect",
+    "level": 58
+  },
+  {
+    "id": 2539,
+    "name": "Transon's Phantasmal Protection",
+    "level": 58
+  },
+  {
+    "id": 1670,
+    "name": "Velocity",
+    "level": 58
+  },
+  {
+    "id": 7694,
+    "name": "Focus Mass Spellcaster's Empowering Essence",
+    "level": 59
+  },
+  {
+    "id": 1678,
+    "name": "Greater Vocaration Air",
+    "level": 59
+  },
+  {
+    "id": 3353,
+    "name": "Imbue Air",
+    "level": 59
+  },
+  {
+    "id": 1665,
+    "name": "Manastorm",
+    "level": 59
+  },
+  {
+    "id": 1936,
+    "name": "Manifest Elements",
+    "level": 59
+  },
+  {
+    "id": 1664,
+    "name": "Seeking Flame of Seukor",
+    "level": 59
+  },
+  {
+    "id": 1284,
+    "name": "Valiant Companion",
+    "level": 59
+  },
+  {
+    "id": 1669,
+    "name": "Aegis of Ro",
+    "level": 60
+  },
+  {
+    "id": 2119,
+    "name": "Ancient Burnout Blaze",
+    "level": 60
+  },
+  {
+    "id": 2118,
+    "name": "Ancient Shock of Sun",
+    "level": 60
+  },
+  {
+    "id": 1531,
+    "name": "Banishment",
+    "level": 60
+  },
+  {
+    "id": 7682,
+    "name": "Focus Refined Spellcaster's Empowering Essence",
+    "level": 60
+  },
+  {
+    "id": 1676,
+    "name": "Greater Vocaration Water",
+    "level": 60
+  },
+  {
+    "id": 3356,
+    "name": "Imbue Fire",
+    "level": 60
+  },
+  {
+    "id": 3357,
+    "name": "Imbue Water",
+    "level": 60
+  },
+  {
+    "id": 1394,
+    "name": "Maelstrom of Electricity",
+    "level": 60
+  },
+  {
+    "id": 1772,
+    "name": "Mala",
+    "level": 60
+  },
+  {
+    "id": 1404,
+    "name": "Monster Summoning III",
+    "level": 60
+  },
+  {
+    "id": 2540,
+    "name": "Shock of Fiery Blades",
+    "level": 60
+  },
+  {
+    "id": 2896,
+    "name": "Transon's Elemental Renewal",
+    "level": 60
+  },
+  {
+    "id": 4078,
+    "name": "Wind of the Desert",
+    "level": 60
+  },
+  {
+    "id": 3040,
+    "name": "Belt of Magi'Kot",
+    "level": 61
+  },
+  {
+    "id": 3041,
+    "name": "Blade of Walnan",
+    "level": 61
+  },
+  {
+    "id": 3329,
+    "name": "Elemental Barrier",
+    "level": 61
+  },
+  {
+    "id": 3318,
+    "name": "Firebolt of Tallon",
+    "level": 61
+  },
+  {
+    "id": 3198,
+    "name": "Flameshield of Ro",
+    "level": 61
+  },
+  {
+    "id": 3300,
+    "name": "Shield of the Arcane",
+    "level": 61
+  },
+  {
+    "id": 3209,
+    "name": "Summon Glowing Bauble",
+    "level": 61
+  },
+  {
+    "id": 6738,
+    "name": "Summon Lava Orb",
+    "level": 61
+  },
+  {
+    "id": 3205,
+    "name": "Summon Platinum Choker",
+    "level": 61
+  },
+  {
+    "id": 3206,
+    "name": "Summon Runed Mantle",
+    "level": 61
+  },
+  {
+    "id": 3207,
+    "name": "Summon Sapphire Bracelet",
+    "level": 61
+  },
+  {
+    "id": 3208,
+    "name": "Summon Spiked Ring",
+    "level": 61
+  },
+  {
+    "id": 4030,
+    "name": "Summon Steel Bracelet",
+    "level": 61
+  },
+  {
+    "id": 3317,
+    "name": "Ward of Xegony",
+    "level": 61
+  },
+  {
+    "id": 4110,
+    "name": "Burning Sand",
+    "level": 62
+  },
+  {
+    "id": 3237,
+    "name": "Burnout V",
+    "level": 62
+  },
+  {
+    "id": 3042,
+    "name": "Fist of Ixiblat",
+    "level": 62
+  },
+  {
+    "id": 3320,
+    "name": "Servant of Marr",
+    "level": 62
+  },
+  {
+    "id": 3319,
+    "name": "Sun Storm",
+    "level": 62
+  },
+  {
+    "id": 3045,
+    "name": "Talisman of Return",
+    "level": 62
+  },
+  {
+    "id": 3031,
+    "name": "Xegony's Phantasmal Guard",
+    "level": 62
+  },
+  {
+    "id": 3321,
+    "name": "Black Steel",
+    "level": 63
+  },
+  {
+    "id": 3043,
+    "name": "Blade of The Kedge",
+    "level": 63
+  },
+  {
+    "id": 3322,
+    "name": "Child of Ro",
+    "level": 63
+  },
+  {
+    "id": 3483,
+    "name": "Elemental Silence",
+    "level": 63
+  },
+  {
+    "id": 3486,
+    "name": "Maelstrom of Ro",
+    "level": 63
+  },
+  {
+    "id": 3387,
+    "name": "Malosinia",
+    "level": 63
+  },
+  {
+    "id": 3210,
+    "name": "Summon Jewelry Bag",
+    "level": 63
+  },
+  {
+    "id": 3238,
+    "name": "Destroy Summoned",
+    "level": 64
+  },
+  {
+    "id": 7695,
+    "name": "Focus Mass Refined Spellcaster's Empowering Essence",
+    "level": 64
+  },
+  {
+    "id": 3044,
+    "name": "Girdle of Magi'Kot",
+    "level": 64
+  },
+  {
+    "id": 3323,
+    "name": "Maelstrom of Thunder",
+    "level": 64
+  },
+  {
+    "id": 3239,
+    "name": "Planar Renewal",
+    "level": 64
+  },
+  {
+    "id": 4081,
+    "name": "Protection of Calliav",
+    "level": 64
+  },
+  {
+    "id": 3302,
+    "name": "Shield of Maelin",
+    "level": 64
+  },
+  {
+    "id": 4976,
+    "name": "Ancient Chaos Vortex",
+    "level": 65
+  },
+  {
+    "id": 3484,
+    "name": "Call of the Arch Mage",
+    "level": 65
+  },
+  {
+    "id": 4886,
+    "name": "Elemental Siphon",
+    "level": 65
+  },
+  {
+    "id": 7683,
+    "name": "Focus Intricate Spellcaster's Empowering Essence",
+    "level": 65
+  },
+  {
+    "id": 4888,
+    "name": "Monster Summoning IV",
+    "level": 65
+  },
+  {
+    "id": 3324,
+    "name": "Rathe's Son",
+    "level": 65
+  },
+  {
+    "id": 4887,
+    "name": "Rock of Taelosia",
+    "level": 65
+  },
+  {
+    "id": 3325,
+    "name": "Sun Vortex",
+    "level": 65
+  },
+  {
+    "id": 5474,
+    "name": "Bolt of Jerikor",
+    "level": 66
+  },
+  {
+    "id": 5473,
+    "name": "Child of Wind",
+    "level": 66
+  },
+  {
+    "id": 5472,
+    "name": "Elemental Aura",
+    "level": 66
+  },
+  {
+    "id": 5466,
+    "name": "Fireskin",
+    "level": 66
+  },
+  {
+    "id": 5470,
+    "name": "Summon Calliav's Glowing Bauble",
+    "level": 66
+  },
+  {
+    "id": 5468,
+    "name": "Summon Calliav's Jeweled Bracelet",
+    "level": 66
+  },
+  {
+    "id": 5475,
+    "name": "Summon Calliav's Platinum Choker",
+    "level": 66
+  },
+  {
+    "id": 5464,
+    "name": "Summon Calliav's Runed Mantle",
+    "level": 66
+  },
+  {
+    "id": 5469,
+    "name": "Summon Calliav's Spiked Ring",
+    "level": 66
+  },
+  {
+    "id": 5471,
+    "name": "Summon Calliav's Steel Bracelet",
+    "level": 66
+  },
+  {
+    "id": 5467,
+    "name": "Summon Fireblade",
+    "level": 66
+  },
+  {
+    "id": 5480,
+    "name": "Child of Water",
+    "level": 67
+  },
+  {
+    "id": 5479,
+    "name": "Rain of Jerikor",
+    "level": 67
+  },
+  {
+    "id": 5489,
+    "name": "Summon Crystal Belt",
+    "level": 67
+  },
+  {
+    "id": 5477,
+    "name": "Summon Dagger of the Deep",
+    "level": 67
+  },
+  {
+    "id": 5486,
+    "name": "Summon Sphere of Air",
+    "level": 67
+  },
+  {
+    "id": 5465,
+    "name": "Summon Staff of the North Wind",
+    "level": 67
+  },
+  {
+    "id": 5484,
+    "name": "Blade Strike",
+    "level": 68
+  },
+  {
+    "id": 8038,
+    "name": "Burning Aura",
+    "level": 68
+  },
+  {
+    "id": 5485,
+    "name": "Child of Fire",
+    "level": 68
+  },
+  {
+    "id": 5476,
+    "name": "Phantom Shield",
+    "level": 68
+  },
+  {
+    "id": 5492,
+    "name": "Pyrilen Skin",
+    "level": 68
+  },
+  {
+    "id": 5483,
+    "name": "Summon Pouch of Jerikor",
+    "level": 68
+  },
+  {
+    "id": 5494,
+    "name": "Bulwark of Calliav",
+    "level": 69
+  },
+  {
+    "id": 5481,
+    "name": "Burning Earth",
+    "level": 69
+  },
+  {
+    "id": 5490,
+    "name": "Desolate Summoned",
+    "level": 69
+  },
+  {
+    "id": 5478,
+    "name": "Elemental Fury",
+    "level": 69
+  },
+  {
+    "id": 8040,
+    "name": "Fickle Fire",
+    "level": 69
+  },
+  {
+    "id": 7696,
+    "name": "Focus Mass Intricate Spellcaster's Empowering Essence",
+    "level": 69
+  },
+  {
+    "id": 5491,
+    "name": "Renewal of Jerikor",
+    "level": 69
+  },
+  {
+    "id": 6670,
+    "name": "Summon Molten Orb",
+    "level": 69
+  },
+  {
+    "id": 5498,
+    "name": "Ancient Nova Strike",
+    "level": 70
+  },
+  {
+    "id": 6145,
+    "name": "Ancient Veil of Pyrilonus",
+    "level": 70
+  },
+  {
+    "id": 5495,
+    "name": "Child of Earth",
+    "level": 70
+  },
+  {
+    "id": 5488,
+    "name": "Circle of Fireskin",
+    "level": 70
+  },
+  {
+    "id": 5497,
+    "name": "Elemental Simulacrum",
+    "level": 70
+  },
+  {
+    "id": 7684,
+    "name": "Focus Elaborate Spellcaster's Empowering Essence",
+    "level": 70
+  },
+  {
+    "id": 8517,
+    "name": "Iceflame Guard",
+    "level": 70
+  },
+  {
+    "id": 8037,
+    "name": "Raging Servant",
+    "level": 70
+  },
+  {
+    "id": 8518,
+    "name": "Rathe's Strength",
+    "level": 70
+  },
+  {
+    "id": 8515,
+    "name": "Spear of Ro",
+    "level": 70
+  },
+  {
+    "id": 5493,
+    "name": "Star Scream",
+    "level": 70
+  },
+  {
+    "id": 5496,
+    "name": "Star Strike",
+    "level": 70
+  }
+]

@@ -1,0 +1,2082 @@
+[
+  {
+    "id": 93,
+    "name": "Burst of Flame",
+    "level": 1
+  },
+  {
+    "id": 237,
+    "name": "Dance of the Fireflies",
+    "level": 1
+  },
+  {
+    "id": 224,
+    "name": "Endure Fire",
+    "level": 1
+  },
+  {
+    "id": 239,
+    "name": "Flame Lick",
+    "level": 1
+  },
+  {
+    "id": 240,
+    "name": "Lull Animal",
+    "level": 1
+  },
+  {
+    "id": 200,
+    "name": "Minor Healing",
+    "level": 1
+  },
+  {
+    "id": 241,
+    "name": "Panic Animal",
+    "level": 1
+  },
+  {
+    "id": 238,
+    "name": "Sense Animals",
+    "level": 1
+  },
+  {
+    "id": 26,
+    "name": "Skin like Wood",
+    "level": 1
+  },
+  {
+    "id": 242,
+    "name": "Snare",
+    "level": 1
+  },
+  {
+    "id": 2591,
+    "name": "Tangling Weeds",
+    "level": 1
+  },
+  {
+    "id": 249,
+    "name": "Grasping Roots",
+    "level": 2
+  },
+  {
+    "id": 248,
+    "name": "Ward Summoned",
+    "level": 2
+  },
+  {
+    "id": 92,
+    "name": "Burst of Fire",
+    "level": 3
+  },
+  {
+    "id": 253,
+    "name": "Whirling Wind",
+    "level": 3
+  },
+  {
+    "id": 247,
+    "name": "Camouflage",
+    "level": 4
+  },
+  {
+    "id": 213,
+    "name": "Cure Disease",
+    "level": 4
+  },
+  {
+    "id": 252,
+    "name": "Invoke Lightning",
+    "level": 4
+  },
+  {
+    "id": 203,
+    "name": "Cure Poison",
+    "level": 5
+  },
+  {
+    "id": 36,
+    "name": "Gate",
+    "level": 5
+  },
+  {
+    "id": 250,
+    "name": "Harmony",
+    "level": 5
+  },
+  {
+    "id": 86,
+    "name": "Enduring Breath",
+    "level": 6
+  },
+  {
+    "id": 254,
+    "name": "Firefist",
+    "level": 6
+  },
+  {
+    "id": 258,
+    "name": "Treeform",
+    "level": 6
+  },
+  {
+    "id": 256,
+    "name": "Shield of Thistles",
+    "level": 7
+  },
+  {
+    "id": 268,
+    "name": "Strength of Earth",
+    "level": 7
+  },
+  {
+    "id": 515,
+    "name": "Thistlecoat",
+    "level": 7
+  },
+  {
+    "id": 91,
+    "name": "Ignite",
+    "level": 8
+  },
+  {
+    "id": 255,
+    "name": "Invisibility Versus Animals",
+    "level": 8
+  },
+  {
+    "id": 4056,
+    "name": "Remove Minor Curse",
+    "level": 8
+  },
+  {
+    "id": 225,
+    "name": "Endure Cold",
+    "level": 9
+  },
+  {
+    "id": 17,
+    "name": "Light Healing",
+    "level": 9
+  },
+  {
+    "id": 2511,
+    "name": "Protection of Wood",
+    "level": 9
+  },
+  {
+    "id": 257,
+    "name": "Starshine",
+    "level": 9
+  },
+  {
+    "id": 278,
+    "name": "Spirit of Wolf",
+    "level": 10
+  },
+  {
+    "id": 264,
+    "name": "Stinging Swarm",
+    "level": 10
+  },
+  {
+    "id": 211,
+    "name": "Summon Drink",
+    "level": 10
+  },
+  {
+    "id": 234,
+    "name": "Halo of Light",
+    "level": 11
+  },
+  {
+    "id": 4261,
+    "name": "Reebo's Lesser Augury",
+    "level": 11
+  },
+  {
+    "id": 50,
+    "name": "Summon Food",
+    "level": 11
+  },
+  {
+    "id": 35,
+    "name": "Bind Affinity",
+    "level": 12
+  },
+  {
+    "id": 262,
+    "name": "Cascade of Hail",
+    "level": 12
+  },
+  {
+    "id": 245,
+    "name": "Befriend Animal",
+    "level": 13
+  },
+  {
+    "id": 663,
+    "name": "Expulse Summoned",
+    "level": 13
+  },
+  {
+    "id": 80,
+    "name": "See Invisible",
+    "level": 13
+  },
+  {
+    "id": 261,
+    "name": "Levitate",
+    "level": 14
+  },
+  {
+    "id": 4285,
+    "name": "Reebo's Lesser Cleansing",
+    "level": 14
+  },
+  {
+    "id": 4273,
+    "name": "Reebo's Lesser Exorcism",
+    "level": 14
+  },
+  {
+    "id": 263,
+    "name": "Skin like Rock",
+    "level": 14
+  },
+  {
+    "id": 513,
+    "name": "Calm Animal",
+    "level": 15
+  },
+  {
+    "id": 530,
+    "name": "Ring of Karana",
+    "level": 15
+  },
+  {
+    "id": 2021,
+    "name": "Ring of Surefall Glade",
+    "level": 15
+  },
+  {
+    "id": 514,
+    "name": "Terrorize Animal",
+    "level": 15
+  },
+  {
+    "id": 419,
+    "name": "Careless Lightning",
+    "level": 16
+  },
+  {
+    "id": 520,
+    "name": "Dizzying Wind",
+    "level": 16
+  },
+  {
+    "id": 532,
+    "name": "Ring of Butcher",
+    "level": 16
+  },
+  {
+    "id": 516,
+    "name": "Barbcoat",
+    "level": 17
+  },
+  {
+    "id": 531,
+    "name": "Ring of Commons",
+    "level": 17
+  },
+  {
+    "id": 533,
+    "name": "Ring of Toxxulia",
+    "level": 17
+  },
+  {
+    "id": 273,
+    "name": "Shield of Barbs",
+    "level": 17
+  },
+  {
+    "id": 3583,
+    "name": "Tiny Companion",
+    "level": 17
+  },
+  {
+    "id": 48,
+    "name": "Cancel Magic",
+    "level": 18
+  },
+  {
+    "id": 139,
+    "name": "Feral Spirit",
+    "level": 18
+  },
+  {
+    "id": 2183,
+    "name": "Lesser Succor",
+    "level": 18
+  },
+  {
+    "id": 2417,
+    "name": "Ring of Grimling",
+    "level": 18
+  },
+  {
+    "id": 34,
+    "name": "Superior Camouflage",
+    "level": 18
+  },
+  {
+    "id": 226,
+    "name": "Endure Disease",
+    "level": 19
+  },
+  {
+    "id": 227,
+    "name": "Endure Poison",
+    "level": 19
+  },
+  {
+    "id": 12,
+    "name": "Healing",
+    "level": 19
+  },
+  {
+    "id": 2512,
+    "name": "Protection of Rock",
+    "level": 19
+  },
+  {
+    "id": 2433,
+    "name": "Ring of the Nexus",
+    "level": 19
+  },
+  {
+    "id": 9957,
+    "name": "Circle of Blightfire Moors",
+    "level": 20
+  },
+  {
+    "id": 27779,
+    "name": "Primary Anchor Ring",
+    "level": 20
+  },
+  {
+    "id": 60,
+    "name": "Resist Fire",
+    "level": 20
+  },
+  {
+    "id": 9958,
+    "name": "Ring of Blightfire Moors",
+    "level": 20
+  },
+  {
+    "id": 535,
+    "name": "Ring of Ro",
+    "level": 20
+  },
+  {
+    "id": 3794,
+    "name": "Ring of Stonebrunt",
+    "level": 20
+  },
+  {
+    "id": 27782,
+    "name": "Secondary Anchor Ring",
+    "level": 20
+  },
+  {
+    "id": 425,
+    "name": "Wolf Form",
+    "level": 20
+  },
+  {
+    "id": 9956,
+    "name": "Zephyr Blightfire Moors",
+    "level": 20
+  },
+  {
+    "id": 76,
+    "name": "Ensnaring Roots",
+    "level": 21
+  },
+  {
+    "id": 4262,
+    "name": "Reebo's Augury",
+    "level": 21
+  },
+  {
+    "id": 537,
+    "name": "Ring of Steamfont",
+    "level": 21
+  },
+  {
+    "id": 220,
+    "name": "Spirit of Cheetah",
+    "level": 21
+  },
+  {
+    "id": 405,
+    "name": "Tremor",
+    "level": 21
+  },
+  {
+    "id": 27,
+    "name": "Pogonip",
+    "level": 22
+  },
+  {
+    "id": 536,
+    "name": "Ring of Feerrott",
+    "level": 22
+  },
+  {
+    "id": 534,
+    "name": "Ring of Lavastorm",
+    "level": 22
+  },
+  {
+    "id": 143,
+    "name": "Sunbeam",
+    "level": 22
+  },
+  {
+    "id": 260,
+    "name": "Charm Animals",
+    "level": 23
+  },
+  {
+    "id": 115,
+    "name": "Dismiss Summoned",
+    "level": 23
+  },
+  {
+    "id": 4057,
+    "name": "Remove Lesser Curse",
+    "level": 23
+  },
+  {
+    "id": 2422,
+    "name": "Ring of Twilight",
+    "level": 23
+  },
+  {
+    "id": 99,
+    "name": "Creeping Crud",
+    "level": 24
+  },
+  {
+    "id": 4286,
+    "name": "Reebo's Cleansing",
+    "level": 24
+  },
+  {
+    "id": 4274,
+    "name": "Reebo's Exorcism",
+    "level": 24
+  },
+  {
+    "id": 1326,
+    "name": "Ring of the Combines",
+    "level": 24
+  },
+  {
+    "id": 421,
+    "name": "Skin like Steel",
+    "level": 24
+  },
+  {
+    "id": 553,
+    "name": "Circle of Butcher",
+    "level": 25
+  },
+  {
+    "id": 550,
+    "name": "Circle of Karana",
+    "level": 25
+  },
+  {
+    "id": 552,
+    "name": "Circle of Toxxulia",
+    "level": 25
+  },
+  {
+    "id": 78,
+    "name": "Immolate",
+    "level": 25
+  },
+  {
+    "id": 3182,
+    "name": "Ring of Knowledge",
+    "level": 25
+  },
+  {
+    "id": 538,
+    "name": "Ring of Misty",
+    "level": 25
+  },
+  {
+    "id": 2020,
+    "name": "Circle of Surefall Glade",
+    "level": 26
+  },
+  {
+    "id": 2432,
+    "name": "Circle of the Nexus",
+    "level": 26
+  },
+  {
+    "id": 512,
+    "name": "Ensnare",
+    "level": 26
+  },
+  {
+    "id": 424,
+    "name": "Scale of Wolf",
+    "level": 26
+  },
+  {
+    "id": 607,
+    "name": "Succor East",
+    "level": 26
+  },
+  {
+    "id": 517,
+    "name": "Bramblecoat",
+    "level": 27
+  },
+  {
+    "id": 551,
+    "name": "Circle of Commons",
+    "level": 27
+  },
+  {
+    "id": 2513,
+    "name": "Protection of Steel",
+    "level": 27
+  },
+  {
+    "id": 129,
+    "name": "Shield of Brambles",
+    "level": 27
+  },
+  {
+    "id": 753,
+    "name": "Beguile Plants",
+    "level": 28
+  },
+  {
+    "id": 3792,
+    "name": "Circle of Stonebrunt",
+    "level": 28
+  },
+  {
+    "id": 217,
+    "name": "Combust",
+    "level": 28
+  },
+  {
+    "id": 96,
+    "name": "Counteract Disease",
+    "level": 28
+  },
+  {
+    "id": 95,
+    "name": "Counteract Poison",
+    "level": 28
+  },
+  {
+    "id": 2419,
+    "name": "Circle of Grimling",
+    "level": 29
+  },
+  {
+    "id": 15,
+    "name": "Greater Healing",
+    "level": 29
+  },
+  {
+    "id": 3601,
+    "name": "Harmony of Nature",
+    "level": 29
+  },
+  {
+    "id": 1888,
+    "name": "Imbue Emerald",
+    "level": 29
+  },
+  {
+    "id": 1800,
+    "name": "Imbue Plains Pebble",
+    "level": 29
+  },
+  {
+    "id": 3998,
+    "name": "Mass Imbue Emerald",
+    "level": 29
+  },
+  {
+    "id": 4004,
+    "name": "Mass Imbue Plains Pebble",
+    "level": 29
+  },
+  {
+    "id": 2427,
+    "name": "Ring of Dawnshroud",
+    "level": 29
+  },
+  {
+    "id": 554,
+    "name": "Circle of Lavastorm",
+    "level": 30
+  },
+  {
+    "id": 1439,
+    "name": "Fury of Air",
+    "level": 30
+  },
+  {
+    "id": 426,
+    "name": "Greater Wolf Form",
+    "level": 30
+  },
+  {
+    "id": 61,
+    "name": "Resist Cold",
+    "level": 30
+  },
+  {
+    "id": 4054,
+    "name": "Spirit of the Shrew",
+    "level": 30
+  },
+  {
+    "id": 557,
+    "name": "Circle of Steamfont",
+    "level": 31
+  },
+  {
+    "id": 406,
+    "name": "Earthquake",
+    "level": 31
+  },
+  {
+    "id": 418,
+    "name": "Lightning Strike",
+    "level": 31
+  },
+  {
+    "id": 4263,
+    "name": "Reebo's Greater Augury",
+    "level": 31
+  },
+  {
+    "id": 1433,
+    "name": "Ring of Iceclad",
+    "level": 31
+  },
+  {
+    "id": 556,
+    "name": "Circle of Feerrott",
+    "level": 32
+  },
+  {
+    "id": 1434,
+    "name": "Circle of Iceclad",
+    "level": 32
+  },
+  {
+    "id": 555,
+    "name": "Circle of Ro",
+    "level": 32
+  },
+  {
+    "id": 259,
+    "name": "Drones of Doom",
+    "level": 32
+  },
+  {
+    "id": 608,
+    "name": "Succor Butcher",
+    "level": 32
+  },
+  {
+    "id": 25898,
+    "name": "Zephyr Nexus",
+    "level": 32
+  },
+  {
+    "id": 25904,
+    "name": "Zephyr Toxxulia",
+    "level": 32
+  },
+  {
+    "id": 141,
+    "name": "Beguile Animals",
+    "level": 33
+  },
+  {
+    "id": 1517,
+    "name": "Circle of the Combines",
+    "level": 33
+  },
+  {
+    "id": 2424,
+    "name": "Circle of Twilight",
+    "level": 33
+  },
+  {
+    "id": 664,
+    "name": "Expel Summoned",
+    "level": 33
+  },
+  {
+    "id": 2029,
+    "name": "Ring of Great Divide",
+    "level": 33
+  },
+  {
+    "id": 25689,
+    "name": "Zephyr Butcherblock",
+    "level": 33
+  },
+  {
+    "id": 25698,
+    "name": "Zephyr Iceclad",
+    "level": 33
+  },
+  {
+    "id": 228,
+    "name": "Endure Magic",
+    "level": 34
+  },
+  {
+    "id": 3834,
+    "name": "Healing Water",
+    "level": 34
+  },
+  {
+    "id": 4287,
+    "name": "Reebo's Greater Cleansing",
+    "level": 34
+  },
+  {
+    "id": 4275,
+    "name": "Reebo's Greater Exorcism",
+    "level": 34
+  },
+  {
+    "id": 144,
+    "name": "Regeneration",
+    "level": 34
+  },
+  {
+    "id": 429,
+    "name": "Strength of Stone",
+    "level": 34
+  },
+  {
+    "id": 25899,
+    "name": "Zephyr Karana",
+    "level": 34
+  },
+  {
+    "id": 4055,
+    "name": "Pack Shrew",
+    "level": 35
+  },
+  {
+    "id": 169,
+    "name": "Pack Spirit",
+    "level": 35
+  },
+  {
+    "id": 27781,
+    "name": "Primary Anchor Circle",
+    "level": 35
+  },
+  {
+    "id": 27784,
+    "name": "Secondary Anchor Circle",
+    "level": 35
+  },
+  {
+    "id": 428,
+    "name": "Share Wolf Form",
+    "level": 35
+  },
+  {
+    "id": 25690,
+    "name": "Zephyr Commonlands",
+    "level": 35
+  },
+  {
+    "id": 25903,
+    "name": "Zephyr Stonebrunt",
+    "level": 35
+  },
+  {
+    "id": 25900,
+    "name": "Zephyr Surefall Glade",
+    "level": 35
+  },
+  {
+    "id": 558,
+    "name": "Circle of Misty",
+    "level": 36
+  },
+  {
+    "id": 490,
+    "name": "Enveloping Roots",
+    "level": 36
+  },
+  {
+    "id": 2030,
+    "name": "Ring of Wakening Lands",
+    "level": 36
+  },
+  {
+    "id": 422,
+    "name": "Skin like Diamond",
+    "level": 36
+  },
+  {
+    "id": 3580,
+    "name": "Spirit of Ash",
+    "level": 36
+  },
+  {
+    "id": 28,
+    "name": "Avalanche",
+    "level": 37
+  },
+  {
+    "id": 2429,
+    "name": "Circle of Dawnshroud",
+    "level": 37
+  },
+  {
+    "id": 1437,
+    "name": "Ro's Fiery Sundering",
+    "level": 37
+  },
+  {
+    "id": 432,
+    "name": "Shield of Spikes",
+    "level": 37
+  },
+  {
+    "id": 518,
+    "name": "Spikecoat",
+    "level": 37
+  },
+  {
+    "id": 1737,
+    "name": "Wind of the South",
+    "level": 37
+  },
+  {
+    "id": 1438,
+    "name": "Circle of Great Divide",
+    "level": 38
+  },
+  {
+    "id": 3184,
+    "name": "Circle of Knowledge",
+    "level": 38
+  },
+  {
+    "id": 57,
+    "name": "Firestrike",
+    "level": 38
+  },
+  {
+    "id": 2946,
+    "name": "Remove Curse",
+    "level": 38
+  },
+  {
+    "id": 609,
+    "name": "Succor Ro",
+    "level": 38
+  },
+  {
+    "id": 25697,
+    "name": "Zephyr Grimling",
+    "level": 38
+  },
+  {
+    "id": 6873,
+    "name": "Nature's Renewal",
+    "level": 39
+  },
+  {
+    "id": 137,
+    "name": "Pack Regeneration",
+    "level": 39
+  },
+  {
+    "id": 2514,
+    "name": "Protection of Diamond",
+    "level": 39
+  },
+  {
+    "id": 2031,
+    "name": "Ring of Cobalt Scar",
+    "level": 39
+  },
+  {
+    "id": 1736,
+    "name": "Wind of the North",
+    "level": 39
+  },
+  {
+    "id": 25695,
+    "name": "Zephyr Feerrott",
+    "level": 39
+  },
+  {
+    "id": 25902,
+    "name": "Zephyr Steamfont",
+    "level": 39
+  },
+  {
+    "id": 1398,
+    "name": "Circle of Wakening Lands",
+    "level": 40
+  },
+  {
+    "id": 665,
+    "name": "Drifting Death",
+    "level": 40
+  },
+  {
+    "id": 427,
+    "name": "Form of the Great Wolf",
+    "level": 40
+  },
+  {
+    "id": 27757,
+    "name": "Primary Anchor Push",
+    "level": 40
+  },
+  {
+    "id": 27758,
+    "name": "Secondary Anchor Push",
+    "level": 40
+  },
+  {
+    "id": 25694,
+    "name": "Zephyr Combines",
+    "level": 40
+  },
+  {
+    "id": 27780,
+    "name": "Zephyr Primary Anchor",
+    "level": 40
+  },
+  {
+    "id": 25901,
+    "name": "Zephyr Ro",
+    "level": 40
+  },
+  {
+    "id": 27783,
+    "name": "Zephyr Secondary Anchor",
+    "level": 40
+  },
+  {
+    "id": 140,
+    "name": "Savage Spirit",
+    "level": 41
+  },
+  {
+    "id": 610,
+    "name": "Succor Lavastorm",
+    "level": 41
+  },
+  {
+    "id": 1285,
+    "name": "Summon Companion",
+    "level": 41
+  },
+  {
+    "id": 25905,
+    "name": "Zephyr Twilight",
+    "level": 41
+  },
+  {
+    "id": 145,
+    "name": "Chloroplast",
+    "level": 42
+  },
+  {
+    "id": 1440,
+    "name": "Circle of Cobalt Scar",
+    "level": 42
+  },
+  {
+    "id": 1436,
+    "name": "Fixation of Ro",
+    "level": 42
+  },
+  {
+    "id": 25696,
+    "name": "Zephyr Great Divide",
+    "level": 42
+  },
+  {
+    "id": 142,
+    "name": "Allure of the Wild",
+    "level": 43
+  },
+  {
+    "id": 116,
+    "name": "Banish Summoned",
+    "level": 43
+  },
+  {
+    "id": 1740,
+    "name": "Dustdevil",
+    "level": 43
+  },
+  {
+    "id": 49,
+    "name": "Nullify Magic",
+    "level": 43
+  },
+  {
+    "id": 25906,
+    "name": "Zephyr Wakening Lands",
+    "level": 43
+  },
+  {
+    "id": 53122,
+    "name": "Greater Mass Imbue Emerald",
+    "level": 44
+  },
+  {
+    "id": 53128,
+    "name": "Greater Mass Imbue Plains Pebble",
+    "level": 44
+  },
+  {
+    "id": 63,
+    "name": "Resist Disease",
+    "level": 44
+  },
+  {
+    "id": 62,
+    "name": "Resist Poison",
+    "level": 44
+  },
+  {
+    "id": 430,
+    "name": "Storm Strength",
+    "level": 44
+  },
+  {
+    "id": 9,
+    "name": "Superior Healing",
+    "level": 44
+  },
+  {
+    "id": 25693,
+    "name": "Zephyr Cobalt Scar",
+    "level": 44
+  },
+  {
+    "id": 77,
+    "name": "Engulfing Roots",
+    "level": 45
+  },
+  {
+    "id": 138,
+    "name": "Pack Chloroplast",
+    "level": 45
+  },
+  {
+    "id": 3579,
+    "name": "Share Form of the Great Wolf",
+    "level": 45
+  },
+  {
+    "id": 25699,
+    "name": "Zephyr Misty",
+    "level": 45
+  },
+  {
+    "id": 420,
+    "name": "Lightning Blast",
+    "level": 46
+  },
+  {
+    "id": 423,
+    "name": "Skin like Nature",
+    "level": 46
+  },
+  {
+    "id": 611,
+    "name": "Succor North",
+    "level": 46
+  },
+  {
+    "id": 24773,
+    "name": "Zephyr Knowledge",
+    "level": 46
+  },
+  {
+    "id": 29,
+    "name": "Ice",
+    "level": 47
+  },
+  {
+    "id": 356,
+    "name": "Shield of Thorns",
+    "level": 47
+  },
+  {
+    "id": 519,
+    "name": "Thorncoat",
+    "level": 47
+  },
+  {
+    "id": 24771,
+    "name": "Zephyr Lavastorm",
+    "level": 47
+  },
+  {
+    "id": 433,
+    "name": "Fire",
+    "level": 48
+  },
+  {
+    "id": 1435,
+    "name": "Improved Superior Camouflage",
+    "level": 48
+  },
+  {
+    "id": 671,
+    "name": "Starfire",
+    "level": 48
+  },
+  {
+    "id": 1542,
+    "name": "Upheaval",
+    "level": 48
+  },
+  {
+    "id": 6876,
+    "name": "Forest's Renewal",
+    "level": 49
+  },
+  {
+    "id": 1727,
+    "name": "Legacy of Spike",
+    "level": 49
+  },
+  {
+    "id": 2515,
+    "name": "Protection of Nature",
+    "level": 49
+  },
+  {
+    "id": 64,
+    "name": "Resist Magic",
+    "level": 49
+  },
+  {
+    "id": 4104,
+    "name": "Vengeance of the Wild",
+    "level": 49
+  },
+  {
+    "id": 2881,
+    "name": "Everlasting Breath",
+    "level": 50
+  },
+  {
+    "id": 2894,
+    "name": "Levitation",
+    "level": 50
+  },
+  {
+    "id": 5571,
+    "name": "Tangle",
+    "level": 50
+  },
+  {
+    "id": 1551,
+    "name": "Circle of Winter",
+    "level": 51
+  },
+  {
+    "id": 1550,
+    "name": "Repulse Animal",
+    "level": 51
+  },
+  {
+    "id": 53153,
+    "name": "Ring of Tranquility",
+    "level": 51
+  },
+  {
+    "id": 1600,
+    "name": "Breath of Ro",
+    "level": 52
+  },
+  {
+    "id": 1553,
+    "name": "Call of Karana",
+    "level": 52
+  },
+  {
+    "id": 8965,
+    "name": "Circle of Arcstone",
+    "level": 52
+  },
+  {
+    "id": 1552,
+    "name": "Circle of Summer",
+    "level": 52
+  },
+  {
+    "id": 8235,
+    "name": "Circle of Undershore",
+    "level": 52
+  },
+  {
+    "id": 1566,
+    "name": "Egress I",
+    "level": 52
+  },
+  {
+    "id": 4058,
+    "name": "Feral Pack",
+    "level": 52
+  },
+  {
+    "id": 2516,
+    "name": "Foliage Shield",
+    "level": 52
+  },
+  {
+    "id": 3693,
+    "name": "Pure Blood",
+    "level": 52
+  },
+  {
+    "id": 8967,
+    "name": "Ring of Arcstone",
+    "level": 52
+  },
+  {
+    "id": 5733,
+    "name": "Ring of Barindu",
+    "level": 52
+  },
+  {
+    "id": 4967,
+    "name": "Ring of Natimbi",
+    "level": 52
+  },
+  {
+    "id": 8237,
+    "name": "Ring of Undershore",
+    "level": 52
+  },
+  {
+    "id": 24775,
+    "name": "Zephyr Undershore",
+    "level": 52
+  },
+  {
+    "id": 1555,
+    "name": "Glamour of Tunare",
+    "level": 53
+  },
+  {
+    "id": 6185,
+    "name": "Ring of Bloodfields",
+    "level": 53
+  },
+  {
+    "id": 1554,
+    "name": "Spirit of Scale",
+    "level": 53
+  },
+  {
+    "id": 1601,
+    "name": "Winged Death",
+    "level": 53
+  },
+  {
+    "id": 1602,
+    "name": "Blizzard",
+    "level": 54
+  },
+  {
+    "id": 4966,
+    "name": "Circle of Natimbi",
+    "level": 54
+  },
+  {
+    "id": 53154,
+    "name": "Circle of Tranquility",
+    "level": 54
+  },
+  {
+    "id": 21400,
+    "name": "Eradicate Curse",
+    "level": 54
+  },
+  {
+    "id": 1562,
+    "name": "Form of the Howler",
+    "level": 54
+  },
+  {
+    "id": 1568,
+    "name": "Regrowth",
+    "level": 54
+  },
+  {
+    "id": 2880,
+    "name": "Remove Greater Curse",
+    "level": 54
+  },
+  {
+    "id": 11982,
+    "name": "Ring of Buried Sea",
+    "level": 54
+  },
+  {
+    "id": 1603,
+    "name": "Scoriae",
+    "level": 54
+  },
+  {
+    "id": 2517,
+    "name": "Spirit of Eagle",
+    "level": 54
+  },
+  {
+    "id": 1526,
+    "name": "Annul Magic",
+    "level": 55
+  },
+  {
+    "id": 8929,
+    "name": "Aura of the Grove",
+    "level": 55
+  },
+  {
+    "id": 1290,
+    "name": "Chloroblast",
+    "level": 55
+  },
+  {
+    "id": 5731,
+    "name": "Circle of Barindu",
+    "level": 55
+  },
+  {
+    "id": 6184,
+    "name": "Circle of Bloodfields",
+    "level": 55
+  },
+  {
+    "id": 1529,
+    "name": "Exile Summoned",
+    "level": 55
+  },
+  {
+    "id": 1605,
+    "name": "Frost",
+    "level": 55
+  },
+  {
+    "id": 1557,
+    "name": "Girdle of Karana",
+    "level": 55
+  },
+  {
+    "id": 1475,
+    "name": "Nature Walker's Behest",
+    "level": 55
+  },
+  {
+    "id": 1556,
+    "name": "Tunare's Request",
+    "level": 55
+  },
+  {
+    "id": 4105,
+    "name": "Vengeance of Nature",
+    "level": 55
+  },
+  {
+    "id": 1558,
+    "name": "Bladecoat",
+    "level": 56
+  },
+  {
+    "id": 1604,
+    "name": "Breath of Karana",
+    "level": 56
+  },
+  {
+    "id": 1719,
+    "name": "Engorging Roots",
+    "level": 56
+  },
+  {
+    "id": 2518,
+    "name": "Ro's Smoldering Disjunction",
+    "level": 56
+  },
+  {
+    "id": 1725,
+    "name": "Wake of Karana",
+    "level": 56
+  },
+  {
+    "id": 24776,
+    "name": "Zephyr Arcstone",
+    "level": 56
+  },
+  {
+    "id": 25700,
+    "name": "Zephyr Natimbi",
+    "level": 56
+  },
+  {
+    "id": 1767,
+    "name": "Bonds of Tunare",
+    "level": 57
+  },
+  {
+    "id": 3346,
+    "name": "Imbue Storm",
+    "level": 57
+  },
+  {
+    "id": 6998,
+    "name": "Instinctual Fear",
+    "level": 57
+  },
+  {
+    "id": 1559,
+    "name": "Natureskin",
+    "level": 57
+  },
+  {
+    "id": 1567,
+    "name": "Succor",
+    "level": 57
+  },
+  {
+    "id": 25691,
+    "name": "Zephyr Barindu",
+    "level": 57
+  },
+  {
+    "id": 25692,
+    "name": "Zephyr Bloodfields",
+    "level": 57
+  },
+  {
+    "id": 24772,
+    "name": "Zephyr Dawnshroud",
+    "level": 57
+  },
+  {
+    "id": 53155,
+    "name": "Zephyr Tranquility",
+    "level": 57
+  },
+  {
+    "id": 2519,
+    "name": "Circle of Seasons",
+    "level": 58
+  },
+  {
+    "id": 21399,
+    "name": "Eradicate Disease",
+    "level": 58
+  },
+  {
+    "id": 21398,
+    "name": "Eradicate Poison",
+    "level": 58
+  },
+  {
+    "id": 1606,
+    "name": "Fist of Karana",
+    "level": 58
+  },
+  {
+    "id": 1569,
+    "name": "Regrowth of the Grove",
+    "level": 58
+  },
+  {
+    "id": 1560,
+    "name": "Shield of Blades",
+    "level": 58
+  },
+  {
+    "id": 2179,
+    "name": "Tunare's Renewal",
+    "level": 58
+  },
+  {
+    "id": 11981,
+    "name": "Circle of Buried Sea",
+    "level": 59
+  },
+  {
+    "id": 4589,
+    "name": "Incarnate Anew",
+    "level": 59
+  },
+  {
+    "id": 1561,
+    "name": "Legacy of Thorn",
+    "level": 59
+  },
+  {
+    "id": 2188,
+    "name": "Protection of the Cabbage",
+    "level": 59
+  },
+  {
+    "id": 1564,
+    "name": "Spirit of Oak",
+    "level": 59
+  },
+  {
+    "id": 1607,
+    "name": "Wildfire",
+    "level": 59
+  },
+  {
+    "id": 2125,
+    "name": "Ancient Legacy of Blades",
+    "level": 60
+  },
+  {
+    "id": 2126,
+    "name": "Ancient Starfire of Ro",
+    "level": 60
+  },
+  {
+    "id": 1531,
+    "name": "Banishment",
+    "level": 60
+  },
+  {
+    "id": 9954,
+    "name": "Circle of The Steppes",
+    "level": 60
+  },
+  {
+    "id": 1608,
+    "name": "Entrapping Roots",
+    "level": 60
+  },
+  {
+    "id": 1563,
+    "name": "Form of the Hunter",
+    "level": 60
+  },
+  {
+    "id": 1565,
+    "name": "Mask of the Hunter",
+    "level": 60
+  },
+  {
+    "id": 2887,
+    "name": "Mask of the Stalker",
+    "level": 60
+  },
+  {
+    "id": 2877,
+    "name": "Moonfire",
+    "level": 60
+  },
+  {
+    "id": 2520,
+    "name": "Nature's Recovery",
+    "level": 60
+  },
+  {
+    "id": 1291,
+    "name": "Nature's Touch",
+    "level": 60
+  },
+  {
+    "id": 1442,
+    "name": "Protection of the Glades",
+    "level": 60
+  },
+  {
+    "id": 9955,
+    "name": "Ring of The Steppes",
+    "level": 60
+  },
+  {
+    "id": 33099,
+    "name": "Teleport Guild Hall Anchor",
+    "level": 60
+  },
+  {
+    "id": 9953,
+    "name": "Zephyr The Steppes",
+    "level": 60
+  },
+  {
+    "id": 3473,
+    "name": "Catastrophe",
+    "level": 61
+  },
+  {
+    "id": 9700,
+    "name": "Cure Corruption",
+    "level": 61
+  },
+  {
+    "id": 9701,
+    "name": "Cure Corruption Rk. II",
+    "level": 61
+  },
+  {
+    "id": 9702,
+    "name": "Cure Corruption Rk. III",
+    "level": 61
+  },
+  {
+    "id": 3192,
+    "name": "Earthen Roots",
+    "level": 61
+  },
+  {
+    "id": 5572,
+    "name": "Entangle",
+    "level": 61
+  },
+  {
+    "id": 3435,
+    "name": "Hand of Ro",
+    "level": 61
+  },
+  {
+    "id": 6999,
+    "name": "Instinctual Panic",
+    "level": 61
+  },
+  {
+    "id": 6733,
+    "name": "Mire Thorns",
+    "level": 61
+  },
+  {
+    "id": 3433,
+    "name": "Replenishment",
+    "level": 61
+  },
+  {
+    "id": 3434,
+    "name": "Storm's Fury",
+    "level": 61
+  },
+  {
+    "id": 3436,
+    "name": "Winter's Storm",
+    "level": 61
+  },
+  {
+    "id": 3185,
+    "name": "Flight of Eagles",
+    "level": 62
+  },
+  {
+    "id": 3437,
+    "name": "Immolation of Ro",
+    "level": 62
+  },
+  {
+    "id": 3438,
+    "name": "Karana's Rage",
+    "level": 62
+  },
+  {
+    "id": 3439,
+    "name": "Nature's Might",
+    "level": 62
+  },
+  {
+    "id": 6180,
+    "name": "Ring of Slaughter",
+    "level": 62
+  },
+  {
+    "id": 3440,
+    "name": "Ro's Illumination",
+    "level": 62
+  },
+  {
+    "id": 3441,
+    "name": "Blessing of Replenishment",
+    "level": 63
+  },
+  {
+    "id": 3445,
+    "name": "Command of Tunare",
+    "level": 63
+  },
+  {
+    "id": 3442,
+    "name": "E'ci's Frosty Breath",
+    "level": 63
+  },
+  {
+    "id": 3443,
+    "name": "Nature's Infusion",
+    "level": 63
+  },
+  {
+    "id": 3234,
+    "name": "Protection of the Nine",
+    "level": 63
+  },
+  {
+    "id": 9721,
+    "name": "Resist Corruption",
+    "level": 63
+  },
+  {
+    "id": 9722,
+    "name": "Resist Corruption Rk. II",
+    "level": 63
+  },
+  {
+    "id": 9723,
+    "name": "Resist Corruption Rk. III",
+    "level": 63
+  },
+  {
+    "id": 3448,
+    "name": "Shield of Bracken",
+    "level": 63
+  },
+  {
+    "id": 3446,
+    "name": "Swarming Death",
+    "level": 63
+  },
+  {
+    "id": 3450,
+    "name": "Brackencoat",
+    "level": 64
+  },
+  {
+    "id": 9920,
+    "name": "Chant of the Napaea",
+    "level": 64
+  },
+  {
+    "id": 9921,
+    "name": "Chant of the Napaea Rk. II",
+    "level": 64
+  },
+  {
+    "id": 9922,
+    "name": "Chant of the Napaea Rk. III",
+    "level": 64
+  },
+  {
+    "id": 6179,
+    "name": "Circle of Slaughter",
+    "level": 64
+  },
+  {
+    "id": 3232,
+    "name": "Karana's Renewal",
+    "level": 64
+  },
+  {
+    "id": 3444,
+    "name": "Protection of Seasons",
+    "level": 64
+  },
+  {
+    "id": 3447,
+    "name": "Savage Roots",
+    "level": 64
+  },
+  {
+    "id": 3449,
+    "name": "Summer's Flame",
+    "level": 64
+  },
+  {
+    "id": 4106,
+    "name": "Vengeance of Tunare",
+    "level": 64
+  },
+  {
+    "id": 11980,
+    "name": "Zephyr Buried Sea",
+    "level": 64
+  },
+  {
+    "id": 4974,
+    "name": "Ancient Chaos Frost",
+    "level": 65
+  },
+  {
+    "id": 3451,
+    "name": "Blessing of the Nine",
+    "level": 65
+  },
+  {
+    "id": 3238,
+    "name": "Destroy Summoned",
+    "level": 65
+  },
+  {
+    "id": 3295,
+    "name": "Legacy of Bracken",
+    "level": 65
+  },
+  {
+    "id": 3453,
+    "name": "Mask of the Forest",
+    "level": 65
+  },
+  {
+    "id": 4885,
+    "name": "Sylvan Embers",
+    "level": 65
+  },
+  {
+    "id": 4884,
+    "name": "Sylvan Fire",
+    "level": 65
+  },
+  {
+    "id": 4883,
+    "name": "Sylvan Infusion",
+    "level": 65
+  },
+  {
+    "id": 3452,
+    "name": "Winter's Frost",
+    "level": 65
+  },
+  {
+    "id": 5346,
+    "name": "Earth Shiver",
+    "level": 66
+  },
+  {
+    "id": 7000,
+    "name": "Instinctual Terror",
+    "level": 66
+  },
+  {
+    "id": 5342,
+    "name": "Oaken Vigor",
+    "level": 66
+  },
+  {
+    "id": 5343,
+    "name": "Stormwatch",
+    "level": 66
+  },
+  {
+    "id": 5345,
+    "name": "Tempest Wind",
+    "level": 66
+  },
+  {
+    "id": 5354,
+    "name": "Glacier Breath",
+    "level": 67
+  },
+  {
+    "id": 5348,
+    "name": "Immolation of the Sun",
+    "level": 67
+  },
+  {
+    "id": 5350,
+    "name": "Lion's Strength",
+    "level": 67
+  },
+  {
+    "id": 5347,
+    "name": "Nature's Serenity",
+    "level": 67
+  },
+  {
+    "id": 5358,
+    "name": "Nettle Shield",
+    "level": 67
+  },
+  {
+    "id": 5351,
+    "name": "Sun's Corona",
+    "level": 67
+  },
+  {
+    "id": 24774,
+    "name": "Zephyr Slaughter",
+    "level": 67
+  },
+  {
+    "id": 5355,
+    "name": "Chlorotrope",
+    "level": 68
+  },
+  {
+    "id": 6123,
+    "name": "Cloak of Nature",
+    "level": 68
+  },
+  {
+    "id": 5364,
+    "name": "Desolate Summoned",
+    "level": 68
+  },
+  {
+    "id": 5362,
+    "name": "Nettlecoat",
+    "level": 68
+  },
+  {
+    "id": 8008,
+    "name": "Skin of the Reptile",
+    "level": 68
+  },
+  {
+    "id": 5352,
+    "name": "Steeloak Skin",
+    "level": 68
+  },
+  {
+    "id": 5357,
+    "name": "Wasp Swarm",
+    "level": 68
+  },
+  {
+    "id": 5353,
+    "name": "Blessing of Oak",
+    "level": 69
+  },
+  {
+    "id": 5356,
+    "name": "Oaken Guard",
+    "level": 69
+  },
+  {
+    "id": 6665,
+    "name": "Serpent Vines",
+    "level": 69
+  },
+  {
+    "id": 5361,
+    "name": "Solstice Strike",
+    "level": 69
+  },
+  {
+    "id": 8010,
+    "name": "Spore Spiral",
+    "level": 69
+  },
+  {
+    "id": 5363,
+    "name": "Vengeance of the Sun",
+    "level": 69
+  },
+  {
+    "id": 6141,
+    "name": "Ancient Chlorobon",
+    "level": 70
+  },
+  {
+    "id": 5369,
+    "name": "Ancient Glacier Frost",
+    "level": 70
+  },
+  {
+    "id": 8499,
+    "name": "Aura of Life",
+    "level": 70
+  },
+  {
+    "id": 8497,
+    "name": "Barkspur",
+    "level": 70
+  },
+  {
+    "id": 5366,
+    "name": "Blessing of Steeloak",
+    "level": 70
+  },
+  {
+    "id": 9951,
+    "name": "Circle of Direwind",
+    "level": 70
+  },
+  {
+    "id": 8011,
+    "name": "Dawnstrike",
+    "level": 70
+  },
+  {
+    "id": 5367,
+    "name": "Glitterfrost",
+    "level": 70
+  },
+  {
+    "id": 5349,
+    "name": "Hungry Vines",
+    "level": 70
+  },
+  {
+    "id": 5365,
+    "name": "Legacy of Nettles",
+    "level": 70
+  },
+  {
+    "id": 5368,
+    "name": "Mask of the Wild",
+    "level": 70
+  },
+  {
+    "id": 8498,
+    "name": "Moonshadow",
+    "level": 70
+  },
+  {
+    "id": 5359,
+    "name": "Nature's Beckon",
+    "level": 70
+  },
+  {
+    "id": 9952,
+    "name": "Ring of Direwind",
+    "level": 70
+  },
+  {
+    "id": 9950,
+    "name": "Zephyr Direwind",
+    "level": 70
+  }
+]

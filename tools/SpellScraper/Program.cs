@@ -12,23 +12,51 @@ class Program
 {
     static void Main(string[] args)
     {
-        var pages = new[] { 18, 19, 20, 21 };
-        var baseUrl = "https://lucy.allakhazam.com/spelllist.html?classes=CLR&source=Live&page=";
-        // Parse local HTML directories provided by the user
-        var clericDir = @"C:\Users\Jake\Downloads\Spells\Cleric Spells";
-        var shamanDir = @"C:\Users\Jake\Downloads\Spells\Shaman Spells";
-
-        var cleric = ParseLocalDir(clericDir, "CLR");
-        var shaman = ParseLocalDir(shamanDir, "SHM");
+        // Define all spell classes and their directories
+        var spellClasses = new Dictionary<string, string>
+        {
+            { "CLR", @"C:\Users\Jake\Downloads\Spells\Cleric Spells" },
+            { "SHM", @"C:\Users\Jake\Downloads\Spells\Shaman Spells" },
+            { "DRU", @"C:\Users\Jake\Downloads\Spells\Druid Spells" },
+            { "ENC", @"C:\Users\Jake\Downloads\Spells\Enchanter Spells" },
+            { "MAG", @"C:\Users\Jake\Downloads\Spells\Magician Spells" },
+            { "NEC", @"C:\Users\Jake\Downloads\Spells\Necromancer Spells" },
+            { "RNG", @"C:\Users\Jake\Downloads\Spells\Ranger Spells" },
+            { "WIZ", @"C:\Users\Jake\Downloads\Spells\Wizard Spells" }
+        };
 
         var outBase = Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, "tools", "ConfigEditor", "spells"));
         Directory.CreateDirectory(outBase);
-        var clericOut = Path.Combine(outBase, "cleric_spells.json");
-        var shamanOut = Path.Combine(outBase, "shaman_spells.json");
-        File.WriteAllText(clericOut, JsonConvert.SerializeObject(cleric, Formatting.Indented));
-        File.WriteAllText(shamanOut, JsonConvert.SerializeObject(shaman, Formatting.Indented));
-        Console.WriteLine($"Wrote {cleric.Count} cleric spells to {clericOut}");
-        Console.WriteLine($"Wrote {shaman.Count} shaman spells to {shamanOut}");
+
+        foreach (var kvp in spellClasses)
+        {
+            var classCode = kvp.Key;
+            var classDir = kvp.Value;
+            var className = GetClassName(classCode);
+            
+            Console.WriteLine($"Processing {className} spells...");
+            var spells = ParseLocalDir(classDir, classCode);
+            
+            var outputFile = Path.Combine(outBase, $"{className.ToLower()}_spells.json");
+            File.WriteAllText(outputFile, JsonConvert.SerializeObject(spells, Formatting.Indented));
+            Console.WriteLine($"Wrote {spells.Count} {className.ToLower()} spells to {outputFile}");
+        }
+    }
+
+    static string GetClassName(string classCode)
+    {
+        return classCode switch
+        {
+            "CLR" => "cleric",
+            "SHM" => "shaman", 
+            "DRU" => "druid",
+            "ENC" => "enchanter",
+            "MAG" => "magician",
+            "NEC" => "necromancer",
+            "RNG" => "ranger",
+            "WIZ" => "wizard",
+            _ => classCode.ToLower()
+        };
     }
 
     class SpellRow { public int id; public string name = ""; public int level; }

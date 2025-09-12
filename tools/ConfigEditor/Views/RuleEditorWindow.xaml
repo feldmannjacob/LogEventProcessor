@@ -132,6 +132,12 @@
             <ComboBox x:Name="SpellClassCombo" Width="110" Margin="6,0,6,0">
                 <ComboBoxItem Content="Cleric"/>
                 <ComboBoxItem Content="Shaman"/>
+                <ComboBoxItem Content="Druid"/>
+                <ComboBoxItem Content="Enchanter"/>
+                <ComboBoxItem Content="Magician"/>
+                <ComboBoxItem Content="Necromancer"/>
+                <ComboBoxItem Content="Ranger"/>
+                <ComboBoxItem Content="Wizard"/>
             </ComboBox>
             <TextBox x:Name="MinLevelText" Width="40" Margin="6,0,2,0" ToolTip="Min"/>
             <TextBox x:Name="MaxLevelText" Width="40" Margin="2,0,6,0" ToolTip="Max"/>
