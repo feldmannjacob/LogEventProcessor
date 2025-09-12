@@ -26,9 +26,9 @@ process_info: true
 # Regex matching rules with actions
 regex_rules:
   - name: "hello_world_response"
-    pattern: ".*hello world.*"
+    pattern: ".*hello # world.*"
     action_type: "command"
-    action_value: "g Goodbye"
+    action_value: "g # Goodbye"
     modifiers: 0
     enabled: true
   

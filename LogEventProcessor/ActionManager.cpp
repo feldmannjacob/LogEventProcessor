@@ -2,6 +2,7 @@
 #include <iostream>
 #include <sstream>
 #include <algorithm>
+#include <regex>
 
 ActionManager::ActionManager() 
     : _regexMatcher(nullptr), _executedActionCount(0), _failedActionCount(0) {
@@ -55,7 +56,29 @@ bool ActionManager::processEvent(const LogEventPtr& event) {
                 std::cout << "[ACTION] Rule '" << rule->name << "' matched, executing action: " 
                          << it->second.actionType << ":" << it->second.actionValue << std::endl;
                 
-                if (executeAction(it->second)) {
+                // Substitute placeholders ('#') with captured text
+                ActionMapping mappingToExecute = it->second;
+                // Determine extracted text: first capture group if present, otherwise full match
+                std::string extractedText;
+                if (matches.size() > 1) {
+                    extractedText = matches[1].str();
+                } else if (matches.size() > 0) {
+                    extractedText = matches[0].str();
+                }
+                if (!extractedText.empty() && mappingToExecute.actionValue.find('#') != std::string::npos) {
+                    std::string result;
+                    result.reserve(mappingToExecute.actionValue.size() + extractedText.size());
+                    for (char c : mappingToExecute.actionValue) {
+                        if (c == '#') {
+                            result += extractedText;
+                        } else {
+                            result.push_back(c);
+                        }
+                    }
+                    mappingToExecute.actionValue = result;
+                }
+
+                if (executeAction(mappingToExecute)) {
                     _executedActionCount.fetch_add(1);
                     anyMatch = true;
                 } else {
@@ -81,7 +104,27 @@ bool ActionManager::getActionsForEvent(const LogEventPtr& event, std::vector<Act
             std::lock_guard<std::mutex> lock(_mutex);
             auto it = _actionMappings.find(rule->name);
             if (it != _actionMappings.end() && it->second.enabled) {
-                outActions.push_back(it->second);
+                // Create a copy with placeholder substitution for this specific match
+                ActionMapping mappingForEvent = it->second;
+                std::string extractedText;
+                if (matches.size() > 1) {
+                    extractedText = matches[1].str();
+                } else if (matches.size() > 0) {
+                    extractedText = matches[0].str();
+                }
+                if (!extractedText.empty() && mappingForEvent.actionValue.find('#') != std::string::npos) {
+                    std::string result;
+                    result.reserve(mappingForEvent.actionValue.size() + extractedText.size());
+                    for (char c : mappingForEvent.actionValue) {
+                        if (c == '#') {
+                            result += extractedText;
+                        } else {
+                            result.push_back(c);
+                        }
+                    }
+                    mappingForEvent.actionValue = result;
+                }
+                outActions.push_back(std::move(mappingForEvent));
                 any = true;
             }
         }

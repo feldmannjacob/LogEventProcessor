@@ -5,6 +5,7 @@
 #include <sstream>
 #include <algorithm>
 #include <iostream>
+#include <unordered_set>
 
 ConfigManager::ConfigManager() : _isLoaded(false), _lastConfigPath("") {
 }
@@ -110,6 +111,24 @@ bool ConfigManager::loadRegexRulesAndActions(RegexMatcher& matcher, ActionManage
     int currentModifiers = 0;
     bool currentEnabled = true;
     
+    // Helper: convert template with '#' into regex by only replacing '#' with a capture of non-space
+    auto templateToRegex = [](const std::string& templ) -> std::string {
+        if (templ.find('#') == std::string::npos) {
+            return templ; // no placeholder, treat as provided (may already be regex)
+        }
+        std::string out;
+        out.reserve(templ.size() + 8);
+        for (char c : templ) {
+            if (c == '#') {
+                out += "([^\\s]+)"; // capture contiguous non-space
+            } else {
+                // Leave other characters (including regex metacharacters like . * + etc.) intact
+                out.push_back(c);
+            }
+        }
+        return out;
+    };
+
     while (std::getline(stream, line)) {
         // Trim whitespace
         line.erase(0, line.find_first_not_of(" \t"));
@@ -147,7 +166,8 @@ bool ConfigManager::loadRegexRulesAndActions(RegexMatcher& matcher, ActionManage
             size_t start = line.find('"') + 1;
             size_t end = line.find('"', start);
             if (start > 0 && end != std::string::npos) {
-                currentPattern = line.substr(start, end - start);
+                std::string rawPattern = line.substr(start, end - start);
+                currentPattern = templateToRegex(rawPattern);
             }
         }
         else if (inRegexRules && line.find("action_type:") != std::string::npos) {
