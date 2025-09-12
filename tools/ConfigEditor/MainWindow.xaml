@@ -86,19 +86,15 @@
                         <Button Content="Duplicate" Click="DuplicateRule_Click" />
                         <Button Content="Delete" Click="DeleteRule_Click" />
                         <Separator />
+                        <Button Content="Edit Rule..." Click="EditRule_Click" />
+                        <Separator />
                         <Button Background="{StaticResource AccentBrush}" Foreground="#0B1220" Content="Edit Steps..." Click="EditSteps_Click" />
                     </ToolBar>
-                    <DataGrid x:Name="RulesGrid" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="False" Margin="8" SelectionMode="Extended" RowEditEnding="RulesGrid_RowEditEnding" CellEditEnding="RulesGrid_CellEditEnding" CurrentCellChanged="RulesGrid_CurrentCellChanged" Background="{StaticResource SurfaceBrush}">
+                    <DataGrid x:Name="RulesGrid" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" Margin="8" SelectionMode="Extended" Background="{StaticResource SurfaceBrush}" MouseDoubleClick="RulesGrid_MouseDoubleClick">
                         <DataGrid.Columns>
-                            <DataGridCheckBoxColumn Header="Enabled" Binding="{Binding Enabled}" Width="80"/>
                             <DataGridTextColumn Header="Name" Width="200">
                                 <DataGridTextColumn.Binding>
                                     <Binding Path="Name" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay" />
-                                </DataGridTextColumn.Binding>
-                            </DataGridTextColumn>
-                            <DataGridTextColumn Header="Pattern" Width="300">
-                                <DataGridTextColumn.Binding>
-                                    <Binding Path="Pattern" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay" />
                                 </DataGridTextColumn.Binding>
                             </DataGridTextColumn>
                             <DataGridComboBoxColumn Header="Action Type" Width="120">
@@ -118,17 +114,11 @@
                                     <Binding Path="ActionValue" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay" />
                                 </DataGridTextColumn.Binding>
                             </DataGridTextColumn>
-                            <DataGridTextColumn Header="Modifiers" Width="90">
-                                <DataGridTextColumn.Binding>
-                                    <Binding Path="Modifiers" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay" />
-                                </DataGridTextColumn.Binding>
-                            </DataGridTextColumn>
                             <DataGridTextColumn Header="Cooldown (ms)" Width="110">
                                 <DataGridTextColumn.Binding>
                                     <Binding Path="CooldownMs" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay" />
                                 </DataGridTextColumn.Binding>
                             </DataGridTextColumn>
-                            <DataGridTextColumn Header="Steps" Binding="{Binding Actions.Count}" Width="70"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </DockPanel>
