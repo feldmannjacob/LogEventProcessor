@@ -259,13 +259,24 @@ namespace ConfigEditor
             var baseName = "new_rule";
             var idx = 1;
             var name = baseName;
-            var names = Rules.Select(r => r.Name).ToHashSet(StringComparer.OrdinalIgnoreCase);
-            while (names.Contains(name)) { idx++; name = $"{baseName}_{idx}"; }
+            var existingNames = Rules.Select(r => r.Name).ToHashSet(StringComparer.OrdinalIgnoreCase);
+            while (existingNames.Contains(name)) { idx++; name = $"{baseName}_{idx}"; }
 
-            var rule = new RegexRule { Name = name, Pattern = ".*", ActionType = "keystroke", ActionValue = "f1", Modifiers = 0, Enabled = true };
-            Rules.Add(rule);
-            Current.RegexRules.Add(rule);
-            AutoSave();
+            // Prepare a new rule but do not insert until confirmed
+            var draft = new RegexRule { Name = name, Pattern = ".*", ActionType = "keystroke", ActionValue = "f1", Modifiers = 0, Enabled = true };
+            var dlg = new RuleEditorWindow(draft);
+            dlg.Owner = this;
+            if (dlg.ShowDialog() == true)
+            {
+                // Ensure unique name after possible edits
+                var finalName = draft.Name ?? name;
+                idx = 1;
+                while (existingNames.Contains(finalName)) { idx++; finalName = $"{draft.Name}_{idx}"; }
+                draft.Name = finalName;
+                Rules.Add(draft);
+                Current.RegexRules.Add(draft);
+                AutoSave();
+            }
         }
 
         private void DeleteRule_Click(object sender, RoutedEventArgs e)
