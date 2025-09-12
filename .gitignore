@@ -1,42 +1,64 @@
 # Visual Studio
 .vs/
-*.user
 *.suo
-*.vcxproj.user
-*.VC.db
-*.opendb
+*.user
+*.userosscache
+*.sln.docstates
 
-# Build output
-[Bb]in/
-[Oo]bj/
-[Dd]ebug/
-[Rr]elease/
-[Rr]eleases/
-[xX]64/
-[xX]86/
-*.iobj
-*.ipdb
-*.idb
+# Build outputs
+x64/
+**/x64/
+**/Debug/
+**/Release/
+*.obj
 *.pdb
 *.ilk
-*.obj
+*.log
 *.tlog/
-*.cache
+*.ipdb
+*.iobj
 
-# Executables and packages
+# OS / misc
+.DS_Store
+Thumbs.db
+*.tmp
+
+# Binaries
 *.exe
 *.dll
 *.lib
-*.exp
-*.apk
-*.msi
 
-# Logs and temp
+# Generated configs/tests
+LogEventProcessor/test_config_*.yaml
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build outputs
+x64/
+**/x64/
+**/Debug/
+**/Release/
+*.obj
+*.pdb
+*.ilk
 *.log
-[Tt]est[Rr]esult*/
-*.tmp
-~$*
+*.tlog/
+*.ipdb
+*.iobj
 
-# Other
-*.DS_Store
+# OS / misc
+.DS_Store
 Thumbs.db
+*.tmp
+
+# Binaries
+*.exe
+*.dll
+*.lib
+
+# Generated configs/tests
+LogEventProcessor/test_config_*.yaml

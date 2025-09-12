@@ -59,10 +59,24 @@ int main(int argc, char* argv[]) {
     std::cout << "A multi-threaded log file monitoring application" << std::endl;
     std::cout << "Press Ctrl+C to exit gracefully" << std::endl << std::endl;
     
-    // Determine config file path
-    std::string configPath = "config.yaml";
+    // Determine config file path: prefer ./config/config.yaml, then LogEventProcessor/config.yaml, then ./config.yaml, unless overridden by argv
+    std::string configPath;
     if (argc > 1) {
         configPath = argv[1];
+    } else {
+        // Probe common locations
+        const char* candidates[] = {
+            "config/config.yaml",
+            "LogEventProcessor/config.yaml",
+            "config.yaml"
+        };
+        for (const char* c : candidates) {
+            std::ifstream f(c);
+            if (f.good()) { configPath = c; break; }
+        }
+        if (configPath.empty()) {
+            configPath = "config.yaml"; // fallback
+        }
     }
     
     // Load configuration

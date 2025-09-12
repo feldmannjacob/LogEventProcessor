@@ -1,0 +1,68 @@
+# Log Event Processor Configuration File
+
+# Path to the log file to monitor
+log_file_path: "C:/Users/Public/Daybreak Game Company/Installed Games/EverQuest/Logs/eqlog_Nebsk_teek.txt"
+
+# Output directory for processed events (future use)
+output_directory: "./output"
+
+# Polling interval in milliseconds
+polling_interval_ms: 1000
+
+# Enable parallel regex processing with ordered action execution
+parallel_processing: false
+
+# Enable debug mode
+debug_mode: true
+
+# Maximum queue size (0 = unlimited)
+max_queue_size: 1000
+
+# Event processing settings
+process_errors: true
+process_warnings: true
+process_info: true
+
+# Regex matching rules with actions
+regex_rules:
+  - name: "hello_world_response"
+    pattern: ".*hello # world.*"
+    action_type: "command"
+    action_value: "g # Goodbye"
+    modifiers: 0
+    enabled: true
+  
+  - name: "error_detection"
+    pattern: ".*\\[ERROR\\].*"
+    action_type: "keystroke"
+    action_value: "f1"
+    modifiers: 0
+    enabled: true
+  
+  - name: "warning_detection"
+    pattern: ".*\\[WARNING\\].*"
+    action_type: "keystroke"
+    action_value: "f2"
+    modifiers: 0
+    enabled: true
+  
+  - name: "database_errors"
+    pattern: ".*database.*(?:error|timeout|failed).*"
+    action_type: "command"
+    action_value: "sit"
+    modifiers: 0
+    enabled: true
+  
+  - name: "user_login"
+    pattern: ".*User login: ([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}).*"
+    action_type: "text"
+    action_value: "Hello!"
+    modifiers: 0
+    enabled: true
+  
+  - name: "memory_warning"
+    pattern: ".*High memory usage detected: (\\d+)%.*"
+    action_type: "keystroke"
+    action_value: "f3"
+    modifiers: 0
+    enabled: true
