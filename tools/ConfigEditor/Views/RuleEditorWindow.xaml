@@ -30,7 +30,9 @@
         <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Pattern, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
         <TextBlock Grid.Row="3" Grid.Column="0" Margin="0,6,12,6" Text="Action Type"/>
-        <ComboBox Grid.Row="3" Grid.Column="1" SelectedItem="{Binding ActionType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+        <ComboBox Grid.Row="3" Grid.Column="1"
+                  SelectedValuePath="Content"
+                  SelectedValue="{Binding ActionType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
             <ComboBoxItem Content="keystroke"/>
             <ComboBoxItem Content="command"/>
             <ComboBoxItem Content="text"/>
