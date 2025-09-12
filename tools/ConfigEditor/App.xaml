@@ -21,6 +21,9 @@
             <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
             <Setter Property="Background" Value="{StaticResource WindowBackgroundBrush}"/>
         </Style>
+        <Style TargetType="DockPanel">
+            <Setter Property="Background" Value="{StaticResource WindowBackgroundBrush}"/>
+        </Style>
         <Style TargetType="TextBlock">
             <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
             <Setter Property="TextWrapping" Value="Wrap"/>
@@ -90,6 +93,37 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
+        </Style>
+
+        <!-- Navigation and containers -->
+        <Style TargetType="Menu">
+            <Setter Property="Background" Value="{StaticResource SurfaceBrush}"/>
+            <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+        </Style>
+        <Style TargetType="MenuItem">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+            <Style.Triggers>
+                <Trigger Property="IsHighlighted" Value="True">
+                    <Setter Property="Background" Value="#0C1624"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="ToolBar">
+            <Setter Property="Background" Value="{StaticResource SurfaceBrush}"/>
+            <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource SurfaceBorderBrush}"/>
+        </Style>
+        <Style TargetType="TabControl">
+            <Setter Property="Background" Value="{StaticResource SurfaceBrush}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource SurfaceBorderBrush}"/>
+        </Style>
+        <Style TargetType="TabItem">
+            <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+            <Setter Property="Background" Value="{StaticResource SurfaceBrush}"/>
+        </Style>
+        <Style TargetType="ScrollViewer">
+            <Setter Property="Background" Value="{StaticResource SurfaceBrush}"/>
         </Style>
 
         <!-- DataGrid defaults -->

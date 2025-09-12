@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ConfigEditor"
         mc:Ignorable="d"
-        Title="EQ Log Config Editor" Height="720" Width="1100" MinHeight="600" MinWidth="900">
-    <DockPanel>
+        Title="EQ Log Config Editor" Height="720" Width="1100" MinHeight="600" MinWidth="900"
+        Background="{StaticResource WindowBackgroundBrush}">
+    <DockPanel Background="{StaticResource WindowBackgroundBrush}">
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File">
                 <MenuItem Header="_Open..." Click="Open_Click" />
@@ -25,8 +26,8 @@
         <Border Margin="12" Padding="12" Background="{StaticResource SurfaceBrush}" BorderBrush="{StaticResource SurfaceBorderBrush}" BorderThickness="1" CornerRadius="6">
         <TabControl>
             <TabItem Header="General">
-                <ScrollViewer VerticalScrollBarVisibility="Auto">
-                    <Grid Margin="4">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Background="{StaticResource SurfaceBrush}">
+                    <Grid Margin="4" Background="{StaticResource SurfaceBrush}">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="200" />
                             <ColumnDefinition Width="*" />
@@ -79,7 +80,7 @@
             </TabItem>
 
             <TabItem Header="Rules">
-                <DockPanel>
+                <DockPanel Background="{StaticResource SurfaceBrush}">
                     <ToolBar DockPanel.Dock="Top">
                         <Button Content="Add" Click="AddRule_Click" />
                         <Button Content="Duplicate" Click="DuplicateRule_Click" />
@@ -87,7 +88,7 @@
                         <Separator />
                         <Button Background="{StaticResource AccentBrush}" Foreground="#0B1220" Content="Edit Steps..." Click="EditSteps_Click" />
                     </ToolBar>
-                    <DataGrid x:Name="RulesGrid" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="False" Margin="8" SelectionMode="Extended" RowEditEnding="RulesGrid_RowEditEnding" CellEditEnding="RulesGrid_CellEditEnding" CurrentCellChanged="RulesGrid_CurrentCellChanged">
+                    <DataGrid x:Name="RulesGrid" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="False" Margin="8" SelectionMode="Extended" RowEditEnding="RulesGrid_RowEditEnding" CellEditEnding="RulesGrid_CellEditEnding" CurrentCellChanged="RulesGrid_CurrentCellChanged" Background="{StaticResource SurfaceBrush}">
                         <DataGrid.Columns>
                             <DataGridCheckBoxColumn Header="Enabled" Binding="{Binding Enabled}" Width="80"/>
                             <DataGridTextColumn Header="Name" Width="200">
