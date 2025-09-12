@@ -58,6 +58,15 @@ public:
      * @return true if command was sent successfully, false otherwise
      */
     bool sendCommand(const std::string& command);
+
+    /**
+     * @brief Send a chord: hold modifiers, press each key in order, then release modifiers
+     * @param keys Vector of virtual key codes to press
+     * @param modifiers Modifier keys (Ctrl, Alt, Shift)
+     * @param pressTogether If true and feasible, attempt minimal delay to simulate simultaneity
+     * @return true if the chord was sent successfully
+     */
+    bool sendChord(const std::vector<int>& keys, int modifiers = 0, bool pressTogether = false);
     
     /**
      * @brief Refresh the process handle (useful if process restarts)

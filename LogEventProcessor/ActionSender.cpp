@@ -257,6 +257,55 @@ bool ActionSender::sendKeystrokeSequence(const std::vector<int>& keys, int modif
     return success;
 }
 
+bool ActionSender::sendChord(const std::vector<int>& keys, int modifiers, bool pressTogether) {
+    if (!_isReady.load()) {
+        std::cerr << "ActionSender not ready" << std::endl;
+        _failureCount.fetch_add(1);
+        return false;
+    }
+
+    std::lock_guard<std::mutex> lock(_mutex);
+    if (_targets.empty()) {
+        _targets.push_back(Target{_processId, _windowHandle});
+    }
+    bool anySuccess = false;
+    for (const auto& tgt : _targets) {
+        if (!bringToForeground(tgt.hwnd, tgt.pid)) {
+            std::cerr << "Failed to bring target window to foreground pid=" << tgt.pid << std::endl;
+            continue;
+        }
+        bool success = true;
+        // Hold modifiers
+        if (modifiers & MOD_CONTROL) success &= sendKeyScan(VK_CONTROL, false);
+        if (modifiers & MOD_ALT)     success &= sendKeyScan(VK_MENU, false);
+        if (modifiers & MOD_SHIFT)   success &= sendKeyScan(VK_SHIFT, false);
+
+        // Press keys
+        for (int vk : keys) {
+            success &= sendKeyScan(vk, false);
+            if (!pressTogether) std::this_thread::sleep_for(std::chrono::milliseconds(10));
+        }
+        // Release keys in reverse
+        for (auto it = keys.rbegin(); it != keys.rend(); ++it) {
+            success &= sendKeyScan(*it, true);
+            if (!pressTogether) std::this_thread::sleep_for(std::chrono::milliseconds(10));
+        }
+
+        // Release modifiers
+        if (modifiers & MOD_SHIFT)   success &= sendKeyScan(VK_SHIFT, true);
+        if (modifiers & MOD_ALT)     success &= sendKeyScan(VK_MENU, true);
+        if (modifiers & MOD_CONTROL) success &= sendKeyScan(VK_CONTROL, true);
+
+        if (success) {
+            _successCount.fetch_add(1);
+            anySuccess = true;
+        } else {
+            _failureCount.fetch_add(1);
+        }
+    }
+    return anySuccess;
+}
+
 bool ActionSender::sendCommand(const std::string& command) {
     // Send the command as text (EQ commands start with /)
     std::string fullCommand = "/" + command;

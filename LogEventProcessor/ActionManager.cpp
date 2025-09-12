@@ -2,6 +2,7 @@
 #include <iostream>
 #include <sstream>
 #include <algorithm>
+#include <cctype>
 #include <regex>
 
 ActionManager::ActionManager() 
@@ -181,9 +182,18 @@ bool ActionManager::executeAction(const ActionMapping& mapping) {
     }
     
     if (mapping.actionType == "keystroke") {
-        int key, modifiers;
-        if (parseKeystroke(mapping.actionValue, key, modifiers)) {
-            return _actionSender.sendKeystroke(key, modifiers);
+        // Try to parse as chord first (multiple keys)
+        std::vector<int> keys; int modifiers = 0;
+        if (parseChord(mapping.actionValue, keys, modifiers) && !keys.empty()) {
+            if (keys.size() == 1) {
+                return _actionSender.sendKeystroke(keys[0], modifiers);
+            }
+            return _actionSender.sendChord(keys, modifiers, false);
+        }
+        // Fallback to single key parsing
+        int key, singleMods;
+        if (parseKeystroke(mapping.actionValue, key, singleMods)) {
+            return _actionSender.sendKeystroke(key, singleMods);
         } else {
             std::cerr << "Failed to parse keystroke: " << mapping.actionValue << std::endl;
             return false;
@@ -201,27 +211,66 @@ bool ActionManager::executeAction(const ActionMapping& mapping) {
 bool ActionManager::parseKeystroke(const std::string& keystrokeString, int& key, int& modifiers) {
     key = 0;
     modifiers = 0;
-    
-    std::string lower = keystrokeString;
-    std::transform(lower.begin(), lower.end(), lower.begin(), ::tolower);
-    
-    // Parse modifiers
-    if (lower.find("ctrl+") != std::string::npos) {
-        modifiers |= MOD_CONTROL;
-        lower = lower.substr(5);
+
+    // Normalize: lowercase and remove spaces to support formats like "Ctrl + 1"
+    std::string normalized = keystrokeString;
+    std::transform(normalized.begin(), normalized.end(), normalized.begin(), ::tolower);
+    normalized.erase(std::remove_if(normalized.begin(), normalized.end(), [](unsigned char ch){ return std::isspace(ch); }), normalized.end());
+
+    // Split by '+'
+    std::vector<std::string> tokens;
+    std::string current;
+    for (char c : normalized) {
+        if (c == '+') {
+            if (!current.empty()) { tokens.push_back(current); current.clear(); }
+        } else {
+            current.push_back(c);
+        }
     }
-    if (lower.find("alt+") != std::string::npos) {
-        modifiers |= MOD_ALT;
-        lower = lower.substr(4);
+    if (!current.empty()) tokens.push_back(current);
+
+    for (const auto& tok : tokens) {
+        if (tok == "ctrl" || tok == "control") { modifiers |= MOD_CONTROL; continue; }
+        if (tok == "alt") { modifiers |= MOD_ALT; continue; }
+        if (tok == "shift") { modifiers |= MOD_SHIFT; continue; }
+        if (key == 0) {
+            key = getVirtualKeyCode(tok);
+        } else {
+            // Multiple non-modifier keys not supported in single keystroke
+            // Ignore extras for now
+        }
     }
-    if (lower.find("shift+") != std::string::npos) {
-        modifiers |= MOD_SHIFT;
-        lower = lower.substr(6);
-    }
-    
-    // Parse the key
-    key = getVirtualKeyCode(lower);
+
     return key != 0;
+}
+
+bool ActionManager::parseChord(const std::string& keystrokeString, std::vector<int>& keys, int& modifiers) {
+    keys.clear();
+    modifiers = 0;
+    std::string normalized = keystrokeString;
+    std::transform(normalized.begin(), normalized.end(), normalized.begin(), ::tolower);
+    normalized.erase(std::remove_if(normalized.begin(), normalized.end(), [](unsigned char ch){ return std::isspace(ch); }), normalized.end());
+
+    // Split by '+'
+    std::vector<std::string> tokens;
+    std::string current;
+    for (char c : normalized) {
+        if (c == '+') {
+            if (!current.empty()) { tokens.push_back(current); current.clear(); }
+        } else {
+            current.push_back(c);
+        }
+    }
+    if (!current.empty()) tokens.push_back(current);
+
+    for (const auto& tok : tokens) {
+        if (tok == "ctrl" || tok == "control") { modifiers |= MOD_CONTROL; continue; }
+        if (tok == "alt") { modifiers |= MOD_ALT; continue; }
+        if (tok == "shift") { modifiers |= MOD_SHIFT; continue; }
+        int vk = getVirtualKeyCode(tok);
+        if (vk != 0) keys.push_back(vk);
+    }
+    return !keys.empty();
 }
 
 int ActionManager::getVirtualKeyCode(const std::string& keyString) const {

@@ -153,6 +153,8 @@ private:
      * @return true if parsing was successful, false otherwise
      */
     bool parseKeystroke(const std::string& keystrokeString, int& key, int& modifiers);
+    // Parse possibly multiple keys like "ctrl+1+2" or "alt + f1 + f2"; returns list of keys and modifiers
+    bool parseChord(const std::string& keystrokeString, std::vector<int>& keys, int& modifiers);
     
     /**
      * @brief Get virtual key code from string
