@@ -19,12 +19,13 @@ struct ActionMapping {
     std::string actionValue; // The actual action to perform
     int modifiers;           // Modifier keys for keystrokes
     bool enabled;
+    int delayMs;             // Delay after executing this step (ms)
     
-    ActionMapping() : modifiers(0), enabled(false) {}
+    ActionMapping() : modifiers(0), enabled(false), delayMs(0) {}
     
     ActionMapping(const std::string& rule, const std::string& type, 
                   const std::string& value, int mods = 0, bool isEnabled = true)
-        : ruleName(rule), actionType(type), actionValue(value), modifiers(mods), enabled(isEnabled) {}
+        : ruleName(rule), actionType(type), actionValue(value), modifiers(mods), enabled(isEnabled), delayMs(0) {}
 };
 
 /**
@@ -58,6 +59,9 @@ public:
      */
     void addActionMapping(const std::string& ruleName, const std::string& actionType,
                          const std::string& actionValue, int modifiers = 0, bool enabled = true);
+
+    // Add multiple action steps for a rule at once
+    void addActionSequence(const std::string& ruleName, const std::vector<ActionMapping>& steps);
     
     /**
      * @brief Process a log event and execute actions if rules match
@@ -134,7 +138,7 @@ public:
 private:
     ActionSender _actionSender;
     RegexMatcher* _regexMatcher;
-    std::map<std::string, ActionMapping> _actionMappings;
+    std::map<std::string, std::vector<ActionMapping>> _actionMappings;
     std::atomic<size_t> _executedActionCount;
     std::atomic<size_t> _failedActionCount;
     mutable std::mutex _mutex;

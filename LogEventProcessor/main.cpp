@@ -3,6 +3,7 @@
 #include <memory>
 #include <csignal>
 #include <atomic>
+#include <windows.h>
 #include <fstream>
 #include "ConfigManager.h"
 #include "LogReader.h"
@@ -60,12 +61,12 @@ int main(int argc, char* argv[]) {
     std::cout << "A multi-threaded log file monitoring application" << std::endl;
     std::cout << "Press Ctrl+C to exit gracefully" << std::endl << std::endl;
     
-    // Determine config file path: prefer ./config/config.yaml, then LogEventProcessor/config.yaml, then ./config.yaml, unless overridden by argv
+    // Determine config file path: probe multiple locations relative to CWD and executable directory
     std::string configPath;
     if (argc > 1) {
         configPath = argv[1];
     } else {
-        // Probe common locations
+        // First probe CWD-based locations
         const char* candidates[] = {
             "config/config.yaml",
             "LogEventProcessor/config.yaml",
@@ -75,10 +76,28 @@ int main(int argc, char* argv[]) {
             std::ifstream f(c);
             if (f.good()) { configPath = c; break; }
         }
+        // If not found, probe relative to executable directory
         if (configPath.empty()) {
-            configPath = "config.yaml"; // fallback
+            char modulePath[MAX_PATH] = {0};
+            if (GetModuleFileNameA(NULL, modulePath, MAX_PATH) > 0) {
+                std::string exePath(modulePath);
+                std::string exeDir = exePath.substr(0, exePath.find_last_of("\\/"));
+                std::string exeCandidates[] = {
+                    exeDir + "\\config.yaml",
+                    exeDir + "\\..\\config\\config.yaml",
+                    exeDir + "\\..\\LogEventProcessor\\config.yaml"
+                };
+                for (const auto& p : exeCandidates) {
+                    std::ifstream f(p);
+                    if (f.good()) { configPath = p; break; }
+                }
+            }
+        }
+        if (configPath.empty()) {
+            configPath = "config.yaml"; // final fallback
         }
     }
+    std::cout << "Using config: " << configPath << std::endl;
     
     // Load configuration
     ConfigManager config;

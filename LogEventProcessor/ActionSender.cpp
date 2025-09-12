@@ -147,15 +147,15 @@ bool ActionSender::sendKeystroke(int key, int modifiers) {
     
     bool success = true;
     
-    // Send modifier keys down
+    // Send modifier keys down using scancodes (more reliable for games)
     if (modifiers & MOD_CONTROL) {
-        success &= sendKeyDown(VK_CONTROL);
+        success &= sendKeyScan(VK_CONTROL, false);
     }
     if (modifiers & MOD_ALT) {
-        success &= sendKeyDown(VK_MENU);
+        success &= sendKeyScan(VK_MENU, false);
     }
     if (modifiers & MOD_SHIFT) {
-        success &= sendKeyDown(VK_SHIFT);
+        success &= sendKeyScan(VK_SHIFT, false);
     }
     
         // Send main key using scancodes (games often prefer raw scancodes)
@@ -163,15 +163,15 @@ bool ActionSender::sendKeystroke(int key, int modifiers) {
         std::this_thread::sleep_for(std::chrono::milliseconds(10));
         success &= sendKeyScan(key, true);
     
-    // Send modifier keys up
+    // Send modifier keys up using scancodes
     if (modifiers & MOD_SHIFT) {
-        success &= sendKeyUp(VK_SHIFT);
+        success &= sendKeyScan(VK_SHIFT, true);
     }
     if (modifiers & MOD_ALT) {
-        success &= sendKeyUp(VK_MENU);
+        success &= sendKeyScan(VK_MENU, true);
     }
     if (modifiers & MOD_CONTROL) {
-        success &= sendKeyUp(VK_CONTROL);
+        success &= sendKeyScan(VK_CONTROL, true);
     }
     
         if (success) {

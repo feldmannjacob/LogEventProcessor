@@ -69,7 +69,13 @@ regex_rules:
 
   - name: "attack_minions"
     pattern: ".*Attack my minions.*"
-    action_type: "keystroke"
-    action_value: "Ctrl + 1"
-    modifiers: 0
-    enabled: true
+    actions:
+      - type: "keystroke"
+        value: "Ctrl + 1"
+        modifiers: 0
+        delay_ms: 2500
+        enabled: true
+      - type: "command"
+        value: "g at delaying"
+        delay_ms: 0
+        enabled: true

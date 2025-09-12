@@ -110,6 +110,9 @@ bool ConfigManager::loadRegexRulesAndActions(RegexMatcher& matcher, ActionManage
     std::string currentActionValue;
     int currentModifiers = 0;
     bool currentEnabled = true;
+    bool inActionsList = false;
+    std::vector<ActionMapping> currentSteps;
+    ActionMapping currentStep;
     
     // Helper: convert template with '#' into regex by only replacing '#' with a capture of non-space
     auto templateToRegex = [](const std::string& templ) -> std::string {
@@ -148,8 +151,20 @@ bool ConfigManager::loadRegexRulesAndActions(RegexMatcher& matcher, ActionManage
         if (inRegexRules && line.find("- name:") != std::string::npos) {
             // Save previous rule if exists
             if (!currentRule.empty() && !currentPattern.empty()) {
+                // Flush any pending step in actions list
+                if (inActionsList) {
+                    if (!currentStep.actionType.empty() || !currentStep.actionValue.empty()) {
+                        currentSteps.push_back(currentStep);
+                    }
+                }
                 matcher.addRule(currentRule, currentPattern, "", currentEnabled);
-                actionManager.addActionMapping(currentRule, currentActionType, currentActionValue, currentModifiers, currentEnabled);
+                if (inActionsList && !currentSteps.empty()) {
+                    // Ensure ruleName is set on each step
+                    for (auto& s : currentSteps) { s.ruleName = currentRule; }
+                    actionManager.addActionSequence(currentRule, currentSteps);
+                } else {
+                    actionManager.addActionMapping(currentRule, currentActionType, currentActionValue, currentModifiers, currentEnabled);
+                }
             }
             
             // Start new rule
@@ -161,6 +176,9 @@ bool ConfigManager::loadRegexRulesAndActions(RegexMatcher& matcher, ActionManage
             currentActionValue = "";
             currentModifiers = 0;
             currentEnabled = true;
+            inActionsList = false;
+            currentSteps.clear();
+            currentStep = ActionMapping();
         }
         else if (inRegexRules && line.find("pattern:") != std::string::npos) {
             size_t start = line.find('"') + 1;
@@ -168,6 +186,81 @@ bool ConfigManager::loadRegexRulesAndActions(RegexMatcher& matcher, ActionManage
             if (start > 0 && end != std::string::npos) {
                 std::string rawPattern = line.substr(start, end - start);
                 currentPattern = templateToRegex(rawPattern);
+            }
+        }
+        else if (inRegexRules && line == "actions:") {
+            inActionsList = true;
+            currentSteps.clear();
+            currentStep = ActionMapping();
+        }
+        else if (inRegexRules && inActionsList && line.rfind("- ", 0) == 0) {
+            // Starting a new step; flush previous if any
+            if (!currentStep.actionType.empty() || !currentStep.actionValue.empty()) {
+                currentSteps.push_back(currentStep);
+            }
+            currentStep = ActionMapping();
+            currentStep.ruleName = currentRule;
+            // Parse inline key on same line if present (e.g., - type: "command")
+            if (line.find("type:") != std::string::npos) {
+                size_t start = line.find('"') + 1;
+                size_t end = line.find('"', start);
+                if (start > 0 && end != std::string::npos) {
+                    currentStep.actionType = line.substr(start, end - start);
+                }
+            }
+            if (line.find("value:") != std::string::npos) {
+                size_t start = line.find('"') + 1;
+                size_t end = line.find('"', start);
+                if (start > 0 && end != std::string::npos) {
+                    currentStep.actionValue = line.substr(start, end - start);
+                }
+            }
+            if (line.find("modifiers:") != std::string::npos) {
+                size_t pos = line.find("modifiers:"); pos += 10;
+                while (pos < line.length() && (line[pos] == ' ' || line[pos] == '\t')) pos++;
+                try { currentStep.modifiers = std::stoi(line.substr(pos)); } catch (...) { currentStep.modifiers = 0; }
+            }
+            if (line.find("delay_ms:") != std::string::npos) {
+                size_t pos = line.find("delay_ms:"); pos += 9;
+                while (pos < line.length() && (line[pos] == ' ' || line[pos] == '\t')) pos++;
+                try { currentStep.delayMs = std::stoi(line.substr(pos)); } catch (...) { currentStep.delayMs = 0; }
+            }
+            if (line.find("enabled:") != std::string::npos) {
+                size_t pos = line.find("enabled:"); pos += 8;
+                while (pos < line.length() && (line[pos] == ' ' || line[pos] == '\t')) pos++;
+                std::string v = line.substr(pos);
+                currentStep.enabled = (v == "true");
+            } else {
+                currentStep.enabled = true; // default
+            }
+        }
+        else if (inRegexRules && inActionsList) {
+            // Continuation lines for current step
+            if (line.find("type:") != std::string::npos) {
+                size_t start = line.find('"') + 1;
+                size_t end = line.find('"', start);
+                if (start > 0 && end != std::string::npos) {
+                    currentStep.actionType = line.substr(start, end - start);
+                }
+            } else if (line.find("value:") != std::string::npos) {
+                size_t start = line.find('"') + 1;
+                size_t end = line.find('"', start);
+                if (start > 0 && end != std::string::npos) {
+                    currentStep.actionValue = line.substr(start, end - start);
+                }
+            } else if (line.find("modifiers:") != std::string::npos) {
+                size_t pos = line.find("modifiers:"); pos += 10;
+                while (pos < line.length() && (line[pos] == ' ' || line[pos] == '\t')) pos++;
+                try { currentStep.modifiers = std::stoi(line.substr(pos)); } catch (...) { currentStep.modifiers = 0; }
+            } else if (line.find("delay_ms:") != std::string::npos) {
+                size_t pos = line.find("delay_ms:"); pos += 9;
+                while (pos < line.length() && (line[pos] == ' ' || line[pos] == '\t')) pos++;
+                try { currentStep.delayMs = std::stoi(line.substr(pos)); } catch (...) { currentStep.delayMs = 0; }
+            } else if (line.find("enabled:") != std::string::npos) {
+                size_t pos = line.find("enabled:"); pos += 8;
+                while (pos < line.length() && (line[pos] == ' ' || line[pos] == '\t')) pos++;
+                std::string v = line.substr(pos);
+                currentStep.enabled = (v == "true");
             }
         }
         else if (inRegexRules && line.find("action_type:") != std::string::npos) {
@@ -202,8 +295,18 @@ bool ConfigManager::loadRegexRulesAndActions(RegexMatcher& matcher, ActionManage
     
     // Save the last rule
     if (!currentRule.empty() && !currentPattern.empty()) {
+        if (inActionsList) {
+            if (!currentStep.actionType.empty() || !currentStep.actionValue.empty()) {
+                currentSteps.push_back(currentStep);
+            }
+        }
         matcher.addRule(currentRule, currentPattern, "", currentEnabled);
-        actionManager.addActionMapping(currentRule, currentActionType, currentActionValue, currentModifiers, currentEnabled);
+        if (inActionsList && !currentSteps.empty()) {
+            for (auto& s : currentSteps) { s.ruleName = currentRule; }
+            actionManager.addActionSequence(currentRule, currentSteps);
+        } else {
+            actionManager.addActionMapping(currentRule, currentActionType, currentActionValue, currentModifiers, currentEnabled);
+        }
     }
     
     std::cout << "Loaded " << matcher.getRuleCount() << " regex rules with actions." << std::endl;
