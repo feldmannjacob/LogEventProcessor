@@ -3,6 +3,7 @@
 #include <memory>
 #include <csignal>
 #include <atomic>
+#include <fstream>
 #include "ConfigManager.h"
 #include "LogReader.h"
 #include "EventProcessor.h"

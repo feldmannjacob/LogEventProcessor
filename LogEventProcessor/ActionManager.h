@@ -4,6 +4,7 @@
 #include <map>
 #include <memory>
 #include <mutex>
+#include <vector>
 #include "ActionSender.h"
 #include "RegexMatcher.h"
 #include "LogEvent.h"
