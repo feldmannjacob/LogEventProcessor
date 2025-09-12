@@ -19,7 +19,7 @@ namespace ConfigEditor.Services
     {
         private static readonly HashSet<string> AllowedActionTypes = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
         {
-            "keystroke", "command", "text"
+            "keystroke", "command", "text", "spell"
         };
 
         public IReadOnlyList<ValidationIssue> Validate(ConfigRoot config)

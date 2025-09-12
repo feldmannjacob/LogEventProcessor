@@ -23,6 +23,17 @@
 
   <ItemGroup>
     <PackageReference Include="YamlDotNet" Version="15.1.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.61" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="spells\cleric_spells.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="spells\shaman_spells.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   

@@ -25,6 +25,24 @@ namespace ConfigEditor
         {
             InitializeComponent();
             RulesGrid.ItemsSource = Rules;
+            
+            // Subscribe to property changes for auto-save
+            Rules.CollectionChanged += (s, e) => {
+                if (e.NewItems != null)
+                {
+                    foreach (RegexRule rule in e.NewItems)
+                    {
+                        rule.PropertyChanged += Rule_PropertyChanged;
+                    }
+                }
+                if (e.OldItems != null)
+                {
+                    foreach (RegexRule rule in e.OldItems)
+                    {
+                        rule.PropertyChanged -= Rule_PropertyChanged;
+                    }
+                }
+            };
 
             // Prefer portable config next to the editor's EXE; fallback to repo config
             var portablePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.yaml");
@@ -35,10 +53,10 @@ namespace ConfigEditor
                 var defaultPath = repoPath != null ? System.IO.Path.Combine(repoPath, "LogEventProcessor", "config.yaml") : null;
                 if (defaultPath != null && File.Exists(defaultPath))
                 {
-                    // Load repo config for convenience, but default saves to portable path
+                    // Load repo config and save to the same file
+                    _currentPath = defaultPath; // Set the current path BEFORE loading
                     LoadFrom(defaultPath);
-                    _currentPath = portablePath;
-                    Title = $"EQ Log Config Editor - {System.IO.Path.GetFileName(portablePath)}";
+                    Title = $"EQ Log Config Editor - {System.IO.Path.GetFileName(defaultPath)}";
                 }
                 else
                 {
@@ -73,7 +91,7 @@ namespace ConfigEditor
         {
             try
             {
-                var dir = AppContext.BaseDirectory;
+                var dir = AppDomain.CurrentDomain.BaseDirectory;
                 var d = new DirectoryInfo(dir);
                 while (d != null)
                 {
@@ -114,9 +132,16 @@ namespace ConfigEditor
 
         private void RefreshRules()
         {
+            // Unsubscribe from old rules
+            foreach (var rule in Rules)
+            {
+                rule.PropertyChanged -= Rule_PropertyChanged;
+            }
+            
             Rules.Clear();
             foreach (var r in Current.RegexRules)
             {
+                r.PropertyChanged += Rule_PropertyChanged;
                 Rules.Add(r);
             }
         }
@@ -186,7 +211,7 @@ namespace ConfigEditor
             if (string.IsNullOrEmpty(_currentPath))
             {
                 // Default to portable path next to this EXE
-                var portablePath = System.IO.Path.Combine(AppContext.BaseDirectory, "config.yaml");
+                var portablePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.yaml");
                 SaveTo(portablePath);
             }
             else
@@ -263,7 +288,7 @@ namespace ConfigEditor
             while (existingNames.Contains(name)) { idx++; name = $"{baseName}_{idx}"; }
 
             // Prepare a new rule but do not insert until confirmed
-            var draft = new RegexRule { Name = name, Pattern = ".*", ActionType = "keystroke", ActionValue = "f1", Modifiers = 0, Enabled = true };
+            var draft = new RegexRule { Name = name, Pattern = ".*TESTPATTERN.*", ActionType = "keystroke", ActionValue = "f1", Modifiers = 0, Enabled = true };
             var dlg = new RuleEditorWindow(draft);
             dlg.Owner = this;
             if (dlg.ShowDialog() == true)
@@ -331,14 +356,39 @@ namespace ConfigEditor
 
         private void RulesGrid_CellEditEnding(object sender, System.Windows.Controls.DataGridCellEditEndingEventArgs e)
         {
-            // Ensure cell-level edits like changing action type trigger a save
-            var _ = Dispatcher.BeginInvoke(new Action(() => { AutoSave(); }));
+            // Ensure cell-level edits like changing enabled state trigger a save
+            if (e.Column.Header.ToString() == "Enabled")
+            {
+                // Get the rule and update its enabled state
+                if (e.Row.DataContext is RegexRule rule && e.EditingElement is System.Windows.Controls.CheckBox checkbox)
+                {
+                    rule.Enabled = checkbox.IsChecked == true;
+                }
+                
+                var _ = Dispatcher.BeginInvoke(new Action(() => { AutoSave(); }));
+            }
         }
 
         private void RulesGrid_CurrentCellChanged(object sender, EventArgs e)
         {
-            // In some cases ComboBox edits commit on cell change; catch that too
-            var _ = Dispatcher.BeginInvoke(new Action(() => { AutoSave(); }));
+            // Check if we're in the Enabled column and trigger save
+            if (RulesGrid.CurrentCell != null && RulesGrid.CurrentCell.Column != null)
+            {
+                var columnHeader = RulesGrid.CurrentCell.Column.Header?.ToString();
+                if (columnHeader == "Enabled")
+                {
+                    var _ = Dispatcher.BeginInvoke(new Action(() => { AutoSave(); }));
+                }
+            }
+            
+            // Also trigger a delayed save for any cell change to catch enabled changes
+            Dispatcher.BeginInvoke(new Action(() => {
+                System.Threading.Tasks.Task.Delay(100).ContinueWith(task => {
+                    Dispatcher.Invoke(() => {
+                        AutoSave();
+                    });
+                });
+            }));
         }
 
         private void General_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
@@ -381,10 +431,9 @@ namespace ConfigEditor
                 var errors = issues.Where(i => i.Severity == ValidationSeverity.Error).ToList();
                 if (errors.Count > 0)
                 {
-                    // Do not save on validation errors; optionally surface indicator later
                     return;
                 }
-                var path = string.IsNullOrEmpty(_currentPath) ? System.IO.Path.Combine(AppContext.BaseDirectory, "config.yaml") : _currentPath;
+                var path = string.IsNullOrEmpty(_currentPath) ? System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.yaml") : _currentPath;
                 // Atomic write
                 var tmp = path + ".tmp";
                 _service.Save(tmp, Current);
@@ -398,7 +447,10 @@ namespace ConfigEditor
                 }
                 _currentPath = path;
             }
-            catch { }
+            catch (Exception ex) 
+            { 
+                // Silent fail for auto-save
+            }
             finally { _isSaving = false; }
         }
 
@@ -482,8 +534,65 @@ namespace ConfigEditor
                         AutoSave();
                     }
                 }
+
+                // And allow selecting spells: prefill as /cast <spell name>
+                foreach (var spell in dlg.SelectedSpells)
+                {
+                    var prefilled = new RegexRule
+                    {
+                        Name = string.Empty,
+                        Pattern = string.Empty,
+                        Enabled = true,
+                        CooldownMs = 0,
+                        Modifiers = 0,
+                        ActionType = "spell",
+                        ActionValue = spell.Name
+                    };
+
+                    var editor = new Views.RuleEditorWindow(prefilled) { Owner = this };
+                    if (editor.ShowDialog() == true)
+                    {
+                        var baseName = string.IsNullOrWhiteSpace(prefilled.Name) ? "new_rule" : prefilled.Name;
+                        var finalName = baseName;
+                        int i = 1;
+                        var existingNames = Current.RegexRules.Select(x => x.Name).ToHashSet(StringComparer.OrdinalIgnoreCase);
+                        while (existingNames.Contains(finalName)) { i++; finalName = baseName + "_" + i; }
+                        prefilled.Name = finalName;
+
+                        Current.RegexRules.Add(prefilled);
+                        Rules.Add(prefilled);
+                        AutoSave();
+                    }
+                }
             }
         }
+
+        private void Rule_PropertyChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            // Auto-save when any rule property changes (especially Enabled)
+            if (e.PropertyName == nameof(RegexRule.Enabled))
+            {
+                AutoSave();
+            }
+        }
+
+        private void EnabledCheckBox_Changed(object sender, RoutedEventArgs e)
+        {
+            // Get the checkbox and its data context
+            if (sender is System.Windows.Controls.CheckBox checkbox)
+            {
+                var rule = checkbox.DataContext as RegexRule;
+                if (rule != null)
+                {
+                    // Explicitly update the property
+                    rule.Enabled = checkbox.IsChecked == true;
+                }
+            }
+            
+            // Auto-save
+            AutoSave();
+        }
+
 
         private void CommitAllEdits() { try { this.UpdateLayout(); } catch { } }
     }

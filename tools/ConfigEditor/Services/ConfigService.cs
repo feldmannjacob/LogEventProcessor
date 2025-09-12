@@ -14,7 +14,7 @@ namespace ConfigEditor.Services
         {
             _serializer = new SerializerBuilder()
                 .WithNamingConvention(UnderscoredNamingConvention.Instance)
-                .ConfigureDefaultValuesHandling(DefaultValuesHandling.OmitDefaults)
+                .ConfigureDefaultValuesHandling(DefaultValuesHandling.Preserve)
                 .Build();
 
             _deserializer = new DeserializerBuilder()

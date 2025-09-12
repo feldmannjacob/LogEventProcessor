@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jake\\source\\repos\\EQLogAutomator\\tools\\ConfigEditor\\ConfigEditor.csproj": {}
+    "C:\\Users\\Jake\\source\\repos\\EQLogAutomator\\tools\\SpellScraper\\SpellScraper.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jake\\source\\repos\\EQLogAutomator\\tools\\ConfigEditor\\ConfigEditor.csproj": {
+    "C:\\Users\\Jake\\source\\repos\\EQLogAutomator\\tools\\SpellScraper\\SpellScraper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jake\\source\\repos\\EQLogAutomator\\tools\\ConfigEditor\\ConfigEditor.csproj",
-        "projectName": "ConfigEditor",
-        "projectPath": "C:\\Users\\Jake\\source\\repos\\EQLogAutomator\\tools\\ConfigEditor\\ConfigEditor.csproj",
+        "projectUniqueName": "C:\\Users\\Jake\\source\\repos\\EQLogAutomator\\tools\\SpellScraper\\SpellScraper.csproj",
+        "projectName": "SpellScraper",
+        "projectPath": "C:\\Users\\Jake\\source\\repos\\EQLogAutomator\\tools\\SpellScraper\\SpellScraper.csproj",
         "packagesPath": "C:\\Users\\Jake\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jake\\source\\repos\\EQLogAutomator\\tools\\ConfigEditor\\obj\\",
+        "outputPath": "C:\\Users\\Jake\\source\\repos\\EQLogAutomator\\tools\\SpellScraper\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -57,10 +57,6 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
-            },
-            "YamlDotNet": {
-              "target": "Package",
-              "version": "[15.1.2, )"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201\\RuntimeIdentifierGraph.json"

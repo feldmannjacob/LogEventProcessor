@@ -1,0 +1,1617 @@
+﻿[
+    {
+        "id":  6140,
+        "name":  "Ancient Hallowed Light",
+        "level":  70
+    },
+    {
+        "id":  5279,
+        "name":  "Ancient Pious Conscience",
+        "level":  70
+    },
+    {
+        "id":  5276,
+        "name":  "Armor of the Pious",
+        "level":  70
+    },
+    {
+        "id":  8495,
+        "name":  "Aura of the Pious",
+        "level":  70
+    },
+    {
+        "id":  5277,
+        "name":  "Balikor\u0027s Mark",
+        "level":  70
+    },
+    {
+        "id":  8007,
+        "name":  "Desperate Renewal",
+        "level":  70
+    },
+    {
+        "id":  8493,
+        "name":  "Elixir of Divinity",
+        "level":  70
+    },
+    {
+        "id":  5278,
+        "name":  "Hand of Conviction",
+        "level":  70
+    },
+    {
+        "id":  5274,
+        "name":  "Placate",
+        "level":  70
+    },
+    {
+        "id":  8494,
+        "name":  "Puratus",
+        "level":  70
+    },
+    {
+        "id":  5275,
+        "name":  "Silent Dictation",
+        "level":  70
+    },
+    {
+        "id":  5272,
+        "name":  "Aura of Devotion",
+        "level":  69
+    },
+    {
+        "id":  5271,
+        "name":  "Calamity",
+        "level":  69
+    },
+    {
+        "id":  8006,
+        "name":  "Chromastrike",
+        "level":  69
+    },
+    {
+        "id":  5269,
+        "name":  "Mark of the Blameless",
+        "level":  69
+    },
+    {
+        "id":  6662,
+        "name":  "Ward of Retribution",
+        "level":  69
+    },
+    {
+        "id":  5270,
+        "name":  "Word of Vivification",
+        "level":  69
+    },
+    {
+        "id":  5273,
+        "name":  "Yaulp VII",
+        "level":  69
+    },
+    {
+        "id":  8004,
+        "name":  "Death\u0027s Regret",
+        "level":  68
+    },
+    {
+        "id":  6979,
+        "name":  "Deistic Howl",
+        "level":  68
+    },
+    {
+        "id":  5268,
+        "name":  "Desolate Undead",
+        "level":  68
+    },
+    {
+        "id":  5264,
+        "name":  "Hammer of Reproach",
+        "level":  68
+    },
+    {
+        "id":  5265,
+        "name":  "Pious Light",
+        "level":  68
+    },
+    {
+        "id":  5266,
+        "name":  "Sound of Divinity",
+        "level":  68
+    },
+    {
+        "id":  5256,
+        "name":  "Unswerving Hammer of Retribution",
+        "level":  68
+    },
+    {
+        "id":  5258,
+        "name":  "Blessing of Devotion",
+        "level":  67
+    },
+    {
+        "id":  5257,
+        "name":  "Conviction",
+        "level":  67
+    },
+    {
+        "id":  5261,
+        "name":  "Panoply of Vie",
+        "level":  67
+    },
+    {
+        "id":  5259,
+        "name":  "Pious Elixir",
+        "level":  67
+    },
+    {
+        "id":  5260,
+        "name":  "Reproach",
+        "level":  67
+    },
+    {
+        "id":  5255,
+        "name":  "Sermon of Reproach",
+        "level":  67
+    },
+    {
+        "id":  5250,
+        "name":  "Confidence",
+        "level":  66
+    },
+    {
+        "id":  1344,
+        "name":  "Greater Reviviscence",
+        "level":  66
+    },
+    {
+        "id":  5251,
+        "name":  "Pious Remedy",
+        "level":  66
+    },
+    {
+        "id":  6991,
+        "name":  "Revulsion of Death",
+        "level":  66
+    },
+    {
+        "id":  5254,
+        "name":  "Shock of Wonder",
+        "level":  66
+    },
+    {
+        "id":  6125,
+        "name":  "Sun Cloak",
+        "level":  66
+    },
+    {
+        "id":  5252,
+        "name":  "Symbol of Balikor",
+        "level":  66
+    },
+    {
+        "id":  5253,
+        "name":  "Ward of Valiance",
+        "level":  66
+    },
+    {
+        "id":  4973,
+        "name":  "Ancient Chaos Censure",
+        "level":  65
+    },
+    {
+        "id":  3474,
+        "name":  "Armor of the Zealot",
+        "level":  65
+    },
+    {
+        "id":  3479,
+        "name":  "Hand of Virtue",
+        "level":  65
+    },
+    {
+        "id":  4882,
+        "name":  "Holy Elixir",
+        "level":  65
+    },
+    {
+        "id":  4880,
+        "name":  "Holy Light",
+        "level":  65
+    },
+    {
+        "id":  3477,
+        "name":  "Mark of the Righteous",
+        "level":  65
+    },
+    {
+        "id":  4881,
+        "name":  "Order",
+        "level":  65
+    },
+    {
+        "id":  3197,
+        "name":  "Pacification",
+        "level":  65
+    },
+    {
+        "id":  3464,
+        "name":  "The Silent Command",
+        "level":  65
+    },
+    {
+        "id":  3186,
+        "name":  "Yaulp VI",
+        "level":  65
+    },
+    {
+        "id":  4108,
+        "name":  "Aura of Reverence",
+        "level":  64
+    },
+    {
+        "id":  3473,
+        "name":  "Catastrophe",
+        "level":  64
+    },
+    {
+        "id":  3468,
+        "name":  "Destroy Undead",
+        "level":  64
+    },
+    {
+        "id":  9794,
+        "name":  "Expunge Corruption",
+        "level":  64
+    },
+    {
+        "id":  9795,
+        "name":  "Expunge Corruption Rk. II",
+        "level":  64
+    },
+    {
+        "id":  9796,
+        "name":  "Expunge Corruption Rk. III",
+        "level":  64
+    },
+    {
+        "id":  3469,
+        "name":  "Mark of Kings",
+        "level":  64
+    },
+    {
+        "id":  3196,
+        "name":  "Petrifying Earth",
+        "level":  64
+    },
+    {
+        "id":  9791,
+        "name":  "Shared Purity",
+        "level":  64
+    },
+    {
+        "id":  9792,
+        "name":  "Shared Purity Rk. II",
+        "level":  64
+    },
+    {
+        "id":  9793,
+        "name":  "Shared Purity Rk. III",
+        "level":  64
+    },
+    {
+        "id":  3471,
+        "name":  "Word of Replenishment",
+        "level":  64
+    },
+    {
+        "id":  6978,
+        "name":  "Deistic Bellow",
+        "level":  63
+    },
+    {
+        "id":  3478,
+        "name":  "Hammer of Damnation",
+        "level":  63
+    },
+    {
+        "id":  3047,
+        "name":  "Kazad\u0027s Mark",
+        "level":  63
+    },
+    {
+        "id":  9721,
+        "name":  "Resist Corruption",
+        "level":  63
+    },
+    {
+        "id":  9722,
+        "name":  "Resist Corruption Rk. II",
+        "level":  63
+    },
+    {
+        "id":  9723,
+        "name":  "Resist Corruption Rk. III",
+        "level":  63
+    },
+    {
+        "id":  3482,
+        "name":  "Sound of Might",
+        "level":  63
+    },
+    {
+        "id":  3480,
+        "name":  "Supernal Light",
+        "level":  63
+    },
+    {
+        "id":  3472,
+        "name":  "Blessing of Reverence",
+        "level":  62
+    },
+    {
+        "id":  4091,
+        "name":  "Bulwark of Vie",
+        "level":  62
+    },
+    {
+        "id":  3476,
+        "name":  "Condemnation",
+        "level":  62
+    },
+    {
+        "id":  3195,
+        "name":  "Greater Immobilize",
+        "level":  62
+    },
+    {
+        "id":  3187,
+        "name":  "Sermon of Penitence",
+        "level":  62
+    },
+    {
+        "id":  3475,
+        "name":  "Supernal Elixir",
+        "level":  62
+    },
+    {
+        "id":  3467,
+        "name":  "Virtue",
+        "level":  62
+    },
+    {
+        "id":  6990,
+        "name":  "Death\u0027s Despair",
+        "level":  61
+    },
+    {
+        "id":  3296,
+        "name":  "Faith",
+        "level":  61
+    },
+    {
+        "id":  1342,
+        "name":  "Larger Reviviscence",
+        "level":  61
+    },
+    {
+        "id":  3465,
+        "name":  "Supernal Remedy",
+        "level":  61
+    },
+    {
+        "id":  3466,
+        "name":  "Symbol of Kazad",
+        "level":  61
+    },
+    {
+        "id":  3481,
+        "name":  "Tarnation",
+        "level":  61
+    },
+    {
+        "id":  3470,
+        "name":  "Ward of Gallantry",
+        "level":  61
+    },
+    {
+        "id":  6730,
+        "name":  "Ward of Vengeance",
+        "level":  61
+    },
+    {
+        "id":  1447,
+        "name":  "Aegolism",
+        "level":  60
+    },
+    {
+        "id":  2122,
+        "name":  "Ancient Gift of Aegolism",
+        "level":  60
+    },
+    {
+        "id":  2109,
+        "name":  "Ancient High Priest\u0027s Bulwark",
+        "level":  60
+    },
+    {
+        "id":  1530,
+        "name":  "Banishment of Shadows",
+        "level":  60
+    },
+    {
+        "id":  2510,
+        "name":  "Blessing of Aegolism",
+        "level":  60
+    },
+    {
+        "id":  1546,
+        "name":  "Divine Intervention",
+        "level":  60
+    },
+    {
+        "id":  2180,
+        "name":  "Ethereal Elixir",
+        "level":  60
+    },
+    {
+        "id":  3136,
+        "name":  "Hammer of Souls",
+        "level":  60
+    },
+    {
+        "id":  2893,
+        "name":  "Marzin\u0027s Mark",
+        "level":  60
+    },
+    {
+        "id":  1523,
+        "name":  "Word of Redemption",
+        "level":  60
+    },
+    {
+        "id":  1522,
+        "name":  "Celestial Elixir",
+        "level":  59
+    },
+    {
+        "id":  6977,
+        "name":  "Deistic Voice",
+        "level":  59
+    },
+    {
+        "id":  2462,
+        "name":  "Ethereal Remedy",
+        "level":  59
+    },
+    {
+        "id":  3592,
+        "name":  "Imbue Valor",
+        "level":  59
+    },
+    {
+        "id":  1545,
+        "name":  "The Unspoken Word",
+        "level":  59
+    },
+    {
+        "id":  1525,
+        "name":  "Antidote",
+        "level":  58
+    },
+    {
+        "id":  2509,
+        "name":  "Blessed Armor of the Risen",
+        "level":  58
+    },
+    {
+        "id":  1544,
+        "name":  "Enforced Reverence",
+        "level":  58
+    },
+    {
+        "id":  21399,
+        "name":  "Eradicate Disease",
+        "level":  58
+    },
+    {
+        "id":  2182,
+        "name":  "Ethereal Light",
+        "level":  58
+    },
+    {
+        "id":  3135,
+        "name":  "Hammer of Divinity",
+        "level":  58
+    },
+    {
+        "id":  1774,
+        "name":  "Naltron\u0027s Mark",
+        "level":  58
+    },
+    {
+        "id":  1540,
+        "name":  "Aegis",
+        "level":  57
+    },
+    {
+        "id":  1537,
+        "name":  "Bulwark of Faith",
+        "level":  57
+    },
+    {
+        "id":  1527,
+        "name":  "Trepidation",
+        "level":  57
+    },
+    {
+        "id":  6903,
+        "name":  "Ward of Rebuke",
+        "level":  57
+    },
+    {
+        "id":  1521,
+        "name":  "Word of Restoration",
+        "level":  57
+    },
+    {
+        "id":  116,
+        "name":  "Banish Summoned",
+        "level":  56
+    },
+    {
+        "id":  6989,
+        "name":  "Cower the Dead",
+        "level":  56
+    },
+    {
+        "id":  2181,
+        "name":  "Hammer of Judgment",
+        "level":  56
+    },
+    {
+        "id":  2508,
+        "name":  "Judgment",
+        "level":  56
+    },
+    {
+        "id":  1548,
+        "name":  "Mark of Karn",
+        "level":  56
+    },
+    {
+        "id":  133,
+        "name":  "Paralyzing Earth",
+        "level":  56
+    },
+    {
+        "id":  1524,
+        "name":  "Reviviscence",
+        "level":  56
+    },
+    {
+        "id":  2326,
+        "name":  "Yaulp V",
+        "level":  56
+    },
+    {
+        "id":  8928,
+        "name":  "Aura of the Zealot",
+        "level":  55
+    },
+    {
+        "id":  1528,
+        "name":  "Exile Undead",
+        "level":  55
+    },
+    {
+        "id":  1539,
+        "name":  "Fortitude",
+        "level":  55
+    },
+    {
+        "id":  1446,
+        "name":  "Stun Command",
+        "level":  55
+    },
+    {
+        "id":  1541,
+        "name":  "Wake of Tranquility",
+        "level":  55
+    },
+    {
+        "id":  21400,
+        "name":  "Eradicate Curse",
+        "level":  54
+    },
+    {
+        "id":  2507,
+        "name":  "Mark of Retribution",
+        "level":  54
+    },
+    {
+        "id":  4090,
+        "name":  "Protection of Vie",
+        "level":  54
+    },
+    {
+        "id":  1543,
+        "name":  "Reckoning",
+        "level":  54
+    },
+    {
+        "id":  2880,
+        "name":  "Remove Greater Curse",
+        "level":  54
+    },
+    {
+        "id":  1535,
+        "name":  "Symbol of Marzin",
+        "level":  54
+    },
+    {
+        "id":  1721,
+        "name":  "Unswerving Hammer of Faith",
+        "level":  54
+    },
+    {
+        "id":  1526,
+        "name":  "Annul Magic",
+        "level":  53
+    },
+    {
+        "id":  1519,
+        "name":  "Divine Light",
+        "level":  53
+    },
+    {
+        "id":  1534,
+        "name":  "Yaulp IV",
+        "level":  53
+    },
+    {
+        "id":  2506,
+        "name":  "Epitaph of Life",
+        "level":  52
+    },
+    {
+        "id":  21398,
+        "name":  "Eradicate Poison",
+        "level":  52
+    },
+    {
+        "id":  1538,
+        "name":  "Heroic Bond",
+        "level":  52
+    },
+    {
+        "id":  1536,
+        "name":  "Heroic Bond",
+        "level":  52
+    },
+    {
+        "id":  1533,
+        "name":  "Heroism",
+        "level":  52
+    },
+    {
+        "id":  1542,
+        "name":  "Upheaval",
+        "level":  52
+    },
+    {
+        "id":  1520,
+        "name":  "Word of Vigor",
+        "level":  52
+    },
+    {
+        "id":  1547,
+        "name":  "Death Pact",
+        "level":  51
+    },
+    {
+        "id":  1532,
+        "name":  "Dread of Night",
+        "level":  51
+    },
+    {
+        "id":  3693,
+        "name":  "Pure Blood",
+        "level":  51
+    },
+    {
+        "id":  1518,
+        "name":  "Remedy",
+        "level":  51
+    },
+    {
+        "id":  1726,
+        "name":  "Sunskin",
+        "level":  51
+    },
+    {
+        "id":  6902,
+        "name":  "Ward of the Divine",
+        "level":  50
+    },
+    {
+        "id":  2505,
+        "name":  "Armor of the Faithful",
+        "level":  49
+    },
+    {
+        "id":  416,
+        "name":  "Word Divine",
+        "level":  49
+    },
+    {
+        "id":  97,
+        "name":  "Abolish Poison",
+        "level":  48
+    },
+    {
+        "id":  1411,
+        "name":  "Improved Invisibility to Undead",
+        "level":  48
+    },
+    {
+        "id":  664,
+        "name":  "Expel Summoned",
+        "level":  47
+    },
+    {
+        "id":  392,
+        "name":  "Resurrection",
+        "level":  47
+    },
+    {
+        "id":  132,
+        "name":  "Immobilize",
+        "level":  46
+    },
+    {
+        "id":  125,
+        "name":  "Sound of Force",
+        "level":  46
+    },
+    {
+        "id":  4053,
+        "name":  "Blessing of Temperance",
+        "level":  45
+    },
+    {
+        "id":  6878,
+        "name":  "Healing Light",
+        "level":  45
+    },
+    {
+        "id":  20,
+        "name":  "Shield of Words",
+        "level":  45
+    },
+    {
+        "id":  136,
+        "name":  "Word of Healing",
+        "level":  45
+    },
+    {
+        "id":  1444,
+        "name":  "Celestial Healing",
+        "level":  44
+    },
+    {
+        "id":  406,
+        "name":  "Earthquake",
+        "level":  44
+    },
+    {
+        "id":  53118,
+        "name":  "Greater Mass Imbue Amber",
+        "level":  44
+    },
+    {
+        "id":  53119,
+        "name":  "Greater Mass Imbue Black Pearl",
+        "level":  44
+    },
+    {
+        "id":  53120,
+        "name":  "Greater Mass Imbue Black Sapphire",
+        "level":  44
+    },
+    {
+        "id":  53121,
+        "name":  "Greater Mass Imbue Diamond",
+        "level":  44
+    },
+    {
+        "id":  53122,
+        "name":  "Greater Mass Imbue Emerald",
+        "level":  44
+    },
+    {
+        "id":  53126,
+        "name":  "Greater Mass Imbue Opal",
+        "level":  44
+    },
+    {
+        "id":  53127,
+        "name":  "Greater Mass Imbue Peridot",
+        "level":  44
+    },
+    {
+        "id":  53128,
+        "name":  "Greater Mass Imbue Plains Pebble",
+        "level":  44
+    },
+    {
+        "id":  53129,
+        "name":  "Greater Mass Imbue Rose Quartz",
+        "level":  44
+    },
+    {
+        "id":  53130,
+        "name":  "Greater Mass Imbue Ruby",
+        "level":  44
+    },
+    {
+        "id":  53131,
+        "name":  "Greater Mass Imbue Sapphire",
+        "level":  44
+    },
+    {
+        "id":  53132,
+        "name":  "Greater Mass Imbue Topaz",
+        "level":  44
+    },
+    {
+        "id":  672,
+        "name":  "Retribution",
+        "level":  44
+    },
+    {
+        "id":  118,
+        "name":  "Banish Undead",
+        "level":  43
+    },
+    {
+        "id":  64,
+        "name":  "Resist Magic",
+        "level":  43
+    },
+    {
+        "id":  314,
+        "name":  "Resolution",
+        "level":  42
+    },
+    {
+        "id":  2172,
+        "name":  "Restoration",
+        "level":  42
+    },
+    {
+        "id":  488,
+        "name":  "Symbol of Naltron",
+        "level":  41
+    },
+    {
+        "id":  44,
+        "name":  "Yaulp III",
+        "level":  41
+    },
+    {
+        "id":  4089,
+        "name":  "Guard of Vie",
+        "level":  40
+    },
+    {
+        "id":  675,
+        "name":  "Hammer of Requital",
+        "level":  40
+    },
+    {
+        "id":  3692,
+        "name":  "Temperance",
+        "level":  40
+    },
+    {
+        "id":  13,
+        "name":  "Complete Heal",
+        "level":  39
+    },
+    {
+        "id":  2504,
+        "name":  "Sacred Word",
+        "level":  39
+    },
+    {
+        "id":  415,
+        "name":  "Word of Souls",
+        "level":  39
+    },
+    {
+        "id":  49,
+        "name":  "Nullify Magic",
+        "level":  38
+    },
+    {
+        "id":  2946,
+        "name":  "Remove Curse",
+        "level":  38
+    },
+    {
+        "id":  61,
+        "name":  "Resist Cold",
+        "level":  38
+    },
+    {
+        "id":  115,
+        "name":  "Dismiss Summoned",
+        "level":  37
+    },
+    {
+        "id":  388,
+        "name":  "Resuscitate",
+        "level":  37
+    },
+    {
+        "id":  1443,
+        "name":  "Turning of the Unnatural",
+        "level":  37
+    },
+    {
+        "id":  127,
+        "name":  "Invoke Fear",
+        "level":  36
+    },
+    {
+        "id":  45,
+        "name":  "Pacify",
+        "level":  36
+    },
+    {
+        "id":  63,
+        "name":  "Resist Disease",
+        "level":  36
+    },
+    {
+        "id":  19,
+        "name":  "Armor of Faith",
+        "level":  35
+    },
+    {
+        "id":  3576,
+        "name":  "Blessing of Faith",
+        "level":  35
+    },
+    {
+        "id":  1445,
+        "name":  "Armor of Protection",
+        "level":  34
+    },
+    {
+        "id":  134,
+        "name":  "Blinding Luminance",
+        "level":  34
+    },
+    {
+        "id":  4284,
+        "name":  "Iony\u0027s Greater Cleansing",
+        "level":  34
+    },
+    {
+        "id":  4272,
+        "name":  "Iony\u0027s Greater Exorcism",
+        "level":  34
+    },
+    {
+        "id":  405,
+        "name":  "Tremor",
+        "level":  34
+    },
+    {
+        "id":  53,
+        "name":  "Abundant Food",
+        "level":  33
+    },
+    {
+        "id":  662,
+        "name":  "Expel Undead",
+        "level":  33
+    },
+    {
+        "id":  4260,
+        "name":  "Iony\u0027s Greater Augury",
+        "level":  33
+    },
+    {
+        "id":  60,
+        "name":  "Resist Fire",
+        "level":  33
+    },
+    {
+        "id":  480,
+        "name":  "Atone",
+        "level":  32
+    },
+    {
+        "id":  2171,
+        "name":  "Renewal",
+        "level":  32
+    },
+    {
+        "id":  312,
+        "name":  "Valor",
+        "level":  32
+    },
+    {
+        "id":  124,
+        "name":  "Force",
+        "level":  31
+    },
+    {
+        "id":  504,
+        "name":  "Frenzied Strength",
+        "level":  31
+    },
+    {
+        "id":  487,
+        "name":  "Symbol of Pinzarn",
+        "level":  31
+    },
+    {
+        "id":  62,
+        "name":  "Resist Poison",
+        "level":  30
+    },
+    {
+        "id":  9,
+        "name":  "Superior Healing",
+        "level":  30
+    },
+    {
+        "id":  135,
+        "name":  "Word of Health",
+        "level":  30
+    },
+    {
+        "id":  2175,
+        "name":  "Celestial Health",
+        "level":  29
+    },
+    {
+        "id":  130,
+        "name":  "Divine Barrier",
+        "level":  29
+    },
+    {
+        "id":  1885,
+        "name":  "Imbue Amber",
+        "level":  29
+    },
+    {
+        "id":  1894,
+        "name":  "Imbue Black Pearl",
+        "level":  29
+    },
+    {
+        "id":  1897,
+        "name":  "Imbue Black Sapphire",
+        "level":  29
+    },
+    {
+        "id":  1895,
+        "name":  "Imbue Diamond",
+        "level":  29
+    },
+    {
+        "id":  1888,
+        "name":  "Imbue Emerald",
+        "level":  29
+    },
+    {
+        "id":  1798,
+        "name":  "Imbue Opal",
+        "level":  29
+    },
+    {
+        "id":  1898,
+        "name":  "Imbue Peridot",
+        "level":  29
+    },
+    {
+        "id":  1800,
+        "name":  "Imbue Plains Pebble",
+        "level":  29
+    },
+    {
+        "id":  1896,
+        "name":  "Imbue Rose Quartz",
+        "level":  29
+    },
+    {
+        "id":  1887,
+        "name":  "Imbue Ruby",
+        "level":  29
+    },
+    {
+        "id":  1886,
+        "name":  "Imbue Sapphire",
+        "level":  29
+    },
+    {
+        "id":  1799,
+        "name":  "Imbue Topaz",
+        "level":  29
+    },
+    {
+        "id":  3994,
+        "name":  "Mass Imbue Amber",
+        "level":  29
+    },
+    {
+        "id":  3995,
+        "name":  "Mass Imbue Black Pearl",
+        "level":  29
+    },
+    {
+        "id":  3996,
+        "name":  "Mass Imbue Black Sapphire",
+        "level":  29
+    },
+    {
+        "id":  3997,
+        "name":  "Mass Imbue Diamond",
+        "level":  29
+    },
+    {
+        "id":  3998,
+        "name":  "Mass Imbue Emerald",
+        "level":  29
+    },
+    {
+        "id":  4002,
+        "name":  "Mass Imbue Opal",
+        "level":  29
+    },
+    {
+        "id":  4003,
+        "name":  "Mass Imbue Peridot",
+        "level":  29
+    },
+    {
+        "id":  4004,
+        "name":  "Mass Imbue Plains Pebble",
+        "level":  29
+    },
+    {
+        "id":  4005,
+        "name":  "Mass Imbue Rose Quartz",
+        "level":  29
+    },
+    {
+        "id":  4006,
+        "name":  "Mass Imbue Ruby",
+        "level":  29
+    },
+    {
+        "id":  4007,
+        "name":  "Mass Imbue Sapphire",
+        "level":  29
+    },
+    {
+        "id":  4008,
+        "name":  "Mass Imbue Topaz",
+        "level":  29
+    },
+    {
+        "id":  329,
+        "name":  "Wrath",
+        "level":  29
+    },
+    {
+        "id":  52,
+        "name":  "Abundant Drink",
+        "level":  28
+    },
+    {
+        "id":  96,
+        "name":  "Counteract Disease",
+        "level":  28
+    },
+    {
+        "id":  663,
+        "name":  "Expulse Summoned",
+        "level":  27
+    },
+    {
+        "id":  131,
+        "name":  "Instill",
+        "level":  27
+    },
+    {
+        "id":  391,
+        "name":  "Revive",
+        "level":  27
+    },
+    {
+        "id":  59,
+        "name":  "Panic the Dead",
+        "level":  26
+    },
+    {
+        "id":  414,
+        "name":  "Word of Spirit",
+        "level":  26
+    },
+    {
+        "id":  18,
+        "name":  "Guard",
+        "level":  25
+    },
+    {
+        "id":  2503,
+        "name":  "Sermon of the Righteous",
+        "level":  25
+    },
+    {
+        "id":  4283,
+        "name":  "Iony\u0027s Cleansing",
+        "level":  24
+    },
+    {
+        "id":  4271,
+        "name":  "Iony\u0027s Exorcism",
+        "level":  24
+    },
+    {
+        "id":  117,
+        "name":  "Dismiss Undead",
+        "level":  23
+    },
+    {
+        "id":  4259,
+        "name":  "Iony\u0027s Augury",
+        "level":  23
+    },
+    {
+        "id":  4057,
+        "name":  "Remove Lesser Curse",
+        "level":  23
+    },
+    {
+        "id":  244,
+        "name":  "Bravery",
+        "level":  22
+    },
+    {
+        "id":  95,
+        "name":  "Counteract Poison",
+        "level":  22
+    },
+    {
+        "id":  2170,
+        "name":  "Reparation",
+        "level":  22
+    },
+    {
+        "id":  126,
+        "name":  "Inspire Fear",
+        "level":  21
+    },
+    {
+        "id":  486,
+        "name":  "Symbol of Ryltan",
+        "level":  21
+    },
+    {
+        "id":  128,
+        "name":  "Wave of Fear",
+        "level":  21
+    },
+    {
+        "id":  15,
+        "name":  "Greater Healing",
+        "level":  20
+    },
+    {
+        "id":  37,
+        "name":  "Hammer of Striking",
+        "level":  20
+    },
+    {
+        "id":  4088,
+        "name":  "Ward of Vie",
+        "level":  20
+    },
+    {
+        "id":  2502,
+        "name":  "Celestial Remedy",
+        "level":  19
+    },
+    {
+        "id":  413,
+        "name":  "Word of Shadow",
+        "level":  19
+    },
+    {
+        "id":  2169,
+        "name":  "Reconstitution",
+        "level":  18
+    },
+    {
+        "id":  89,
+        "name":  "Daring",
+        "level":  17
+    },
+    {
+        "id":  248,
+        "name":  "Ward Summoned",
+        "level":  17
+    },
+    {
+        "id":  228,
+        "name":  "Endure Magic",
+        "level":  16
+    },
+    {
+        "id":  123,
+        "name":  "Holy Might",
+        "level":  16
+    },
+    {
+        "id":  43,
+        "name":  "Yaulp II",
+        "level":  16
+    },
+    {
+        "id":  3575,
+        "name":  "Blessing of Piety",
+        "level":  15
+    },
+    {
+        "id":  47,
+        "name":  "Calm",
+        "level":  15
+    },
+    {
+        "id":  368,
+        "name":  "Spirit Armor",
+        "level":  15
+    },
+    {
+        "id":  4282,
+        "name":  "Iony\u0027s Lesser Cleansing",
+        "level":  14
+    },
+    {
+        "id":  4270,
+        "name":  "Iony\u0027s Lesser Exorcism",
+        "level":  14
+    },
+    {
+        "id":  16,
+        "name":  "Smite",
+        "level":  14
+    },
+    {
+        "id":  48,
+        "name":  "Cancel Magic",
+        "level":  13
+    },
+    {
+        "id":  225,
+        "name":  "Endure Cold",
+        "level":  13
+    },
+    {
+        "id":  233,
+        "name":  "Expulse Undead",
+        "level":  13
+    },
+    {
+        "id":  234,
+        "name":  "Halo of Light",
+        "level":  12
+    },
+    {
+        "id":  2168,
+        "name":  "Reanimation",
+        "level":  12
+    },
+    {
+        "id":  232,
+        "name":  "Sense Summoned",
+        "level":  12
+    },
+    {
+        "id":  226,
+        "name":  "Endure Disease",
+        "level":  11
+    },
+    {
+        "id":  235,
+        "name":  "Invisibility Versus Undead",
+        "level":  11
+    },
+    {
+        "id":  485,
+        "name":  "Symbol of Transal",
+        "level":  11
+    },
+    {
+        "id":  35,
+        "name":  "Bind Affinity",
+        "level":  10
+    },
+    {
+        "id":  12,
+        "name":  "Healing",
+        "level":  10
+    },
+    {
+        "id":  4258,
+        "name":  "Iony\u0027s Lesser Augury",
+        "level":  10
+    },
+    {
+        "id":  221,
+        "name":  "Sense the Dead",
+        "level":  9
+    },
+    {
+        "id":  231,
+        "name":  "Word of Pain",
+        "level":  9
+    },
+    {
+        "id":  224,
+        "name":  "Endure Fire",
+        "level":  8
+    },
+    {
+        "id":  4056,
+        "name":  "Remove Minor Curse",
+        "level":  8
+    },
+    {
+        "id":  50,
+        "name":  "Summon Food",
+        "level":  8
+    },
+    {
+        "id":  219,
+        "name":  "Center",
+        "level":  7
+    },
+    {
+        "id":  223,
+        "name":  "Hammer of Wrath",
+        "level":  7
+    },
+    {
+        "id":  230,
+        "name":  "Root",
+        "level":  7
+    },
+    {
+        "id":  227,
+        "name":  "Endure Poison",
+        "level":  6
+    },
+    {
+        "id":  229,
+        "name":  "Fear",
+        "level":  6
+    },
+    {
+        "id":  2501,
+        "name":  "Sanctuary",
+        "level":  6
+    },
+    {
+        "id":  560,
+        "name":  "Furor",
+        "level":  5
+    },
+    {
+        "id":  36,
+        "name":  "Gate",
+        "level":  5
+    },
+    {
+        "id":  501,
+        "name":  "Soothe",
+        "level":  5
+    },
+    {
+        "id":  213,
+        "name":  "Cure Disease",
+        "level":  4
+    },
+    {
+        "id":  17,
+        "name":  "Light Healing",
+        "level":  4
+    },
+    {
+        "id":  218,
+        "name":  "Ward Undead",
+        "level":  4
+    },
+    {
+        "id":  212,
+        "name":  "Cure Blindness",
+        "level":  3
+    },
+    {
+        "id":  211,
+        "name":  "Summon Drink",
+        "level":  3
+    },
+    {
+        "id":  215,
+        "name":  "Reckless Strength",
+        "level":  2
+    },
+    {
+        "id":  216,
+        "name":  "Stun",
+        "level":  2
+    },
+    {
+        "id":  202,
+        "name":  "Courage",
+        "level":  1
+    },
+    {
+        "id":  203,
+        "name":  "Cure Poison",
+        "level":  1
+    },
+    {
+        "id":  207,
+        "name":  "Divine Aura",
+        "level":  1
+    },
+    {
+        "id":  201,
+        "name":  "Flash of Light",
+        "level":  1
+    },
+    {
+        "id":  11,
+        "name":  "Holy Armor",
+        "level":  1
+    },
+    {
+        "id":  208,
+        "name":  "Lull",
+        "level":  1
+    },
+    {
+        "id":  200,
+        "name":  "Minor Healing",
+        "level":  1
+    },
+    {
+        "id":  209,
+        "name":  "Spook the Dead",
+        "level":  1
+    },
+    {
+        "id":  14,
+        "name":  "Strike",
+        "level":  1
+    },
+    {
+        "id":  205,
+        "name":  "True North",
+        "level":  1
+    },
+    {
+        "id":  210,
+        "name":  "Yaulp",
+        "level":  1
+    }
+]

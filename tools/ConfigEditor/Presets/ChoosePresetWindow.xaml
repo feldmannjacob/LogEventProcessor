@@ -14,12 +14,30 @@
         <Grid Margin="8">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
             <GroupBox Header="EQ Commands">
                 <ListBox x:Name="CommandsList" SelectionMode="Extended" />
             </GroupBox>
-            <GroupBox Grid.Column="1" Header="Preset Rules" Margin="8,0,0,0">
+            <GroupBox Grid.Column="1" Header="Spells" Margin="8,0,0,0">
+                <DockPanel>
+                    <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,6">
+                        <TextBlock VerticalAlignment="Center" Margin="0,0,6,0" Text="Class"/>
+                        <ComboBox x:Name="SpellClassFilter" Width="110" Margin="0,0,12,0">
+                            <ComboBoxItem Content="Cleric"/>
+                            <ComboBoxItem Content="Shaman"/>
+                        </ComboBox>
+                        <TextBlock VerticalAlignment="Center" Margin="0,0,6,0" Text="Levels"/>
+                        <TextBox x:Name="MinLevelFilter" Width="40" Margin="0,0,4,0"/>
+                        <TextBlock VerticalAlignment="Center" Text="-" Margin="0,0,4,0"/>
+                        <TextBox x:Name="MaxLevelFilter" Width="40" Margin="0,0,12,0"/>
+                        <Button Content="Apply" x:Name="ApplySpellFilterButton"/>
+                    </StackPanel>
+                    <ListBox x:Name="SpellsList" SelectionMode="Extended" DisplayMemberPath="Name"/>
+                </DockPanel>
+            </GroupBox>
+            <GroupBox Grid.Column="2" Header="Preset Rules" Margin="8,0,0,0">
                 <ListBox x:Name="PresetsList" SelectionMode="Extended" DisplayMemberPath="Name"/>
             </GroupBox>
         </Grid>

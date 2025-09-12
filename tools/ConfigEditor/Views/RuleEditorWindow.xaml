@@ -35,16 +35,20 @@
                   SelectedValue="{Binding ActionType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
             <ComboBoxItem Content="keystroke"/>
             <ComboBoxItem Content="command"/>
+            <ComboBoxItem Content="spell"/>
             <ComboBoxItem Content="text"/>
         </ComboBox>
 
-        <!-- Generic action value (hidden for command type) -->
+        <!-- Generic action value (hidden for command and spell types) -->
         <TextBlock Grid.Row="5" Grid.Column="0" Margin="0,6,12,6" Text="Action Value">
             <TextBlock.Style>
                 <Style TargetType="TextBlock">
                     <Setter Property="Visibility" Value="Visible"/>
                     <Style.Triggers>
                         <DataTrigger Binding="{Binding ActionType}" Value="command">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ActionType}" Value="spell">
                             <Setter Property="Visibility" Value="Collapsed"/>
                         </DataTrigger>
                     </Style.Triggers>
@@ -57,6 +61,9 @@
                     <Setter Property="Visibility" Value="Visible"/>
                     <Style.Triggers>
                         <DataTrigger Binding="{Binding ActionType}" Value="command">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ActionType}" Value="spell">
                             <Setter Property="Visibility" Value="Collapsed"/>
                         </DataTrigger>
                     </Style.Triggers>
@@ -93,6 +100,42 @@
             </Border>
             <TextBox x:Name="CommandNameText" Width="140" Margin="0,0,6,0"/>
             <TextBox x:Name="CommandArgText" Width="200"/>
+        </StackPanel>
+
+        <!-- Spell-specific UI: read-only '/cast', class dropdown, level range, spell dropdown -->
+        <TextBlock Grid.Row="4" Grid.Column="0" Margin="0,6,12,6" Text="Spell">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ActionType}" Value="spell">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal">
+            <StackPanel.Style>
+                <Style TargetType="StackPanel">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ActionType}" Value="spell">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </StackPanel.Style>
+            <Border Background="{StaticResource SurfaceBorderBrush}" BorderBrush="{StaticResource SurfaceBorderBrush}" BorderThickness="1" Padding="6,4" CornerRadius="4" Margin="0,0,6,0">
+                <TextBlock Text="/cast"/>
+            </Border>
+            <ComboBox x:Name="SpellClassCombo" Width="110" Margin="6,0,6,0">
+                <ComboBoxItem Content="Cleric"/>
+                <ComboBoxItem Content="Shaman"/>
+            </ComboBox>
+            <TextBox x:Name="MinLevelText" Width="40" Margin="6,0,2,0" ToolTip="Min"/>
+            <TextBox x:Name="MaxLevelText" Width="40" Margin="2,0,6,0" ToolTip="Max"/>
+            <ComboBox x:Name="SpellNameCombo" Width="240" DisplayMemberPath="Name" SelectedValuePath="Name"/>
         </StackPanel>
 
         <TextBlock Grid.Row="6" Grid.Column="0" Margin="0,6,12,6" Text="Modifiers"/>

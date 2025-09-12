@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "HXXCs1CpysA=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Jake\\source\\repos\\EQLogAutomator\\tools\\SpellScraper\\SpellScraper.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jake\\.nuget\\packages\\htmlagilitypack\\1.11.61\\htmlagilitypack.1.11.61.nupkg.sha512",
+    "C:\\Users\\Jake\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

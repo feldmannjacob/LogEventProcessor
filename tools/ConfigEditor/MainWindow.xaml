@@ -89,15 +89,34 @@
                         <Button Content="Edit Rule..." Click="EditRule_Click" />
                         <Separator />
                         <Button Background="{StaticResource AccentBrush}" Foreground="#0B1220" Content="Edit Steps..." Click="EditSteps_Click" />
+                        <Separator />
                     </ToolBar>
-                    <DataGrid x:Name="RulesGrid" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" Margin="8" SelectionMode="Extended" Background="{StaticResource SurfaceBrush}" MouseDoubleClick="RulesGrid_MouseDoubleClick">
+                    <DataGrid x:Name="RulesGrid" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="False" Margin="8" SelectionMode="Extended" Background="{StaticResource SurfaceBrush}" MouseDoubleClick="RulesGrid_MouseDoubleClick" CellEditEnding="RulesGrid_CellEditEnding">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Name" Width="200">
+                            <DataGridCheckBoxColumn Header="Enabled" Width="60" Binding="{Binding Enabled, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                                <DataGridCheckBoxColumn.ElementStyle>
+                                    <Style TargetType="CheckBox">
+                                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                        <EventSetter Event="Checked" Handler="EnabledCheckBox_Changed"/>
+                                        <EventSetter Event="Unchecked" Handler="EnabledCheckBox_Changed"/>
+                                    </Style>
+                                </DataGridCheckBoxColumn.ElementStyle>
+                                <DataGridCheckBoxColumn.EditingElementStyle>
+                                    <Style TargetType="CheckBox">
+                                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                        <EventSetter Event="Checked" Handler="EnabledCheckBox_Changed"/>
+                                        <EventSetter Event="Unchecked" Handler="EnabledCheckBox_Changed"/>
+                                    </Style>
+                                </DataGridCheckBoxColumn.EditingElementStyle>
+                            </DataGridCheckBoxColumn>
+                            <DataGridTextColumn Header="Name" Width="200" IsReadOnly="True">
                                 <DataGridTextColumn.Binding>
                                     <Binding Path="Name" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay" />
                                 </DataGridTextColumn.Binding>
                             </DataGridTextColumn>
-                            <DataGridComboBoxColumn Header="Action Type" Width="120">
+                            <DataGridComboBoxColumn Header="Action Type" Width="120" IsReadOnly="True">
                                 <DataGridComboBoxColumn.SelectedItemBinding>
                                     <Binding Path="ActionType" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" />
                                 </DataGridComboBoxColumn.SelectedItemBinding>
@@ -105,16 +124,17 @@
                                     <x:Array Type="{x:Type sys:String}" xmlns:sys="clr-namespace:System;assembly=mscorlib">
                                         <sys:String>keystroke</sys:String>
                                         <sys:String>command</sys:String>
+                                        <sys:String>spell</sys:String>
                                         <sys:String>text</sys:String>
                                     </x:Array>
                                 </DataGridComboBoxColumn.ItemsSource>
                             </DataGridComboBoxColumn>
-                            <DataGridTextColumn Header="Action Value" Width="200">
+                            <DataGridTextColumn Header="Action Value" Width="200" IsReadOnly="True">
                                 <DataGridTextColumn.Binding>
                                     <Binding Path="ActionValue" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay" />
                                 </DataGridTextColumn.Binding>
                             </DataGridTextColumn>
-                            <DataGridTextColumn Header="Cooldown (ms)" Width="110">
+                            <DataGridTextColumn Header="Cooldown (ms)" Width="110" IsReadOnly="True">
                                 <DataGridTextColumn.Binding>
                                     <Binding Path="CooldownMs" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay" />
                                 </DataGridTextColumn.Binding>

@@ -1,0 +1,1497 @@
+﻿[
+    {
+        "id":  5403,
+        "name":  "Pained Memory",
+        "level":  68
+    },
+    {
+        "id":  5398,
+        "name":  "Spirit of Fortitude",
+        "level":  68
+    },
+    {
+        "id":  5399,
+        "name":  "Talisman of Sense",
+        "level":  68
+    },
+    {
+        "id":  5396,
+        "name":  "Wunshi\u0027s Focusing",
+        "level":  68
+    },
+    {
+        "id":  5395,
+        "name":  "Yoppa\u0027s Mending",
+        "level":  68
+    },
+    {
+        "id":  5401,
+        "name":  "Yoppa\u0027s Rain of Venom",
+        "level":  68
+    },
+    {
+        "id":  5397,
+        "name":  "Ancestral Bulwark",
+        "level":  67
+    },
+    {
+        "id":  5411,
+        "name":  "Breath of Wunshi",
+        "level":  67
+    },
+    {
+        "id":  5389,
+        "name":  "Farrel\u0027s Companion",
+        "level":  67
+    },
+    {
+        "id":  5404,
+        "name":  "Spirit of Might",
+        "level":  67
+    },
+    {
+        "id":  5402,
+        "name":  "Spirit Veil",
+        "level":  67
+    },
+    {
+        "id":  5394,
+        "name":  "Crippling Spasm",
+        "level":  66
+    },
+    {
+        "id":  5392,
+        "name":  "Putrid Decay",
+        "level":  66
+    },
+    {
+        "id":  5393,
+        "name":  "Spirit of Perseverance",
+        "level":  66
+    },
+    {
+        "id":  5390,
+        "name":  "Spirit of Sense",
+        "level":  66
+    },
+    {
+        "id":  5391,
+        "name":  "Yoppa\u0027s Spear of Venom",
+        "level":  66
+    },
+    {
+        "id":  4979,
+        "name":  "Ancient Chaotic Pain",
+        "level":  65
+    },
+    {
+        "id":  4900,
+        "name":  "Balance of the Nihil",
+        "level":  65
+    },
+    {
+        "id":  3396,
+        "name":  "Blood of Saryrn",
+        "level":  65
+    },
+    {
+        "id":  4899,
+        "name":  "Breath of Trushar",
+        "level":  65
+    },
+    {
+        "id":  4901,
+        "name":  "Daluda\u0027s Mending",
+        "level":  65
+    },
+    {
+        "id":  3399,
+        "name":  "Ferine Avatar",
+        "level":  65
+    },
+    {
+        "id":  3397,
+        "name":  "Focus of the Seventh",
+        "level":  65
+    },
+    {
+        "id":  3395,
+        "name":  "Malos",
+        "level":  65
+    },
+    {
+        "id":  3398,
+        "name":  "Quiescence",
+        "level":  65
+    },
+    {
+        "id":  10044,
+        "name":  "Wishka\u0027s Favor",
+        "level":  65
+    },
+    {
+        "id":  10045,
+        "name":  "Wishka\u0027s Favor Rk. II",
+        "level":  65
+    },
+    {
+        "id":  10046,
+        "name":  "Wishka\u0027s Favor Rk. III",
+        "level":  65
+    },
+    {
+        "id":  4095,
+        "name":  "Bane",
+        "level":  64
+    },
+    {
+        "id":  3394,
+        "name":  "Breath of Ultor",
+        "level":  64
+    },
+    {
+        "id":  9920,
+        "name":  "Chant of the Napaea",
+        "level":  64
+    },
+    {
+        "id":  9921,
+        "name":  "Chant of the Napaea Rk. II",
+        "level":  64
+    },
+    {
+        "id":  9922,
+        "name":  "Chant of the Napaea Rk. III",
+        "level":  64
+    },
+    {
+        "id":  3196,
+        "name":  "Petrifying Earth",
+        "level":  64
+    },
+    {
+        "id":  3391,
+        "name":  "Talisman of Celerity",
+        "level":  64
+    },
+    {
+        "id":  3392,
+        "name":  "Talisman of the Diaku",
+        "level":  64
+    },
+    {
+        "id":  3393,
+        "name":  "Tiny Terror",
+        "level":  64
+    },
+    {
+        "id":  3390,
+        "name":  "Velium Strike",
+        "level":  64
+    },
+    {
+        "id":  3441,
+        "name":  "Blessing of Replenishment",
+        "level":  63
+    },
+    {
+        "id":  3386,
+        "name":  "Malicious Decay",
+        "level":  63
+    },
+    {
+        "id":  3387,
+        "name":  "Malosinia",
+        "level":  63
+    },
+    {
+        "id":  3388,
+        "name":  "Strength of the Diaku",
+        "level":  63
+    },
+    {
+        "id":  172,
+        "name":  "Swift Like the Wind",
+        "level":  63
+    },
+    {
+        "id":  3389,
+        "name":  "Talisman of the Boar",
+        "level":  63
+    },
+    {
+        "id":  3385,
+        "name":  "Tears of Saryrn",
+        "level":  63
+    },
+    {
+        "id":  3381,
+        "name":  "Ancestral Guard",
+        "level":  62
+    },
+    {
+        "id":  9700,
+        "name":  "Cure Corruption",
+        "level":  62
+    },
+    {
+        "id":  9701,
+        "name":  "Cure Corruption Rk. II",
+        "level":  62
+    },
+    {
+        "id":  9702,
+        "name":  "Cure Corruption Rk. III",
+        "level":  62
+    },
+    {
+        "id":  3382,
+        "name":  "Endurance of the Boar",
+        "level":  62
+    },
+    {
+        "id":  3235,
+        "name":  "Focus of Soul",
+        "level":  62
+    },
+    {
+        "id":  3195,
+        "name":  "Greater Immobilize",
+        "level":  62
+    },
+    {
+        "id":  3384,
+        "name":  "Talisman of the Tribunal",
+        "level":  62
+    },
+    {
+        "id":  3383,
+        "name":  "Talisman of the Wrulan",
+        "level":  62
+    },
+    {
+        "id":  3233,
+        "name":  "Tnarg\u0027s Mending",
+        "level":  62
+    },
+    {
+        "id":  3378,
+        "name":  "Agility of the Wrulan",
+        "level":  61
+    },
+    {
+        "id":  3380,
+        "name":  "Cloud of Grummus",
+        "level":  61
+    },
+    {
+        "id":  3433,
+        "name":  "Replenishment",
+        "level":  61
+    },
+    {
+        "id":  3379,
+        "name":  "Spear of Torment",
+        "level":  61
+    },
+    {
+        "id":  6735,
+        "name":  "Spirit of the Leopard",
+        "level":  61
+    },
+    {
+        "id":  3377,
+        "name":  "True Spirit",
+        "level":  61
+    },
+    {
+        "id":  2112,
+        "name":  "Ancient Feral Avatar",
+        "level":  60
+    },
+    {
+        "id":  2113,
+        "name":  "Ancient Scourge of Nife",
+        "level":  60
+    },
+    {
+        "id":  1598,
+        "name":  "Avatar",
+        "level":  60
+    },
+    {
+        "id":  1432,
+        "name":  "Focus of Spirit",
+        "level":  60
+    },
+    {
+        "id":  2530,
+        "name":  "Khura\u0027s Focusing",
+        "level":  60
+    },
+    {
+        "id":  1578,
+        "name":  "Malo",
+        "level":  60
+    },
+    {
+        "id":  1377,
+        "name":  "Primal Avatar",
+        "level":  60
+    },
+    {
+        "id":  1576,
+        "name":  "Torpor",
+        "level":  60
+    },
+    {
+        "id":  3593,
+        "name":  "Imbue War",
+        "level":  59
+    },
+    {
+        "id":  4589,
+        "name":  "Incarnate Anew",
+        "level":  59
+    },
+    {
+        "id":  1591,
+        "name":  "Pox of Bertoxxulous",
+        "level":  59
+    },
+    {
+        "id":  1583,
+        "name":  "Talisman of the Raptor",
+        "level":  59
+    },
+    {
+        "id":  1597,
+        "name":  "Unfailing Reverence",
+        "level":  59
+    },
+    {
+        "id":  1599,
+        "name":  "Voice of the Berserker",
+        "level":  59
+    },
+    {
+        "id":  2886,
+        "name":  "Acumen of Dar Khura",
+        "level":  58
+    },
+    {
+        "id":  1332,
+        "name":  "Cannibalize IV",
+        "level":  58
+    },
+    {
+        "id":  3591,
+        "name":  "Imbue Disease",
+        "level":  58
+    },
+    {
+        "id":  2435,
+        "name":  "Kragg\u0027s Mending",
+        "level":  58
+    },
+    {
+        "id":  1596,
+        "name":  "Mortal Deftness",
+        "level":  58
+    },
+    {
+        "id":  2529,
+        "name":  "Talisman of Epuration",
+        "level":  58
+    },
+    {
+        "id":  1581,
+        "name":  "Talisman of the Rhino",
+        "level":  58
+    },
+    {
+        "id":  1582,
+        "name":  "Talisman of the Serpent",
+        "level":  58
+    },
+    {
+        "id":  1589,
+        "name":  "Tigir\u0027s Insects",
+        "level":  58
+    },
+    {
+        "id":  3595,
+        "name":  "Imbue Justice",
+        "level":  57
+    },
+    {
+        "id":  1577,
+        "name":  "Malosini",
+        "level":  57
+    },
+    {
+        "id":  1593,
+        "name":  "Maniacal Strength",
+        "level":  57
+    },
+    {
+        "id":  6907,
+        "name":  "Spirit of the Jaguar",
+        "level":  57
+    },
+    {
+        "id":  1580,
+        "name":  "Talisman of the Brute",
+        "level":  57
+    },
+    {
+        "id":  1579,
+        "name":  "Talisman of the Cat",
+        "level":  57
+    },
+    {
+        "id":  1575,
+        "name":  "Acumen",
+        "level":  56
+    },
+    {
+        "id":  1590,
+        "name":  "Bane of Nife",
+        "level":  56
+    },
+    {
+        "id":  171,
+        "name":  "Celerity",
+        "level":  56
+    },
+    {
+        "id":  21398,
+        "name":  "Eradicate Poison",
+        "level":  56
+    },
+    {
+        "id":  133,
+        "name":  "Paralyzing Earth",
+        "level":  56
+    },
+    {
+        "id":  2528,
+        "name":  "Regrowth of Dar Khura",
+        "level":  56
+    },
+    {
+        "id":  1526,
+        "name":  "Annul Magic",
+        "level":  55
+    },
+    {
+        "id":  1290,
+        "name":  "Chloroblast",
+        "level":  55
+    },
+    {
+        "id":  1431,
+        "name":  "Form of the Great Bear",
+        "level":  55
+    },
+    {
+        "id":  8930,
+        "name":  "Idol of Malo",
+        "level":  55
+    },
+    {
+        "id":  1574,
+        "name":  "Spirit of the Howler",
+        "level":  55
+    },
+    {
+        "id":  1585,
+        "name":  "Talisman of Kragg",
+        "level":  55
+    },
+    {
+        "id":  1587,
+        "name":  "Torrent of Poison",
+        "level":  55
+    },
+    {
+        "id":  4094,
+        "name":  "Anathema",
+        "level":  54
+    },
+    {
+        "id":  3574,
+        "name":  "Blast of Venom",
+        "level":  54
+    },
+    {
+        "id":  1572,
+        "name":  "Cannibalize III",
+        "level":  54
+    },
+    {
+        "id":  21400,
+        "name":  "Eradicate Curse",
+        "level":  54
+    },
+    {
+        "id":  1586,
+        "name":  "Ice Strike",
+        "level":  54
+    },
+    {
+        "id":  2527,
+        "name":  "Plague of Insects",
+        "level":  54
+    },
+    {
+        "id":  2880,
+        "name":  "Remove Greater Curse",
+        "level":  54
+    },
+    {
+        "id":  1595,
+        "name":  "Riotous Health",
+        "level":  54
+    },
+    {
+        "id":  1584,
+        "name":  "Shroud of the Spirits",
+        "level":  54
+    },
+    {
+        "id":  1592,
+        "name":  "Cripple",
+        "level":  53
+    },
+    {
+        "id":  1594,
+        "name":  "Deliriously Nimble",
+        "level":  53
+    },
+    {
+        "id":  1571,
+        "name":  "Talisman of Shadoo",
+        "level":  53
+    },
+    {
+        "id":  3842,
+        "name":  "Blood of Nadox",
+        "level":  52
+    },
+    {
+        "id":  2526,
+        "name":  "Disinfecting Aura",
+        "level":  52
+    },
+    {
+        "id":  21399,
+        "name":  "Eradicate Disease",
+        "level":  52
+    },
+    {
+        "id":  1573,
+        "name":  "Insidious Decay",
+        "level":  52
+    },
+    {
+        "id":  1819,
+        "name":  "Primal Essence",
+        "level":  52
+    },
+    {
+        "id":  1568,
+        "name":  "Regrowth",
+        "level":  52
+    },
+    {
+        "id":  1554,
+        "name":  "Spirit of Scale",
+        "level":  52
+    },
+    {
+        "id":  2881,
+        "name":  "Everlasting Breath",
+        "level":  51
+    },
+    {
+        "id":  132,
+        "name":  "Immobilize",
+        "level":  51
+    },
+    {
+        "id":  2894,
+        "name":  "Levitation",
+        "level":  51
+    },
+    {
+        "id":  1588,
+        "name":  "Turgur\u0027s Insects",
+        "level":  51
+    },
+    {
+        "id":  6877,
+        "name":  "Kragg\u0027s Salve",
+        "level":  50
+    },
+    {
+        "id":  6906,
+        "name":  "Spirit of the Puma",
+        "level":  50
+    },
+    {
+        "id":  1430,
+        "name":  "Spirit Quickening",
+        "level":  50
+    },
+    {
+        "id":  1570,
+        "name":  "Talisman of Jasinth",
+        "level":  50
+    },
+    {
+        "id":  436,
+        "name":  "Envenomed Bolt",
+        "level":  49
+    },
+    {
+        "id":  3454,
+        "name":  "Infusion of Spirit",
+        "level":  49
+    },
+    {
+        "id":  32,
+        "name":  "Plague",
+        "level":  49
+    },
+    {
+        "id":  98,
+        "name":  "Abolish Disease",
+        "level":  48
+    },
+    {
+        "id":  157,
+        "name":  "Dexterity",
+        "level":  48
+    },
+    {
+        "id":  112,
+        "name":  "Malosi",
+        "level":  48
+    },
+    {
+        "id":  156,
+        "name":  "Charisma",
+        "level":  47
+    },
+    {
+        "id":  3573,
+        "name":  "Shock of Venom",
+        "level":  47
+    },
+    {
+        "id":  2525,
+        "name":  "Harnessing of Spirit",
+        "level":  46
+    },
+    {
+        "id":  159,
+        "name":  "Strength",
+        "level":  46
+    },
+    {
+        "id":  166,
+        "name":  "Frenzied Spirit",
+        "level":  45
+    },
+    {
+        "id":  337,
+        "name":  "Rage",
+        "level":  45
+    },
+    {
+        "id":  9,
+        "name":  "Superior Healing",
+        "level":  45
+    },
+    {
+        "id":  510,
+        "name":  "Blizzard Blast",
+        "level":  44
+    },
+    {
+        "id":  53118,
+        "name":  "Greater Mass Imbue Amber",
+        "level":  44
+    },
+    {
+        "id":  53121,
+        "name":  "Greater Mass Imbue Diamond",
+        "level":  44
+    },
+    {
+        "id":  53124,
+        "name":  "Greater Mass Imbue Ivory",
+        "level":  44
+    },
+    {
+        "id":  53125,
+        "name":  "Greater Mass Imbue Jade",
+        "level":  44
+    },
+    {
+        "id":  53131,
+        "name":  "Greater Mass Imbue Sapphire",
+        "level":  44
+    },
+    {
+        "id":  49,
+        "name":  "Nullify Magic",
+        "level":  44
+    },
+    {
+        "id":  3694,
+        "name":  "Stoicism",
+        "level":  44
+    },
+    {
+        "id":  4093,
+        "name":  "Odium",
+        "level":  43
+    },
+    {
+        "id":  64,
+        "name":  "Resist Magic",
+        "level":  43
+    },
+    {
+        "id":  158,
+        "name":  "Stamina",
+        "level":  43
+    },
+    {
+        "id":  170,
+        "name":  "Alacrity",
+        "level":  42
+    },
+    {
+        "id":  1429,
+        "name":  "Blast of Poison",
+        "level":  42
+    },
+    {
+        "id":  389,
+        "name":  "Guardian",
+        "level":  42
+    },
+    {
+        "id":  154,
+        "name":  "Agility",
+        "level":  41
+    },
+    {
+        "id":  165,
+        "name":  "Guardian Spirit",
+        "level":  41
+    },
+    {
+        "id":  163,
+        "name":  "Incapacitate",
+        "level":  41
+    },
+    {
+        "id":  6874,
+        "name":  "Spirit Salve",
+        "level":  40
+    },
+    {
+        "id":  1285,
+        "name":  "Summon Companion",
+        "level":  40
+    },
+    {
+        "id":  168,
+        "name":  "Talisman of Altuna",
+        "level":  40
+    },
+    {
+        "id":  134,
+        "name":  "Blinding Luminance",
+        "level":  39
+    },
+    {
+        "id":  145,
+        "name":  "Chloroplast",
+        "level":  39
+    },
+    {
+        "id":  152,
+        "name":  "Deftness",
+        "level":  39
+    },
+    {
+        "id":  153,
+        "name":  "Furious Strength",
+        "level":  39
+    },
+    {
+        "id":  754,
+        "name":  "Cannibalize II",
+        "level":  38
+    },
+    {
+        "id":  527,
+        "name":  "Insidious Malady",
+        "level":  38
+    },
+    {
+        "id":  2946,
+        "name":  "Remove Curse",
+        "level":  38
+    },
+    {
+        "id":  507,
+        "name":  "Togor\u0027s Insects",
+        "level":  38
+    },
+    {
+        "id":  155,
+        "name":  "Glamour",
+        "level":  37
+    },
+    {
+        "id":  435,
+        "name":  "Venom of the Snake",
+        "level":  37
+    },
+    {
+        "id":  577,
+        "name":  "Vigilant Spirit",
+        "level":  37
+    },
+    {
+        "id":  384,
+        "name":  "Assiduous Vision",
+        "level":  36
+    },
+    {
+        "id":  438,
+        "name":  "Gale of Poison",
+        "level":  36
+    },
+    {
+        "id":  2524,
+        "name":  "Spirit of Bih\u0027Li",
+        "level":  36
+    },
+    {
+        "id":  62,
+        "name":  "Resist Poison",
+        "level":  35
+    },
+    {
+        "id":  1428,
+        "name":  "Tumultuous Strength",
+        "level":  35
+    },
+    {
+        "id":  4092,
+        "name":  "Curse",
+        "level":  34
+    },
+    {
+        "id":  4055,
+        "name":  "Pack Shrew",
+        "level":  34
+    },
+    {
+        "id":  4287,
+        "name":  "Reebo\u0027s Greater Cleansing",
+        "level":  34
+    },
+    {
+        "id":  4275,
+        "name":  "Reebo\u0027s Greater Exorcism",
+        "level":  34
+    },
+    {
+        "id":  1427,
+        "name":  "Shock of the Tainted",
+        "level":  34
+    },
+    {
+        "id":  131,
+        "name":  "Instill",
+        "level":  33
+    },
+    {
+        "id":  4263,
+        "name":  "Reebo\u0027s Greater Augury",
+        "level":  33
+    },
+    {
+        "id":  509,
+        "name":  "Winter\u0027s Roar",
+        "level":  33
+    },
+    {
+        "id":  260,
+        "name":  "Charm Animals",
+        "level":  32
+    },
+    {
+        "id":  164,
+        "name":  "Companion Spirit",
+        "level":  32
+    },
+    {
+        "id":  111,
+        "name":  "Malaisement",
+        "level":  32
+    },
+    {
+        "id":  167,
+        "name":  "Talisman of Tnarg",
+        "level":  32
+    },
+    {
+        "id":  160,
+        "name":  "Nimble",
+        "level":  31
+    },
+    {
+        "id":  31,
+        "name":  "Scourge",
+        "level":  31
+    },
+    {
+        "id":  431,
+        "name":  "Shifting Shield",
+        "level":  31
+    },
+    {
+        "id":  326,
+        "name":  "Fury",
+        "level":  30
+    },
+    {
+        "id":  161,
+        "name":  "Health",
+        "level":  30
+    },
+    {
+        "id":  63,
+        "name":  "Resist Disease",
+        "level":  30
+    },
+    {
+        "id":  15,
+        "name":  "Greater Healing",
+        "level":  29
+    },
+    {
+        "id":  1885,
+        "name":  "Imbue Amber",
+        "level":  29
+    },
+    {
+        "id":  1895,
+        "name":  "Imbue Diamond",
+        "level":  29
+    },
+    {
+        "id":  1884,
+        "name":  "Imbue Ivory",
+        "level":  29
+    },
+    {
+        "id":  1891,
+        "name":  "Imbue Jade",
+        "level":  29
+    },
+    {
+        "id":  1886,
+        "name":  "Imbue Sapphire",
+        "level":  29
+    },
+    {
+        "id":  162,
+        "name":  "Listless Power",
+        "level":  29
+    },
+    {
+        "id":  3994,
+        "name":  "Mass Imbue Amber",
+        "level":  29
+    },
+    {
+        "id":  3997,
+        "name":  "Mass Imbue Diamond",
+        "level":  29
+    },
+    {
+        "id":  4000,
+        "name":  "Mass Imbue Ivory",
+        "level":  29
+    },
+    {
+        "id":  4001,
+        "name":  "Mass Imbue Jade",
+        "level":  29
+    },
+    {
+        "id":  4007,
+        "name":  "Mass Imbue Sapphire",
+        "level":  29
+    },
+    {
+        "id":  4054,
+        "name":  "Spirit of the Shrew",
+        "level":  29
+    },
+    {
+        "id":  150,
+        "name":  "Alluring Aura",
+        "level":  28
+    },
+    {
+        "id":  151,
+        "name":  "Raging Strength",
+        "level":  28
+    },
+    {
+        "id":  42,
+        "name":  "Invisibility",
+        "level":  27
+    },
+    {
+        "id":  60,
+        "name":  "Resist Fire",
+        "level":  27
+    },
+    {
+        "id":  506,
+        "name":  "Tagar\u0027s Insects",
+        "level":  27
+    },
+    {
+        "id":  95,
+        "name":  "Counteract Poison",
+        "level":  26
+    },
+    {
+        "id":  39,
+        "name":  "Quickness",
+        "level":  26
+    },
+    {
+        "id":  46,
+        "name":  "Ultravision",
+        "level":  26
+    },
+    {
+        "id":  245,
+        "name":  "Befriend Animal",
+        "level":  25
+    },
+    {
+        "id":  2523,
+        "name":  "Form of the Bear",
+        "level":  25
+    },
+    {
+        "id":  349,
+        "name":  "Rising Dexterity",
+        "level":  25
+    },
+    {
+        "id":  434,
+        "name":  "Envenomed Breath",
+        "level":  24
+    },
+    {
+        "id":  4286,
+        "name":  "Reebo\u0027s Cleansing",
+        "level":  24
+    },
+    {
+        "id":  4274,
+        "name":  "Reebo\u0027s Exorcism",
+        "level":  24
+    },
+    {
+        "id":  4057,
+        "name":  "Remove Lesser Curse",
+        "level":  24
+    },
+    {
+        "id":  61,
+        "name":  "Resist Cold",
+        "level":  24
+    },
+    {
+        "id":  265,
+        "name":  "Cannibalize",
+        "level":  23
+    },
+    {
+        "id":  508,
+        "name":  "Frost Strike",
+        "level":  23
+    },
+    {
+        "id":  4262,
+        "name":  "Reebo\u0027s Augury",
+        "level":  23
+    },
+    {
+        "id":  144,
+        "name":  "Regeneration",
+        "level":  23
+    },
+    {
+        "id":  96,
+        "name":  "Counteract Disease",
+        "level":  22
+    },
+    {
+        "id":  437,
+        "name":  "Poison Storm",
+        "level":  22
+    },
+    {
+        "id":  424,
+        "name":  "Scale of Wolf",
+        "level":  22
+    },
+    {
+        "id":  220,
+        "name":  "Spirit of Cheetah",
+        "level":  21
+    },
+    {
+        "id":  146,
+        "name":  "Spirit of Monkey",
+        "level":  21
+    },
+    {
+        "id":  149,
+        "name":  "Spirit of Ox",
+        "level":  21
+    },
+    {
+        "id":  640,
+        "name":  "Creeping Vision",
+        "level":  20
+    },
+    {
+        "id":  649,
+        "name":  "Protect",
+        "level":  20
+    },
+    {
+        "id":  511,
+        "name":  "Affliction",
+        "level":  19
+    },
+    {
+        "id":  48,
+        "name":  "Cancel Magic",
+        "level":  19
+    },
+    {
+        "id":  228,
+        "name":  "Endure Magic",
+        "level":  19
+    },
+    {
+        "id":  12,
+        "name":  "Healing",
+        "level":  19
+    },
+    {
+        "id":  110,
+        "name":  "Malaise",
+        "level":  18
+    },
+    {
+        "id":  148,
+        "name":  "Spirit of Cat",
+        "level":  18
+    },
+    {
+        "id":  147,
+        "name":  "Spirit Strength",
+        "level":  18
+    },
+    {
+        "id":  526,
+        "name":  "Insidious Fever",
+        "level":  17
+    },
+    {
+        "id":  580,
+        "name":  "Vision",
+        "level":  17
+    },
+    {
+        "id":  308,
+        "name":  "Frenzy",
+        "level":  16
+    },
+    {
+        "id":  2522,
+        "name":  "Grow",
+        "level":  16
+    },
+    {
+        "id":  3583,
+        "name":  "Tiny Companion",
+        "level":  16
+    },
+    {
+        "id":  365,
+        "name":  "Infectious Cloud",
+        "level":  15
+    },
+    {
+        "id":  345,
+        "name":  "Shrink",
+        "level":  15
+    },
+    {
+        "id":  35,
+        "name":  "Bind Affinity",
+        "level":  14
+    },
+    {
+        "id":  4285,
+        "name":  "Reebo\u0027s Lesser Cleansing",
+        "level":  14
+    },
+    {
+        "id":  4273,
+        "name":  "Reebo\u0027s Lesser Exorcism",
+        "level":  14
+    },
+    {
+        "id":  282,
+        "name":  "Spirit Strike",
+        "level":  14
+    },
+    {
+        "id":  4261,
+        "name":  "Reebo\u0027s Lesser Augury",
+        "level":  13
+    },
+    {
+        "id":  505,
+        "name":  "Walking Sleep",
+        "level":  13
+    },
+    {
+        "id":  281,
+        "name":  "Disempower",
+        "level":  12
+    },
+    {
+        "id":  86,
+        "name":  "Enduring Breath",
+        "level":  12
+    },
+    {
+        "id":  230,
+        "name":  "Root",
+        "level":  12
+    },
+    {
+        "id":  280,
+        "name":  "Burst of Strength",
+        "level":  11
+    },
+    {
+        "id":  227,
+        "name":  "Endure Poison",
+        "level":  11
+    },
+    {
+        "id":  283,
+        "name":  "Turtle Skin",
+        "level":  11
+    },
+    {
+        "id":  255,
+        "name":  "Invisibility Versus Animals",
+        "level":  10
+    },
+    {
+        "id":  261,
+        "name":  "Levitate",
+        "level":  10
+    },
+    {
+        "id":  284,
+        "name":  "Spirit of Snake",
+        "level":  10
+    },
+    {
+        "id":  17,
+        "name":  "Light Healing",
+        "level":  9
+    },
+    {
+        "id":  4056,
+        "name":  "Remove Minor Curse",
+        "level":  9
+    },
+    {
+        "id":  278,
+        "name":  "Spirit of Wolf",
+        "level":  9
+    },
+    {
+        "id":  226,
+        "name":  "Endure Disease",
+        "level":  8
+    },
+    {
+        "id":  277,
+        "name":  "Tainted Breath",
+        "level":  8
+    },
+    {
+        "id":  2521,
+        "name":  "Talisman of the Beast",
+        "level":  8
+    },
+    {
+        "id":  212,
+        "name":  "Cure Blindness",
+        "level":  7
+    },
+    {
+        "id":  238,
+        "name":  "Sense Animals",
+        "level":  7
+    },
+    {
+        "id":  79,
+        "name":  "Spirit Sight",
+        "level":  7
+    },
+    {
+        "id":  276,
+        "name":  "Serpent Sight",
+        "level":  6
+    },
+    {
+        "id":  279,
+        "name":  "Spirit of Bear",
+        "level":  6
+    },
+    {
+        "id":  50,
+        "name":  "Summon Food",
+        "level":  6
+    },
+    {
+        "id":  270,
+        "name":  "Drowsy",
+        "level":  5
+    },
+    {
+        "id":  224,
+        "name":  "Endure Fire",
+        "level":  5
+    },
+    {
+        "id":  36,
+        "name":  "Gate",
+        "level":  5
+    },
+    {
+        "id":  271,
+        "name":  "Fleeting Fury",
+        "level":  4
+    },
+    {
+        "id":  275,
+        "name":  "Frost Rift",
+        "level":  4
+    },
+    {
+        "id":  75,
+        "name":  "Sicken",
+        "level":  4
+    },
+    {
+        "id":  269,
+        "name":  "Feet like Cat",
+        "level":  3
+    },
+    {
+        "id":  274,
+        "name":  "Scale Skin",
+        "level":  3
+    },
+    {
+        "id":  203,
+        "name":  "Cure Poison",
+        "level":  2
+    },
+    {
+        "id":  272,
+        "name":  "Spirit Pouch",
+        "level":  2
+    },
+    {
+        "id":  211,
+        "name":  "Summon Drink",
+        "level":  2
+    },
+    {
+        "id":  93,
+        "name":  "Burst of Flame",
+        "level":  1
+    },
+    {
+        "id":  213,
+        "name":  "Cure Disease",
+        "level":  1
+    },
+    {
+        "id":  266,
+        "name":  "Dexterous Aura",
+        "level":  1
+    },
+    {
+        "id":  225,
+        "name":  "Endure Cold",
+        "level":  1
+    },
+    {
+        "id":  201,
+        "name":  "Flash of Light",
+        "level":  1
+    },
+    {
+        "id":  267,
+        "name":  "Inner Fire",
+        "level":  1
+    },
+    {
+        "id":  200,
+        "name":  "Minor Healing",
+        "level":  1
+    },
+    {
+        "id":  40,
+        "name":  "Strengthen",
+        "level":  1
+    },
+    {
+        "id":  205,
+        "name":  "True North",
+        "level":  1
+    }
+]
