@@ -13,6 +13,10 @@
         <SolidColorBrush x:Key="SubtleTextBrush" Color="#9CA3AF"/>
         <SolidColorBrush x:Key="SelectionBrush" Color="#1F2937"/>
         <SolidColorBrush x:Key="SelectionBorderBrush" Color="#374151"/>
+        <SolidColorBrush x:Key="TabHeaderBg" Color="#111827"/>
+        <SolidColorBrush x:Key="TabHeaderSelBg" Color="#0B1220"/>
+        <SolidColorBrush x:Key="TabHeaderHoverBg" Color="#0F172A"/>
+        <SolidColorBrush x:Key="TabHeaderBorder" Color="#1F2937"/>
 
         <!-- Typography defaults -->
         <Style TargetType="Window">
@@ -120,7 +124,27 @@
         </Style>
         <Style TargetType="TabItem">
             <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
-            <Setter Property="Background" Value="{StaticResource SurfaceBrush}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TabItem">
+                        <Border x:Name="Bd" Background="{StaticResource TabHeaderBg}" BorderBrush="{StaticResource TabHeaderBorder}" BorderThickness="0,0,1,1" CornerRadius="4,4,0,0" Padding="10,6" Margin="2,0,2,0">
+                            <ContentPresenter ContentSource="Header" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="{StaticResource TabHeaderSelBg}"/>
+                                <Setter TargetName="Bd" Property="BorderThickness" Value="1,1,1,0"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="{StaticResource TabHeaderHoverBg}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="Bd" Property="Opacity" Value="0.6"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
         <Style TargetType="ScrollViewer">
             <Setter Property="Background" Value="{StaticResource SurfaceBrush}"/>
