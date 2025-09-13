@@ -60,6 +60,13 @@ public:
     bool sendCommand(const std::string& command);
 
     /**
+     * @brief Send SMS (tell message) via email
+     * @param logLine The log line containing the tell message
+     * @return true if SMS was sent successfully, false otherwise
+     */
+    bool sendSms(const std::string& logLine);
+
+    /**
      * @brief Send a chord: hold modifiers, press each key in order, then release modifiers
      * @param keys Vector of virtual key codes to press
      * @param modifiers Modifier keys (Ctrl, Alt, Shift)

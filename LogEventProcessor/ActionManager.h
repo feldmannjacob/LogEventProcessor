@@ -17,8 +17,9 @@
  */
 struct ActionMapping {
     std::string ruleName;
-    std::string actionType;  // "keystroke", "command", "text"
+    std::string actionType;  // "keystroke", "command", "text", "sms"
     std::string actionValue; // The actual action to perform
+    std::string logLine;     // The original log line (for SMS action type)
     int modifiers;           // Modifier keys for keystrokes
     bool enabled;
     int delayMs;             // Delay after executing this step (ms)

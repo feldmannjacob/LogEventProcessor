@@ -2,6 +2,13 @@ log_file_path: C:/Users/Public/Daybreak Game Company/Installed Games/EverQuest/L
 output_directory: ''
 polling_interval_ms: 1000
 parallel_processing: true
+email_smtp_server: smtp.gmail.com
+email_smtp_port: 587
+email_username: your-email@gmail.com
+email_password: your-app-password
+email_from: your-email@gmail.com
+email_to: recipient@gmail.com
+email_enable_ssl: true
 regex_rules:
 - name: hello_world_response
   pattern: '.*hello # world.*'
@@ -23,4 +30,9 @@ regex_rules:
   pattern: .*clarice.*
   action_type: keystroke
   action_value: g woot
+  enabled: true
+- name: email_test
+  pattern: .*email test.*
+  action_type: email
+  action_value: Test email from EQ Log Automator
   enabled: true

@@ -19,7 +19,7 @@ namespace ConfigEditor.Services
     {
         private static readonly HashSet<string> AllowedActionTypes = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
         {
-            "keystroke", "command", "text", "spell"
+            "keystroke", "command", "text", "spell", "sms"
         };
 
         public IReadOnlyList<ValidationIssue> Validate(ConfigRoot config)
@@ -38,6 +38,31 @@ namespace ConfigEditor.Services
             if (config.MaxQueueSize < 0)
             {
                 issues.Add(new ValidationIssue { Severity = ValidationSeverity.Error, Message = "Max queue size cannot be negative" });
+            }
+
+            // Check if SMS action type is used and validate email configuration
+            bool hasSmsAction = config.RegexRules.Any(rule => 
+                string.Equals(rule.ActionType, "sms", StringComparison.OrdinalIgnoreCase) ||
+                (rule.Actions?.Any(action => string.Equals(action.Type, "sms", StringComparison.OrdinalIgnoreCase)) == true));
+
+            if (hasSmsAction)
+            {
+                if (string.IsNullOrWhiteSpace(config.EmailSmtpServer))
+                {
+                    issues.Add(new ValidationIssue { Severity = ValidationSeverity.Error, Message = "Email SMTP server is required when using SMS action type" });
+                }
+                if (string.IsNullOrWhiteSpace(config.EmailFrom))
+                {
+                    issues.Add(new ValidationIssue { Severity = ValidationSeverity.Error, Message = "From email address is required when using SMS action type" });
+                }
+                if (string.IsNullOrWhiteSpace(config.EmailTo))
+                {
+                    issues.Add(new ValidationIssue { Severity = ValidationSeverity.Error, Message = "To email address is required when using SMS action type" });
+                }
+                if (string.IsNullOrWhiteSpace(config.EmailUsername))
+                {
+                    issues.Add(new ValidationIssue { Severity = ValidationSeverity.Warning, Message = "Email username is recommended for SMTP authentication" });
+                }
             }
 
             // Rules
@@ -84,7 +109,7 @@ namespace ConfigEditor.Services
                         {
                             issues.Add(new ValidationIssue { Severity = ValidationSeverity.Error, RuleName = rule.Name, Message = $"Step {i + 1}: invalid type" });
                         }
-                        if (string.IsNullOrWhiteSpace(step.Value))
+                        if (string.IsNullOrWhiteSpace(step.Value) && !string.Equals(step.Type, "sms", StringComparison.OrdinalIgnoreCase))
                         {
                             issues.Add(new ValidationIssue { Severity = ValidationSeverity.Error, RuleName = rule.Name, Message = $"Step {i + 1}: value is required" });
                         }
@@ -107,7 +132,7 @@ namespace ConfigEditor.Services
                         {
                             issues.Add(new ValidationIssue { Severity = ValidationSeverity.Error, RuleName = rule.Name, Message = "Invalid action_type" });
                         }
-                        if (string.IsNullOrWhiteSpace(rule.ActionValue))
+                        if (string.IsNullOrWhiteSpace(rule.ActionValue) && !string.Equals(rule.ActionType, "sms", StringComparison.OrdinalIgnoreCase))
                         {
                             issues.Add(new ValidationIssue { Severity = ValidationSeverity.Error, RuleName = rule.Name, Message = "action_value is required when action_type is set" });
                         }

@@ -115,6 +115,15 @@ namespace ConfigEditor
             ProcessErrorsCheck.IsChecked = Current.ProcessErrors;
             ProcessWarningsCheck.IsChecked = Current.ProcessWarnings;
             ProcessInfoCheck.IsChecked = Current.ProcessInfo;
+            
+            // Email configuration
+            EmailSmtpServerText.Text = Current.EmailSmtpServer ?? string.Empty;
+            EmailSmtpPortText.Text = Current.EmailSmtpPort.ToString();
+            EmailUsernameText.Text = Current.EmailUsername ?? string.Empty;
+            EmailPasswordText.Password = Current.EmailPassword ?? string.Empty;
+            EmailFromText.Text = Current.EmailFrom ?? string.Empty;
+            EmailToText.Text = Current.EmailTo ?? string.Empty;
+            EmailEnableSslCheck.IsChecked = Current.EmailEnableSsl;
         }
 
         private void UpdateFromGeneral()
@@ -128,6 +137,15 @@ namespace ConfigEditor
             Current.ProcessErrors = ProcessErrorsCheck.IsChecked == true;
             Current.ProcessWarnings = ProcessWarningsCheck.IsChecked == true;
             Current.ProcessInfo = ProcessInfoCheck.IsChecked == true;
+            
+            // Email configuration
+            Current.EmailSmtpServer = EmailSmtpServerText.Text;
+            if (int.TryParse(EmailSmtpPortText.Text, out var port)) Current.EmailSmtpPort = port; else Current.EmailSmtpPort = 587;
+            Current.EmailUsername = EmailUsernameText.Text;
+            Current.EmailPassword = EmailPasswordText.Password;
+            Current.EmailFrom = EmailFromText.Text;
+            Current.EmailTo = EmailToText.Text;
+            Current.EmailEnableSsl = EmailEnableSslCheck.IsChecked == true;
         }
 
         private void RefreshRules()
@@ -150,6 +168,7 @@ namespace ConfigEditor
         {
             try
             {
+                _isLoading = true;
                 var cfg = _service.Load(path);
                 _currentPath = path;
                 Current = cfg;
@@ -160,6 +179,10 @@ namespace ConfigEditor
             catch (Exception ex)
             {
                 MessageBox.Show(this, ex.Message, "Failed to load", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            finally
+            {
+                _isLoading = false;
             }
         }
 
@@ -401,6 +424,11 @@ namespace ConfigEditor
             AutoSave();
         }
 
+        private void General_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            DebouncedAutoSave();
+        }
+
         private DateTime _lastChange = DateTime.MinValue;
         private System.Timers.Timer? _debounceTimer;
         private void DebouncedAutoSave()
@@ -420,11 +448,12 @@ namespace ConfigEditor
         }
 
         private bool _isSaving = false;
+        private bool _isLoading = false;
         private void AutoSave()
         {
             try
             {
-                if (_isSaving) return;
+                if (_isSaving || _isLoading) return;
                 _isSaving = true;
                 UpdateFromGeneral();
                 var issues = _validator.Validate(Current);

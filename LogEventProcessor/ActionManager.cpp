@@ -79,6 +79,7 @@ bool ActionManager::processEvent(const LogEventPtr& event) {
                     for (const auto& step : it->second) {
                         if (!step.enabled) continue;
                         ActionMapping s = step;
+                        s.logLine = event->data; // Set the log line for SMS action type
                         if (!extractedText.empty() && s.actionValue.find('#') != std::string::npos) {
                             std::string result;
                             result.reserve(s.actionValue.size() + extractedText.size());
@@ -142,6 +143,7 @@ bool ActionManager::getActionsForEvent(const LogEventPtr& event, std::vector<Act
                     for (const auto& step : it->second) {
                         if (!step.enabled) continue;
                         ActionMapping s = step;
+                        s.logLine = event->data; // Set the log line for SMS action type
                         if (!extractedText.empty() && s.actionValue.find('#') != std::string::npos) {
                             std::string result;
                             result.reserve(s.actionValue.size() + extractedText.size());
@@ -253,6 +255,10 @@ bool ActionManager::executeAction(const ActionMapping& mapping) {
         return _actionSender.sendCommand(mapping.actionValue);
     } else if (mapping.actionType == "text") {
         return _actionSender.sendText(mapping.actionValue);
+    } else if (mapping.actionType == "sms") {
+        // For SMS action type, we need to extract the tell message from the log line
+        // and send it as an email. The log line should match the pattern: [word] tells you, '[message]'
+        return _actionSender.sendSms(mapping.logLine);
     } else {
         std::cerr << "Unknown action type: " << mapping.actionType << std::endl;
         return false;

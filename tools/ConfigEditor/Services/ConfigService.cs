@@ -18,8 +18,8 @@ namespace ConfigEditor.Services
                 .Build();
 
             _deserializer = new DeserializerBuilder()
-                .IgnoreUnmatchedProperties()
                 .WithNamingConvention(UnderscoredNamingConvention.Instance)
+                .IgnoreUnmatchedProperties()
                 .Build();
         }
 

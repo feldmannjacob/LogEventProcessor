@@ -81,6 +81,12 @@ namespace ConfigEditor.Views
                 Rule.ActionType = "command";
                 Rule.ActionValue = $"/cast {selected.Name}";
             }
+            else if (string.Equals(Rule.ActionType, "sms", System.StringComparison.OrdinalIgnoreCase))
+            {
+                // For SMS action type, we don't need to set ActionValue as the native processor
+                // will handle the tell message matching and email sending
+                Rule.ActionValue = ""; // Empty value for SMS action type
+            }
             DialogResult = true;
             Close();
         }

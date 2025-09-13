@@ -19,6 +19,15 @@ namespace ConfigEditor.Models
         [YamlMember(Alias = "process_warnings")] public bool ProcessWarnings { get; set; } = true;
         [YamlMember(Alias = "process_info")] public bool ProcessInfo { get; set; } = true;
 
+        // Email configuration for SMS action type
+        [YamlMember(Alias = "email_smtp_server")] public string? EmailSmtpServer { get; set; }
+        [YamlMember(Alias = "email_smtp_port")] public int EmailSmtpPort { get; set; } = 587;
+        [YamlMember(Alias = "email_username")] public string? EmailUsername { get; set; }
+        [YamlMember(Alias = "email_password")] public string? EmailPassword { get; set; }
+        [YamlMember(Alias = "email_from")] public string? EmailFrom { get; set; }
+        [YamlMember(Alias = "email_to")] public string? EmailTo { get; set; }
+        [YamlMember(Alias = "email_enable_ssl")] public bool EmailEnableSsl { get; set; } = true;
+
         [YamlMember(Alias = "regex_rules")] public List<RegexRule> RegexRules { get; set; } = new List<RegexRule>();
     }
 

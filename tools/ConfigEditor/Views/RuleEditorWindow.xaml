@@ -37,6 +37,7 @@
             <ComboBoxItem Content="command"/>
             <ComboBoxItem Content="spell"/>
             <ComboBoxItem Content="text"/>
+            <ComboBoxItem Content="sms"/>
         </ComboBox>
 
         <!-- Generic action value (hidden for command and spell types) -->
@@ -144,13 +145,41 @@
             <ComboBox x:Name="SpellNameCombo" Width="240" DisplayMemberPath="Name" SelectedValuePath="Name"/>
         </StackPanel>
 
-        <TextBlock Grid.Row="6" Grid.Column="0" Margin="0,6,12,6" Text="Modifiers"/>
-        <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding Modifiers, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <!-- SMS-specific UI: read-only info about tell message matching -->
+        <TextBlock Grid.Row="6" Grid.Column="0" Margin="0,6,12,6" Text="SMS Info">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ActionType}" Value="sms">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <StackPanel Grid.Row="6" Grid.Column="1" Orientation="Vertical">
+            <StackPanel.Style>
+                <Style TargetType="StackPanel">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ActionType}" Value="sms">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </StackPanel.Style>
+            <TextBlock Text="Matches: [word] tells you, '[message]'" FontStyle="Italic" Foreground="Gray" Margin="0,0,0,4"/>
+            <TextBlock Text="Sends the entire tell message as an email" FontStyle="Italic" Foreground="Gray"/>
+        </StackPanel>
 
-        <TextBlock Grid.Row="7" Grid.Column="0" Margin="0,6,12,6" Text="Cooldown (ms)"/>
-        <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding CooldownMs, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBlock Grid.Row="7" Grid.Column="0" Margin="0,6,12,6" Text="Modifiers"/>
+        <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding Modifiers, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
-        <StackPanel Grid.Row="8" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,12,0,0">
+        <TextBlock Grid.Row="8" Grid.Column="0" Margin="0,6,12,6" Text="Cooldown (ms)"/>
+        <TextBox Grid.Row="8" Grid.Column="1" Text="{Binding CooldownMs, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <StackPanel Grid.Row="9" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,12,0,0">
             <Button Width="90" Margin="0,0,8,0" Content="OK" IsDefault="True" Click="Ok_Click"/>
             <Button Width="90" Content="Cancel" IsCancel="True"/>
         </StackPanel>

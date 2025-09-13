@@ -29,8 +29,8 @@
                 <ScrollViewer VerticalScrollBarVisibility="Auto" Background="{StaticResource SurfaceBrush}">
                     <Grid Margin="4" Background="{StaticResource SurfaceBrush}">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="200" />
-                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" MinWidth="150" MaxWidth="250" />
+                            <ColumnDefinition Width="*" MinWidth="300" />
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
@@ -42,39 +42,72 @@
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" Grid.Column="0" Margin="0,10,12,6" Text="Log file path" />
-                        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
-                            <TextBox x:Name="LogFilePathText" Width="500" Margin="0,0,8,0" TextChanged="General_TextChanged"/>
-                            <Button Content="Browse..." Click="BrowseLogFile_Click"/>
+                        <TextBlock Grid.Row="0" Grid.Column="0" Margin="0,10,12,6" Text="Log file path" VerticalAlignment="Center" />
+                        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" Margin="0,10,0,0">
+                            <TextBox x:Name="LogFilePathText" MinWidth="200" Margin="0,0,8,0" TextChanged="General_TextChanged"/>
+                            <Button Content="Browse..." Click="BrowseLogFile_Click" VerticalAlignment="Center"/>
                         </StackPanel>
 
-                        <TextBlock Grid.Row="1" Grid.Column="0" Margin="0,6,12,6" Text="Output directory" />
-                        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
-                            <TextBox x:Name="OutputDirectoryText" Width="500" Margin="0,0,8,0" TextChanged="General_TextChanged"/>
-                            <Button Content="Browse..." Click="BrowseOutputDir_Click" />
+                        <TextBlock Grid.Row="1" Grid.Column="0" Margin="0,6,12,6" Text="Output directory" VerticalAlignment="Center" />
+                        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Margin="0,6,0,0">
+                            <TextBox x:Name="OutputDirectoryText" MinWidth="200" Margin="0,0,8,0" TextChanged="General_TextChanged"/>
+                            <Button Content="Browse..." Click="BrowseOutputDir_Click" VerticalAlignment="Center" />
                         </StackPanel>
 
-                        <TextBlock Grid.Row="2" Grid.Column="0" Margin="0,6,12,6" Text="Polling interval (ms)" />
-                        <TextBox Grid.Row="2" Grid.Column="1" x:Name="PollingIntervalText" Width="120" TextChanged="General_TextChanged"/>
+                        <TextBlock Grid.Row="2" Grid.Column="0" Margin="0,6,12,6" Text="Polling interval (ms)" VerticalAlignment="Center" />
+                        <TextBox Grid.Row="2" Grid.Column="1" x:Name="PollingIntervalText" MinWidth="80" MaxWidth="120" Margin="0,6,0,0" TextChanged="General_TextChanged"/>
 
-                        <TextBlock Grid.Row="3" Grid.Column="0" Margin="0,6,12,6" Text="Parallel processing" />
-                        <CheckBox Grid.Row="3" Grid.Column="1" x:Name="ParallelProcessingCheck" Checked="General_CheckChanged" Unchecked="General_CheckChanged" />
+                        <TextBlock Grid.Row="3" Grid.Column="0" Margin="0,6,12,6" Text="Parallel processing" VerticalAlignment="Center" />
+                        <CheckBox Grid.Row="3" Grid.Column="1" x:Name="ParallelProcessingCheck" Margin="0,6,0,0" Checked="General_CheckChanged" Unchecked="General_CheckChanged" />
 
-                        <TextBlock Grid.Row="4" Grid.Column="0" Margin="0,6,12,6" Text="Debug mode" />
-                        <CheckBox Grid.Row="4" Grid.Column="1" x:Name="DebugModeCheck" Checked="General_CheckChanged" Unchecked="General_CheckChanged" />
+                        <TextBlock Grid.Row="4" Grid.Column="0" Margin="0,6,12,6" Text="Debug mode" VerticalAlignment="Center" />
+                        <CheckBox Grid.Row="4" Grid.Column="1" x:Name="DebugModeCheck" Margin="0,6,0,0" Checked="General_CheckChanged" Unchecked="General_CheckChanged" />
 
-                        <TextBlock Grid.Row="5" Grid.Column="0" Margin="0,6,12,6" Text="Max queue size (0 = unlimited)" />
-                        <TextBox Grid.Row="5" Grid.Column="1" x:Name="MaxQueueSizeText" Width="120" TextChanged="General_TextChanged"/>
+                        <TextBlock Grid.Row="5" Grid.Column="0" Margin="0,6,12,6" Text="Max queue size (0 = unlimited)" VerticalAlignment="Center" />
+                        <TextBox Grid.Row="5" Grid.Column="1" x:Name="MaxQueueSizeText" MinWidth="80" MaxWidth="120" Margin="0,6,0,0" TextChanged="General_TextChanged"/>
 
-                        <TextBlock Grid.Row="6" Grid.Column="0" Margin="0,6,12,6" Text="Process errors" />
-                        <CheckBox Grid.Row="6" Grid.Column="1" x:Name="ProcessErrorsCheck" Checked="General_CheckChanged" Unchecked="General_CheckChanged" />
+                        <TextBlock Grid.Row="6" Grid.Column="0" Margin="0,6,12,6" Text="Process errors" VerticalAlignment="Center" />
+                        <CheckBox Grid.Row="6" Grid.Column="1" x:Name="ProcessErrorsCheck" Margin="0,6,0,0" Checked="General_CheckChanged" Unchecked="General_CheckChanged" />
 
-                        <TextBlock Grid.Row="7" Grid.Column="0" Margin="0,6,12,6" Text="Process warnings" />
-                        <CheckBox Grid.Row="7" Grid.Column="1" x:Name="ProcessWarningsCheck" Checked="General_CheckChanged" Unchecked="General_CheckChanged" />
+                        <TextBlock Grid.Row="7" Grid.Column="0" Margin="0,6,12,6" Text="Process warnings" VerticalAlignment="Center" />
+                        <CheckBox Grid.Row="7" Grid.Column="1" x:Name="ProcessWarningsCheck" Margin="0,6,0,0" Checked="General_CheckChanged" Unchecked="General_CheckChanged" />
 
-                        <TextBlock Grid.Row="8" Grid.Column="0" Margin="0,6,12,6" Text="Process info" />
-                        <CheckBox Grid.Row="8" Grid.Column="1" x:Name="ProcessInfoCheck" Checked="General_CheckChanged" Unchecked="General_CheckChanged" />
+                        <TextBlock Grid.Row="8" Grid.Column="0" Margin="0,6,12,6" Text="Process info" VerticalAlignment="Center" />
+                        <CheckBox Grid.Row="8" Grid.Column="1" x:Name="ProcessInfoCheck" Margin="0,6,0,0" Checked="General_CheckChanged" Unchecked="General_CheckChanged" />
+
+                        <!-- Email Configuration for SMS Action Type -->
+                        <TextBlock Grid.Row="9" Grid.Column="0" Margin="0,20,12,6" Text="Email Configuration (for SMS action type)" FontWeight="Bold" VerticalAlignment="Center" />
+                        <TextBlock Grid.Row="9" Grid.Column="1" Margin="0,20,0,6" Text="Configure email settings for sending tell messages" FontStyle="Italic" Foreground="Gray" VerticalAlignment="Center" />
+
+                        <TextBlock Grid.Row="10" Grid.Column="0" Margin="0,6,12,6" Text="SMTP Server" VerticalAlignment="Center" />
+                        <TextBox Grid.Row="10" Grid.Column="1" x:Name="EmailSmtpServerText" MinWidth="200" Margin="0,6,0,0" TextChanged="General_TextChanged"/>
+
+                        <TextBlock Grid.Row="11" Grid.Column="0" Margin="0,6,12,6" Text="SMTP Port" VerticalAlignment="Center" />
+                        <TextBox Grid.Row="11" Grid.Column="1" x:Name="EmailSmtpPortText" MinWidth="60" MaxWidth="80" Margin="0,6,0,0" TextChanged="General_TextChanged"/>
+
+                        <TextBlock Grid.Row="12" Grid.Column="0" Margin="0,6,12,6" Text="Username" VerticalAlignment="Center" />
+                        <TextBox Grid.Row="12" Grid.Column="1" x:Name="EmailUsernameText" MinWidth="200" Margin="0,6,0,0" TextChanged="General_TextChanged"/>
+
+                        <TextBlock Grid.Row="13" Grid.Column="0" Margin="0,6,12,6" Text="Password" VerticalAlignment="Center" />
+                        <PasswordBox Grid.Row="13" Grid.Column="1" x:Name="EmailPasswordText" MinWidth="200" Margin="0,6,0,0" PasswordChanged="General_PasswordChanged"/>
+
+                        <TextBlock Grid.Row="14" Grid.Column="0" Margin="0,10,12,6" Text="From Email" VerticalAlignment="Center" />
+                        <TextBox Grid.Row="14" Grid.Column="1" x:Name="EmailFromText" MinWidth="200" Margin="0,10,0,0" TextChanged="General_TextChanged"/>
+
+                        <TextBlock Grid.Row="15" Grid.Column="0" Margin="0,10,12,6" Text="To Email" VerticalAlignment="Center" />
+                        <TextBox Grid.Row="15" Grid.Column="1" x:Name="EmailToText" MinWidth="200" Margin="0,10,0,0" TextChanged="General_TextChanged"/>
+
+                        <TextBlock Grid.Row="16" Grid.Column="0" Margin="0,10,12,6" Text="Enable SSL" VerticalAlignment="Center" />
+                        <CheckBox Grid.Row="16" Grid.Column="1" x:Name="EmailEnableSslCheck" Margin="0,10,0,0" Checked="General_CheckChanged" Unchecked="General_CheckChanged" />
                     </Grid>
                 </ScrollViewer>
             </TabItem>
