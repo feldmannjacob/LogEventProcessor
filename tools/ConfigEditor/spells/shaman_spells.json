@@ -1465,6 +1465,11 @@
     "level": 67
   },
   {
+    "id": 8015,
+    "name": "Lingering Sloth",
+    "level": 68
+  },
+  {
     "id": 5403,
     "name": "Pained Memory",
     "level": 68
@@ -1493,5 +1498,105 @@
     "id": 5401,
     "name": "Yoppa's Rain of Venom",
     "level": 68
+  },
+  {
+    "id": 6827,
+    "name": "Balance of Discord",
+    "level": 69
+  },
+  {
+    "id": 8018,
+    "name": "Breath of Antraygus",
+    "level": 69
+  },
+  {
+    "id": 5412,
+    "name": "Curse of Sisslak",
+    "level": 69
+  },
+  {
+    "id": 5408,
+    "name": "Ice Age",
+    "level": 69
+  },
+  {
+    "id": 5410,
+    "name": "Pure Spirit",
+    "level": 69
+  },
+  {
+    "id": 6667,
+    "name": "Spirit of the Panther",
+    "level": 69
+  },
+  {
+    "id": 5405,
+    "name": "Talisman of Fortitude",
+    "level": 69
+  },
+  {
+    "id": 5406,
+    "name": "Talisman of Perseverance",
+    "level": 69
+  },
+  {
+    "id": 5418,
+    "name": "Ancient Ancestral Calling",
+    "level": 70
+  },
+  {
+    "id": 6142,
+    "name": "Ancient Wilslik's Mending",
+    "level": 70
+  },
+  {
+    "id": 5414,
+    "name": "Blood of Yoppa",
+    "level": 70
+  },
+  {
+    "id": 5417,
+    "name": "Champion",
+    "level": 70
+  },
+  {
+    "id": 8503,
+    "name": "Ghost of Renewal",
+    "level": 70
+  },
+  {
+    "id": 8017,
+    "name": "Hungry Plague",
+    "level": 70
+  },
+  {
+    "id": 8504,
+    "name": "Idol of Malos",
+    "level": 70
+  },
+  {
+    "id": 8501,
+    "name": "Nectar of Pain",
+    "level": 70
+  },
+  {
+    "id": 5416,
+    "name": "Spiritual Serenity",
+    "level": 70
+  },
+  {
+    "id": 5409,
+    "name": "Talisman of Might",
+    "level": 70
+  },
+  {
+    "id": 5415,
+    "name": "Talisman of Wunshi",
+    "level": 70
+  },
+  {
+    "id": 5400,
+    "name": "Vindictive Spirit",
+    "level": 70
   }
 ]
