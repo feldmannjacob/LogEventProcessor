@@ -232,9 +232,18 @@ int main(int argc, char* argv[]) {
         while (g_running.load()) {
             std::this_thread::sleep_for(std::chrono::milliseconds(100));
             
+            // Check for email responses every 5 seconds
+            static auto lastEmailCheckTime = std::chrono::steady_clock::now();
+            auto now = std::chrono::steady_clock::now();
+            if (std::chrono::duration_cast<std::chrono::seconds>(now - lastEmailCheckTime).count() >= 5) {
+                if (g_actionManager) {
+                    g_actionManager->checkEmailResponses();
+                }
+                lastEmailCheckTime = now;
+            }
+            
             // Print status every 10 seconds
             static auto lastStatusTime = std::chrono::steady_clock::now();
-            auto now = std::chrono::steady_clock::now();
             if (std::chrono::duration_cast<std::chrono::seconds>(now - lastStatusTime).count() >= 10) {
                 std::cout << "Status: Line " << logReader.getCurrentLineNumber() 
                          << ", Processed " << eventProcessor.getProcessedEventCount() 

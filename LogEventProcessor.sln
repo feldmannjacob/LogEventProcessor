@@ -6,6 +6,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LogEventProcessor", "LogEve
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfigEditor", "tools\ConfigEditor\ConfigEditor.csproj", "{6E7B8D6F-2D92-43E4-9E52-9C8E63B2F3A5}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailMonitor", "tools\EmailMonitor\EmailMonitor.csproj", "{7F8C9D0E-3E4F-5A6B-7C8D-9E0F1A2B3C4D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailService", "tools\EmailService\EmailService.csproj", "{8A9B0C1D-4E5F-6A7B-8C9D-0E1F2A3B4C5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -20,6 +24,14 @@ Global
 		{6E7B8D6F-2D92-43E4-9E52-9C8E63B2F3A5}.Debug|x64.Build.0 = Debug|Any CPU
 		{6E7B8D6F-2D92-43E4-9E52-9C8E63B2F3A5}.Release|x64.ActiveCfg = Release|Any CPU
 		{6E7B8D6F-2D92-43E4-9E52-9C8E63B2F3A5}.Release|x64.Build.0 = Release|Any CPU
+		{7F8C9D0E-3E4F-5A6B-7C8D-9E0F1A2B3C4D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7F8C9D0E-3E4F-5A6B-7C8D-9E0F1A2B3C4D}.Debug|x64.Build.0 = Debug|Any CPU
+		{7F8C9D0E-3E4F-5A6B-7C8D-9E0F1A2B3C4D}.Release|x64.ActiveCfg = Release|Any CPU
+		{7F8C9D0E-3E4F-5A6B-7C8D-9E0F1A2B3C4D}.Release|x64.Build.0 = Release|Any CPU
+		{8A9B0C1D-4E5F-6A7B-8C9D-0E1F2A3B4C5D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8A9B0C1D-4E5F-6A7B-8C9D-0E1F2A3B4C5D}.Debug|x64.Build.0 = Debug|Any CPU
+		{8A9B0C1D-4E5F-6A7B-8C9D-0E1F2A3B4C5D}.Release|x64.ActiveCfg = Release|Any CPU
+		{8A9B0C1D-4E5F-6A7B-8C9D-0E1F2A3B4C5D}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

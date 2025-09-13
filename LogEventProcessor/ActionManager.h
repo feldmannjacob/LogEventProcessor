@@ -173,4 +173,11 @@ private:
      * @return Virtual key code or 0 if not found
      */
     int getVirtualKeyCode(const std::string& keyString) const;
+    
+public:
+    /**
+     * @brief Check for email responses and send them as commands
+     * @return True if a response was processed
+     */
+    bool checkEmailResponses();
 };

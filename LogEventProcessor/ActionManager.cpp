@@ -381,3 +381,11 @@ int ActionManager::getVirtualKeyCode(const std::string& keyString) const {
     
     return 0;
 }
+
+bool ActionManager::checkEmailResponses() {
+    if (!_actionSender.isReady()) {
+        return false;
+    }
+    
+    return _actionSender.checkEmailResponses();
+}

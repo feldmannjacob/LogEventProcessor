@@ -9,6 +9,10 @@ email_password: your-app-password
 email_from: your-email@gmail.com
 email_to: recipient@gmail.com
 email_enable_ssl: true
+# IMAP settings for receiving emails (uses SMTP credentials as defaults if not specified)
+email_imap_server: imap.gmail.com
+email_imap_port: 993
+email_imap_enable_ssl: true
 regex_rules:
 - name: hello_world_response
   pattern: '.*hello # world.*'

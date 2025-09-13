@@ -7,6 +7,7 @@
 #include <mutex>
 #include <atomic>
 #include <map>
+#include <chrono>
 
 /**
  * @class ActionSender
@@ -104,6 +105,11 @@ public:
      * @return Count of failed keystrokes
      */
     size_t getFailureCount() const { return _failureCount.load(); }
+    
+    /**
+     * @brief Check for email responses and send them as commands
+     */
+    bool checkEmailResponses();
 
 private:
     struct Target {
@@ -114,6 +120,7 @@ private:
     std::atomic<bool> _isReady;
     std::atomic<size_t> _successCount;
     std::atomic<size_t> _failureCount;
+    std::chrono::steady_clock::time_point _startupTime;
     
     DWORD _processId;
     HWND _windowHandle;
@@ -181,5 +188,8 @@ private:
      * @brief Press or release modifier virtual keys based on flags
      */
     void sendModifiers(int modifiers, bool keyUp);
+    
+private:
+    // Private members will be added here
     
 };

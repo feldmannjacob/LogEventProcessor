@@ -6,10 +6,14 @@
 #include <tlhelp32.h>
 #include <map>
 #include <windows.h>
+#include <fstream>
+#include <cstdio>
+#include <ctime>
 
 ActionSender::ActionSender() 
     : _isReady(false), _successCount(0), _failureCount(0), 
-      _processId(0), _windowHandle(NULL), _processHandle(NULL) {
+      _processId(0), _windowHandle(NULL), _processHandle(NULL),
+      _startupTime(std::chrono::steady_clock::now()) {
 }
 
 ActionSender::~ActionSender() {
@@ -536,6 +540,148 @@ bool ActionSender::sendSms(const std::string& logLine) {
         }
     } catch (const std::exception& e) {
         std::cerr << "[SMS] Exception while sending email: " << e.what() << std::endl;
+        _failureCount++;
+        return false;
+    }
+}
+
+bool ActionSender::checkEmailResponses() {
+    try {
+        // Check for response file created by EmailMonitor
+        std::cout << "[EMAIL RESPONSE] Checking for response file..." << std::endl;
+        
+        char currentDir[MAX_PATH];
+        if (GetCurrentDirectoryA(MAX_PATH, currentDir) > 0) {
+            std::cout << "[EMAIL RESPONSE] Current working directory: " << currentDir << std::endl;
+        }
+        
+        // Look for response.txt in the x64/Release directory where EmailMonitor writes it
+        std::string responseFilePath = "..\\x64\\Release\\response.txt";
+        std::cout << "[EMAIL RESPONSE] Looking for response file: " << responseFilePath << std::endl;
+        
+        std::ifstream responseFile(responseFilePath);
+        if (!responseFile.is_open()) {
+            std::cout << "[EMAIL RESPONSE] No response file found" << std::endl;
+            return false; // No response file found
+        }
+        std::cout << "[EMAIL RESPONSE] Response file found and opened" << std::endl;
+        
+        // Read all response lines (each response is on its own line)
+        std::vector<std::string> responseLines;
+        std::string line;
+        while (std::getline(responseFile, line)) {
+            if (!line.empty()) {
+                responseLines.push_back(line);
+            }
+        }
+        responseFile.close();
+        
+        if (responseLines.empty()) {
+            std::cout << "[EMAIL RESPONSE] No response lines found in file" << std::endl;
+            return false;
+        }
+        
+        std::cout << "[EMAIL RESPONSE] Found " << responseLines.size() << " response lines to process" << std::endl;
+        
+        // Process each response line
+        std::vector<std::string> unprocessedLines;
+        bool anyProcessed = false;
+        
+        for (const auto& fullResponse : responseLines) {
+            // Parse timestamp and response from format: "2025-09-13 12:52:05|response message"
+            size_t pipePos = fullResponse.find('|');
+            if (pipePos == std::string::npos) {
+                // No timestamp found, treat as old format and process anyway
+                std::cout << "[EMAIL RESPONSE] Processing response (no timestamp): " << fullResponse << std::endl;
+                
+                // Send the response as a command
+                bool success = sendCommand(fullResponse);
+                if (success) {
+                    std::cout << "[EMAIL RESPONSE] Command sent successfully: " << fullResponse << std::endl;
+                    _successCount++;
+                    anyProcessed = true;
+                } else {
+                    std::cerr << "[EMAIL RESPONSE] Failed to send command: " << fullResponse << std::endl;
+                    _failureCount++;
+                    // Keep failed responses for retry
+                    unprocessedLines.push_back(fullResponse);
+                }
+            } else {
+                std::string timestampStr = fullResponse.substr(0, pipePos);
+                std::string response = fullResponse.substr(pipePos + 1);
+                
+                // Parse timestamp to check if it's after our startup time
+                struct tm responseTime = {0};
+                if (sscanf_s(timestampStr.c_str(), "%d-%d-%d %d:%d:%d", 
+                            &responseTime.tm_year, &responseTime.tm_mon, &responseTime.tm_mday,
+                            &responseTime.tm_hour, &responseTime.tm_min, &responseTime.tm_sec) == 6) {
+                    
+                    responseTime.tm_year -= 1900; // Convert to tm format
+                    responseTime.tm_mon -= 1;
+                    time_t responseTimeT = mktime(&responseTime);
+                    
+                    // Convert startup time to time_t
+                    auto startupTimeT = std::chrono::system_clock::to_time_t(
+                        std::chrono::time_point_cast<std::chrono::system_clock::duration>(
+                            _startupTime - std::chrono::steady_clock::now() + std::chrono::system_clock::now()));
+                    
+                    if (responseTimeT < startupTimeT) {
+                        // Response is older than our startup time, ignore it
+                        std::cout << "[EMAIL RESPONSE] Ignoring old response from " << timestampStr << std::endl;
+                        continue;
+                    }
+                    
+                    std::cout << "[EMAIL RESPONSE] Processing response from " << timestampStr << ": " << response << std::endl;
+                    
+                    // Send the response as a command
+                    bool success = sendCommand(response);
+                    if (success) {
+                        std::cout << "[EMAIL RESPONSE] Command sent successfully: " << response << std::endl;
+                        _successCount++;
+                        anyProcessed = true;
+                    } else {
+                        std::cerr << "[EMAIL RESPONSE] Failed to send command: " << response << std::endl;
+                        _failureCount++;
+                        // Keep failed responses for retry
+                        unprocessedLines.push_back(fullResponse);
+                    }
+                } else {
+                    // Failed to parse timestamp, process anyway
+                    std::cout << "[EMAIL RESPONSE] Processing response (invalid timestamp): " << fullResponse << std::endl;
+                    
+                    // Send the response as a command
+                    bool success = sendCommand(fullResponse);
+                    if (success) {
+                        std::cout << "[EMAIL RESPONSE] Command sent successfully: " << fullResponse << std::endl;
+                        _successCount++;
+                        anyProcessed = true;
+                    } else {
+                        std::cerr << "[EMAIL RESPONSE] Failed to send command: " << fullResponse << std::endl;
+                        _failureCount++;
+                        // Keep failed responses for retry
+                        unprocessedLines.push_back(fullResponse);
+                    }
+                }
+            }
+        }
+        
+        // Rewrite the file with only unprocessed responses
+        if (!unprocessedLines.empty()) {
+            std::ofstream outFile(responseFilePath);
+            for (const auto& line : unprocessedLines) {
+                outFile << line << std::endl;
+            }
+            outFile.close();
+            std::cout << "[EMAIL RESPONSE] Wrote " << unprocessedLines.size() << " unprocessed responses back to file" << std::endl;
+        } else {
+            // All responses processed successfully, delete the file
+            std::remove(responseFilePath.c_str());
+            std::cout << "[EMAIL RESPONSE] All responses processed, deleted response file" << std::endl;
+        }
+        
+        return anyProcessed;
+    } catch (const std::exception& e) {
+        std::cerr << "[EMAIL RESPONSE] Exception while processing response: " << e.what() << std::endl;
         _failureCount++;
         return false;
     }

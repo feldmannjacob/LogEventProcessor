@@ -1,0 +1,5 @@
+This is a test email response.
+
+Response: /g Hello from email!
+
+This would be sent as a command to EverQuest when the EmailMonitor processes it.
