@@ -5,6 +5,7 @@
 #include <chrono>
 #include <tlhelp32.h>
 #include <map>
+#include <windows.h>
 
 ActionSender::ActionSender() 
     : _isReady(false), _successCount(0), _failureCount(0), 
@@ -511,6 +512,32 @@ void ActionSender::sendModifiers(int modifiers, bool keyUp) {
     }
     if (modifiers & MOD_SHIFT) {
         sendKeyScan(VK_SHIFT, keyUp);
+    }
+}
+
+bool ActionSender::sendSms(const std::string& logLine) {
+    std::cout << "[SMS] Tell message detected: " << logLine << std::endl;
+    
+    try {
+        // Call the C# EmailService to send the email
+        std::string configPath = "config.yaml";
+        std::string command = "cmd /c \"cd /d C:\\Users\\Jake\\source\\repos\\EQLogAutomator\\x64\\Release && EmailService.exe " + configPath + " \"" + logLine + "\"\"";
+        
+        int result = system(command.c_str());
+        
+        if (result == 0) {
+            std::cout << "[SMS] Email sent successfully" << std::endl;
+            _successCount++;
+            return true;
+        } else {
+            std::cerr << "[SMS] Failed to send email. EmailService returned: " << result << std::endl;
+            _failureCount++;
+            return false;
+        }
+    } catch (const std::exception& e) {
+        std::cerr << "[SMS] Exception while sending email: " << e.what() << std::endl;
+        _failureCount++;
+        return false;
     }
 }
 

@@ -1,0 +1,38 @@
+log_file_path: C:/Users/Public/Daybreak Game Company/Installed Games/EverQuest/Logs/eqlog_Nebsk_teek.txt
+output_directory: ''
+polling_interval_ms: 1000
+parallel_processing: true
+email_smtp_server: smtp.gmail.com
+email_smtp_port: 587
+email_username: your-email@gmail.com
+email_password: your-app-password
+email_from: your-email@gmail.com
+email_to: recipient@gmail.com
+email_enable_ssl: true
+regex_rules:
+- name: hello_world_response
+  pattern: '.*hello # world.*'
+  action_type: command
+  action_value: 'g # Goodbye'
+  enabled: true
+- name: attack_minions
+  pattern: .*Attack my minions.*
+  enabled: true
+  actions:
+  - type: keystroke
+    value: Ctrl + 1
+    delay_ms: 2500
+    enabled: true
+  - type: command
+    value: g at delaying
+    enabled: true
+- name: test
+  pattern: .*clarice.*
+  action_type: keystroke
+  action_value: g woot
+  enabled: true
+- name: email_test
+  pattern: .*email test.*
+  action_type: email
+  action_value: Test email from EQ Log Automator
+  enabled: true
