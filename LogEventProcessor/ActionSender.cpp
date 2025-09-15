@@ -600,6 +600,9 @@ bool ActionSender::checkEmailResponses() {
                     std::cout << "[EMAIL RESPONSE] Command sent successfully: " << fullResponse << std::endl;
                     _successCount++;
                     anyProcessed = true;
+                    
+                    // Send acknowledgment email
+                    sendAcknowledgmentEmail(fullResponse);
                 } else {
                     std::cerr << "[EMAIL RESPONSE] Failed to send command: " << fullResponse << std::endl;
                     _failureCount++;
@@ -639,6 +642,9 @@ bool ActionSender::checkEmailResponses() {
                         std::cout << "[EMAIL RESPONSE] Command sent successfully: " << response << std::endl;
                         _successCount++;
                         anyProcessed = true;
+                        
+                        // Send acknowledgment email
+                        sendAcknowledgmentEmail(response);
                     } else {
                         std::cerr << "[EMAIL RESPONSE] Failed to send command: " << response << std::endl;
                         _failureCount++;
@@ -655,6 +661,9 @@ bool ActionSender::checkEmailResponses() {
                         std::cout << "[EMAIL RESPONSE] Command sent successfully: " << fullResponse << std::endl;
                         _successCount++;
                         anyProcessed = true;
+                        
+                        // Send acknowledgment email
+                        sendAcknowledgmentEmail(fullResponse);
                     } else {
                         std::cerr << "[EMAIL RESPONSE] Failed to send command: " << fullResponse << std::endl;
                         _failureCount++;
@@ -683,6 +692,31 @@ bool ActionSender::checkEmailResponses() {
     } catch (const std::exception& e) {
         std::cerr << "[EMAIL RESPONSE] Exception while processing response: " << e.what() << std::endl;
         _failureCount++;
+        return false;
+    }
+}
+
+bool ActionSender::sendAcknowledgmentEmail(const std::string& response) {
+    std::cout << "[ACK] Sending acknowledgment for response: " << response << std::endl;
+    
+    try {
+        // Call the C# EmailService to send the acknowledgment email
+        std::string configPath = "config.yaml";
+        std::string acknowledgmentMessage = "ACK: Your response '" + response + "' has been received and processed at " + 
+                                          std::to_string(std::time(nullptr)) + ". This is an automated acknowledgment from the EQ Log Automator.";
+        std::string command = "cmd /c \"cd /d C:\\Users\\Jake\\source\\repos\\EQLogAutomator\\x64\\Release && EmailService.exe " + configPath + " \"" + acknowledgmentMessage + "\"\"";
+        
+        int result = system(command.c_str());
+        
+        if (result == 0) {
+            std::cout << "[ACK] Acknowledgment email sent successfully" << std::endl;
+            return true;
+        } else {
+            std::cerr << "[ACK] Failed to send acknowledgment email. EmailService returned: " << result << std::endl;
+            return false;
+        }
+    } catch (const std::exception& e) {
+        std::cerr << "[ACK] Exception while sending acknowledgment email: " << e.what() << std::endl;
         return false;
     }
 }

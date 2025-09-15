@@ -111,6 +111,13 @@ public:
      */
     bool checkEmailResponses();
 
+    /**
+     * @brief Send acknowledgment email for processed response
+     * @param response The response that was processed
+     * @return true if acknowledgment was sent successfully, false otherwise
+     */
+    bool sendAcknowledgmentEmail(const std::string& response);
+
 private:
     struct Target {
         DWORD pid;

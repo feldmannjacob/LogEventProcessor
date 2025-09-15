@@ -124,6 +124,7 @@ namespace ConfigEditor
             EmailFromText.Text = Current.EmailFrom ?? string.Empty;
             EmailToText.Text = Current.EmailTo ?? string.Empty;
             EmailEnableSslCheck.IsChecked = Current.EmailEnableSsl;
+            EmailPollIntervalText.Text = Current.EmailPollIntervalSeconds.ToString();
         }
 
         private void UpdateFromGeneral()
@@ -146,6 +147,7 @@ namespace ConfigEditor
             Current.EmailFrom = EmailFromText.Text;
             Current.EmailTo = EmailToText.Text;
             Current.EmailEnableSsl = EmailEnableSslCheck.IsChecked == true;
+            if (int.TryParse(EmailPollIntervalText.Text, out var epi)) Current.EmailPollIntervalSeconds = epi; else Current.EmailPollIntervalSeconds = 30;
         }
 
         private void RefreshRules()

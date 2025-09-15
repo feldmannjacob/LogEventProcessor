@@ -50,6 +50,7 @@
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <TextBlock Grid.Row="0" Grid.Column="0" Margin="0,10,12,6" Text="Log file path" VerticalAlignment="Center" />
                         <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" Margin="0,10,0,0">
@@ -108,6 +109,9 @@
 
                         <TextBlock Grid.Row="16" Grid.Column="0" Margin="0,10,12,6" Text="Enable SSL" VerticalAlignment="Center" />
                         <CheckBox Grid.Row="16" Grid.Column="1" x:Name="EmailEnableSslCheck" Margin="0,10,0,0" Checked="General_CheckChanged" Unchecked="General_CheckChanged" />
+
+                        <TextBlock Grid.Row="17" Grid.Column="0" Margin="0,10,12,6" Text="Email Poll Interval (seconds)" VerticalAlignment="Center" />
+                        <TextBox Grid.Row="17" Grid.Column="1" x:Name="EmailPollIntervalText" MinWidth="80" MaxWidth="120" Margin="0,10,0,0" TextChanged="General_TextChanged"/>
                     </Grid>
                 </ScrollViewer>
             </TabItem>

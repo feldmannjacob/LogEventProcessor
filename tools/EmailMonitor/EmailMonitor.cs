@@ -79,7 +79,7 @@ namespace EmailMonitor
 
             Console.WriteLine($"[EMAIL MONITOR] Starting email monitoring for {_toEmail}");
             Console.WriteLine($"[EMAIL MONITOR] Monitoring emails received after {_startupTime:yyyy-MM-dd HH:mm:ss}");
-            Console.WriteLine($"[EMAIL MONITOR] Checking every {_checkIntervalMs / 1000} seconds");
+            Console.WriteLine($"[EMAIL MONITOR] Polling every {_checkIntervalMs / 1000} seconds (configured via email_poll_interval_seconds)");
             Console.WriteLine($"[EMAIL MONITOR] Current working directory: {Directory.GetCurrentDirectory()}");
             Console.WriteLine($"[EMAIL MONITOR] Response file will be written to: {Path.GetFullPath("response.txt")}");
 
@@ -452,6 +452,12 @@ namespace EmailMonitor
                         config.ImapPassword = line.Split(new char[] { ':' }, 2)[1].Trim();
                     else if (line.StartsWith("email_imap_enable_ssl:"))
                         config.ImapEnableSsl = line.Split(new char[] { ':' }, 2)[1].Trim().ToLower() == "true";
+                    else if (line.StartsWith("email_poll_interval_seconds:"))
+                    {
+                        int interval;
+                        if (int.TryParse(line.Split(new char[] { ':' }, 2)[1].Trim(), out interval))
+                            config.PollIntervalSeconds = interval;
+                    }
                 }
 
                 // Use SMTP credentials as defaults for IMAP if IMAP credentials are not specified
@@ -460,7 +466,7 @@ namespace EmailMonitor
                 
                 return new EmailMonitor(
                     config.SmtpServer, config.SmtpPort, config.Username, config.Password,
-                    config.From, config.To, config.EnableSsl, 30000, // Check every 30 seconds
+                    config.From, config.To, config.EnableSsl, config.PollIntervalSeconds * 1000, // Convert seconds to milliseconds
                     config.ImapServer, config.ImapPort, imapUsername, imapPassword, config.ImapEnableSsl);
             }
             catch (Exception ex)
@@ -487,5 +493,8 @@ namespace EmailMonitor
         public bool ImapEnableSsl { get; set; } = true;
         public string ImapUsername { get; set; } = "";
         public string ImapPassword { get; set; } = "";
+        
+        // Email monitoring poll interval
+        public int PollIntervalSeconds { get; set; } = 30;
     }
 }

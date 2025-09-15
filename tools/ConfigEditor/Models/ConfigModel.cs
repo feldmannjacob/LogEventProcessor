@@ -27,6 +27,7 @@ namespace ConfigEditor.Models
         [YamlMember(Alias = "email_from")] public string? EmailFrom { get; set; }
         [YamlMember(Alias = "email_to")] public string? EmailTo { get; set; }
         [YamlMember(Alias = "email_enable_ssl")] public bool EmailEnableSsl { get; set; } = true;
+        [YamlMember(Alias = "email_poll_interval_seconds")] public int EmailPollIntervalSeconds { get; set; } = 30;
 
         [YamlMember(Alias = "regex_rules")] public List<RegexRule> RegexRules { get; set; } = new List<RegexRule>();
     }
