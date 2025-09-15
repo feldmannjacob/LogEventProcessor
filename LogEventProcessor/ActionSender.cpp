@@ -597,8 +597,8 @@ bool ActionSender::checkEmailResponses() {
             std::cout << "[EMAIL RESPONSE] Current working directory: " << currentDir << std::endl;
         }
         
-        // Look for response.txt in the x64/Release directory where EmailMonitor writes it
-        std::string responseFilePath = "..\\x64\\Release\\response.txt";
+        // Look for response.txt in the current directory where EmailMonitor writes it
+        std::string responseFilePath = "response.txt";
         std::cout << "[EMAIL RESPONSE] Looking for response file: " << responseFilePath << std::endl;
         
         std::ifstream responseFile(responseFilePath);
