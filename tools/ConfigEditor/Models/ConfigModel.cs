@@ -29,6 +29,11 @@ namespace ConfigEditor.Models
         [YamlMember(Alias = "email_enable_ssl")] public bool EmailEnableSsl { get; set; } = true;
         [YamlMember(Alias = "email_poll_interval_seconds")] public int EmailPollIntervalSeconds { get; set; } = 30;
 
+        // Process targeting configuration
+        [YamlMember(Alias = "target_all_processes")] public bool TargetAllProcesses { get; set; } = true;
+        [YamlMember(Alias = "target_process_ids")] public List<int>? TargetProcessIds { get; set; }
+        [YamlMember(Alias = "target_process_names")] public List<string>? TargetProcessNames { get; set; }
+
         [YamlMember(Alias = "regex_rules")] public List<RegexRule> RegexRules { get; set; } = new List<RegexRule>();
     }
 

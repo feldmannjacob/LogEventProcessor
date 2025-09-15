@@ -74,6 +74,90 @@ int ConfigManager::getPollingInterval() const {
     return getInt("polling_interval_ms", 1000);
 }
 
+bool ConfigManager::getTargetAllProcesses() const {
+    return getBool("target_all_processes", true);
+}
+
+std::vector<int> ConfigManager::getTargetProcessIds() const {
+    std::vector<int> result;
+    std::string idsStr = getString("target_process_ids", "");
+    
+    if (!idsStr.empty()) {
+        // Handle both comma-separated and YAML array format
+        if (idsStr.find('[') != std::string::npos) {
+            // YAML array format: [123, 456, 789]
+            std::string content = idsStr;
+            content = content.substr(content.find('[') + 1);
+            content = content.substr(0, content.find(']'));
+            
+            std::istringstream iss(content);
+            std::string id;
+            while (std::getline(iss, id, ',')) {
+                std::string trimmed = trim(id);
+                try {
+                    int pid = std::stoi(trimmed);
+                    result.push_back(pid);
+                } catch (const std::exception&) {
+                    // Skip invalid IDs
+                }
+            }
+        } else {
+            // Comma-separated format: 123,456,789
+            std::istringstream iss(idsStr);
+            std::string id;
+            while (std::getline(iss, id, ',')) {
+                std::string trimmed = trim(id);
+                try {
+                    int pid = std::stoi(trimmed);
+                    result.push_back(pid);
+                } catch (const std::exception&) {
+                    // Skip invalid IDs
+                }
+            }
+        }
+    }
+    
+    return result;
+}
+
+std::vector<std::string> ConfigManager::getTargetProcessNames() const {
+    std::vector<std::string> result;
+    std::string namesStr = getString("target_process_names", "");
+    if (!namesStr.empty()) {
+        // Handle both comma-separated and YAML array format
+        if (namesStr.find('[') != std::string::npos) {
+            // YAML array format: ["eqgame.exe", "other.exe"]
+            std::string content = namesStr;
+            content = content.substr(content.find('[') + 1);
+            content = content.substr(0, content.find(']'));
+            
+            std::istringstream iss(content);
+            std::string name;
+            while (std::getline(iss, name, ',')) {
+                std::string trimmed = trim(name);
+                // Remove quotes if present
+                if (trimmed.length() >= 2 && trimmed[0] == '"' && trimmed[trimmed.length() - 1] == '"') {
+                    trimmed = trimmed.substr(1, trimmed.length() - 2);
+                }
+                if (!trimmed.empty()) {
+                    result.push_back(trimmed);
+                }
+            }
+        } else {
+            // Comma-separated format: eqgame.exe,other.exe
+            std::istringstream iss(namesStr);
+            std::string name;
+            while (std::getline(iss, name, ',')) {
+                std::string trimmed = trim(name);
+                if (!trimmed.empty()) {
+                    result.push_back(trimmed);
+                }
+            }
+        }
+    }
+    return result;
+}
+
 bool ConfigManager::loadRegexRulesAndActions(RegexMatcher& matcher, ActionManager& actionManager, const std::string& configPath) const {
     if (!_isLoaded) {
         std::cerr << "Configuration not loaded. Cannot load regex rules." << std::endl;
@@ -361,11 +445,46 @@ bool ConfigManager::loadRegexRulesAndActions(RegexMatcher& matcher, ActionManage
 void ConfigManager::parseYAML(const std::string& content) {
     std::istringstream stream(content);
     std::string line;
+    std::string currentKey;
+    bool inArray = false;
+    std::vector<std::string> arrayValues;
     
     while (std::getline(stream, line)) {
         // Skip empty lines and comments
         if (line.empty() || line[0] == '#') {
             continue;
+        }
+        
+        // Check if we're in an array (indented with -)
+        if (line.find("- ") == 0) {
+            if (inArray && !currentKey.empty()) {
+                // Extract the value after "- "
+                std::string value = trim(line.substr(2));
+                arrayValues.push_back(value);
+            }
+            continue;
+        }
+        
+        // Check if we're ending an array (non-indented line or different key)
+        if (inArray && !currentKey.empty() && !arrayValues.empty()) {
+            // Convert array to string format that getTargetProcessIds() can parse
+            std::string arrayStr = "[";
+            for (size_t i = 0; i < arrayValues.size(); ++i) {
+                if (i > 0) arrayStr += ",";
+                arrayStr += arrayValues[i];
+            }
+            arrayStr += "]";
+            _config[currentKey] = arrayStr;
+            
+            // Debug output for target_process_ids
+            if (currentKey == "target_process_ids") {
+                std::cout << "[DEBUG] Raw target_process_ids string: '" << arrayStr << "'" << std::endl;
+            }
+            
+            // Reset array state
+            inArray = false;
+            currentKey.clear();
+            arrayValues.clear();
         }
         
         // Find the colon separator
@@ -378,13 +497,48 @@ void ConfigManager::parseYAML(const std::string& content) {
         std::string key = trim(line.substr(0, colonPos));
         std::string value = trim(line.substr(colonPos + 1));
         
-        // Remove quotes if present
-        if (value.length() >= 2 && value[0] == '"' && value[value.length() - 1] == '"') {
-            value = value.substr(1, value.length() - 2);
+        // Check if this is an array declaration (empty value after colon)
+        if (value.empty() && (key == "target_process_ids" || key == "target_process_names")) {
+            // This is the start of a YAML array
+            inArray = true;
+            currentKey = key;
+            arrayValues.clear();
+            continue;
+        }
+        
+        // Handle inline YAML arrays (e.g., [123, 456, 789] or ["item1", "item2"])
+        if (value.length() >= 2 && value[0] == '[' && value[value.length() - 1] == ']') {
+            // Keep the array format as-is for getTargetProcessIds() to parse
+            // No additional processing needed here
+        } else {
+            // Remove quotes if present for regular string values
+            if (value.length() >= 2 && value[0] == '"' && value[value.length() - 1] == '"') {
+                value = value.substr(1, value.length() - 2);
+            }
         }
         
         if (!key.empty()) {
             _config[key] = value;
+            // Debug output for target_process_ids
+            if (key == "target_process_ids") {
+                std::cout << "[DEBUG] Raw target_process_ids string: '" << value << "'" << std::endl;
+            }
+        }
+    }
+    
+    // Handle case where file ends while in an array
+    if (inArray && !currentKey.empty() && !arrayValues.empty()) {
+        std::string arrayStr = "[";
+        for (size_t i = 0; i < arrayValues.size(); ++i) {
+            if (i > 0) arrayStr += ",";
+            arrayStr += arrayValues[i];
+        }
+        arrayStr += "]";
+        _config[currentKey] = arrayStr;
+        
+        // Debug output for target_process_ids
+        if (currentKey == "target_process_ids") {
+            std::cout << "[DEBUG] Raw target_process_ids string: '" << arrayStr << "'" << std::endl;
         }
     }
 }

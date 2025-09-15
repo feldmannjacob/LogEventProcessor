@@ -13,7 +13,8 @@
 ActionSender::ActionSender() 
     : _isReady(false), _successCount(0), _failureCount(0), 
       _processId(0), _windowHandle(NULL), _processHandle(NULL),
-      _startupTime(std::chrono::steady_clock::now()) {
+      _startupTime(std::chrono::steady_clock::now()),
+      _targetAllProcesses(true) {
 }
 
 ActionSender::~ActionSender() {
@@ -41,6 +42,32 @@ bool ActionSender::initialize() {
     _isReady = true;
     std::cout << "ActionSender initialized successfully. Process ID: " << _processId << std::endl;
     return true;
+}
+
+void ActionSender::configureProcessTargeting(bool targetAllProcesses, const std::vector<int>& targetProcessIds, const std::vector<std::string>& targetProcessNames) {
+    std::lock_guard<std::mutex> lock(_mutex);
+    
+    _targetAllProcesses = targetAllProcesses;
+    _targetProcessIds = targetProcessIds;
+    _targetProcessNames = targetProcessNames; // Keep for compatibility but not used
+    
+    std::cout << "[TARGETING] Configured process targeting: " 
+              << (targetAllProcesses ? "All processes" : "Specific processes") << std::endl;
+    
+    if (!targetAllProcesses) {
+        std::cout << "[TARGETING] Target PIDs: ";
+        for (int id : targetProcessIds) {
+            std::cout << id << " ";
+        }
+        std::cout << std::endl;
+        
+        if (targetProcessIds.empty()) {
+            std::cout << "[TARGETING] WARNING: No target PIDs specified - no processes will be targeted!" << std::endl;
+        }
+    }
+    
+    // Refresh the target list with the new configuration
+    findAllTargets();
 }
 
 bool ActionSender::findProcess() {
@@ -78,15 +105,30 @@ bool ActionSender::findAllTargets() {
         do {
             if (wcscmp(pe32.szExeFile, L"eqgame.exe") == 0) {
                 DWORD pid = pe32.th32ProcessID;
-                HWND hwndFound = NULL;
-                auto data = std::make_pair(pid, &hwndFound);
-                EnumWindows([](HWND hwnd, LPARAM lParam) -> BOOL {
-                    auto dataPtr = reinterpret_cast<std::pair<DWORD, HWND*>*>(lParam);
-                    DWORD procId = 0; GetWindowThreadProcessId(hwnd, &procId);
-                    if (procId == dataPtr->first) { *(dataPtr->second) = hwnd; return FALSE; }
-                    return TRUE; }, reinterpret_cast<LPARAM>(&data));
-                if (hwndFound) {
-                    _targets.push_back(Target{pid, hwndFound});
+                
+                // Check if this process should be targeted based on configuration
+                bool shouldTarget = false;
+                
+                if (_targetAllProcesses) {
+                    shouldTarget = true;
+                } else {
+                    // Check if PID is in target list
+                    if (std::find(_targetProcessIds.begin(), _targetProcessIds.end(), static_cast<int>(pid)) != _targetProcessIds.end()) {
+                        shouldTarget = true;
+                    }
+                }
+                
+                if (shouldTarget) {
+                    HWND hwndFound = NULL;
+                    auto data = std::make_pair(pid, &hwndFound);
+                    EnumWindows([](HWND hwnd, LPARAM lParam) -> BOOL {
+                        auto dataPtr = reinterpret_cast<std::pair<DWORD, HWND*>*>(lParam);
+                        DWORD procId = 0; GetWindowThreadProcessId(hwnd, &procId);
+                        if (procId == dataPtr->first) { *(dataPtr->second) = hwnd; return FALSE; }
+                        return TRUE; }, reinterpret_cast<LPARAM>(&data));
+                    if (hwndFound) {
+                        _targets.push_back(Target{pid, hwndFound});
+                    }
                 }
             }
         } while (Process32Next(hSnapshot, &pe32));

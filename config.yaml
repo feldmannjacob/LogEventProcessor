@@ -15,6 +15,15 @@ email_imap_port: 993
 email_imap_enable_ssl: true
 # Email monitoring poll interval in seconds (default: 30)
 email_poll_interval_seconds: 30
+
+# Process targeting configuration
+# Set to true to target all EQGame.exe processes, false to target specific ones
+target_all_processes: false
+# List of specific process IDs to target (when target_all_processes is false)
+target_process_ids: [1234, 5678]
+# List of specific process names to target (when target_all_processes is false)
+# Note: Since only EQGame processes are shown, process names are redundant
+target_process_names: []
 regex_rules:
 - name: hello_world_response
   pattern: '.*hello # world.*'

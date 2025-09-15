@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ConfigEditor"
+        xmlns:views="clr-namespace:ConfigEditor.Views"
         mc:Ignorable="d"
         Title="EQ Log Config Editor" Height="720" Width="1100" MinHeight="600" MinWidth="900"
         Background="{StaticResource WindowBackgroundBrush}">
@@ -33,6 +34,8 @@
                             <ColumnDefinition Width="*" MinWidth="300" />
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
@@ -112,6 +115,14 @@
 
                         <TextBlock Grid.Row="17" Grid.Column="0" Margin="0,10,12,6" Text="Email Poll Interval (seconds)" VerticalAlignment="Center" />
                         <TextBox Grid.Row="17" Grid.Column="1" x:Name="EmailPollIntervalText" MinWidth="80" MaxWidth="120" Margin="0,10,0,0" TextChanged="General_TextChanged"/>
+
+                        <!-- Process Targeting Configuration -->
+                        <TextBlock Grid.Row="18" Grid.Column="0" Margin="0,20,12,6" Text="Process Targeting" FontWeight="Bold" VerticalAlignment="Center" />
+                        <TextBlock Grid.Row="18" Grid.Column="1" Margin="0,20,0,6" Text="Configure which EQGame.exe processes to target" FontStyle="Italic" Foreground="Gray" VerticalAlignment="Center" />
+
+                        <Grid Grid.Row="19" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,6,0,0">
+                            <views:ProcessSelector x:Name="ProcessSelector" SelectionChanged="ProcessSelector_SelectionChanged"/>
+                        </Grid>
                     </Grid>
                 </ScrollViewer>
             </TabItem>

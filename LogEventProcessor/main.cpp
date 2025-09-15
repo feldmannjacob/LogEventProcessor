@@ -84,9 +84,9 @@ int main(int argc, char* argv[]) {
             // If no portable config found, try common CWD-based locations
             if (configPath.empty()) {
                 const char* candidates[] = {
+                    "config.yaml",
                     "config/config.yaml",
-                    "LogEventProcessor/config.yaml",
-                    "config.yaml"
+                    "LogEventProcessor/config.yaml"
                 };
                 for (const char* c : candidates) {
                     std::ifstream f(c);
@@ -138,6 +138,12 @@ int main(int argc, char* argv[]) {
     if (g_actionManager->initialize()) {
         g_actionManager->setRegexMatcher(g_regexMatcher.get());
         
+        // Configure process targeting
+        bool targetAllProcesses = config.getTargetAllProcesses();
+        std::vector<int> targetProcessIds = config.getTargetProcessIds();
+        std::vector<std::string> targetProcessNames = config.getTargetProcessNames();
+        g_actionManager->getActionSender().configureProcessTargeting(targetAllProcesses, targetProcessIds, targetProcessNames);
+        
         // Load regex rules and actions from configuration
         if (config.loadRegexRulesAndActions(*g_regexMatcher, *g_actionManager)) {
             std::cout << "  Regex rules: " << g_regexMatcher->getRuleCount() << " loaded" << std::endl;
@@ -188,6 +194,7 @@ int main(int argc, char* argv[]) {
             unsigned long long lastWrite = getWriteTicks();
             auto applyConfig = [&]() {
                 std::cout << "Applying configuration from: " << configPath << std::endl;
+                std::cout << "[HOTRELOAD] Loading config from: " << configPath << std::endl;
                 if (!config.loadConfig(configPath)) {
                     std::cerr << "Reload failed (keeping previous settings)." << std::endl;
                     return;
@@ -199,6 +206,14 @@ int main(int argc, char* argv[]) {
                     if (!config.loadRegexRulesAndActions(*g_regexMatcher, *g_actionManager)) {
                         std::cerr << "Reload: failed to load rules/actions from config." << std::endl;
                     }
+                    
+                    // Configure process targeting
+                    bool targetAllProcesses = config.getTargetAllProcesses();
+                    std::vector<int> targetProcessIds = config.getTargetProcessIds();
+                    std::vector<std::string> targetProcessNames = config.getTargetProcessNames();
+                    std::cout << "[HOTRELOAD] Process targeting - TargetAll: " << targetAllProcesses << ", PIDs: " << targetProcessIds.size() << std::endl;
+                    g_actionManager->getActionSender().configureProcessTargeting(targetAllProcesses, targetProcessIds, targetProcessNames);
+                    
                     bool pp = config.getBool("parallel_processing", false);
                     if (pp) {
                         eventProcessor.enableParallelProcessing(true, workerCount);

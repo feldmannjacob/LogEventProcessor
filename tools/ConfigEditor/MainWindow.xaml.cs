@@ -1,5 +1,6 @@
 using Microsoft.Win32;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
@@ -44,28 +45,42 @@ namespace ConfigEditor
                 }
             };
 
-            // Prefer portable config next to the editor's EXE; fallback to repo config
-            var portablePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.yaml");
-            if (File.Exists(portablePath)) {
-                LoadFrom(portablePath);
-            } else {
-                var repoPath = FindRepoRoot();
-                var defaultPath = repoPath != null ? System.IO.Path.Combine(repoPath, "LogEventProcessor", "config.yaml") : null;
-                if (defaultPath != null && File.Exists(defaultPath))
-                {
-                    // Load repo config and save to the same file
-                    _currentPath = defaultPath; // Set the current path BEFORE loading
-                    LoadFrom(defaultPath);
-                    Title = $"EQ Log Config Editor - {System.IO.Path.GetFileName(defaultPath)}";
+            // Load configuration after the window is fully loaded
+            Loaded += MainWindow_Loaded;
+        }
+
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // Prefer portable config next to the editor's EXE; fallback to repo config
+                var portablePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.yaml");
+                if (File.Exists(portablePath)) {
+                    LoadFrom(portablePath);
+                } else {
+                    var repoPath = FindRepoRoot();
+                    var defaultPath = repoPath != null ? System.IO.Path.Combine(repoPath, "LogEventProcessor", "config.yaml") : null;
+                    if (defaultPath != null && File.Exists(defaultPath))
+                    {
+                        // Load repo config and save to the same file
+                        _currentPath = defaultPath; // Set the current path BEFORE loading
+                        LoadFrom(defaultPath);
+                        Title = $"EQ Log Config Editor - {System.IO.Path.GetFileName(defaultPath)}";
+                    }
+                    else
+                    {
+                        // Start with empty model; default save will go to portable path
+                        _currentPath = portablePath;
+                        Current = new ConfigRoot();
+                        BindGeneral();
+                        Title = $"EQ Log Config Editor - {System.IO.Path.GetFileName(portablePath)}";
+                    }
                 }
-                else
-                {
-                    // Start with empty model; default save will go to portable path
-                    _currentPath = portablePath;
-                    Current = new ConfigRoot();
-                    BindGeneral();
-                    Title = $"EQ Log Config Editor - {System.IO.Path.GetFileName(portablePath)}";
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error during startup: {ex.Message}\n\nStack trace:\n{ex.StackTrace}", 
+                    "Startup Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void EditRule_Click(object sender, RoutedEventArgs e)
@@ -106,25 +121,62 @@ namespace ConfigEditor
 
         private void BindGeneral()
         {
-            LogFilePathText.Text = Current.LogFilePath ?? string.Empty;
-            OutputDirectoryText.Text = Current.OutputDirectory ?? string.Empty;
-            PollingIntervalText.Text = Current.PollingIntervalMs.ToString();
-            ParallelProcessingCheck.IsChecked = Current.ParallelProcessing;
-            DebugModeCheck.IsChecked = Current.DebugMode;
-            MaxQueueSizeText.Text = Current.MaxQueueSize.ToString();
-            ProcessErrorsCheck.IsChecked = Current.ProcessErrors;
-            ProcessWarningsCheck.IsChecked = Current.ProcessWarnings;
-            ProcessInfoCheck.IsChecked = Current.ProcessInfo;
-            
-            // Email configuration
-            EmailSmtpServerText.Text = Current.EmailSmtpServer ?? string.Empty;
-            EmailSmtpPortText.Text = Current.EmailSmtpPort.ToString();
-            EmailUsernameText.Text = Current.EmailUsername ?? string.Empty;
-            EmailPasswordText.Password = Current.EmailPassword ?? string.Empty;
-            EmailFromText.Text = Current.EmailFrom ?? string.Empty;
-            EmailToText.Text = Current.EmailTo ?? string.Empty;
-            EmailEnableSslCheck.IsChecked = Current.EmailEnableSsl;
-            EmailPollIntervalText.Text = Current.EmailPollIntervalSeconds.ToString();
+            try
+            {
+                LogFilePathText.Text = Current.LogFilePath ?? string.Empty;
+                OutputDirectoryText.Text = Current.OutputDirectory ?? string.Empty;
+                PollingIntervalText.Text = Current.PollingIntervalMs.ToString();
+                ParallelProcessingCheck.IsChecked = Current.ParallelProcessing;
+                DebugModeCheck.IsChecked = Current.DebugMode;
+                MaxQueueSizeText.Text = Current.MaxQueueSize.ToString();
+                ProcessErrorsCheck.IsChecked = Current.ProcessErrors;
+                ProcessWarningsCheck.IsChecked = Current.ProcessWarnings;
+                ProcessInfoCheck.IsChecked = Current.ProcessInfo;
+                
+                // Email configuration
+                EmailSmtpServerText.Text = Current.EmailSmtpServer ?? string.Empty;
+                EmailSmtpPortText.Text = Current.EmailSmtpPort.ToString();
+                EmailUsernameText.Text = Current.EmailUsername ?? string.Empty;
+                EmailPasswordText.Password = Current.EmailPassword ?? string.Empty;
+                EmailFromText.Text = Current.EmailFrom ?? string.Empty;
+                EmailToText.Text = Current.EmailTo ?? string.Empty;
+                EmailEnableSslCheck.IsChecked = Current.EmailEnableSsl;
+                EmailPollIntervalText.Text = Current.EmailPollIntervalSeconds.ToString();
+                
+                // Process targeting configuration - only if ProcessSelector is loaded
+                try
+                {
+                    System.Diagnostics.Debug.WriteLine($"BindGeneral: ProcessSelector null: {ProcessSelector == null}, IsLoaded: {ProcessSelector?.IsLoaded}");
+                    System.Diagnostics.Debug.WriteLine($"BindGeneral: Current values - TargetAll={Current.TargetAllProcesses}, IDs={Current.TargetProcessIds?.Count ?? 0}, Names={Current.TargetProcessNames?.Count ?? 0}");
+                    
+                    if (ProcessSelector != null && ProcessSelector.IsLoaded)
+                    {
+                        System.Diagnostics.Debug.WriteLine("BindGeneral: Loading ProcessSelector config immediately");
+                        ProcessSelector.LoadFromConfig(Current.TargetAllProcesses, Current.TargetProcessIds ?? new List<int>(), new List<string>());
+                    }
+                    else
+                    {
+                        System.Diagnostics.Debug.WriteLine("BindGeneral: ProcessSelector not ready, deferring config load");
+                        // If ProcessSelector isn't ready, defer the configuration loading
+                        if (ProcessSelector != null)
+                        {
+                            // Remove any existing Loaded event handler to avoid duplicates
+                            ProcessSelector.Loaded -= ProcessSelector_LoadedHandler;
+                            ProcessSelector.Loaded += ProcessSelector_LoadedHandler;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Error accessing ProcessSelector: {ex.Message}");
+                    // Continue without ProcessSelector configuration - it's not critical for startup
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error in BindGeneral: {ex.Message}\n\nStack trace:\n{ex.StackTrace}", 
+                    "BindGeneral Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void UpdateFromGeneral()
@@ -148,6 +200,29 @@ namespace ConfigEditor
             Current.EmailTo = EmailToText.Text;
             Current.EmailEnableSsl = EmailEnableSslCheck.IsChecked == true;
             if (int.TryParse(EmailPollIntervalText.Text, out var epi)) Current.EmailPollIntervalSeconds = epi; else Current.EmailPollIntervalSeconds = 30;
+            
+            // Process targeting configuration - only if ProcessSelector is ready
+            try
+            {
+                if (ProcessSelector != null && ProcessSelector.IsLoaded)
+                {
+                    System.Diagnostics.Debug.WriteLine($"UpdateFromGeneral: Setting TargetAll={ProcessSelector.TargetAllProcesses}, IDs={ProcessSelector.SelectedProcessIds.Count}");
+                    Current.TargetAllProcesses = ProcessSelector.TargetAllProcesses;
+                    Current.TargetProcessIds = ProcessSelector.SelectedProcessIds;
+                    Current.TargetProcessNames = new List<string>(); // Always empty since we only use process IDs
+                    System.Diagnostics.Debug.WriteLine($"UpdateFromGeneral: Current values set to TargetAll={Current.TargetAllProcesses}, IDs={Current.TargetProcessIds?.Count ?? 0}");
+                }
+                else
+                {
+                    System.Diagnostics.Debug.WriteLine($"UpdateFromGeneral: ProcessSelector not available or not loaded, preserving current values: TargetAll={Current.TargetAllProcesses}, IDs={Current.TargetProcessIds?.Count ?? 0}, Names={Current.TargetProcessNames?.Count ?? 0}");
+                }
+                // Don't reset to defaults when ProcessSelector is not available - preserve current values
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error accessing ProcessSelector in UpdateFromGeneral: {ex.Message}");
+                // Don't reset to defaults on error - preserve current values
+            }
         }
 
         private void RefreshRules()
@@ -455,16 +530,24 @@ namespace ConfigEditor
         {
             try
             {
-                if (_isSaving || _isLoading) return;
+                if (_isSaving || _isLoading) 
+                {
+                    System.Diagnostics.Debug.WriteLine($"AutoSave skipped - _isSaving: {_isSaving}, _isLoading: {_isLoading}");
+                    return;
+                }
                 _isSaving = true;
+                System.Diagnostics.Debug.WriteLine($"AutoSave starting - Current values before UpdateFromGeneral: TargetAll={Current.TargetAllProcesses}, IDs={Current.TargetProcessIds?.Count ?? 0}, Names={Current.TargetProcessNames?.Count ?? 0}");
                 UpdateFromGeneral();
+                System.Diagnostics.Debug.WriteLine($"AutoSave - Current values after UpdateFromGeneral: TargetAll={Current.TargetAllProcesses}, IDs={Current.TargetProcessIds?.Count ?? 0}, Names={Current.TargetProcessNames?.Count ?? 0}");
                 var issues = _validator.Validate(Current);
                 var errors = issues.Where(i => i.Severity == ValidationSeverity.Error).ToList();
                 if (errors.Count > 0)
                 {
+                    System.Diagnostics.Debug.WriteLine($"AutoSave skipped due to validation errors: {string.Join(", ", errors.Select(e => e.Message))}");
                     return;
                 }
                 var path = string.IsNullOrEmpty(_currentPath) ? System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.yaml") : _currentPath;
+                System.Diagnostics.Debug.WriteLine($"AutoSave saving to: {path}");
                 // Atomic write
                 var tmp = path + ".tmp";
                 _service.Save(tmp, Current);
@@ -477,10 +560,11 @@ namespace ConfigEditor
                     File.Move(tmp, path);
                 }
                 _currentPath = path;
+                System.Diagnostics.Debug.WriteLine("AutoSave completed successfully");
             }
             catch (Exception ex) 
             { 
-                // Silent fail for auto-save
+                System.Diagnostics.Debug.WriteLine($"AutoSave failed: {ex.Message}");
             }
             finally { _isSaving = false; }
         }
@@ -624,6 +708,60 @@ namespace ConfigEditor
             AutoSave();
         }
 
+
+        private void ProcessSelector_LoadedHandler(object? sender, RoutedEventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Debug.WriteLine("ProcessSelector Loaded event fired, loading config");
+                if (ProcessSelector != null)
+                {
+                    // Use a small delay to ensure the ProcessSelector is fully initialized
+                    var timer = new System.Windows.Threading.DispatcherTimer();
+                    timer.Interval = TimeSpan.FromMilliseconds(100);
+                    timer.Tick += (s, args) => {
+                        timer.Stop();
+                        try
+                        {
+                            System.Diagnostics.Debug.WriteLine($"ProcessSelector_LoadedHandler delayed: TargetAll={Current.TargetAllProcesses}, IDs={Current.TargetProcessIds?.Count ?? 0}");
+                            ProcessSelector.LoadFromConfig(Current.TargetAllProcesses, Current.TargetProcessIds ?? new List<int>(), new List<string>());
+                        }
+                        catch (Exception ex)
+                        {
+                            System.Diagnostics.Debug.WriteLine($"Error in delayed ProcessSelector LoadFromConfig: {ex.Message}");
+                        }
+                    };
+                    timer.Start();
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error in ProcessSelector Loaded event: {ex.Message}");
+            }
+        }
+
+        private void ProcessSelector_SelectionChanged(object? sender, EventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Debug.WriteLine($"ProcessSelector_SelectionChanged called - ProcessSelector null: {ProcessSelector == null}, IsLoaded: {ProcessSelector?.IsLoaded}");
+                
+                // Only auto-save if ProcessSelector is available and loaded
+                if (ProcessSelector != null && ProcessSelector.IsLoaded)
+                {
+                    System.Diagnostics.Debug.WriteLine($"ProcessSelector_SelectionChanged: TargetAll={ProcessSelector.TargetAllProcesses}, IDs={ProcessSelector.SelectedProcessIds.Count}, Names={ProcessSelector.SelectedProcessNames.Count}");
+                    AutoSave();
+                }
+                else
+                {
+                    System.Diagnostics.Debug.WriteLine($"ProcessSelector_SelectionChanged: ProcessSelector not available or not loaded");
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error in ProcessSelector_SelectionChanged: {ex.Message}");
+            }
+        }
 
         private void CommitAllEdits() { try { this.UpdateLayout(); } catch { } }
     }

@@ -25,6 +25,14 @@ public:
     bool initialize();
     
     /**
+     * @brief Configure process targeting settings
+     * @param targetAllProcesses If true, target all EQGame.exe processes; if false, use specific targeting
+     * @param targetProcessIds List of specific process IDs to target
+     * @param targetProcessNames List of specific process names to target
+     */
+    void configureProcessTargeting(bool targetAllProcesses, const std::vector<int>& targetProcessIds, const std::vector<std::string>& targetProcessNames);
+    
+    /**
      * @brief Check if the action sender is ready to send keystrokes
      * @return true if ready, false otherwise
      */
@@ -133,6 +141,11 @@ private:
     HWND _windowHandle;
     HANDLE _processHandle;
     std::vector<Target> _targets;
+    
+    // Process targeting configuration
+    bool _targetAllProcesses;
+    std::vector<int> _targetProcessIds;
+    std::vector<std::string> _targetProcessNames;
     
     mutable std::mutex _mutex;
     

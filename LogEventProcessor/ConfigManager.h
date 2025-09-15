@@ -74,6 +74,24 @@ public:
     int getPollingInterval() const;
     
     /**
+     * @brief Check if all processes should be targeted
+     * @return true if targeting all processes, false if targeting specific ones
+     */
+    bool getTargetAllProcesses() const;
+    
+    /**
+     * @brief Get list of target process IDs
+     * @return Vector of process IDs to target
+     */
+    std::vector<int> getTargetProcessIds() const;
+    
+    /**
+     * @brief Get list of target process names
+     * @return Vector of process names to target
+     */
+    std::vector<std::string> getTargetProcessNames() const;
+    
+    /**
      * @brief Load regex rules and actions from configuration
      * @param matcher RegexMatcher instance to populate with rules
      * @param actionManager ActionManager instance to populate with actions
